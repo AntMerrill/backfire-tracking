@@ -49,3 +49,17 @@ Appended to as work happens, not written after the fact.
   only, not the full `backfire_srts_all.tar` (scene-clip SRTs +
   master transcript) — that hasn't been uploaded anywhere yet, still
   local-only (Desktop + both USB drives).
+
+## 2026-09-11
+
+- Snipped every occurrence of two speech patterns from the source
+  video: "state president" (35 instances, "stake" mispronounced as
+  "state") and "lukewarm" (13 clustered instances). Built a supercut
+  of the 35 "state president" clips (2:58 total,
+  `state_president_supercut.mp4`); left "lukewarm" as a text-only
+  record per John's call, since the point there is the word itself
+  never gets consistently transcribed - found 6 distinct spellings
+  across 27 hits, including two non-word "q" renderings
+  ("luquormism", "luquormed").
+- New doc: `docs/backfire_speech_patterns_2026-09-11.md` (also in
+  veritastimmy).
