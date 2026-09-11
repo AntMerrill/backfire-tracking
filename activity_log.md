@@ -79,3 +79,18 @@ Appended to as work happens, not written after the fact.
   Yom Kippur's Gregorian date moves yearly. New doc:
   `docs/backfire_truth_claims_inventory_2026-09-11.md` (also in
   veritastimmy).
+
+- Checked the "Wikipedia removed articles promoting Ballard/O.U.R. the
+  same day as the Church statement" claim against Wikipedia's own
+  public edit history (MediaWiki API, no credentials needed). All
+  three most-relevant articles (Tim Ballard, Operation Underground
+  Railroad, Sound of Freedom (film)) show zero edits anywhere near
+  Nov 6, 2025 — gaps of 4 weeks to 6+ months spanning the claimed
+  date, each bracketed by a direct permalink. Different pattern than
+  the two earlier-verified claims (real event, spun) — here the
+  specific claimed event doesn't appear to have happened at all, on
+  the record checked. New doc:
+  `docs/backfire_wikipedia_removal_claim_debunk_2026-09-11.md` (also
+  in veritastimmy). Two Wikipedia-edit drafts from earlier today
+  (Borys dismissal, Abraham Accords claim) both set aside per John's
+  call — neither posted.
