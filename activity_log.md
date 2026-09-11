@@ -94,3 +94,15 @@ Appended to as work happens, not written after the fact.
   in veritastimmy). Two Wikipedia-edit drafts from earlier today
   (Borys dismissal, Abraham Accords claim) both set aside per John's
   call — neither posted.
+
+- Compiled every claim in the video about "Elder Ballard" (M. Russell
+  Ballard, real LDS apostle, died Nov 2023 — no stated relation beyond
+  shared surname): the "best friend" framing, the core contested claim
+  that he was never actually cut off (including an assertion of an
+  undocumented/unproduced phone recording at 02:06:55), the "he
+  recruited me, not vice versa" claims, institutional-association
+  claims (Elder Bednar, security detail, a named son's ordination),
+  and a defense against a name-misuse allegation. 15 distinct claim
+  points, each with an exact cue-start timestamp. New doc:
+  `docs/backfire_elder_ballard_claims_2026-09-11.md` (also in
+  veritastimmy).
