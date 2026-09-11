@@ -63,3 +63,9 @@ Appended to as work happens, not written after the fact.
   ("luquormism", "luquormed").
 - New doc: `docs/backfire_speech_patterns_2026-09-11.md` (also in
   veritastimmy).
+
+- Compiled the actual claims (not just pronunciation) involving the
+  unnamed stake president, and every "deep state" mention (5, all in
+  the church-governance sense, not US politics) — new doc:
+  `docs/backfire_state_president_deep_state_claims_2026-09-11.md`
+  (also in veritastimmy).
