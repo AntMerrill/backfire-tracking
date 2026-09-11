@@ -8,7 +8,7 @@ chronological order, timestamps are full-video elapsed time.
 
 ## The (unnamed) stake president — claim threads
 
-He is never named by John Ballard in this video (see the blame index for
+He is never named by Ballard in this video (see the blame index for
 named parties — Doug Anderson, Kevin Pearson, Matt Holland). Distinct
 claims made about him, roughly in the order they build across the video:
 
