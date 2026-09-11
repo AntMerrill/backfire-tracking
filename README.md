@@ -7,6 +7,16 @@ no video binaries live here; those stay on physical drives (see
 and decided on this project without John having to stay hands-on with
 the underlying material.
 
+## Downloads
+
+- **Minute-chunk SRTs** (233 files + README, no video):
+  https://drive.google.com/file/d/1HiUtSAerhAeuSBne9j9inBRgclrsRSkt/view?usp=sharing
+  — shared "Anyone with the link" (Viewer), uploaded to John's Google
+  Drive 2026-09-10. Does not include the 1,053 scene-clip SRTs or the
+  master full-video transcript — see `backfire_srts_all.tar` locally
+  (Desktop, and copied to both the `E769-0C67` and `RESCUE` USB drives)
+  for the complete set; that one hasn't been uploaded anywhere yet.
+
 ## Contents
 
 - `activity_log.md` — running, dated log of actions taken (appended to
