@@ -106,3 +106,9 @@ Appended to as work happens, not written after the fact.
   points, each with an exact cue-start timestamp. New doc:
   `docs/backfire_elder_ballard_claims_2026-09-11.md` (also in
   veritastimmy).
+
+- Made a TODO.md capturing everything still outstanding from today's
+  Backfire work (trickle plan for the remaining 3 Elder Ballard wiki
+  edits, unused claim clusters, docs with no wiki action taken yet,
+  the incomplete Wikipedia-removal debunk, the un-uploaded full SRT
+  tar) before moving on to something else.
