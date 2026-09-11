@@ -69,3 +69,13 @@ Appended to as work happens, not written after the fact.
   the church-governance sense, not US politics) — new doc:
   `docs/backfire_state_president_deep_state_claims_2026-09-11.md`
   (also in veritastimmy).
+
+- Compiled a truth-claims inventory from the master transcript,
+  same [F]/[T]/[S] tagging convention as the earlier Fearless Brothers
+  claims doc: financial/box-office figures, court outcomes, media
+  conduct claims, and dated events. Flagged one internal inconsistency
+  worth checking — two different dates two years apart are both
+  called "the Day of Atonement," which shouldn't both be true since
+  Yom Kippur's Gregorian date moves yearly. New doc:
+  `docs/backfire_truth_claims_inventory_2026-09-11.md` (also in
+  veritastimmy).
