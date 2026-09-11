@@ -1,0 +1,18 @@
+# backfire-tracking (private, internal use only)
+
+Tracking repo for the Tim Ballard "Backfire" excommunication video project
+(`youtube__pBo_2DYxfrY`, Official Tim Ballard channel). Text/docs only —
+no video binaries live here; those stay on physical drives (see
+`release_manifest.md`). Purpose: keep a paper trail of what's been done
+and decided on this project without John having to stay hands-on with
+the underlying material.
+
+## Contents
+
+- `activity_log.md` — running, dated log of actions taken (appended to
+  as work happens, not written after the fact).
+- `release_manifest.md` — what's staged where, across the tiered
+  release structure on the RESCUE drive.
+- `docs/` — copies of the investigative findings docs (also live in
+  `veritastimmy/docs/` — duplicated here for a self-contained internal
+  record, not moved/removed from there).
