@@ -1,5 +1,7 @@
 # backfire-tracking (private, internal use only)
 
+Repo URL: https://github.com/AntMerrill/backfire-tracking
+
 Tracking repo for the Tim Ballard "Backfire" excommunication video project
 (`youtube__pBo_2DYxfrY`, Official Tim Ballard channel). Text/docs only —
 no video binaries live here; those stay on physical drives (see
