@@ -112,3 +112,45 @@ Appended to as work happens, not written after the fact.
   edits, unused claim clusters, docs with no wiki action taken yet,
   the incomplete Wikipedia-removal debunk, the un-uploaded full SRT
   tar) before moving on to something else.
+
+## 2026-09-11/12
+
+- Word histogram + non-dictionary-word audit of the master SRT (211
+  words, `docs/backfire_non_dictionary_words_2026-09-11.md`) — prep
+  work for manual SRT correction going forward.
+- "Lukewarm" spelling-variant deep dive: 8 spellings, 20 instances,
+  garbling clusters hard in the 02:49–03:32 stretch specifically.
+  Published as its own artifact (waveform + frequency meter + exhibit
+  cards): https://claude.ai/code/artifact/60693757-cfc0-4714-998b-2ba097e66129
+- First real manual SRT correction, direct-listen-confirmed by John:
+  00:52:43 "Dagan" → "Dick Andersen" (distinct from "Doug Anderson" in
+  the blame index — unresolved whether same person). Built a proper
+  correction workflow for this going forward: `docs/srt_corrections.json`
+  (machine-readable log) + `bin/apply_srt_corrections.py` (applies to a
+  copy of the master SRT, outputs a unified diff, never touches the
+  original).
+- Wiki edits posted: pinpoint citation on the "best friend" ref (rev
+  1374455144); new Talk:Tim Ballard section on "state president" vs
+  "stake president" (rev 1374458994); found and fixed a citation issue
+  on an unrelated anonymous editor's addition (gave it its own pinpoint
+  cite instead of sharing ours).
+- Argentina research, independent of the video (real news sources, not
+  just Ballard's own claims): the Feb 2025 rescue claim ("20 kids/200
+  videos/La Plata") doesn't match any independently reported account
+  (all say 2 girls, Mar del Plata) — biggest concrete claim-vs-reality
+  gap found in this project. Also found: a Justice Minister
+  secretly-recorded offering to help "clean up" Ballard's image
+  (real institutional scandal, impeachment push), an OUR-affiliated
+  operative arrested for obstructing the active Loan Peña missing-child
+  case, and Security Minister Patricia Bullrich's on-record rejection
+  of Ballard. Two new docs, nothing staged for wiki use yet.
+- Translated and posted the English "Lawsuits and investigations"
+  section to both Portuguese and Spanish Wikipedia (different article
+  titles — "Tim Ballard" vs "Timothy Ballard"). Confirmed Wikipedia's
+  SUL means the same bot credentials work on every language wiki.
+  Portuguese needed a web-UI abuse-filter confirm-click (API path
+  can't do that); found and fixed one broken citation template
+  (`{{Citar processo}}` doesn't exist on pt.wiki). Spanish posted
+  clean on the first try, but that article never had an allegations
+  section to begin with — flagged as a structural gap for later.
+- Updated TODO.md with everything above plus what's still open.
