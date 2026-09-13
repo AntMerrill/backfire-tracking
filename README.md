@@ -11,13 +11,18 @@ the underlying material.
 
 ## Downloads
 
-- **Minute-chunk SRTs** (233 files + README, no video):
+- **Full SRT set** (`backfire_srts_all.tar` — 1,053 scene-clip SRTs, 233
+  minute-chunk SRTs, the master full-video transcript, and a README):
   https://drive.google.com/file/d/1HiUtSAerhAeuSBne9j9inBRgclrsRSkt/view?usp=sharing
   — shared "Anyone with the link" (Viewer), uploaded to John's Google
-  Drive 2026-09-10. Does not include the 1,053 scene-clip SRTs or the
-  master full-video transcript — see `backfire_srts_all.tar` locally
-  (Desktop, and copied to both the `E769-0C67` and `RESCUE` USB drives)
-  for the complete set; that one hasn't been uploaded anywhere yet.
+  Drive 2026-09-10. (Corrected 2026-09-13: this was previously and
+  wrongly described here as a minute-chunk-only subset — verified
+  directly against Drive, it's actually the complete tar.)
+- **Tier 1 preview** (`backfire_tier1_preview.tar` — 2 curated highlight
+  clips with transcripts, the 12-verified-silent-clips compilation, the
+  master transcript, and 3 research docs):
+  https://drive.google.com/file/d/17_kM7ZxNGBCdFUNBeC1X7O4JxAo0fzvT/view?usp=sharing
+  — uploaded 2026-09-13.
 
 ## Contents
 
