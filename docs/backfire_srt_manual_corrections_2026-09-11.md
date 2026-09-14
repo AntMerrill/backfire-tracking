@@ -54,3 +54,33 @@ just picked the wrong (also real) word that sounds similar.
 All three logged as corrections (ids 8–15 in `srt_corrections.json`)
 since they still need fixing in the SRT text itself, even though no
 identification/listening judgment call was really needed here.
+
+## "Exchangeers" (4x) → "Exchangers"
+
+Another false-alarm: not an invented word. Whisper mishearing the real
+King James Bible word **"exchangers"** (Matthew 25:27: "thou oughtest
+therefore to have put my money to the exchangers"), also thematically
+tied to Jesus driving the money-changers from the temple (Matthew
+21:12). Full context (01:57:12–01:57:41): "...they gave their money to
+the exchangeers instead of building the tower... what percentage of the
+money tithes go to the exchangeers versus going to do what Jesus would
+do... instead we give the money to the exchangeers..." Ballard is using
+it rhetorically to criticize money going to financial/investment
+purposes instead of charity work — reads as a jab at the Church's
+investment arm (Ensign Peak Advisors), a real, independently documented
+controversy on exactly this point. Logged as corrections ids 16–19.
+
+## Confirmed real proper nouns — no fix needed
+
+Three more from the histogram audit, spot-checked and confirmed
+accurate as transcribed — just missing from the system dictionary, not
+transcription errors:
+
+- **Nephi** (29x) — real Book of Mormon proper noun. All 29 occurrences
+  checked; every one is a scripture citation ("1st Nephi 13," "2nd
+  Nephi 28," "3 Nephi 231," etc.). No personal/family reference found
+  in any of them, despite an initial recollection that one existed —
+  flagged as unresolved if a specific timestamp turns up later.
+- **Deseret** (17x) — real proper noun (LDS Church business/publishing
+  branding: Deseret Book, Deseret News).
+- **KSL** (9x) — real acronym (Utah's KSL NewsRadio/TV).

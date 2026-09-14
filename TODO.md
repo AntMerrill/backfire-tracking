@@ -158,12 +158,15 @@ edit so far. Still sitting there, unused:
       else to run for practice, per John's call. (Corrected 2026-09-13:
       an earlier note here wrongly said this was already live — it
       wasn't; verified against the live revision history.)
-- [ ] 196 remaining non-dictionary words from the histogram audit still
+- [ ] 200 remaining non-dictionary words from the histogram audit still
       need manual review/correction via the new `apply_srt_corrections.py`
-      workflow — 15 of 211 done so far: Dick Andersen, John Dehlin
-      (garbled 6 ways across one passage), and three "false-alarm"
-      catches that turned out to be real existing words/proper nouns
-      Whisper misheard rather than invented names — Moroni, Hearken,
-      and Atonement (the last one also pins down the exact claimed
-      date, Sept 25 2023, for the Day-of-Atonement inconsistency
-      already flagged in the truth-claims inventory).
+      workflow — 11 distinct word-forms reviewed so far: Dick Andersen,
+      John Dehlin (garbled 6 ways across one passage), Moroni, Hearken,
+      Atonement (pins down the exact claimed date, Sept 25 2023, for
+      the Day-of-Atonement inconsistency already flagged in the
+      truth-claims inventory), Exchangers (a real KJV word, Matthew
+      25:27 -- Ballard using it to jab at the Church's investment
+      practices), plus Nephi/Deseret/KSL confirmed as accurate,
+      real-word transcriptions needing no fix. `docs/backfire_non_
+      dictionary_words_batch2_2026-09-13.md` has the next 50 by
+      frequency queued up for review.

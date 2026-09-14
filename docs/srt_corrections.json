@@ -118,5 +118,37 @@
     "cue_corrected": "of Atonement,",
     "confirmed_by": "John (Hogan), 2026-09-13",
     "note": "Same 'Atonement' correction, third occurrence -- this is the cue immediately preceding the claimed date 'September 25th, 2023.'"
+  },
+  {
+    "id": 16,
+    "timestamp": "01:57:12,417",
+    "cue_original": "to the exchangeers",
+    "cue_corrected": "to the exchangers",
+    "confirmed_by": "John (Hogan), 2026-09-13",
+    "note": "Not an invented word -- Whisper mishearing the real King James Bible word 'exchangers' (Matthew 25:27: 'thou oughtest therefore to have put my money to the exchangers'), also thematically tied to Jesus driving the money-changers from the temple (Matthew 21:12). Ballard uses it rhetorically to criticize money going to financial/investment purposes instead of charity work."
+  },
+  {
+    "id": 17,
+    "timestamp": "01:57:21,197",
+    "cue_original": "exchangeers versus going",
+    "cue_corrected": "exchangers versus going",
+    "confirmed_by": "John (Hogan), 2026-09-13",
+    "note": "Same 'exchangers' correction, second occurrence."
+  },
+  {
+    "id": 18,
+    "timestamp": "01:57:33,677",
+    "cue_original": "to the exchangeers.",
+    "cue_corrected": "to the exchangers.",
+    "confirmed_by": "John (Hogan), 2026-09-13",
+    "note": "Same 'exchangers' correction, third occurrence."
+  },
+  {
+    "id": 19,
+    "timestamp": "01:57:41,337",
+    "cue_original": "exchangeers?",
+    "cue_corrected": "exchangers?",
+    "confirmed_by": "John (Hogan), 2026-09-13",
+    "note": "Same 'exchangers' correction, fourth and final occurrence."
   }
 ]
