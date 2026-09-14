@@ -54,5 +54,69 @@
     "cue_corrected": "John Dehlin,",
     "confirmed_by": "John (Hogan), 2026-09-13",
     "note": "Same John Dehlin reference, sixth and final occurrence in this passage -- a third distinct garbled spelling ('Dillent')."
+  },
+  {
+    "id": 8,
+    "timestamp": "03:48:59,800",
+    "cue_original": "Captain Maroney from",
+    "cue_corrected": "Captain Moroni from",
+    "confirmed_by": "John (Hogan), 2026-09-13",
+    "note": "Not a garbled invented name -- Whisper mishearing a real, pre-existing proper noun. Captain Moroni is a real Book of Mormon figure (Alma 44), not something Ballard made up; the correction restores the actual existing word rather than 'inventing' a name."
+  },
+  {
+    "id": 9,
+    "timestamp": "03:49:23,625",
+    "cue_original": "of Captain Maroney.",
+    "cue_corrected": "of Captain Moroni.",
+    "confirmed_by": "John (Hogan), 2026-09-13",
+    "note": "Same Captain Moroni reference, second occurrence."
+  },
+  {
+    "id": 10,
+    "timestamp": "03:49:29,845",
+    "cue_original": "like Captain Maroney,",
+    "cue_corrected": "like Captain Moroni,",
+    "confirmed_by": "John (Hogan), 2026-09-13",
+    "note": "Same Captain Moroni reference, third and final occurrence in this passage."
+  },
+  {
+    "id": 11,
+    "timestamp": "01:23:10,780",
+    "cue_original": "Harkin not,",
+    "cue_corrected": "Hearken not,",
+    "confirmed_by": "John (Hogan), 2026-09-13",
+    "note": "Not a proper noun at all -- Whisper mishearing the real, pre-existing archaic word 'hearken' (to listen), rendering it as if it were a surname. Scriptural phrasing ('hearken not unto the words of the prophets'), not something Ballard invented."
+  },
+  {
+    "id": 12,
+    "timestamp": "01:23:12,480",
+    "cue_original": "Harkin not into",
+    "cue_corrected": "Hearken not into",
+    "confirmed_by": "John (Hogan), 2026-09-13",
+    "note": "Same 'hearken' correction, second occurrence."
+  },
+  {
+    "id": 13,
+    "timestamp": "00:15:10,403",
+    "cue_original": "Atomans also significant,",
+    "cue_corrected": "Atonement also significant,",
+    "confirmed_by": "John (Hogan), 2026-09-13",
+    "note": "Not a proper noun -- Whisper mishearing the real, pre-existing word 'Atonement' (the Day of Atonement). Directly relevant to the Day-of-Atonement date inconsistency already flagged in backfire_truth_claims_inventory_2026-09-11.md; this occurrence gives the exact claimed date, September 25, 2023 (see cue at 00:15:44)."
+  },
+  {
+    "id": 14,
+    "timestamp": "00:15:25,803",
+    "cue_original": "Atomans.",
+    "cue_corrected": "Atonement.",
+    "confirmed_by": "John (Hogan), 2026-09-13",
+    "note": "Same 'Atonement' correction, second occurrence."
+  },
+  {
+    "id": 15,
+    "timestamp": "00:15:44,003",
+    "cue_original": "of Atomans,",
+    "cue_corrected": "of Atonement,",
+    "confirmed_by": "John (Hogan), 2026-09-13",
+    "note": "Same 'Atonement' correction, third occurrence -- this is the cue immediately preceding the claimed date 'September 25th, 2023.'"
   }
 ]

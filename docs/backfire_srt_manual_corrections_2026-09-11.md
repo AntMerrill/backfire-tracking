@@ -29,3 +29,28 @@ Format: timestamp, what Whisper had, what's actually said, how it was confirmed.
 - Six separate correction entries logged (ids 2–7 in
   `srt_corrections.json`) since each occurrence has its own exact cue
   text and, in three cases, its own distinct garbled spelling.
+
+## Three "false-alarm proper nouns" — real words, not fabrications
+
+Three more non-dictionary words turned out not to be garbled invented
+names at all, just Whisper mishearing real, pre-existing words/proper
+nouns as if they were surnames. Worth distinguishing from the correction
+above: these aren't cases of Ballard saying something and Whisper
+inventing a new wrong name — the correct word already exists, Whisper
+just picked the wrong (also real) word that sounds similar.
+
+- **"Maroney" → "Moroni"** (03:48:59, 03:49:23, 03:49:29) — Captain
+  Moroni is a real Book of Mormon figure (Alma 44), not something
+  Ballard made up.
+- **"Harkin" → "Hearken"** (01:23:10, 01:23:12) — the archaic word
+  "hearken" (to listen), not a surname at all. Scriptural phrasing
+  ("hearken not unto the words of the prophets").
+- **"Atomans" → "Atonement"** (00:15:10, 00:15:25, 00:15:44) — "the Day
+  of Atonement." Directly relevant to the Day-of-Atonement date
+  inconsistency already flagged in
+  `backfire_truth_claims_inventory_2026-09-11.md` — this passage gives
+  the specific claimed date, September 25, 2023.
+
+All three logged as corrections (ids 8–15 in `srt_corrections.json`)
+since they still need fixing in the SRT text itself, even though no
+identification/listening judgment call was really needed here.

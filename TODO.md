@@ -158,8 +158,12 @@ edit so far. Still sitting there, unused:
       else to run for practice, per John's call. (Corrected 2026-09-13:
       an earlier note here wrongly said this was already live — it
       wasn't; verified against the live revision history.)
-- [ ] 204 remaining non-dictionary words from the histogram audit still
+- [ ] 196 remaining non-dictionary words from the histogram audit still
       need manual review/correction via the new `apply_srt_corrections.py`
-      workflow — 7 of 211 done so far: Dick Andersen, and John Dehlin
-      (identified 2026-09-13, garbled 6 different ways across a single
-      90-second passage: "Dillen"/"Dillenton"/"Dillent").
+      workflow — 15 of 211 done so far: Dick Andersen, John Dehlin
+      (garbled 6 ways across one passage), and three "false-alarm"
+      catches that turned out to be real existing words/proper nouns
+      Whisper misheard rather than invented names — Moroni, Hearken,
+      and Atonement (the last one also pins down the exact claimed
+      date, Sept 25 2023, for the Day-of-Atonement inconsistency
+      already flagged in the truth-claims inventory).
