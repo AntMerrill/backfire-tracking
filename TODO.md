@@ -1,5 +1,17 @@
 # TODO — remaining work from the "Backfire" video
 
+## Infrastructure note (2026-09-13)
+
+RESCUE (the second USB drive, exFAT, 248GB) failed with real hardware
+I/O errors — not the earlier "unplugged mid-write" corruption, actual
+sector-level read failures. It's currently disconnected. `dl_wm`'s
+`outputs` symlink now points to a different drive instead: label
+`UBUNTU 26_0` (a dual-purposed Ubuntu 26 installer USB with spare
+capacity, `boner_vault/dl_wm_outputs/` created there — see
+`DRIVE_RECORD.md` on that drive itself). E769-0C67 is healthy but
+100% full (1.4MB free) — read-only in practice until something's
+cleared off it.
+
 Not urgent — parking this to pick back up later. Everything below is
 already-found material from `youtube__pBo_2DYxfrY` that hasn't been
 turned into a wiki edit, a doc, or resolved yet.
@@ -130,17 +142,22 @@ edit so far. Still sitting there, unused:
       the 'it isn't there' part down yet"). Would need: other-language
       Wikipedias checked, independent re-confirmation of the Nov 6,
       2025 statement date.
-- [ ] `backfire_srts_all.tar` (full scene-clip SRTs + master
-      transcript, 4.8MB) — still local only (Desktop + both USB
-      drives). Only the smaller minute-chunk-only subset made it to
-      Google Drive so far.
+- [x] `backfire_srts_all.tar` — corrected 2026-09-13: this **is**
+      already on Drive (uploaded 2026-09-10), and it's the full set
+      (1,053 scene-clip SRTs + 233 minute-chunk SRTs + master
+      transcript), not a subset — verified directly against Drive.
+      Link's in `README.md`. Note: this file is also still local on
+      Desktop and E769-0C67; the RESCUE copy is gone (drive failed and
+      was disconnected, see below).
 - [ ] Two earlier wiki-edit drafts set aside, not being pursued for now:
       Borys dismissal (reinforces a talking point Ballard's already
       using), Abraham Accords claim (real but doesn't hurt him, and has
       an unresolved WP:SYNTH problem).
-- [ ] Citation-format fix for our own "best friend" ref is DONE (see
-      above) — the earlier note about handing it to someone else to
-      practice on is moot now, it's already live.
+- [ ] Citation-format fix for our own "best friend" ref is still just
+      staged (dry-run only) — never actually posted. Left for someone
+      else to run for practice, per John's call. (Corrected 2026-09-13:
+      an earlier note here wrongly said this was already live — it
+      wasn't; verified against the live revision history.)
 - [ ] 209 remaining non-dictionary words from the histogram audit still
       need manual review/correction via the new `apply_srt_corrections.py`
       workflow — only 1 of 211 done so far (Dick Andersen).
