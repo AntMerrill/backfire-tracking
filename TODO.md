@@ -1,5 +1,18 @@
 # TODO — remaining work from the "Backfire" video
 
+## Brazilian Senate testimony — "Canoa" thread (2026-09-14)
+
+`docs/senate_testimony_canoa_2026-09-14.md` — processed the May 2025
+Brazilian Senate CDH hearing (Ballard's testimony) and found it directly
+ties back to the Ecuador Facebook clip: confirms "Canoa" is real (a
+Manabí, Ecuador town hit by the real 2016 earthquake), ties it to "this
+hotel" and Dutch suspects (matching the separate Ecuador police-raid
+clip), and references "Hidden War" by name — same elements recurring
+across two differently-formatted presentations, months apart. New,
+unreconciled 220-children figure. A Ukraine-war-rescue storyline and an
+unresolved transcription oddity ("crânia") both flagged, not chased
+further yet.
+
 ## Infrastructure note (2026-09-13)
 
 RESCUE (the second USB drive, exFAT, 248GB) failed with real hardware
