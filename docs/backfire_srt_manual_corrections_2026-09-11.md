@@ -14,3 +14,18 @@ Format: timestamp, what Whisper had, what's actually said, how it was confirmed.
   (~31 mentions). Not yet checked whether these are meant to be the same
   person under two different renderings or genuinely two different people —
   flagged here, not resolved.
+
+## 01:46:32–01:47:49 — "Dillen"/"Dillenton"/"Dillent" → "Dehlin"
+
+- **Master transcript had** three different garbled spellings of the same
+  name across six occurrences in about 90 seconds: "the John Dillen,"
+  "Dillen," "suing John Dillen," "of John Dillenton," "John Dillenton
+  takes," "John Dillent."
+- **Confirmed by John (Hogan), 2026-09-13:** the real name is **John
+  Dehlin** — founder of the Mormon Stories podcast, excommunicated from
+  the LDS Church in 2015. Fits the context on both counts: Ballard
+  claims the Church is suing him, and separately calls him a habitual
+  critic ("takes punches at me all the time").
+- Six separate correction entries logged (ids 2–7 in
+  `srt_corrections.json`) since each occurrence has its own exact cue
+  text and, in three cases, its own distinct garbled spelling.

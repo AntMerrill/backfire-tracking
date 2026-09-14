@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "timestamp": "00:52:43,501",
+    "cue_original": "from Dagan and",
+    "cue_corrected": "from Dick Andersen and",
+    "confirmed_by": "direct listen (John, 2026-09-11)",
+    "note": "Master SRT had 'Dagan'; an independent re-transcription of the same audio (scene clip_361) had 'Dijk Anderson'; direct listen confirmed the actual words are 'Dick Andersen'."
+  },
+  {
+    "id": 2,
+    "timestamp": "01:46:32,555",
+    "cue_original": "the John Dillen",
+    "cue_corrected": "the John Dehlin",
+    "confirmed_by": "John (Hogan), 2026-09-13",
+    "note": "First of six occurrences of the same real person's name, all garbled differently by Whisper ('Dillen', 'Dillenton', 'Dillent'). Identified as John Dehlin, founder of the Mormon Stories podcast, excommunicated from the LDS Church in 2015 -- fits both parts of the context (a claimed Church lawsuit, and being a habitual critic of Ballard)."
+  },
+  {
+    "id": 3,
+    "timestamp": "01:47:03,815",
+    "cue_original": "Dillen.",
+    "cue_corrected": "Dehlin.",
+    "confirmed_by": "John (Hogan), 2026-09-13",
+    "note": "Same John Dehlin reference, second occurrence."
+  },
+  {
+    "id": 4,
+    "timestamp": "01:47:05,995",
+    "cue_original": "suing John Dillen.",
+    "cue_corrected": "suing John Dehlin.",
+    "confirmed_by": "John (Hogan), 2026-09-13",
+    "note": "Same John Dehlin reference, third occurrence -- the specific claim that the Church is suing him."
+  },
+  {
+    "id": 5,
+    "timestamp": "01:47:42,898",
+    "cue_original": "of John Dillenton.",
+    "cue_corrected": "of John Dehlin.",
+    "confirmed_by": "John (Hogan), 2026-09-13",
+    "note": "Same John Dehlin reference, fourth occurrence -- Whisper renders it 'Dillenton' here instead of 'Dillen'."
+  },
+  {
+    "id": 6,
+    "timestamp": "01:47:43,958",
+    "cue_original": "John Dillenton takes",
+    "cue_corrected": "John Dehlin takes",
+    "confirmed_by": "John (Hogan), 2026-09-13",
+    "note": "Same John Dehlin reference, fifth occurrence -- 'John Dehlin takes punches at me all the time.'"
+  },
+  {
+    "id": 7,
+    "timestamp": "01:47:49,358",
+    "cue_original": "John Dillent,",
+    "cue_corrected": "John Dehlin,",
+    "confirmed_by": "John (Hogan), 2026-09-13",
+    "note": "Same John Dehlin reference, sixth and final occurrence in this passage -- a third distinct garbled spelling ('Dillent')."
+  }
+]
