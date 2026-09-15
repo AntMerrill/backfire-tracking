@@ -150,5 +150,61 @@
     "cue_corrected": "exchangers?",
     "confirmed_by": "John (Hogan), 2026-09-13",
     "note": "Same 'exchangers' correction, fourth and final occurrence."
+  },
+  {
+    "id": 20,
+    "timestamp": "00:39:25,369",
+    "cue_original": "Sherry Dew.",
+    "cue_corrected": "Sheri Dew.",
+    "confirmed_by": "spelling confirmed via independent source (John, 2026-09-14) -- not a direct audio re-listen",
+    "note": "Identified as Sheri L. Dew, CEO of Deseret Book and concurrently EVP/chief content officer of Deseret Management Corporation -- spelling confirmed against her employer's own leadership page (deseretmanagement.com) and her Wikipedia entry. First of four occurrences of the same name, garbled four different ways by Whisper ('Sherry Dew', 'Sister Do', 'Sherry Do', 'Sherry')."
+  },
+  {
+    "id": 21,
+    "timestamp": "02:53:47,086",
+    "cue_original": "Sherry Do is",
+    "cue_corrected": "Sheri Dew is",
+    "confirmed_by": "spelling confirmed via independent source (John, 2026-09-14) -- not a direct audio re-listen",
+    "note": "Same Sheri Dew reference, second occurrence -- introduces her title, 'executive vice president and chief content officer for Deseret Management Corporation'."
+  },
+  {
+    "id": 22,
+    "timestamp": "02:54:04,518",
+    "cue_original": "Sherry,",
+    "cue_corrected": "Sheri,",
+    "confirmed_by": "spelling confirmed via independent source (John, 2026-09-14) -- not a direct audio re-listen",
+    "note": "Same Sheri Dew reference, third occurrence -- Ballard addresses her directly on camera ('we're Sherry, we're friends, right?')."
+  },
+  {
+    "id": 23,
+    "timestamp": "02:55:46,125",
+    "cue_original": "take on Sherry,",
+    "cue_corrected": "take on Sheri,",
+    "confirmed_by": "spelling confirmed via independent source (John, 2026-09-14) -- not a direct audio re-listen",
+    "note": "Same Sheri Dew reference, fourth occurrence, same extended monologue as the two above -- not caught by an initial keyword search on 'Deseret' since that word doesn't appear in this specific sentence."
+  },
+  {
+    "id": 24,
+    "timestamp": "02:53:33,726",
+    "cue_original": "Sister Do,",
+    "cue_corrected": "Sheri Dew,",
+    "confirmed_by": "spelling confirmed via independent source (John, 2026-09-14) -- not a direct audio re-listen",
+    "note": "Same Sheri Dew cluster as ids 20-23; missed in the first pass because the garbled form here is \"Sister Do\" not \"Sherry\". Context: \"For those who don't know, Sister Do, I love her. I think she's a great person.\" [02:53:32-02:53:36]"
+  },
+  {
+    "id": 25,
+    "timestamp": "02:54:01,726",
+    "cue_original": "Sister Do.",
+    "cue_corrected": "Sheri Dew.",
+    "confirmed_by": "spelling confirmed via independent source (John, 2026-09-14) -- not a direct audio re-listen",
+    "note": "Same Sheri Dew cluster as ids 20-23; missed in the first pass because the garbled form here is \"Sister Do\" not \"Sherry\". Context: \"...church-owned media outlets. Sister Do. we're... Sherry, we're friends, right?\" [02:53:59-02:54:07] -- immediately precedes id 22/23's \"Sherry,\"/\"take on Sherry,\" in the same monologue."
+  },
+  {
+    "id": 26,
+    "timestamp": "03:02:58,909",
+    "cue_original": "Sister Do you",
+    "cue_corrected": "Sheri, do you",
+    "confirmed_by": "spelling confirmed via independent source (John, 2026-09-14) -- not a direct audio re-listen",
+    "note": "Same Sheri Dew cluster, different sentence structure -- here \"Do\" is the verb \"do\", not part of the surname, so corrected as direct address + question rather than \"Sheri Dew you\". Context: \"He wants you to repent. Sister Do you know that I did projects associated with the church?\" [03:02:55-03:03:01]"
   }
 ]

@@ -1,5 +1,74 @@
 # TODO — remaining work from the "Backfire" video
 
+## Canoa location-verification package — sent for external review (2026-09-14)
+
+End-of-session status. The "Two Houses, Ecuador" artifact's sports-court
+finding got turned into a standalone legal-memo-style PDF and a full
+verification package, staged for John to send to two outside parties
+*before* anything gets published further:
+
+- **PDF**: `veritastimmy/docs/exhibits/Ballard_Canoa_Findings.pdf` (10 pages
+  — claim, structural house mismatch, satellite/OSM/street-level check
+  against the real town, explicit limitations section, full methodology).
+  Also published live at
+  https://claude.ai/code/artifact/91f3b003-b1e0-4d31-928e-95f23dc017f5
+  ("Two Houses, Ecuador," v8+ — same underlying finding, artifact form).
+- **Full package**: `~/Desktop/claude/2026-09-14/canoa_verification_package.tar.gz`
+  (208MB — both source videos raw+watermarked, Video B's 6 scene clips,
+  every exhibit image at full res, the working docs with exact API
+  request URLs, a MANIFEST.md, and a CHECKSUMS.sha256 for integrity
+  verification). Staged, not sent — John does the actual Drive
+  upload/send himself.
+- **Intended recipients** (per John, contact info verified against their
+  own sites): Mortensen & Milne (mortmilnelaw.com, law firm) and Damion
+  Moore / American Crime Journal (americancrimejournal.com) — both named
+  in the PDF's own "Distribution" section.
+- **Standing instruction**: review with John before anything from this
+  project goes further externally, now that real recipients are involved
+  — see [[feedback_review_before_publishing_legal_material]] memory.
+
+Not yet committed to git in either `veritastimmy` or `backfire-tracking`
+— lots of other uncommitted work sitting in both repos too (see `git
+status`), not just today's. Left alone per standing instruction not to
+commit without being asked.
+
+## "Two Reels, One Hearing" — open items (2026-09-14)
+
+Artifact: https://claude.ai/code/artifact/125d0c52-bd85-4637-8c81-55c52e8a0496
+(combines `senate_testimony_hidden_war_trailer_2026-09-14.md` and
+`senate_testimony_screened_reel_2026-09-14.md`, plus
+`canoa_maps_verification_2026-09-14.md`). Nothing below is resolved yet.
+
+- [ ] Check whether Hristo Stoichkov or Mel Gibson have any documented,
+      independent association with Aerial Recovery, O.U.R., or Ballard —
+      the two most checkable claims in either reel (both are famous,
+      easily-searched people; either there's outside confirmation or there
+      isn't).
+- [ ] Check whether the man in the dramatized scene right after the
+      "Featuring Mel Gibson" card (13:49) is actually Gibson, versus an
+      actor — the card and its placement read as a claim, not visual
+      confirmation against a reference photo.
+- [ ] Check authenticity/source of three evidence graphics in Reel 1: the
+      "I also enjoy touching young girls" document excerpt (14:37), the
+      "ChildLove Pride Flag reveal" graphic (14:44 — a previously-debunked
+      hoax image has circulated under this name, not confirmed this is
+      that image), and the stylized social-post overlay (14:39).
+- [ ] Cross-check the Dutch-sounding names against each other: "Leslie" +
+      "Markhijn" (Reel 2 mugshot card), "Ricardo Dewaal" (Reel 2 credits),
+      "Uittenbogaard" + "Norbert de Jonge" + "Lesley Lu[...]" (Reel 1 ID
+      card, 15:08). Same people spelled differently, overlapping, or
+      unrelated — not established. Also check any of them against a
+      documented prosecution.
+- [ ] Reverse image search on the children's faces in both reels — John's
+      direct-viewing assessment is that they read as AI-generated; this is
+      flagged, not confirmed, until run the way the earlier "najib" montage
+      was checked.
+- [ ] Redo the Canoa satellite check directly against Google Maps once
+      browser access is available — current pass used Yandex Maps (Airbus
+      DS imagery, 2017) as a fallback since Google's static-map endpoint
+      now refuses unauthenticated requests and no browser tool was
+      connected this session.
+
 ## Brazilian Senate testimony — "Canoa" thread (2026-09-14)
 
 `docs/senate_testimony_canoa_2026-09-14.md` — processed the May 2025
@@ -183,3 +252,64 @@ edit so far. Still sitting there, unused:
       real-word transcriptions needing no fix. `docs/backfire_non_
       dictionary_words_batch2_2026-09-13.md` has the next 50 by
       frequency queued up for review.
+
+## Open thread: "extra 200 kids" claim (2026-09-14, reopened)
+
+John recalls Ballard saying, in 2026, on-camera, roughly five separate
+times, that the actual/real number of children was 200 more than what
+"the film" portrayed. Checked existing project docs — this was already
+raised once before and dropped: `veritastimmy/docs/tb_session_summary_2026-08-31.md`
+notes "a separate, unverified 'extra 200 kids' claim was proposed
+mid-task and dropped — no source was ever provided, not included in the
+post." Still no source. Not pursuing via web search per standing
+no-solo-research rule — parked until John comes across one of the videos
+again himself and brings it here.
+
+## Wiki edit posted + fixed (2026-09-14, closing out)
+
+John posted the Hidden War / Sound of Freedom / Mel Gibson sentence
+himself, manually, on **`Sound of Freedom (film)`** (not `Tim Ballard` —
+he chose the film article as the better home). Final wording is his own
+("brands 'Hidden War' as 'Sound of Freedom II'"), not the more
+conservative phrasing I'd proposed — his call, not revisited further.
+
+One real bug in what I handed him: the `{{cite AV media}}` citation
+template was posted without `<ref></ref>` wrapper tags, so it rendered as
+literal text in the paragraph instead of collapsing into a footnote.
+Fixed live, citation-only, wording untouched, after a dry-run diff shown
+to John and his go-ahead — rev `1374941838`.
+
+Added a `--minor` flag to `veritastimmy/bin/wiki_replace_edit.py` to
+support this (didn't exist before — the script always posted as
+`notminor`). Committed and pushed to `dev`
+(`48bf746..1f6409e`). Nothing else in either repo's pile of uncommitted
+work was touched.
+
+## Deseret cluster — queued for wiki-edit review (2026-09-14)
+
+`docs/backfire_deseret_cluster_2026-09-14.md` — all 17 "Deseret" hits from
+the non-dictionary-word audit pulled with full sentence context and
+organized into 4 threads: Deseret News (the disputed-headline/deleted-
+references claims), "Deseret Enterprises" (name unconfirmed, needs a
+court-record check), Sheri Dew (name-correction ready, same pattern as
+Dick Andersen), and Deseret Book (a direct on-camera IP-return quote that
+fills in the previously-flagged, previously-unscoped truth-claims-
+inventory item). 10 screenshots pulled to
+`docs/assets/deseret_cluster_2026-09-14/`. Nothing posted yet — staged for
+review.
+
+- [x] **Sheri Dew name resolved and logged (2026-09-14).** Correct
+      spelling confirmed against her employer's own leadership page and
+      Wikipedia — "Sheri," not "Sherry," surname "Dew." Full-SRT search
+      (not just Deseret-adjacent passages) found a 4th garbled instance
+      the original keyword search missed (02:55:46, "take on Sherry,").
+      All four logged as entries 20-23 in `docs/srt_corrections.json`,
+      `confirmed_by` honestly marked as spelling-confirmed-via-source
+      rather than direct-listen, since no audio re-listen was done. Ready
+      for the next `apply_srt_corrections.py` batch run.
+- [ ] Still open from this cluster: the Deseret News disputed-headline
+      and deleted-references claims (checkable, not checked), and
+      "Deseret Enterprises" (name/entity unconfirmed, needs a
+      court-record check — hasn't been done, would need explicit
+      go-ahead first per the standing no-solo-research rule on
+      TB-litigation-adjacent topics).
