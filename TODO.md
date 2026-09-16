@@ -313,3 +313,99 @@ review.
       court-record check — hasn't been done, would need explicit
       go-ahead first per the standing no-solo-research rule on
       TB-litigation-adjacent topics).
+
+## Non-dictionary word audit — resumed 2026-09-15
+
+Picked back up the 211-word list (`docs/backfire_non_dictionary_words_2026-09-11.md`).
+Filtered the 197 not-yet-reviewed words down to multiplicity > 3 as the
+priority set — only 4 qualified: LDS, unrighteous, DNC, Lai. All four
+resolved this session (LDS/unrighteous confirmed correct as-is, no fix;
+DNC/BNC → D&C, 6 instances; Lai → lie, 4 instances — entries 27-36 in
+`docs/srt_corrections.json`). 22 of 211 word-forms now reviewed.
+
+Then dropped to the count=3 tier and reviewed the next five: docu (cosmetic
+split, no fix), dopamine (real word, dictionary-coverage false positive,
+no fix), Laman (real Book of Mormon name, no fix), Rennlin ("Elder
+Rennlin" — unidentified, needs John's ear or memory, not resolved), and
+**Bellard** — resolved via direct audio re-listen (cut and played back the
+clip at 00:14:35): "President Emmerlund Bellard" is actually **"President
+M. Russell Ballard"** — the real, late President of the Quorum of the
+Twelve Apostles, no relation to Tim Ballard despite the shared surname.
+Logged as entry 37, `confirmed_by` marked as direct audio re-listen (the
+strongest confirmation tier).
+
+- [ ] **Flagged claim, not yet written up**: Ballard calls M. Russell
+      Ballard "my best friend" in the same breath ("They also betrayed my
+      best friend, President M. Russell Ballard") — same pattern as the
+      Sheri Dew "we're friends, right?" claim. Worth its own note/doc if
+      this gets pursued further.
+- [x] **Other two "Bellard" instances resolved (2026-09-15).** John
+      confirmed both are the same M. Russell Ballard reference. Logged as
+      entries 38-39.
+- [x] **Rennlin resolved (2026-09-15): "Elder Renlund"** — Dale G.
+      Renlund, real member of the Quorum of the Twelve Apostles. Context
+      matches ("Elder Renlund," worked with him "on consulting and
+      charitable giving," met more than once). Logged as entries 40-42,
+      context-confirmed by John, not a direct audio re-listen.
+
+All 5 of this round's count=3 words closed out: docu (cosmetic, no fix),
+dopamine (real word, no fix), Laman (real Book of Mormon name, no fix),
+Bellard→Ballard (3 instances), Rennlin→Renlund (3 instances). 39/39→42/42
+corrections now applying cleanly. **26 of 211 word-forms reviewed.**
+
+Next five reviewed (2026-09-15): whistleblower, Bednar, Brunson, Spicer
+all confirmed correct as-transcribed (real words/real names, dictionary-
+coverage false positives). Matsin→**Matsen** (2 instances) and, in the
+same cue, Zwik→**Cwic** — entries 43-44. Also caught in passing: the
+second "Spicer" instance had "Shant" ahead of it instead of "Sean"
+(first instance was already correct) — fixed, entry 45. 45/45 corrections
+now applying cleanly. **29 of 211 word-forms reviewed.**
+
+Next five (2026-09-15, continued): jurisdictions and pedophile confirmed
+correct as-transcribed (no fix). Lafayr→**lawfare** (2 instances, entries
+46-47) — "these lawfare warriors," "I know how lawfare works." Baller→
+**Ballard** (entries 48/50) plus a third instance caught in passing,
+"baller's"→"Ballard's" (entry 49, a separate one-off token in the
+original 211-list, not part of the original "baller" 2x count). 50/50
+corrections now applying cleanly.
+
+Also recounted the running total properly — "Emmerlund," "Zwik," and
+"baller's" are each their own separate entries in the original 211-word
+list (not just sub-details of Bellard/Matsen/baller), so the true count
+was undercounted for a few rounds. **Correct total: 35 of 211
+word-forms reviewed** as of tonight.
+
+**Westre** (2x, "Derek Westre") — reviewed, not resolved. John doesn't
+recognize the name. Left as-is (no fix applied), flagged for a possible
+future re-listen or if the name surfaces again elsewhere.
+
+## Non-dictionary word audit — pacing plan (2026-09-15, session close)
+
+Frequency breakdown across the full 211-word list:
+
+| count | total words | status |
+|---|---|---|
+| 29,17,12,9,7,5 (one each) | 6 | done |
+| 4 | 2 | done |
+| 3 | 9 | done |
+| 2 | 40 | 9 done, Westre flagged/pending, **30 left** |
+| 1 | 154 | **not started** |
+
+Plan going forward: keep working the remaining 30 count=2 words the same
+way (5 at a time, full context, John confirms/redirects). Once those are
+done, the 154 singleton-occurrence words are a different scale of
+problem — going 5-at-a-time through all of them would take a long time
+for words that each only matter once. Proposed approach when we get
+there: skim in bigger batches and only stop on ones that look like real
+garbling, rather than reviewing all 154 individually one by one. Not
+started yet, no commitment either way — revisit when the count=2 tier is
+done.
+
+## Session close (2026-09-15)
+
+Committed tonight's SRT-correction work (backfire-tracking:
+TODO.md/srt_corrections.json; veritastimmy: corrected master SRT + diff).
+Everything else in both repos' uncommitted pile — older docs, the
+response-video build, the Deseret cluster, etc. — left untouched, per the
+standing no-blanket-commit rule. Pick back up at the count=2 tier
+(30 words left) next time this thread continues.
