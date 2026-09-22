@@ -196,4 +196,15 @@ Appended to as work happens, not written after the fact.
   Backfire video) to
   `veritastimmy/drafts/wiki_edit_es_backfire_excommunication_2026-09-22.md`,
   which had previously left this material out entirely while it was
-  still broken/unresolved. Neither language posted yet.
+  still broken/unresolved.
+- **Posted all three Spanish edits** to es.wikipedia.org "Timothy Ballard"
+  via JustinR1970/Norman, each dry-run-verified first: rev 175484977
+  (excommunication fact, extends the existing lead sentence, reusing the
+  article's own already-cited FOX 13 source rather than duplicating it —
+  corrected from the original draft, which wrongly targeted "Fundación
+  O.U.R" based on an earlier AI-summarized read instead of the raw
+  wikitext), rev 175484987 (new "Disputas posteriores a su excomunión
+  con la Iglesia" section), rev 175484998 (new "Backfire" section,
+  includes the Kevin Pearson/Kevin Hamilton "hit job" paragraph with its
+  own citation to the source video). English article's own fix still not
+  posted — deliberately held per John.

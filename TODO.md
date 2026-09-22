@@ -452,20 +452,19 @@ standing no-blanket-commit rule. Pick back up at the count=2 tier
 - [ ] **Audio-confirm "Kevin McCartney" (00:23:44) is Kevin McCarthy**
       (former U.S. Speaker of the House). Currently inferred from "the
       speaker of the House" context only.
-- [x] **Finalized** (not posted) the corrected English replacement sentence
-      — see `docs/backfire_kevin_name_munges_2026-09-22.md` for the exact
-      wikitext. **Per John: fix Spanish first, English later** — order
-      flipped from the original plan below.
-- [ ] **Post the Spanish wiki edit first** — es.wikipedia.org "Timothy
-      Ballard", now includes the corrected/translated Kevin Pearson/Kevin
-      Hamilton paragraph plus the excommunication and post-excommunication
-      dispute content — draft at
+- [x] **Finalized** the corrected English replacement sentence — see
+      `docs/backfire_kevin_name_munges_2026-09-22.md` for the exact
+      wikitext. **Per John: fix Spanish first, English later.**
+- [x] **Posted the Spanish wiki edit** — es.wikipedia.org "Timothy
+      Ballard", 2026-09-22, three edits via JustinR1970/Norman: rev
+      175484977 (excommunication fact), rev 175484987 (post-excommunication
+      Church dispute section), rev 175484998 (Backfire section incl. the
+      Kevin Pearson/Kevin Hamilton paragraph). Draft with full text:
       `veritastimmy/drafts/wiki_edit_es_backfire_excommunication_2026-09-22.md`.
-      Needs a dry-run + go-ahead before posting.
-- [ ] **Then post the corrected Backfire sentence to en.wikipedia.org "Tim
-      Ballard"**, replacing the current broken/conflated one in the
-      "Documentation of release date" subsection. Do this after the
-      Spanish edit above, not before.
+- [ ] **Post the corrected Backfire sentence to en.wikipedia.org "Tim
+      Ballard"** next, replacing the current broken/conflated one in the
+      "Documentation of release date" subsection. Not done yet — waiting
+      on a separate go-ahead per John.
 - [ ] Add "Kevin McCartney"/McCarthy to `docs/backfire_named_accusers_index.md`'s
       sibling doc if it ever turns out to connect to anything else in this
       project — currently believed to be a one-off, unrelated aside.
