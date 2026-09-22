@@ -208,3 +208,20 @@ Appended to as work happens, not written after the fact.
   includes the Kevin Pearson/Kevin Hamilton "hit job" paragraph with its
   own citation to the source video). English article's own fix still not
   posted — deliberately held per John.
+- **Portuguese gets a different, more cautious strategy per John: talk
+  page first, not a direct edit.** pt.wikipedia's "Tim Ballard" article
+  (same title as English, unlike Spanish's "Timothy Ballard") has the
+  same three gaps as Spanish did, plus one wrinkle: it already has a
+  section literally called "Outros trabalhos" ("Other work"), matching
+  English's actual section name, so Backfire slots in there directly —
+  no structural improvising needed like Spanish's "Acerca de su obra."
+  Drafted a talk-page proposal (not posted) at
+  `veritastimmy/drafts/wiki_talk_pt_backfire_excommunication_2026-09-22.md`
+  covering all three items with sources, to post to Discussão:Tim Ballard
+  (confirmed live: `Talk:` correctly aliases to `Discussão:` on pt.wiki)
+  via `wiki_page_edit.py --talk-message-file` and wait for comment before
+  touching the article. Reasons for the extra caution: two of the three
+  items are BLP-sensitive (Church discipline, the Kevin Pearson/Hamilton
+  "hit job" accusation), and pt.wikipedia previously required a web-UI
+  abuse-filter confirmation on a prior bot edit that the API path alone
+  couldn't complete (2026-09-11/12 session). Not posted yet.

@@ -465,6 +465,23 @@ standing no-blanket-commit rule. Pick back up at the count=2 tier
       Ballard"** next, replacing the current broken/conflated one in the
       "Documentation of release date" subsection. Not done yet — waiting
       on a separate go-ahead per John.
+
+## Portuguese wiki — talk-first strategy (2026-09-22)
+
+- [ ] Extract the talk-page message body into its own plain-text file
+      for `--talk-message-file` (draft currently only has it embedded in
+      the .md writeup).
+- [ ] Post the talk-page proposal to Discussão:Tim Ballard — draft at
+      `veritastimmy/drafts/wiki_talk_pt_backfire_excommunication_2026-09-22.md`.
+      Needs John's go-ahead. No `--dry-run` equivalent exists for
+      `wiki_page_edit.py`'s talk-message path, unlike `wiki_replace_edit.py`.
+- [ ] Wait for comment (how long — not decided) before doing the actual
+      article edits.
+- [ ] Once cleared, draft + dry-run + post the three Portuguese article
+      edits the same way the Spanish ones were done (excommunication
+      fact, post-excommunication dispute section, Backfire section under
+      the existing "Outros trabalhos"). Not drafted as article wikitext
+      yet — only the talk-page proposal text exists so far.
 - [ ] Add "Kevin McCartney"/McCarthy to `docs/backfire_named_accusers_index.md`'s
       sibling doc if it ever turns out to connect to anything else in this
       project — currently believed to be a one-off, unrelated aside.
