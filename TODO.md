@@ -307,6 +307,15 @@ review.
       `confirmed_by` honestly marked as spelling-confirmed-via-source
       rather than direct-listen, since no audio re-listen was done. Ready
       for the next `apply_srt_corrections.py` batch run.
+- [x] **Press inquiry email sent (2026-09-16).** To news@deseretnews.com,
+      CC news@ksl.com/tips@nytimes.com/themail@newyorker.com/info@ap.org/
+      news@eastidahonews.com. Signed Mahonri Moriancumr /
+      antmerrill66@gmail.com. Included a Drive link to the full corrected
+      transcript package (`backfire_srts_all_UPDATED.tar` — corrected
+      master SRT + `srt_corrections.json` + diff) and an explicit
+      not-sane-washing-it disclosure that only logged corrections were
+      applied, nothing else smoothed over. Draft at
+      `veritastimmy/drafts/email_deseret_news_sheri_dew_2026-09-14.md`.
 - [ ] Still open from this cluster: the Deseret News disputed-headline
       and deleted-references claims (checkable, not checked), and
       "Deseret Enterprises" (name/entity unconfirmed, needs a
@@ -401,6 +410,31 @@ garbling, rather than reviewing all 154 individually one by one. Not
 started yet, no commitment either way — revisit when the count=2 tier is
 done.
 
+## Wiki edits posted — Hidden War release date + double-booking (2026-09-16)
+
+- [x] **Done.** Three edits to `Sound of Freedom (film)`, same paragraph
+      as the existing "Sound of Freedom II" / Mel Gibson sentence:
+      1. rev 1375258051 — Ballard's stated Hidden War worldwide theatrical
+         release date (November 14, 2026) and Latin America promotion
+         plan, sourced to the Facebook video (1JxN5fQ1BH).
+      2. rev 1375258519 — Ballard's Europe promotion claim from the same
+         day, sourced to the Instagram video (DdRvwOXoAaP). Both
+         sentences sit in the same paragraph, neither editorializes —
+         the same-day double-booking (Latin America "for the next
+         several weeks" vs. "throughout Europe") is left for the reader
+         to notice, per John's call.
+      3. rev 1375259025 — added the exact date ("September 14, 2026")
+         directly after "Ballard stated" in both sentences, so the
+         same-day claim is explicit rather than relying on "the same
+         day" phrasing.
+      Drafts: `veritastimmy/drafts/wiki_edit_hidden_war_release_location_2026-09-16.md`,
+      `veritastimmy/drafts/wiki_edit_hidden_war_europe_2026-09-16.md`.
+- Screenshots from these videos were considered for the article and
+  ruled out — fails Wikipedia's non-free-content criteria (a cited
+  text quote does the same job a screenshot would; the image itself
+  isn't critical to understanding, which is the usual killer for this
+  kind of use). Not pursued further.
+
 ## Session close (2026-09-15)
 
 Committed tonight's SRT-correction work (backfire-tracking:
@@ -409,3 +443,25 @@ Everything else in both repos' uncommitted pile — older docs, the
 response-video build, the Deseret cluster, etc. — left untouched, per the
 standing no-blanket-commit rule. Pick back up at the count=2 tier
 (30 words left) next time this thread continues.
+
+## The "three Kevins" — fixing the broken English wiki sentence (2026-09-22)
+
+- [ ] **Audio-confirm "Kevin Pierce" (01:16:22) is Kevin Pearson.** Currently
+      inferred from context (direct-address register matches other Pearson
+      passages) — not verified by ear.
+- [ ] **Audio-confirm "Kevin McCartney" (00:23:44) is Kevin McCarthy**
+      (former U.S. Speaker of the House). Currently inferred from "the
+      speaker of the House" context only.
+- [ ] **Post the corrected Backfire sentence to en.wikipedia.org "Tim
+      Ballard"**, replacing the current broken/conflated one in the
+      "Documentation of release date" subsection. Proposed text and
+      rationale in `docs/backfire_kevin_name_munges_2026-09-22.md`. Needs
+      a dry-run + go-ahead before posting — not done yet.
+- [ ] **Post (or hold) the Spanish wiki edit** bringing es.wikipedia.org
+      "Timothy Ballard" in line with English on the excommunication,
+      post-excommunication dispute, and Backfire content — draft at
+      `veritastimmy/drafts/wiki_edit_es_backfire_excommunication_2026-09-22.md`.
+      Not posted.
+- [ ] Add "Kevin McCartney"/McCarthy to `docs/backfire_named_accusers_index.md`'s
+      sibling doc if it ever turns out to connect to anything else in this
+      project — currently believed to be a one-off, unrelated aside.

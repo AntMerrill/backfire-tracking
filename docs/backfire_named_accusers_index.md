@@ -75,6 +75,16 @@ role on operations) who turned into what he calls a liar/accuser.
   complaint. Needs a direct listen; the transcript as-is doesn't parse
   cleanly enough to summarize with confidence.
 
+## Cross-reference note (2026-09-22)
+
+Kevin Pearson / Kevin Hamilton (the excommunication "hit job" chain) and
+the unrelated "Kevin McCartney" [sic, likely Kevin McCarthy] political
+aside are **not** part of this doc's scope (named female accusers) — they
+live in `backfire_excommunication_blame_index.md` and the new
+`backfire_kevin_name_munges_2026-09-22.md`. Noted here only as a pointer,
+since this doc is the natural place someone would look for "the other
+named-person doc" in this project.
+
 ## Method note
 
 Same chronological-grep method as the blame index: joined each clip's

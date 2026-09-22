@@ -154,3 +154,34 @@ Appended to as work happens, not written after the fact.
   clean on the first try, but that article never had an allegations
   section to begin with — flagged as a structural gap for later.
 - Updated TODO.md with everything above plus what's still open.
+
+## 2026-09-22
+
+- Traced the broken, unattributed sentence at the end of en.wikipedia.org
+  "Tim Ballard"'s Backfire subsection ("...like the 'hit job he got from
+  his state president Kevin.") back to the corrected master transcript.
+  Found it conflates two separate things: Kevin Pearson (LDS Area
+  President) allegedly ordering Kevin Hamilton (a Genealogy Department
+  employee) to carry out the excommunication "hit job" — and a wholly
+  separate, unrelated aside naming "Kevin McCartney" [sic, almost
+  certainly Kevin McCarthy, former U.S. Speaker of the House] in a
+  political anecdote. Drafted a corrected, properly-attributed
+  replacement sentence for the English article (not yet posted).
+- New doc: `docs/backfire_kevin_name_munges_2026-09-22.md` (also in
+  veritastimmy) — full writeup of all three "Kevin"s, counts, timestamps,
+  and what's actually quotable.
+- Updated `docs/backfire_excommunication_blame_index.md` (also in
+  veritastimmy): resolved the previously-"unnamed" genealogy-department
+  person as Kevin Hamilton, added a new Kevin Hamilton section, added a
+  new Kevin McCartney/McCarthy section, logged the "Kevin Pierce" name
+  munge (probable mishearing of Pearson, not yet audio-confirmed).
+- Added a short cross-reference note (not substantive content — out of
+  that doc's scope) to `docs/backfire_named_accusers_index.md` (also in
+  veritastimmy) pointing to the blame index and the new Kevin doc.
+- Separately drafted the Spanish-language wiki edit bringing
+  es.wikipedia.org "Timothy Ballard" in line with the English article's
+  excommunication/post-excommunication/Backfire content:
+  `veritastimmy/drafts/wiki_edit_es_backfire_excommunication_2026-09-22.md`
+  (Spanish wikitext + English translation + edit summary, not posted).
+- Both audio-confirmations (Pierce=Pearson, McCartney=McCarthy) still
+  open — see TODO.md.

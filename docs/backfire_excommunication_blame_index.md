@@ -47,14 +47,56 @@ excommunication action.
 - 00:18:36 (clip_51) — "he was appalled at the workings of the area
   president, Kevin Pearson"
 - 02:41:56 (clip_541) — "The person who Kevin Pearson sent to order the
-  excuse[?]..."
+  excommunication... is a man named Kevin Hamilton" — **resolved
+  2026-09-22, per the corrected master transcript
+  (`corrections/youtube__pBo_2DYxfrY_master_corrected.srt`): the person
+  is named.** Supersedes the "Still to check" line below about the
+  genealogy-department person being unnamed — see the new Kevin
+  Hamilton entry below.
 - 02:42:40 (clip_547) — "he's the one that Kevin Pearson purportedly
   ordered to come do the hit job... working in the Genealogy Department"
   — implies the actual person who delivered/executed it was someone
-  low-level, possibly "plausible deniability" per Ballard.
-- 03:23:56 (clip_826) — "like Kevin Pearson for bad or Jack Jarard for
-  good" — contrast, worth another listen (Jarard framed positively, NOT
-  blamed — noting so we don't miscategorize him later)
+  low-level, possibly "plausible deniability" per Ballard. That person
+  is Kevin Hamilton — see below.
+- 03:23:56 (clip_826) — "like Kevin Pearson for bad or Jack Girard for
+  good" — contrast, worth another listen (Girard/Jarard spelling
+  inconsistent across passes — framed positively, NOT blamed, noting so
+  we don't miscategorize him later)
+- **Name munge found 2026-09-22**: 01:16:22 (direct address, "and that's
+  what you did Kevin Pierce. That's what you—") — same accusatory
+  register used toward Pearson elsewhere ("that's what you did"), almost
+  certainly Whisper mishearing "Pearson" as "Pierce." Not yet confirmed
+  by direct audio listen — treat as probable, not settled. See
+  `docs/backfire_kevin_name_munges_2026-09-22.md` for the full writeup.
+
+## Kevin Hamilton — genealogy department employee (LDS)
+
+**New entry, 2026-09-22.** Named by Ballard as the specific person Kevin
+Pearson allegedly ordered to carry out the excommunication action ("the
+hit job"), while working in the Church's Genealogy Department rather than
+the Area Authority — Ballard frames this as giving Pearson "plausible
+deniability."
+
+- 00:59:44 (clip ~) — "not to Kevin Hamilton's policy"
+- 02:41:57–02:44:11 — core passage: "The person who Kevin Pearson sent...
+  is a man named Kevin Hamilton... has Kevin Hamilton ever expressed his
+  opinions about this?... So Kevin Hamilton, he's the one that Kevin
+  Pearson purportedly ordered to come do the hit job... he's not exactly
+  in the area authority, he was working in the genealogy department"
+- 02:43:34 — "...wife in the congregation and Kevin [Hamilton, per
+  surrounding context] said he was really nice"
+
+## Kevin McCartney [sic] — almost certainly Kevin McCarthy, NOT related to the excommunication story
+
+**New entry, 2026-09-22, found while chasing the Pearson/Hamilton thread
+— unrelated topic, flagging here so it doesn't get miscategorized as a
+third excommunication figure.** 00:23:44 (clip ~): "that Kevin McCartney,
+the speaker of the House, had come to me and said, what can we—". "Speaker
+of the House" makes this near-certainly a Whisper mishearing of **Kevin
+McCarthy** (real-world former U.S. Speaker of the House) — a political
+anecdote, not a Church figure, and not connected to Pearson/Hamilton or
+the excommunication narrative at all. Not confirmed by direct audio
+listen. See `docs/backfire_kevin_name_munges_2026-09-22.md`.
 
 ## Matt Holland — PR Committee
 
@@ -140,9 +182,10 @@ the excommunication itself — more like a downstream target.
 
 - Have not yet grepped: Oaks (came back empty — worth trying alternate
   spellings), any other apostles/Twelve by name, "Bishop"/"bishopric"
-  references, named journalists beyond Deseret News/Sherry Dew, the
-  "genealogy department" person Kevin Pearson allegedly sent (unnamed so
-  far).
+  references, named journalists beyond Deseret News/Sherry Dew.
+- Direct-audio confirmation, not yet done (2026-09-22): "Kevin Pierce"
+  (01:16:22) really is Kevin Pearson, and "Kevin McCartney" (00:23:44)
+  really is Kevin McCarthy — both currently inferred from context only.
 - The 233 minute-chunk SRTs (`minute_chunks/`, currently generating in
   the background as of 2026-09-09) will give a second, differently-
   segmented pass at the same audio — worth a second grep once those
