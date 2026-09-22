@@ -78,12 +78,23 @@ it's gesturing at is really part of the "Subsequent episodes and status"
 material (fits the "Who Shot the First Bullet" episode description already
 there).
 
+**FINALIZED 2026-09-22, not yet posted to English wiki** (per John: fix
+English later, Spanish gets this content first — see
+`veritastimmy/drafts/wiki_edit_es_backfire_excommunication_2026-09-22.md`).
 Accurate, attributable replacement (ABOUTSELF — Ballard's own claim, not
-stated as fact, same standard as the rest of the Backfire section):
+stated as fact, same standard as the rest of the Backfire section), reusing
+the citation already defined in the article for this video (`ref name=":2"`):
 
-> Ballard further alleges that Kevin Pearson, an LDS area president, ordered
-> a Church employee, Kevin Hamilton, to carry out what Ballard calls "the hit
-> job" — the disciplinary action that led to his excommunication.
+> Separately in the video, Ballard alleges that Kevin Pearson, an LDS area
+> president, ordered a Church employee, Kevin Hamilton, to carry out what
+> Ballard calls "the hit job" leading to his excommunication.<ref name=":2" />
+
+Wikitext to substitute directly for the broken sentence in "Documentation of
+release date" (same location, straight swap, no restructuring):
+
+```
+Separately in the video, Ballard alleges that Kevin Pearson, an LDS area president, ordered a Church employee, Kevin Hamilton, to carry out what Ballard calls "the hit job" leading to his excommunication.<ref name=":2" />
+```
 
 This keeps a "Kevin" (per the ask — actually keeps both real ones relevant to
 this claim, Pearson and Hamilton) and is accurate to what's on tape, unlike

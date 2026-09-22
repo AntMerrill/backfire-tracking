@@ -452,16 +452,20 @@ standing no-blanket-commit rule. Pick back up at the count=2 tier
 - [ ] **Audio-confirm "Kevin McCartney" (00:23:44) is Kevin McCarthy**
       (former U.S. Speaker of the House). Currently inferred from "the
       speaker of the House" context only.
-- [ ] **Post the corrected Backfire sentence to en.wikipedia.org "Tim
-      Ballard"**, replacing the current broken/conflated one in the
-      "Documentation of release date" subsection. Proposed text and
-      rationale in `docs/backfire_kevin_name_munges_2026-09-22.md`. Needs
-      a dry-run + go-ahead before posting — not done yet.
-- [ ] **Post (or hold) the Spanish wiki edit** bringing es.wikipedia.org
-      "Timothy Ballard" in line with English on the excommunication,
-      post-excommunication dispute, and Backfire content — draft at
+- [x] **Finalized** (not posted) the corrected English replacement sentence
+      — see `docs/backfire_kevin_name_munges_2026-09-22.md` for the exact
+      wikitext. **Per John: fix Spanish first, English later** — order
+      flipped from the original plan below.
+- [ ] **Post the Spanish wiki edit first** — es.wikipedia.org "Timothy
+      Ballard", now includes the corrected/translated Kevin Pearson/Kevin
+      Hamilton paragraph plus the excommunication and post-excommunication
+      dispute content — draft at
       `veritastimmy/drafts/wiki_edit_es_backfire_excommunication_2026-09-22.md`.
-      Not posted.
+      Needs a dry-run + go-ahead before posting.
+- [ ] **Then post the corrected Backfire sentence to en.wikipedia.org "Tim
+      Ballard"**, replacing the current broken/conflated one in the
+      "Documentation of release date" subsection. Do this after the
+      Spanish edit above, not before.
 - [ ] Add "Kevin McCartney"/McCarthy to `docs/backfire_named_accusers_index.md`'s
       sibling doc if it ever turns out to connect to anything else in this
       project — currently believed to be a one-off, unrelated aside.

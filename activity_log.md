@@ -185,3 +185,15 @@ Appended to as work happens, not written after the fact.
   (Spanish wikitext + English translation + edit summary, not posted).
 - Both audio-confirmations (Pierce=Pearson, McCartney=McCarthy) still
   open — see TODO.md.
+- **Finalized** the corrected English replacement sentence (logged in
+  `docs/backfire_kevin_name_munges_2026-09-22.md`, also in veritastimmy):
+  "Separately in the video, Ballard alleges that Kevin Pearson, an LDS
+  area president, ordered a Church employee, Kevin Hamilton, to carry
+  out what Ballard calls 'the hit job' leading to his excommunication."
+  reusing the article's existing `ref name=":2"` citation. Per John:
+  **Spanish gets this content first, English gets fixed later** — added
+  the translated paragraph (with its own Spanish citation to the
+  Backfire video) to
+  `veritastimmy/drafts/wiki_edit_es_backfire_excommunication_2026-09-22.md`,
+  which had previously left this material out entirely while it was
+  still broken/unresolved. Neither language posted yet.
