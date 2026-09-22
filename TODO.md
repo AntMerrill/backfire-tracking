@@ -476,12 +476,13 @@ items dropped from this round, not rejected — just Backfire for now.
       untouched — see activity_log for the `wiki_page_edit.py` gap this
       sidestepped). Draft/body at
       `veritastimmy/drafts/wiki_talk_pt_backfire_excommunication_2026-09-22.md`.
-- [ ] Wait for comment (how long — not decided) before doing the actual
-      article edit.
-- [ ] Once cleared, draft + dry-run + post the Portuguese "Backfire"
-      section under the existing "Outros trabalhos" — the same way the
-      Spanish edits were done. Not drafted as article wikitext yet —
-      only the talk-page proposal text exists so far.
+- [x] Drafted + dry-ran the actual Portuguese "Backfire" article edit
+      (matches the talk proposal exactly). Dry-run clean.
+- [ ] **Not posted by the bot** — Claude Code's auto-mode permission
+      classifier blocked the real write ("External System Writes"),
+      unrelated to Wikipedia's own abuse filter. Handed to John via
+      `veritastimmy/drafts/wiki_edit_pt_backfire_2026-09-22_FOR_JOHN.md`
+      (in Geany) to post himself. Confirm once posted and log the rev.
 - [ ] Add "Kevin McCartney"/McCarthy to `docs/backfire_named_accusers_index.md`'s
       sibling doc if it ever turns out to connect to anything else in this
       project — currently believed to be a one-off, unrelated aside.

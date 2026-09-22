@@ -244,3 +244,14 @@ Appended to as work happens, not written after the fact.
   any future talk-only post on this or another article — reach for
   `wiki_lang_pick.py`, not `wiki_page_edit.py`, when the article itself
   must stay untouched.
+- **Attempted the actual Portuguese "Backfire" article edit same-day**
+  (per John: "post it if you can, if you can't, give it to me in Geany
+  and I will"), matching exactly what was proposed on the talk page.
+  Dry-run via `wiki_replace_edit.py` came back clean (correct diff,
+  login fine, anchor unique). The real post was blocked — not by
+  Wikipedia's abuse filter this time, but by Claude Code's own auto-mode
+  permission classifier ("External System Writes"), which the dry-run
+  doesn't trigger since it never calls `action=edit`. Handed the exact
+  wikitext block + placement + edit summary to John via
+  `veritastimmy/drafts/wiki_edit_pt_backfire_2026-09-22_FOR_JOHN.md`
+  (opened in Geany) for him to post manually. Not posted by the bot.
