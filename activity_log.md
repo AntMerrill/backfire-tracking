@@ -229,4 +229,18 @@ Appended to as work happens, not written after the fact.
   and post-excommunication-dispute items dropped from the Portuguese
   proposal (not rejected, just out of scope for this round) — the talk
   page proposal now covers just the new "Backfire" section. Draft file
-  updated in place.
+  updated in place, then shrunk further to just the two body paragraphs
+  (no heading/sign-off) at John's request.
+- **Posted.** rev 73035289, Discussão:Tim Ballard, via JustinR1970/Norman.
+  Article itself untouched — talk-only, waiting for comment before any
+  article edit. Caught a real tooling gap first: `wiki_page_edit.py
+  --talk-message-file` cannot post talk-only — it unconditionally
+  requires `--message`/`--message-file` and always edits the live
+  article too, even with `--append`. It errored out before touching
+  anything (asked for `--message`, nothing was sent). Used
+  `wiki_lang_pick.py --pick 7 --post-talk-file` instead (pick 7 = pt in
+  this article's langlinks), which is genuinely read-only on the article
+  side and only ever writes to the talk page. Worth keeping in mind for
+  any future talk-only post on this or another article — reach for
+  `wiki_lang_pick.py`, not `wiki_page_edit.py`, when the article itself
+  must stay untouched.

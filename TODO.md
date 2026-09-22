@@ -471,13 +471,11 @@ standing no-blanket-commit rule. Pick back up at the count=2 tier
 Scope pared down per John: excommunication-fact and post-excommunication-dispute
 items dropped from this round, not rejected — just Backfire for now.
 
-- [ ] Extract the talk-page message body into its own plain-text file
-      for `--talk-message-file` (draft currently only has it embedded in
-      the .md writeup).
-- [ ] Post the talk-page proposal to Discussão:Tim Ballard — draft at
+- [x] **Posted** talk-page proposal to Discussão:Tim Ballard, rev 73035289,
+      via `wiki_lang_pick.py --pick 7 --post-talk-file` (article itself
+      untouched — see activity_log for the `wiki_page_edit.py` gap this
+      sidestepped). Draft/body at
       `veritastimmy/drafts/wiki_talk_pt_backfire_excommunication_2026-09-22.md`.
-      Needs John's go-ahead. No `--dry-run` equivalent exists for
-      `wiki_page_edit.py`'s talk-message path, unlike `wiki_replace_edit.py`.
 - [ ] Wait for comment (how long — not decided) before doing the actual
       article edit.
 - [ ] Once cleared, draft + dry-run + post the Portuguese "Backfire"
