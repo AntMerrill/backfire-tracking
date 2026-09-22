@@ -225,3 +225,8 @@ Appended to as work happens, not written after the fact.
   "hit job" accusation), and pt.wikipedia previously required a web-UI
   abuse-filter confirmation on a prior bot edit that the API path alone
   couldn't complete (2026-09-11/12 session). Not posted yet.
+- **Pared down to Backfire only, per John.** The excommunication-fact
+  and post-excommunication-dispute items dropped from the Portuguese
+  proposal (not rejected, just out of scope for this round) — the talk
+  page proposal now covers just the new "Backfire" section. Draft file
+  updated in place.

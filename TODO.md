@@ -466,7 +466,10 @@ standing no-blanket-commit rule. Pick back up at the count=2 tier
       "Documentation of release date" subsection. Not done yet — waiting
       on a separate go-ahead per John.
 
-## Portuguese wiki — talk-first strategy (2026-09-22)
+## Portuguese wiki — talk-first strategy, Backfire only (2026-09-22)
+
+Scope pared down per John: excommunication-fact and post-excommunication-dispute
+items dropped from this round, not rejected — just Backfire for now.
 
 - [ ] Extract the talk-page message body into its own plain-text file
       for `--talk-message-file` (draft currently only has it embedded in
@@ -476,12 +479,11 @@ standing no-blanket-commit rule. Pick back up at the count=2 tier
       Needs John's go-ahead. No `--dry-run` equivalent exists for
       `wiki_page_edit.py`'s talk-message path, unlike `wiki_replace_edit.py`.
 - [ ] Wait for comment (how long — not decided) before doing the actual
-      article edits.
-- [ ] Once cleared, draft + dry-run + post the three Portuguese article
-      edits the same way the Spanish ones were done (excommunication
-      fact, post-excommunication dispute section, Backfire section under
-      the existing "Outros trabalhos"). Not drafted as article wikitext
-      yet — only the talk-page proposal text exists so far.
+      article edit.
+- [ ] Once cleared, draft + dry-run + post the Portuguese "Backfire"
+      section under the existing "Outros trabalhos" — the same way the
+      Spanish edits were done. Not drafted as article wikitext yet —
+      only the talk-page proposal text exists so far.
 - [ ] Add "Kevin McCartney"/McCarthy to `docs/backfire_named_accusers_index.md`'s
       sibling doc if it ever turns out to connect to anything else in this
       project — currently believed to be a one-off, unrelated aside.
