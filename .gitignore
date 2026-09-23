@@ -1,0 +1,3 @@
+
+# Claude Code per-machine permissions, not for the repo
+.claude/settings.local.json

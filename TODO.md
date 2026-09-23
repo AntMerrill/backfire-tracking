@@ -154,7 +154,7 @@ turned into a wiki edit, a doc, or resolved yet.
       Drafts saved at `veritastimmy/drafts/wikipedia/pt_lawsuits...` /
       `es_lawsuits_section.wikitext` for reference.
 - [x] Confirmed Wikipedia SUL (single unified login) — the same
-      `JustinR1970` bot-password credentials work across every
+      login credentials work across every
       language wiki, no separate registration needed.
 
 ## Open thread: Spanish article structure gap
@@ -456,7 +456,7 @@ standing no-blanket-commit rule. Pick back up at the count=2 tier
       `docs/backfire_kevin_name_munges_2026-09-22.md` for the exact
       wikitext. **Per John: fix Spanish first, English later.**
 - [x] **Posted the Spanish wiki edit** — es.wikipedia.org "Timothy
-      Ballard", 2026-09-22, three edits via JustinR1970/Norman: rev
+      Ballard", 2026-09-22, three edits: rev
       175484977 (excommunication fact), rev 175484987 (post-excommunication
       Church dispute section), rev 175484998 (Backfire section incl. the
       Kevin Pearson/Kevin Hamilton paragraph). Draft with full text:
@@ -478,7 +478,7 @@ items dropped from this round, not rejected — just Backfire for now.
       `veritastimmy/drafts/wiki_talk_pt_backfire_excommunication_2026-09-22.md`.
 - [x] Drafted + dry-ran the actual Portuguese "Backfire" article edit
       (matches the talk proposal exactly). Dry-run clean.
-- [ ] **Not posted by the bot** — Claude Code's auto-mode permission
+- [ ] **Not posted automatically** — Claude Code's auto-mode permission
       classifier blocked the real write ("External System Writes"),
       unrelated to Wikipedia's own abuse filter. Handed to John via
       `veritastimmy/drafts/wiki_edit_pt_backfire_2026-09-22_FOR_JOHN.md`
