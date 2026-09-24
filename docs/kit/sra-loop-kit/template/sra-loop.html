@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The SRA Loop</title>
+<meta name="description" content="How one story about a stake president moved between Tim Ballard, Jason Preston and Latter Day Chad in five days, and what's documented versus claimed. A reader's guide for Latter-day Saints.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The SRA Loop">
+<meta property="og:description" content="How one story about a stake president moved between Tim Ballard, Jason Preston and Latter Day Chad in five days, and what's documented versus claimed. A reader's guide for Latter-day Saints.">
+<meta property="og:url" content="{{BASE_URL}}sra-loop.html">
+<meta property="og:image" content="{{BASE_URL}}img/sra-loop-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The SRA Loop">
+<meta name="twitter:description" content="How one story about a stake president moved between Tim Ballard, Jason Preston and Latter Day Chad in five days, and what's documented versus claimed. A reader's guide for Latter-day Saints.">
+<meta name="twitter:image" content="{{BASE_URL}}img/sra-loop-card.png">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font-family:system-ui,sans-serif;font-size:14px}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700;1,7..72,400&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap">
+<style>
+:root{
+  --paper:#f3f4f6; --sheet:#ffffff; --ink:#1c2230; --muted:#5a6273; --rule:#d6d9e0;
+  --accent:#1f5a85; --claim:#9a3b2a; --claim-bg:#f7e9e5; --ok:#2e6a4d; --ok-bg:#e5f1ea;
+  --quote-bg:#eef1f6;
+  --serif:"Literata",Georgia,"Times New Roman",serif;
+  --label:"IBM Plex Sans Condensed","Arial Narrow",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --paper:#12151c; --sheet:#1a1f29; --ink:#e6e8ee; --muted:#a2a9b8; --rule:#2e3544;
+  --accent:#7fb4dc; --claim:#e39a88; --claim-bg:#3a2320; --ok:#8fcfae; --ok-bg:#1d3329; --quote-bg:#202837;
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#12151c; --sheet:#1a1f29; --ink:#e6e8ee; --muted:#a2a9b8; --rule:#2e3544;
+  --accent:#7fb4dc; --claim:#e39a88; --claim-bg:#3a2320; --ok:#8fcfae; --ok-bg:#1d3329; --quote-bg:#202837;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font:17px/1.62 var(--serif);padding-inline:16px;padding-block:32px 64px}
+main{max-width:760px;margin:0 auto;display:grid;gap:44px}
+.label{font:600 12px/1.2 var(--label);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+h1{font-size:clamp(34px,7vw,52px);line-height:1.05;margin:10px 0 14px;text-wrap:balance;letter-spacing:-.01em}
+h2{font-size:26px;line-height:1.2;margin:0 0 14px;text-wrap:balance}
+h3{font-size:19px;margin:0 0 4px}
+p{margin:0 0 14px;max-width:66ch}
+.lede{font-size:20px;color:var(--ink)}
+.dek{color:var(--muted);font-style:italic}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.note{background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:18px 20px}
+.note p:last-child{margin-bottom:0}
+/* timeline */
+.tl{list-style:none;margin:0;padding:0;display:grid;gap:0;border-left:2px solid var(--rule);margin-left:6px}
+.tl li{position:relative;padding:0 0 22px 22px}
+.tl li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--accent)}
+.tl .when{font:600 13px/1.3 var(--label);letter-spacing:.04em;color:var(--accent);font-variant-numeric:tabular-nums}
+.tl p{margin:2px 0 0}
+/* people */
+.people{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.person{background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:14px 16px}
+.person .h{font:600 13px/1.3 var(--label);color:var(--muted);letter-spacing:.03em;margin-bottom:6px}
+.person p{font-size:15px;line-height:1.5;margin:0}
+/* quotes */
+blockquote{margin:0;background:var(--quote-bg);border-radius:6px;padding:16px 20px}
+blockquote p{font-size:17px;margin:0 0 8px}
+blockquote cite{font:500 13px/1.3 var(--label);font-style:normal;color:var(--muted);letter-spacing:.02em}
+.quotes{display:grid;gap:12px}
+/* figures */
+.figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;align-items:start}
+.figs.two{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+figure{margin:0;background:var(--sheet);border:1px solid var(--rule);border-radius:6px;overflow:hidden}
+figure img{display:block;width:100%;height:auto}
+figcaption{font-size:14px;line-height:1.45;padding:10px 12px;color:var(--muted)}
+figcaption b{color:var(--ink);font-weight:600}
+/* status table */
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:10px 10px;border-bottom:1px solid var(--rule)}
+th{font:600 12px/1.2 var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.pill{display:inline-block;font:600 12px/1 var(--label);letter-spacing:.05em;text-transform:uppercase;padding:5px 8px;border-radius:999px;white-space:nowrap}
+.pill.ok{color:var(--ok);background:var(--ok-bg)}
+.pill.claim{color:var(--claim);background:var(--claim-bg)}
+.pill.open{color:var(--muted);background:var(--quote-bg)}
+.sources{font-size:14px;line-height:1.5;color:var(--muted);padding-left:18px}
+.sources li{margin-bottom:4px}
+.phone{font:600 16px/1.3 var(--label);letter-spacing:.03em;color:var(--ink);user-select:all}
+hr{border:0;border-top:1px solid var(--rule);margin:0}
+.doclist{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.doclist li{display:grid;gap:2px;padding:10px 0;border-bottom:1px solid var(--rule)}
+.doclist a{font-weight:600;text-decoration:none}
+.doclist a:hover{text-decoration:underline}
+.doclist span{font-size:15px;color:var(--muted);line-height:1.45}
+</style>
+
+</head><body>
+<main>
+<header>
+  <div class="label">A reader's guide for Latter-day Saints · September 2026 · <a href="fellow-travelers.html">Part 2: Fellow Travelers →</a></div>
+  <h1>The SRA Loop</h1>
+  <p class="lede">If your feed has told you that Church leaders are involved in satanic ritual abuse (SRA), that claim is coming from a small circle of online voices who quote, repost and promote one another. This page shows who they are, how one story moved between them last week, and what is actually documented.</p>
+  <p class="dek">Everything below comes from the speakers' own videos, captions and posts, quoted directly. A claim is labeled as a claim. Nothing here asks you to think less of anyone's faith. It asks you to look at where an accusation comes from before you accept it.</p>
+</header>
+
+<section>
+  <h2>The voices</h2>
+  <div class="people">
+    <div class="person"><div class="h">Tim Ballard · 503K Facebook followers</div><p>Former DHS agent, <i>Sound of Freedom</i> subject, excommunicated in 2023. Now promotes his series <i>Backfire</i> and reposts other people's accounts of Church discipline.</p></div>
+    <div class="person"><div class="h">Jason &amp; Alexia Preston · We Are The People Utah</div><p>Podcast hosts. Received a Church Security Department trespass letter dated February 9, 2026. Named by an SRA-focused Substack for their “Shadows of Power” series.</p></div>
+    <div class="person"><div class="h">Latter Day Chad · Instagram, Zion Media</div><p>Commentator who appears on the Zion Media channel, run with Shane Baldwin. Says his temple recommend was taken after he spoke about SRA. Publicly promoted by Ballard.</p></div>
+    <div class="person"><div class="h">The wider circle</div><p>An SRA Substack, <i>Investigations in Ritual Abuse</i>, lists Latter Day Chad, the Prestons, Brett Henry (“the Bearded Realtor”), Shaun Attwood and Jacob K. Johnson as having “taken the topic and run with it.” Candace Owens has since picked it up.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>How one story traveled in five days</h2>
+  <p>The story: that the Prestons' stake president was excommunicated for refusing to excommunicate them. Watch who says it, and who repeats whom.</p>
+  <ol class="tl">
+    <li><div class="when">About Sep 17–18</div><p>Ballard posts on Instagram that <b>another</b> stake president told him about it. This is second-hand. (As described by Latter Day Chad; we don't hold the original post.)</p></li>
+    <li><div class="when">Shortly after</div><p>Jason Preston <b>denies it</b> in the comments on Ballard's post, then checks and finds his stake president is “no longer a stake president,” but says he doesn't know whether he was excommunicated.</p></li>
+    <li><div class="when">Sep 19</div><p>Ballard posts a 3:01 Facebook reel. The voice isn't his: it's <b>Latter Day Chad</b> reacting to Preston's video and describing his own SRA-related discipline. Ballard's caption: “It's not a rumor about Preston's Stake President… Everybody please follow @LatterDayChad.” 27.7K views.</p></li>
+    <li><div class="when">Sep 21</div><p>We Are The People Utah posts a short episode. Now Preston says his stake president “was excommunicated himself.”</p></li>
+    <li><div class="when">Sep 21–22</div><p>Ballard posts a 2:53 Facebook reel that simply plays Preston's segment, captioned “This is pure EVIL!” 61.5K views, his most-watched video of the week.</p></li>
+    <li><div class="when">Sep 22</div><p>Latter Day Chad goes live on Zion Media, replays the same Preston segment, and ties it to SRA.</p></li>
+  </ol>
+  <p>From a second-hand report to “excommunicated” in about five days, carried by three accounts quoting each other. The only step that changed the facts is the one where “no longer a stake president” became “excommunicated.”</p>
+</section>
+
+<section>
+  <h2>In their own frames</h2>
+  <div class="figs">
+    <figure><img alt="Tim Ballard's 2:53 Facebook reel, showing Jason Preston on the We Are The People set" src="img/sra-loop_tb253.jpg"><figcaption><b>Ballard's 2:53 reel.</b> The speaker is Jason Preston, lifted from his own show.</figcaption></figure>
+    <figure><img alt="Tim Ballard's 3:01 Facebook reel, showing Latter Day Chad speaking to camera" src="img/sra-loop_tb301.jpg"><figcaption><b>Ballard's 3:01 reel.</b> The speaker is Latter Day Chad; the caption says to follow him.</figcaption></figure>
+    <figure><img alt="Latter Day Chad's own Instagram reel: 'Why are the leaders of the Church hanging out with…'" src="img/sra-loop_chad_reel.jpg"><figcaption><b>@latterdaychad, Sep 4.</b> The same speaker on his own account.</figcaption></figure>
+  </div>
+  <div class="figs two" style="margin-top:14px">
+    <figure><img alt="Zion Media livestream, Latter Day Chad at a desk" src="img/sra-loop_zion.jpg"><figcaption><b>Zion Media livestream, Sep 22.</b> Same speaker again, 77 minutes, replaying the Preston clip.</figcaption></figure>
+    <figure><img alt="Church Security Department letter dated February 9, 2026, shown on We Are The People Utah" src="img/sra-loop_watp.jpg"><figcaption><b>We Are The People Utah, Sep 21.</b> Preston shows his February 9 trespass letter on air: the one fully documented item in this story.</figcaption></figure>
+  </div>
+  <div class="figs two" style="margin-top:14px">
+    <figure><img alt="Instagram Collaborators sheet listing timballard89, latterdaychad, nauvoolegion, transcendental_mormon_mystic, mount_of_oliveslds and latterdayavenger" src="img/sra-loop_collab.jpg"><figcaption><b>Screenshot, April 12, 2026.</b> One Instagram post, six co-authors: Ballard and Latter Day Chad among them. The partnership predates last week's story.</figcaption></figure>
+    <figure><img alt="Brett Henry Facebook reel titled 'Ritual Abuse Utah — Documents only'" src="img/sra-loop_brett.jpg"><figcaption><b>Brett Henry, Salt Lake City.</b> “Ritual Ab*se in Utah. Documents only…” The on-screen caption at this moment reads “There's no evidence,” out of context, so we don't know how the sentence ends.</figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <h2>What each says about SRA</h2>
+  <div class="quotes">
+    <blockquote><p>“The Department of Justice released files publicly admitting that leaders of our world were engaging in this sort of SRA behavior… There are evil people who run our society. And if you don't believe that, then you don't believe in the Book of Mormon…”</p><cite>Latter Day Chad, Zion Media livestream, Sep 22</cite></blockquote>
+    <blockquote><p>“I don't know if it's going down to the extent that Jason Preston and his guests seem to talk about, but it's certainly going down 100%, and it is 100% being covered up. To what degree? I don't know.”</p><cite>Latter Day Chad, same stream</cite></blockquote>
+    <blockquote><p>“About a year ago after I first went on about SRA… my bishop and stake president were contacted by a lawyer who is also a member of the Seventy… as soon as we mentioned SRA, boom.”</p><cite>Latter Day Chad, in Ballard's 3:01 reel, Sep 19</cite></blockquote>
+    <blockquote><p>“…Latter Day Chad on Instagram, and Jacob K. Johnson of Rise to Liberty, as well as our old frenemy Jason Preston of We Are the People Utah, have all taken the topic and run with it.”</p><cite>Investigations in Ritual Abuse (Substack), Sep 15. Opening of the sentence omitted.</cite></blockquote>
+    <blockquote><p>“They have… blocked and/or covered up child sex abuse for well over a decade… Everybody please follow @LatterDayChad.”</p><cite>Tim Ballard, Facebook caption, Sep 19. His posts in this set don't say “SRA”; he promotes the people who do. In <i>Backfire</i> itself (11:13) he calls it a “strawman” that his case is about “making up lies about SRA.”</cite></blockquote>
+  </div>
+</section>
+
+<section>
+  <h2>Documented, claimed, unknown</h2>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Statement</th><th>Status</th><th>Basis</th></tr></thead>
+    <tbody>
+      <tr><td>The Prestons received a Church Security trespass letter</td><td><span class="pill ok">Documented</span></td><td>Letter dated Feb 9, 2026, shown on their own show</td></tr>
+      <tr><td>Ballard reposted Preston's and Chad's videos and told followers to follow Chad</td><td><span class="pill ok">Documented</span></td><td>Ballard's Facebook reels, Sep 19 and 21–22</td></tr>
+      <tr><td>Ballard and Latter Day Chad co-authored an Instagram post</td><td><span class="pill ok">Documented</span></td><td>Collaborators sheet, Apr 12, 2026</td></tr>
+      <tr><td>The Prestons' stake president was released</td><td><span class="pill claim">Claimed</span></td><td>Jason Preston, after checking; not independently confirmed</td></tr>
+      <tr><td>…and was excommunicated for refusing to excommunicate them</td><td><span class="pill claim">Claimed</span></td><td>Started second-hand with Ballard; Preston first denied it, then repeated it</td></tr>
+      <tr><td>A Seventy / Church lawyer pressured Chad's local leaders over SRA</td><td><span class="pill claim">Claimed</span></td><td>Latter Day Chad's own account only</td></tr>
+      <tr><td>Church leaders take part in or cover up satanic ritual abuse</td><td><span class="pill claim">Claimed</span></td><td>Asserted in these videos and posts; no evidence presented in any of them</td></tr>
+      <tr><td>These accounts coordinate with each other</td><td><span class="pill open">Unclear</span></td><td>They repost and promote each other; Chad says they “aren't really coordinating together, except for me and Shane a little bit”</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2>Checking <i>Backfire</i> itself</h2>
+  <p><i>Backfire: The Excommunication Story of Tim Ballard</i> is the video Ballard keeps pointing people to. It runs over three hours and is streaming on his YouTube channel. The <a href="https://github.com/AntMerrill/backfire-tracking">Backfire tracking repository</a> on GitHub is a working archive for it: a full timestamped transcript, the corrections made to it, and claim-by-claim checks of what the video says. Start here:</p>
+  <ul class="doclist">
+      <li><a href="https://github.com/AntMerrill/backfire-tracking/blob/main/docs/backfire_truth_claims_inventory_2026-09-11.md">Truth claims inventory</a><span>Every checkable factual claim Ballard makes in Backfire, in order.</span></li>
+      <li><a href="https://github.com/AntMerrill/backfire-tracking/blob/main/docs/backfire_state_president_deep_state_claims_2026-09-11.md">The stake president and “deep state”</a><span>What Backfire alleges about Ballard's own (unnamed) stake president, and each “deep state” reference.</span></li>
+      <li><a href="https://github.com/AntMerrill/backfire-tracking/blob/main/docs/backfire_excommunication_blame_index.md">Who gets blamed</a><span>Running index of who Ballard holds responsible for his excommunication.</span></li>
+      <li><a href="https://github.com/AntMerrill/backfire-tracking/blob/main/docs/backfire_elder_ballard_claims_2026-09-11.md">Claims about Elder Ballard</a><span>What the video says about M. Russell Ballard.</span></li>
+      <li><a href="https://github.com/AntMerrill/backfire-tracking/blob/main/docs/backfire_wikipedia_removal_claim_debunk_2026-09-11.md">The Wikipedia claim</a><span>“Wikipedia removed articles the same day”: checked against Wikipedia's public edit history.</span></li>
+      <li><a href="https://github.com/AntMerrill/backfire-tracking/blob/main/docs/backfire_argentina_claims_check_2026-09-12.md">The Argentina rescue story</a><span>The February 2025 rescue claim, checked.</span></li>
+      <li><a href="https://github.com/AntMerrill/backfire-tracking/blob/main/docs/backfire_minute_chunk_methodology_2026-09-09.md">How the transcript was made</a><span>Minute-by-minute transcription and boundary checks, so any quote can be traced to a timestamp.</span></li>
+      <li><a href="https://github.com/AntMerrill/backfire-tracking/blob/main/docs/backfire_srt_manual_corrections_2026-09-11.md">Transcript corrections</a><span>Where the machine transcript was wrong and what was fixed.</span></li>
+  </ul>
+</section>
+
+<section class="note">
+  <h2>Before you share</h2>
+  <p>Utah has been here before. In the late 1980s and early 1990s, SRA accusations spread across the United States, including in Utah. Law enforcement looked hard: the FBI's Kenneth Lanning reported in 1992 that investigators had not corroborated the organized satanic-cult abuse being described, and a multi-year Utah investigation in the 1990s likewise reported no physical evidence of it.</p>
+  <p>That history doesn't mean abuse isn't real. It is, and it deserves a real report to people who can act on it, not a repost. If a child may be in danger in Utah, call the DCFS child abuse hotline:</p>
+  <p class="phone">1-855-323-3237</p>
+  <p>Or dial 911 in an emergency. Outside Utah, contact your local police or child protective services.</p>
+</section>
+
+<hr>
+
+<section>
+  <div class="label" style="margin-bottom:10px">Sources</div>
+  <ul class="sources">
+    <li>Tim Ballard, Facebook reel 2:53: <a href="https://www.facebook.com/reel/1959541814741163/">facebook.com/reel/1959541814741163</a></li>
+    <li>Tim Ballard, Facebook reel 3:01: <a href="https://www.facebook.com/reel/2132062941003126/">facebook.com/reel/2132062941003126</a></li>
+    <li>We Are The People Utah (YouTube): <a href="https://www.youtube.com/watch?v=4hNRNZFOh1M">youtube.com/watch?v=4hNRNZFOh1M</a></li>
+    <li>Zion Media livestream (YouTube): <a href="https://www.youtube.com/watch?v=9r59wR_0MHk">youtube.com/watch?v=9r59wR_0MHk</a></li>
+    <li>Investigations in Ritual Abuse, “Candace Owens on David Leavitt,” Sep 15, 2026: 1830goel.substack.com</li>
+    <li>Instagram screenshots: @latterdaychad reel (Sep 4); Collaborators sheet (Apr 12); Brett Henry Facebook reel (Sep)</li>
+    <li>Backfire tracking repository: <a href="https://github.com/AntMerrill/backfire-tracking">github.com/AntMerrill/backfire-tracking</a></li>
+    <li>Quotes are from machine transcripts checked against the video; small wording errors are possible.</li>
+  </ul>
+</section>
+</main>
+
+</body></html>
