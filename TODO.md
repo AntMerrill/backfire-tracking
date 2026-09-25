@@ -504,3 +504,10 @@ items dropped from this round, not rejected — just Backfire for now.
   Waiting on John's own records. Don't hunt for them online.
 - Open: the PDF (09-24) still says "film" and has the old finding 4.
 - Open: the dl_wm pipeline runs transcription twice (extract_audio + captions).
+
+## DONE 2026-09-25: Deseret News package + Part 4
+- Deseret News emailed by John (from phone) with the Drive package of the four Sept 24–25 reels
+  plus findings (`~/Desktop/claude/2026-09-25/2026-09-25_tb_reels_package/`, sha256 of the tar.gz
+  9307a884…). Watch for a reply. Open: was the 09-16 Sheri Dew inquiry ever sent?
+- Part 4 "Same words, new pictures" is live (docs/same-words-new-pictures.html, og = card 1).
+  3 FB cards in `~/Desktop/claude/2026-09-25/`.
