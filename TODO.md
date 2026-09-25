@@ -486,3 +486,21 @@ items dropped from this round, not rejected — just Backfire for now.
 - [ ] Add "Kevin McCartney"/McCarthy to `docs/backfire_named_accusers_index.md`'s
       sibling doc if it ever turns out to connect to anything else in this
       project — currently believed to be a one-off, unrelated aside.
+
+## PINNED 2026-09-25: YouTube "Episode 1–8" vs the Sept 4 master
+
+- Sept 20, 2026 YouTube "Episode 1–8" uploads: downloaded + watermarked, faster-whisper SRTs
+  (`dl_wm/outputs/2026-09-24/youtube__<id>/`; manifest with checksums in
+  `~/Desktop/claude/2026-09-24/backfire_series_evidence/episodes_downloaded_MANIFEST.txt`).
+- Audio cross-correlation: the episodes are straight cuts of the Sept 4 master (pBo_2DYxfrY).
+  Same recording (NCC 0.96–1.00, fixed offset per episode), boundaries trimmed by hand, and
+  one internal edit (Ep 2 ~0:20, a 2.67 s pause shortened). Write-up:
+  `~/Desktop/claude/2026-09-25/2026-09-25_backfire_episodes_vs_master_audio.md`.
+- "state president" 51 (master, whisper) / 55 (episodes, faster-whisper); "stake" 0 in both.
+- Public page: https://antmerrill.github.io/backfire-tracking/series-for-a-reason.html
+  (Part 3). The talk-page comment on YouTube dates is drafted; the naming suggestion was
+  posted 04:02 UTC 09-25 in the older "state president" thread, from a temp account.
+- Open: the 2025 X-era Backfire episodes (culprits Mortensen/clients vs now "Kevins").
+  Waiting on John's own records. Don't hunt for them online.
+- Open: the PDF (09-24) still says "film" and has the old finding 4.
+- Open: the dl_wm pipeline runs transcription twice (extract_audio + captions).
