@@ -511,3 +511,11 @@ items dropped from this round, not rejected — just Backfire for now.
   9307a884…). Watch for a reply. Open: was the 09-16 Sheri Dew inquiry ever sent?
 - Part 4 "Same words, new pictures" is live (docs/same-words-new-pictures.html, og = card 1).
   3 FB cards in `~/Desktop/claude/2026-09-25/`.
+
+## 2026-09-25 (evening)
+- VIDEO_CATALOG.md/.csv added: Ballard's videos V001–V034, permanent V-numbers (see header).
+- Three new reels 09-25: V032 = Jason Preston's 09-24 video reposted ("Listen to Jason"); V033/V034 =
+  "BONUS episode" parts 1–2 (new material).
+- Ep 6 repost scenes 50→28 (V031, 2:34–4:37): stock-style imagery over "200 kids", "I saw the videos",
+  etc. Reverse image search on scenes 42, 44, 29, 41 not yet run.
+- LDS Living Feb 28, 2015 "former CIA" item captured + archived: docs/ldsliving_2015-02-28_ballard_former_cia.md
