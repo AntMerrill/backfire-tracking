@@ -1,4 +1,4 @@
-# Ballard video catalog (V-numbers)
+# TB Backfire Log (V-numbers)
 
 **V-numbers are permanent.** Each of Ballard's videos gets the next unused number when we catalog it.
 Numbers are never reused or renumbered. His own title is kept word for word as `title`: cite V-numbers, not his labels

@@ -513,7 +513,7 @@ items dropped from this round, not rejected — just Backfire for now.
   3 FB cards in `~/Desktop/claude/2026-09-25/`.
 
 ## 2026-09-25 (evening)
-- VIDEO_CATALOG.md/.csv added: Ballard's videos V001–V034, permanent V-numbers (see header).
+- TB_BACKFIRE_LOG.md/.csv added: Ballard's videos V001–V034, permanent V-numbers (see header).
 - Three new reels 09-25: V032 = Jason Preston's 09-24 video reposted ("Listen to Jason"); V033/V034 =
   "BONUS episode" parts 1–2 (new material).
 - Ep 6 repost scenes 50→28 (V031, 2:34–4:37): stock-style imagery over "200 kids", "I saw the videos",
