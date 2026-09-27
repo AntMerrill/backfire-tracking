@@ -1,0 +1,13 @@
+from,relation,to,at_from,at_to,note
+P006,cross_post_of,P005,,,"same video, same minute, FB + IG"
+V019,plays_audio_of,P007,,,"V019 note: plays Jason Preston's audio (4hNRNZFOh1M, 5:49)"
+V032,reposts,P010,,,"""Listen to Jason"" = Preston's 09-24 video"
+V042,cross_post_of,V032,,,IG copy
+V009,plays_audio_of,P011,,,Latter Day Chad's audio
+P008,same_claim_as,P005,,,stake president excommunicated for refusing to excommunicate Preston
+P009,responds_to,P005,,,asks whether the rumor is true (relation by title; not checked in audio)
+P010,same_claim_as,P005,,,
+P001,screened,hidden-war-promo,13:24–13:48,,"Hidden War promo ""Sound of Freedom II"" shown in the hearing (cited on en.wiki Sound of Freedom)"
+P003,promotes,hidden-war,,,
+IMG_1278,screenshot_of,P005,~0:10,,"our iPhone screenshot: ""our state president has been removed. Uh but I cannot"""
+facebook__14qaYWvbJs7,local_duplicate_of,V021,,,same video downloaded via share link 14qaYWvbJs7 (resolves to 1774065160384040)
