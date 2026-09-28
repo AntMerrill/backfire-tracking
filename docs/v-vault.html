@@ -1,0 +1,105 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Every Tim Ballard video in the TB Backfire Log, watermarked, transcribed, and ready to cite: one download, with checksums.">
+<meta property="og:type" content="article"><meta property="og:title" content="The V-Vault">
+<meta property="og:url" content="https://antmerrill.github.io/backfire-tracking/v-vault.html"><meta property="og:image" content="https://antmerrill.github.io/backfire-tracking/img/v-vault/card.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style>
+<title>The V-Vault</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700;1,7..72,400&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap">
+<style>
+:root{
+  --paper:#f3f4f6; --sheet:#ffffff; --ink:#1c2230; --muted:#5a6273; --rule:#d6d9e0;
+  --accent:#1f5a85; --claim:#9a3b2a; --claim-bg:#f7e9e5; --ok:#2e6a4d; --ok-bg:#e5f1ea;
+  --quote-bg:#eef1f6; --bar1:#2b3a52; --bar2:#c9a227; --bar2-ink:#1c1a10;
+  --serif:"Literata",Georgia,"Times New Roman",serif;
+  --label:"IBM Plex Sans Condensed","Arial Narrow",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --paper:#12151c; --sheet:#1a1f29; --ink:#e6e8ee; --muted:#a2a9b8; --rule:#2e3544;
+  --accent:#7fb4dc; --claim:#e39a88; --claim-bg:#3a2320; --ok:#8fcfae; --ok-bg:#1d3329; --quote-bg:#202837;
+  --bar1:#3b4d6b; --bar2:#e0b93a;
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#12151c; --sheet:#1a1f29; --ink:#e6e8ee; --muted:#a2a9b8; --rule:#2e3544;
+  --accent:#7fb4dc; --claim:#e39a88; --claim-bg:#3a2320; --ok:#8fcfae; --ok-bg:#1d3329; --quote-bg:#202837;
+  --bar1:#3b4d6b; --bar2:#e0b93a;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font:17px/1.62 var(--serif);padding-inline:16px;padding-block:32px 64px}
+main{max-width:760px;margin:0 auto;background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:clamp(20px,5vw,48px)}
+.eyebrow{font:600 13px var(--label);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+h1{font-size:clamp(30px,6vw,44px);line-height:1.12;margin:.2em 0 .3em;text-wrap:balance}
+h2{font-size:23px;line-height:1.25;margin:2em 0 .5em;text-wrap:balance}
+p,li{max-width:65ch}
+.dek{color:var(--muted);font-size:19px}
+.meta{font:500 14px var(--label);color:var(--muted);letter-spacing:.02em}
+a{color:var(--accent)}
+blockquote{margin:1.2em 0;padding:14px 18px;background:var(--claim-bg);border-left:4px solid var(--claim);font-size:18px}
+blockquote .src{display:block;margin-top:8px;font:500 14px var(--label);color:var(--muted)}
+.card{display:block;margin:1.5em auto;width:100%;max-width:min(460px,100%);border:1px solid var(--rule)}
+.bars{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;margin:1.4em 0}
+.bars .lab{font:600 14px var(--label);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.bar{display:flex;height:46px;border-radius:3px;overflow:hidden}
+.bar .one{background:var(--bar1);color:#fff;flex:1;min-width:0;display:flex;align-items:center;padding:6px 12px;font:600 15px/1.25 var(--label)}
+.bar:has(.one){height:auto;min-height:46px}
+.bar .seg{background:var(--bar2);color:var(--bar2-ink);display:flex;align-items:center;justify-content:center;font:600 14px var(--label);border-right:2px solid var(--sheet);overflow:hidden;white-space:nowrap}
+.bar .seg:last-child{border-right:0}
+.bars .note{font:500 14px var(--label);color:var(--muted);margin-top:6px}
+.tablewrap{overflow-x:auto;margin:1em 0}
+table{border-collapse:collapse;width:100%;font:500 14px var(--label);font-variant-numeric:tabular-nums}
+th,td{border-bottom:1px solid var(--rule);padding:7px 8px;text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600;letter-spacing:.04em;text-transform:uppercase;font-size:12px}
+td.num{text-align:right;white-space:nowrap} td.id{font-family:ui-monospace,monospace;font-size:12px;white-space:nowrap}
+tr.film td{font-weight:600}
+ol.findings{padding-left:1.2em;display:grid;gap:.6em}
+.fair{background:var(--ok-bg);border-left:4px solid var(--ok);padding:14px 18px;margin:1.5em 0}
+.fair h3{margin:0 0 .4em;font:600 15px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ok)}
+.fair p{margin:.5em 0}
+.stills{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:10px;margin:1em 0}
+figure{margin:0}
+figure img{display:block;width:100%;border:1px solid var(--rule)}
+figcaption{font:500 13px var(--label);color:var(--muted);margin-top:4px}
+.shot{margin:1.2em 0}
+footer{margin-top:2.5em;padding-top:1em;border-top:1px solid var(--rule);font:500 14px var(--label);color:var(--muted)}
+</style>
+<style>code,.mono{font-family:ui-monospace,monospace;font-size:13px;word-break:break-all} pre{white-space:pre-wrap;word-break:break-all;background:var(--quote-bg);padding:12px 14px;font-size:13px;border-radius:4px}</style>
+</head><body><main>
+<div class="eyebrow">Backfire · Primary sources</div>
+<h1>The V-Vault</h1>
+<p class="dek">Every Tim Ballard video in the TB Backfire Log, in one download: watermarked, transcribed, with his own titles word for word and a ready-made citation for each.</p>
+<p class="meta">Built 2026-09-27 · 49 videos · 53 V-numbers logged · 2.8 GB</p>
+
+<h2>Download</h2>
+<p><a href="https://drive.google.com/file/d/17O6vnR3poDdwY_brQVmUs7nCFRqn74bw/view?usp=sharing">Download the V-vault (Google Drive)</a></p>
+<p class="meta">File: <code>2026-09-27_TB_Backfire_Log_V001-V053.tar</code><br>SHA-256: <code>62160b567c0c6cfcf710a34f81d3d598c346ac4170fc9b825161a3f09b4080c8</code></p>
+
+<h2>What's inside</h2>
+<ul>
+<li><b>One folder per video</b>: the video (watermarked with the date and a running timestamp, nothing else changed), a machine transcript (.srt and .txt), public platform metadata, and a Wikipedia-ready citation.</li>
+<li><b>The log</b> (<code>TB_BACKFIRE_LOG.md</code> / <code>.csv</code>): every V-number, platform, post time (Mountain Time), length, and his own title or caption as written.</li>
+<li><b>All citations</b> in <code>CITES.txt</code>, indexed in <code>CITES.jsonl</code>.</li>
+<li><b>The P-vault</b>: other people's videos in the same story (metadata only), and how they link to his.</li>
+<li><b><code>SHA256SUMS</code></b> for every file.</li>
+</ul>
+
+<div class="fair"><h3>How to use it fairly</h3>
+<p>The transcripts are automatic. Before quoting him, play the video at the timestamp; the transcript is an index, not a quotation. His titles and on-screen captions are reproduced exactly as he published them, including his own misspellings.</p></div>
+
+<h2>Verify</h2>
+<pre>sha256sum 2026-09-27_TB_Backfire_Log_V001-V053.tar        # should print 62160b567c0c6cfcf710a34f81d3d598c346ac4170fc9b825161a3f09b4080c8
+tar -xf 2026-09-27_TB_Backfire_Log_V001-V053.tar
+cd 2026-09-27_TB_Backfire_Log_V001-V053 && sha256sum -c SHA256SUMS</pre>
+
+<h2>Example citation (V008)</h2>
+<pre>{{cite AV media |people=Ballard, Tim |title=Backfire: The Excommunication Story of Tim Ballard |medium=Online video |url=https://www.youtube.com/watch?v=pBo_2DYxfrY |date=September 4, 2026 |publisher=Official Tim Ballard (YouTube) |access-date=September 7, 2026}}</pre>
+
+<h2>The log</h2>
+<p class="meta">V-numbers are permanent. A re-upload, re-cut or cross-post gets its own number. ✓ = in the download; private = removed from public view by him.</p>
+<div class="tablewrap"><table><thead><tr><th>V</th><th>Platform</th><th>Posted (MT)</th><th>Length</th><th>His title</th><th>In pkg</th></tr></thead>
+<tbody><tr><td class="id">V001</td><td>YouTube</td><td class="num">2025-11-19</td><td class="num">?</td><td>EPISODE 1 : BACKFIRE: The Excommunication Story of Tim Ballard</td><td class="num">private</td></tr><tr><td class="id">V002</td><td>X</td><td class="num">2025-11-19 15:44</td><td class="num">10:44</td><td>EPISODE 1 : BACKFIRE: The Excommunication Story of Tim Ballard   See link-Tree for You-Tub…</td><td class="num">✓</td></tr><tr><td class="id">V003</td><td>X</td><td class="num">2025-11-30 20:29</td><td class="num">0:45</td><td>Backfire, Episode 2 drops Tomorrow  Don’t let the evil and cunning workings of man drive y…</td><td class="num">✓</td></tr><tr><td class="id">V004</td><td>YouTube</td><td class="num">2025-12-02</td><td class="num">?</td><td>EPISODE 2 :  BACKFIRE: The Excommunication Story of Tim Ballard</td><td class="num">private</td></tr><tr><td class="id">V005</td><td>X</td><td class="num">2025-12-06 10:15</td><td class="num">4:45</td><td>Backfire, Episode 3: The Kangaroo Court”, some have additional questions about the underco…</td><td class="num">✓</td></tr><tr><td class="id">V006</td><td>YouTube</td><td class="num">~2025-12</td><td class="num">?</td><td>Backfire Episode 3 (label on his link page)</td><td class="num">private</td></tr><tr><td class="id">V007</td><td>X</td><td class="num">2026-01-01 12:44</td><td class="num">0:22</td><td>✅Isaiah 28-29 ✅Isaiah 56 ✅Isaiah 65-66 ✅Ezekiel 34 ✅Psalms 35 ✅2 Neohi 28 ✅D&amp;C 101: 44-66 …</td><td class="num">✓</td></tr><tr><td class="id">V008</td><td>YouTube</td><td class="num">2026-09-04 17:59</td><td class="num">3:52:14</td><td>Backfire:  The Excommunication Story of Tim Ballard</td><td class="num">✓</td></tr><tr><td class="id">V009</td><td>Facebook</td><td class="num">2026-09-19 08:50</td><td class="num">3:01</td><td>It’s not a rumor about Preston’s Stake President. And they know it….and I’ll prove it very…</td><td class="num">✓</td></tr><tr><td class="id">V010</td><td>Facebook</td><td class="num">2026-09-20 19:35</td><td class="num">0:41</td><td>This was the most SELFLESS, COURAGEOUS, LOVING, BOLD, FAITHFUL, BRAVE….and just the overal…</td><td class="num">✓</td></tr><tr><td class="id">V011</td><td>YouTube</td><td class="num">2026-09-20 20:56</td><td class="num">25:06</td><td>BACKFIRE EPISODE 1: The Day of Atonement (spanish subs)</td><td class="num">✓</td></tr><tr><td class="id">V012</td><td>YouTube</td><td class="num">2026-09-20 20:57</td><td class="num">19:49</td><td>BACKFIRE EPISODE 2: Who Shot the First Bullet (Snapish Subs)</td><td class="num">✓</td></tr><tr><td class="id">V013</td><td>YouTube</td><td class="num">2026-09-20 21:01</td><td class="num">18:20</td><td>BACKFIRE EPISODE 3: The Kangaroo Court (Spanish Subs)</td><td class="num">✓</td></tr><tr><td class="id">V014</td><td>YouTube</td><td class="num">2026-09-20 21:05</td><td class="num">7:20</td><td>BACKFIRE EPISODE 4: The Aftermath (Spanish Subs)</td><td class="num">✓</td></tr><tr><td class="id">V015</td><td>YouTube</td><td class="num">2026-09-20 21:05</td><td class="num">2:04:44</td><td>BACKFIRE EPISODE 5: The Woe (Spanish Subs)</td><td class="num">✓</td></tr><tr><td class="id">V016</td><td>YouTube</td><td class="num">2026-09-20 21:07</td><td class="num">6:17</td><td>BACKFIRE EPISODE 6: The Cover-Up (Spanish Subs)</td><td class="num">✓</td></tr><tr><td class="id">V017</td><td>YouTube</td><td class="num">2026-09-20 21:07</td><td class="num">7:14</td><td>BACKFIRE EPISODE 7: The Hope (Spanish Subs)</td><td class="num">✓</td></tr><tr><td class="id">V018</td><td>YouTube</td><td class="num">2026-09-20 21:12</td><td class="num">23:24</td><td>BACKFIRE EPISODE 8: #Retract (Spanish subs)</td><td class="num">✓</td></tr><tr><td class="id">V019</td><td>Facebook</td><td class="num">2026-09-21 16:59</td><td class="num">2:52</td><td>This is pure EVIL! Destroying a man’s life! A stake president’s life…Destroying his family…</td><td class="num">✓</td></tr><tr><td class="id">V020</td><td>Facebook</td><td class="num">2026-09-22 14:02</td><td class="num">4:37</td><td>EVERYONE who was part of this truly EVIL ACT that is hurting children RIGHT NOW……please re…</td><td class="num">✓</td></tr><tr><td class="id">V021</td><td>Facebook</td><td class="num">2026-09-22 15:11</td><td class="num">8:07</td><td>Yes. They LIED about Elder Ballard and LIED about EVERYTHING else…. Three years later, the…</td><td class="num">✓</td></tr><tr><td class="id">V022</td><td>Facebook</td><td class="num">2026-09-22 16:20</td><td class="num">0:37</td><td>Watch Backfire: The Excommunication Story of Tim Ballard. Now streaming on my YouTube chan…</td><td class="num">✓</td></tr><tr><td class="id">V023</td><td>Facebook</td><td class="num">2026-09-22 16:39</td><td class="num">8:53</td><td>Unbelievably, they are still smearing me with a “porn fan-fiction” lie, and they are STILL…</td><td class="num">✓</td></tr><tr><td class="id">V024</td><td>Facebook</td><td class="num">2026-09-22 17:04</td><td class="num">1:44</td><td>We love you, Brazil. We are coming back soon to finish what we started. Jesus LOVES you! ✝…</td><td class="num">✓</td></tr><tr><td class="id">V025</td><td>Facebook</td><td class="num">2026-09-23 09:34</td><td class="num">3:49</td><td>🙏✝️🙏</td><td class="num">✓</td></tr><tr><td class="id">V026</td><td>Facebook</td><td class="num">2026-09-23 18:05</td><td class="num">2:18</td><td>The Church People vs. The Ballard Family: #1 Question Answered</td><td class="num">✓</td></tr><tr><td class="id">V027</td><td>Facebook</td><td class="num">2026-09-23 18:27</td><td class="num">3:44</td><td>Yesterday, I reposted a miracle story from Brazil. But the re-post didn’t tell the WHOLE m…</td><td class="num">✓</td></tr><tr><td class="id">V028</td><td>Facebook</td><td class="num">2026-09-24 19:44</td><td class="num">5:25</td><td>Clip from Backfire. Please watch the entire 8 episode series steaming on my YouTube channe…</td><td class="num">✓</td></tr><tr><td class="id">V029</td><td>Facebook</td><td class="num">2026-09-24 21:30</td><td class="num">3:11</td><td>Question: “Tim! Why are you JUDGING! JUDGMENT is GODS ALONE!” My Answer: (see video post)</td><td class="num">✓</td></tr><tr><td class="id">V030</td><td>Facebook</td><td class="num">2026-09-24 21:46</td><td class="num">2:28</td><td>From all my best friends who brought you Sound of Freedom. “Who you fear He is….He is.” #s…</td><td class="num">✓</td></tr><tr><td class="id">V031</td><td>Facebook</td><td class="num">2026-09-25 02:08</td><td class="num">6:16</td><td>Caption: This is Episode 6 of Backfire: “The Cover-Up.” You really need to watch all 8 epi…</td><td class="num">✓</td></tr><tr><td class="id">V032</td><td>Facebook</td><td class="num">2026-09-25 17:46</td><td class="num">12:47</td><td>Listen to Jason. Watch Backfire. Find the patterns. You don’t character-assassin someone u…</td><td class="num">✓</td></tr><tr><td class="id">V033</td><td>Facebook</td><td class="num">2026-09-25 17:55</td><td class="num">13:30</td><td>Part 1 of 2: BONUS episode to BACKFIRE. What does Isaiah say about BACKFIRE??</td><td class="num">✓</td></tr><tr><td class="id">V034</td><td>Facebook</td><td class="num">2026-09-25 20:17</td><td class="num">12:44</td><td>Part 2 of 2 BONUS episode to BACKFIRE. What does Isaiah say about BACKFIRE??</td><td class="num">✓</td></tr><tr><td class="id">V035</td><td>Facebook</td><td class="num">2026-09-25 21:23</td><td class="num">1:30</td><td>I touched on this theme in Backfire Episode 5: “The Woe,” while unmasking who the false sh…</td><td class="num">✓</td></tr><tr><td class="id">V036</td><td>Facebook</td><td class="num">2026-09-26 02:15</td><td class="num">14:00</td><td>This is a clip from Backfire, Episode 3: “The Kanagaroo Court”. It’s a doozy! 🫣</td><td class="num">✓</td></tr><tr><td class="id">V037</td><td>Instagram</td><td class="num">2026-09-22 22:59</td><td class="num">4:24</td><td>EVERYONE who was part of this truly EVIL ACT that is hurting children RIGHT NOW……please re…</td><td class="num">✓</td></tr><tr><td class="id">V038</td><td>Instagram</td><td class="num">2026-09-24 19:44</td><td class="num">5:25</td><td>Clip from Backfire. Please watch the entire 8 episode series streamed no on my YouTube cha…</td><td class="num">✓</td></tr><tr><td class="id">V039</td><td>Instagram</td><td class="num">2026-09-24 21:30</td><td class="num">3:11</td><td>Question: “Tim! Why are you JUDGING! JUDGMENT is GODS ALONE!” My Answer: (see video post)</td><td class="num">✓</td></tr><tr><td class="id">V040</td><td>Instagram</td><td class="num">2026-09-24 21:46</td><td class="num">2:28</td><td>From all my best friends who brought you Sound of Freedom. “Who you fear He is….He is.” #s…</td><td class="num">✓</td></tr><tr><td class="id">V041</td><td>Instagram</td><td class="num">2026-09-25 02:08</td><td class="num">6:16</td><td>This is Episode 6 of Backfire: “The Cover-Up.” You really need to watch all 8 episodes for…</td><td class="num">✓</td></tr><tr><td class="id">V042</td><td>Instagram</td><td class="num">2026-09-25 17:46</td><td class="num">12:47</td><td>Listen to Jason. Watch Backfire. Find the patterns. You don’t character-assassin someone u…</td><td class="num">✓</td></tr><tr><td class="id">V043</td><td>Instagram</td><td class="num">2026-09-25 17:55</td><td class="num">13:30</td><td>Part 1 of 2: BONUS episode to BACKFIRE. What does Isaiah say about BACKFIRE??</td><td class="num">✓</td></tr><tr><td class="id">V044</td><td>Instagram</td><td class="num">2026-09-25 20:17</td><td class="num">12:44</td><td>Part 2 of 2 BONUS episode to BACKFIRE. What does Isaiah say about BACKFIRE??</td><td class="num">✓</td></tr><tr><td class="id">V045</td><td>Instagram</td><td class="num">2026-09-25 21:23</td><td class="num">1:30</td><td>I touched on this theme in Backfire Episode 5: “The Woe,” while unmasking who the false sh…</td><td class="num">✓</td></tr><tr><td class="id">V046</td><td>Instagram</td><td class="num">2026-09-26 02:15</td><td class="num">14:00</td><td>This is a clip from Backfire, Episode 3: “The Kanagaroo Court”. It’s a doozy! 🫣</td><td class="num">✓</td></tr><tr><td class="id">V047</td><td>Instagram</td><td class="num">2026-09-24 14:26</td><td class="num">0:28</td><td>Not to make light of a VERY serious situation…..but (as I’ve learned on dark operations), …</td><td class="num">✓</td></tr><tr><td class="id">V048</td><td>Instagram</td><td class="num">≤ 2026-09-25 08:38 (seen)</td><td class="num">?</td><td>Unbelievably, they are still smearing me with…</td><td class="num">—</td></tr><tr><td class="id">V049</td><td>Instagram</td><td class="num">2026-05-29 22:31</td><td class="num">13:12</td><td>Hidden War: Post-screening remarks in São Paolo. #godschildrenarenotforsale #brazil #sound…</td><td class="num">✓</td></tr><tr><td class="id">V050</td><td>YouTube</td><td class="num">2026-07-27 14:16</td><td class="num">13:56</td><td>UK Hidden War speech…if we don’t learn from History we are doomed to repeat it!</td><td class="num">✓</td></tr><tr><td class="id">V051</td><td>Instagram</td><td class="num">2026-09-14 12:26</td><td class="num">11:28</td><td>🚨🚨New Warning from London 🇬🇧🚨🚨 ✅Listen carefully as I update you on the Gang Rape Report ✅…</td><td class="num">✓</td></tr><tr><td class="id">V052</td><td>Facebook</td><td class="num">2026-09-14 14:12</td><td class="num">7:47</td><td>Thank you, Troy Ables, for being one of the very few LDS podcasters to live your Matthew-1…</td><td class="num">✓</td></tr><tr><td class="id">V053</td><td>Facebook</td><td class="num">2026-09-18 08:49</td><td class="num">6:30</td><td>This is the final scene of Backfire: The Excommunication Story of Tim Ballard. The entire …</td><td class="num">✓</td></tr></tbody></table></div>
+
+<footer><a href="index.html">Backfire tracking home</a> · <a href="sra-loop-guide.html">The SRA Loop: reader's guide</a></footer>
+</main></body></html>
