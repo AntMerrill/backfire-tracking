@@ -1,0 +1,204 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Tim Ballard's Sept 27, 2026 Isaiah reading, his words verbatim beside the King James text, with frames from his video.">
+<meta property="og:type" content="article"><meta property="og:title" content="Isaiah, According to Tim">
+<meta property="og:description" content="His words, verbatim, beside the King James text. Ten claims, with frames from his video.">
+<meta property="og:url" content="https://antmerrill.github.io/backfire-tracking/isaiah-according-to-tim.html"><meta property="og:image" content="https://antmerrill.github.io/backfire-tracking/img/isaiah/card.png">
+<meta property="og:image:width" content="1080"><meta property="og:image:height" content="1080"><meta name="twitter:card" content="summary_large_image">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style>
+<title>Isaiah, According to Tim</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Sans+Condensed:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a single reading column; each claim is a two-panel ledger, "his words" beside "the verse", with his own frames underneath */
+:root{
+  --bg:#eef0f3; --paper:#ffffff; --ink:#15181d; --muted:#5a616c; --rule:#d3d8e0;
+  --his:#b3261e; --his-bg:#fbeeed; --kjv:#1f4e8c; --kjv-bg:#edf2fa;
+  --f-display:"IBM Plex Sans Condensed","Arial Narrow",Arial,sans-serif;
+  --f-verse:"Spectral",Georgia,"Times New Roman",serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12151a; --paper:#1b1f26; --ink:#e8eaee; --muted:#9aa2ae; --rule:#2e343e;
+  --his:#f08a82; --his-bg:#2c1b1b; --kjv:#8fb4ea; --kjv-bg:#18222f; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12151a; --paper:#1b1f26; --ink:#e8eaee; --muted:#9aa2ae; --rule:#2e343e;
+  --his:#f08a82; --his-bg:#2c1b1b; --kjv:#8fb4ea; --kjv-bg:#18222f; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-display);font-size:16px;line-height:1.5}
+.wrap{max-width:860px;margin:0 auto;padding-inline:16px;padding-block:32px 64px;display:flex;flex-direction:column;gap:28px}
+header{display:flex;flex-direction:column;gap:10px}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{font-size:clamp(34px,7vw,58px);line-height:1.02;margin:0;font-weight:700;letter-spacing:-.01em;text-wrap:balance}
+h1 em{font-family:var(--f-verse);font-style:italic;font-weight:400;color:var(--kjv)}
+.lede{font-size:18px;max-width:62ch;margin:0}
+.src{font-family:var(--f-mono);font-size:12.5px;color:var(--muted);display:flex;flex-direction:column;gap:2px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{width:12px;height:12px;border-radius:2px;display:inline-block}
+.sw.h{background:var(--his)} .sw.k{background:var(--kjv)}
+.claim{background:var(--paper);border:1px solid var(--rule);border-radius:6px;padding:20px;display:flex;flex-direction:column;gap:14px}
+.claim h2{margin:0;font-size:22px;line-height:1.2;text-wrap:balance;display:flex;gap:12px;align-items:baseline}
+.claim h2 .n{font-family:var(--f-mono);font-size:13px;color:var(--muted);font-weight:400}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:640px){.pair{grid-template-columns:1fr}}
+.side{min-width:0;border-radius:4px;padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+.side.h{background:var(--his-bg);border-top:3px solid var(--his)}
+.side.k{background:var(--kjv-bg);border-top:3px solid var(--kjv)}
+.lab{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase}
+.side.h .lab{color:var(--his)} .side.k .lab{color:var(--kjv)}
+.side.h q{font-size:16.5px}
+.side.k q{font-family:var(--f-verse);font-size:17px}
+q{quotes:"\201C" "\201D";display:block}
+q b{font-weight:700}
+.side.h q b{color:var(--his)} .side.k q b{color:var(--kjv)}
+.t{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+.note{margin:0;font-size:15.5px;max-width:70ch}
+.shots{display:flex;flex-wrap:wrap;gap:8px}
+.shots img{width:calc(50% - 4px);max-width:300px;height:auto;border-radius:3px;border:1px solid var(--rule)}
+@media (max-width:480px){.shots img{width:100%;max-width:100%}}
+.kicker{font-family:var(--f-verse);font-size:19px;font-style:italic;max-width:60ch;margin:0}
+footer{font-family:var(--f-mono);font-size:12.5px;color:var(--muted);display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--rule);padding-top:16px}
+</style>
+
+</head><body>
+<div class="wrap">
+<header>
+  <div class="eyebrow">Posted Sept 27, 2026 · Facebook + Instagram · two parts, 33 minutes</div>
+  <h1>Isaiah, <em>according to Tim</em></h1>
+  <p class="lede">Tim Ballard posted a two-part reading from his "forthcoming book," billed as a "follow up here to Backfire." It is mostly Isaiah. Here is what he said Isaiah says, next to what Isaiah says.</p>
+  <div class="legend"><span><i class="sw h"></i>His words, verbatim, uncorrected</span><span><i class="sw k"></i>King James Version</span></div>
+  <div class="src">
+    <span>Part 1 (18:27): FB reel 1095543463259338 · IG DdzGy-BRYCB</span>
+    <span>Part 2 (14:39): FB reel 1780781966406309 · IG DdzMj_MooQb</span>
+    <span>Timestamps are his video's; each frame shows his own caption.</span>
+  </div>
+</header>
+
+<section class="claim">
+  <h2><span class="n">01</span>Isaiah 24:5, with an extra phrase</h2>
+  <div class="pair">
+    <div class="side h"><div class="lab">He says · Part 1, 15:07</div>
+      <q>Quote, the earth also is defiled under the inhabitants thereof <b>because the Gentile covenant leaders, because they or the Gentile covenant leaders</b> have transgressed the laws, changed the ordinances, broken the everlasting covenant</q></div>
+    <div class="side k"><div class="lab">Isaiah 24:5</div>
+      <q>The earth also is defiled under the inhabitants thereof; because <b>they</b> have transgressed the laws, changed the ordinance, broken the everlasting covenant.</q></div>
+  </div>
+  <p class="note">"Gentile covenant leaders" appears in Isaiah zero times.</p>
+  <div class="shots"><img src="img/isaiah/P1_00-15-07.5_isa24_5_gentile_leaders.jpg" alt="Part 1 at 15:07, caption: the earth also is defiled under the inhabitants thereof"></div>
+</section>
+
+<section class="claim">
+  <h2><span class="n">02</span>Isaiah 59, with a plug</h2>
+  <div class="pair">
+    <div class="side h"><div class="lab">He says · Part 2, 12:06</div>
+      <q>Your lips have spoken lies. <b>I'll say that again.</b> Your lips have spoken lies. <b>Watch backfire.</b> Your tongue have muttered perversionist. Isaiah 59, 13</q></div>
+    <div class="side k"><div class="lab">Isaiah 59:3</div>
+      <q>your lips have spoken lies, your tongue hath muttered perverseness.</q></div>
+  </div>
+  <p class="note">The line is verse 3, not 13. It does not mention Backfire.</p>
+  <div class="shots"><img src="img/isaiah/P2_00-12-06.5_say_that_again_watch_backfire.jpg" alt="Part 2 at 12:06, caption: I'll say that again, your lips have spoken lies"></div>
+</section>
+
+<section class="claim">
+  <h2><span class="n">03</span>Isaiah 6 and the 1%</h2>
+  <div class="pair">
+    <div class="side h"><div class="lab">He says · Part 2, 13:38</div>
+      <q>Isaiah 6 indicates that at first <b>only 1%</b>, and then maybe up to <b>10 % of the entire world population</b></q></div>
+    <div class="side k"><div class="lab">Isaiah 6:13</div>
+      <q>But yet in it shall be <b>a tenth</b>, and it shall return, and shall be eaten</q></div>
+  </div>
+  <p class="note">A tenth, of the land. No 1%, no world population.</p>
+  <div class="shots"><img src="img/isaiah/P2_00-13-38.5_isa6_one_percent.jpg" alt="Part 2 at 13:38, caption: and then maybe up to 10% of the entire world population"></div>
+</section>
+
+<section class="claim">
+  <h2><span class="n">04</span>"66 books"</h2>
+  <div class="pair">
+    <div class="side h"><div class="lab">He says · Part 2, 1:39 · 6:57 · 9:24</div>
+      <q>at the end of his book <b>chapter 57 of 66 books</b></q>
+      <q>and in the <b>two final books, Isaiah chapter 65 and 66</b></q>
+      <q>After hammering the indicted <b>over the course of 66 books</b>, the Lord offers his final arguments and final verdict in the <b>last two books, chapters 65 and 66</b>.</q></div>
+    <div class="side k"><div class="lab">The count</div>
+      <q>Isaiah: <b>one book, 66 chapters</b>. The King James Bible: 66 books.</q></div>
+  </div>
+  <p class="note">The number is right twice over. He puts it on the wrong thing.</p>
+  <div class="shots"><img src="img/isaiah/P2_00-01-39.5_66_books_1.jpg" alt="Part 2 at 1:39, caption: at the end of his book chapter 57 of 66 books"><img src="img/isaiah/P2_00-09-24.5_66_books_3_course_of.jpg" alt="Part 2 at 9:24, caption: over the course of 66 books"></div>
+</section>
+
+<section class="claim">
+  <h2><span class="n">05</span>Isaiah 1:29 and "abuse under the sacred trees"</h2>
+  <div class="pair">
+    <div class="side h"><div class="lab">He says · Part 2, 8:36</div>
+      <q>And finally, cultic practices and <b>abuse under the sacred trees. Isaiah 1, 29.</b></q></div>
+    <div class="side k"><div class="lab">Isaiah 1:29</div>
+      <q>For they shall be ashamed of the <b>oaks</b> which ye have desired, and ye shall be confounded for the <b>gardens</b> that ye have chosen.</q></div>
+  </div>
+  <p class="note">Oaks and gardens. No abuse.</p>
+  <div class="shots"><img src="img/isaiah/P2_00-08-36.8_isa1_29_abuse_sacred_trees.jpg" alt="Part 2 at 8:36, caption: cultic practices and abuse under the sacred trees"><img src="img/isaiah/P1_00-18-24.5_isa1_29_parks.jpg" alt="Part 1 at 18:24, his Isaiah 1:29 verse card on screen"></div>
+</section>
+
+<section class="claim">
+  <h2><span class="n">06</span>Isaiah 57:5 and "the Gentile leaders"</h2>
+  <div class="pair">
+    <div class="side h"><div class="lab">He says · Part 1, 16:25</div>
+      <q><b>According to Isaiah, the Gentile leaders</b> will be inflaming themselves with idols under every green tree, slaying the children in the valleys under the clefs of the rocks, Isaiah 57.5.</q></div>
+    <div class="side k"><div class="lab">Isaiah 57:3, 5</div>
+      <q>But draw near hither, <b>ye sons of the sorceress</b>, the seed of the adulterer and the whore… Enflaming yourselves with idols under every green tree, slaying the children in the valleys under the clifts of the rocks?</q></div>
+  </div>
+  <p class="note">"Gentile" appears in Isaiah 57 zero times. A few minutes later, at the start of Part 2, he says so himself:</p>
+  <div class="side h"><div class="lab">He says · Part 2, 1:02</div>
+    <q>These prophecies <b>don't necessarily declare</b> that the Gentile leaders and or elites will themselves directly abuse these children, rather the suggestion may be…</q></div>
+  <div class="shots"><img src="img/isaiah/P1_00-16-25.0_isa57_5_gentile_leaders.jpg" alt="Part 1 at 16:25, caption: inflaming themselves with idols"><img src="img/isaiah/P2_00-01-02.5_dont_necessarily_declare.jpg" alt="Part 2 at 1:02, caption: don't necessarily declare that the Gentile leaders"></div>
+</section>
+
+<section class="claim">
+  <h2><span class="n">07</span>Isaiah 58:5, with a line from Matthew</h2>
+  <div class="pair">
+    <div class="side h"><div class="lab">He says · Part 1, 14:00</div>
+      <q>Instead, quote, they spread sackcloth and ashes under themselves <b>to be seen of men</b></q></div>
+    <div class="side k"><div class="lab">Isaiah 58:5 · Matthew 6:5</div>
+      <q>to spread sackcloth and ashes under him? wilt thou call this a fast… (Isaiah 58:5)</q>
+      <q>…that they may be <b>seen of men</b>. (Matthew 6:5)</q></div>
+  </div>
+  <p class="note">"Seen of men" is from the Sermon on the Mount.</p>
+  <div class="shots"><img src="img/isaiah/P1_00-14-00.5_sackcloth_seen_of_men.jpg" alt="Part 1 at 14:00, caption: they spread sackcloth and ashes under themselves"></div>
+</section>
+
+<section class="claim">
+  <h2><span class="n">08</span>"Joel chapter 1"</h2>
+  <div class="pair">
+    <div class="side h"><div class="lab">He says · Part 2, 4:17</div>
+      <q><b>In Joel chapter 1</b> he sets the final judgment, the scene saying quote, for behold in those days and in that time when I shall bring again the captivity of Judah and Jerusalem…</q></div>
+    <div class="side k"><div class="lab">Joel 1:1–2 · Joel 3:1</div>
+      <q>The word of the LORD that came to Joel the son of Pethuel. Hear this, ye old men… (Joel 1)</q>
+      <q>For, behold, in those days, and in that time, when I shall bring again the captivity of Judah and Jerusalem… (<b>Joel 3</b>)</q></div>
+  </div>
+  <div class="shots"><img src="img/isaiah/P2_00-04-17.0_joel_chapter_1.jpg" alt="Part 2 at 4:17, caption: in Joel chapter 1"></div>
+</section>
+
+<section class="claim">
+  <h2><span class="n">09</span>"I'm just going to read it straight through"</h2>
+  <div class="side h"><div class="lab">He says · Part 1, 3:32 · 5:59 · 7:34</div>
+    <q>I don't like scripts. I like to talk and I'm able to say what I think the Lord wants me to say in that moment.</q>
+    <q>I know I have a hard time not commenting, I like the comment, <b>I'm not going to do that, I'm just going to read it straight through</b></q>
+    <q><b>I said it wasn't going to come up</b>, but this is an important one.</q></div>
+  <p class="note">"Backfire," said aloud during the reading: 3 times in Part 1, 9 times in Part 2.</p>
+  <div class="shots"><img src="img/isaiah/P1_00-05-59.0_not_going_to_comment.jpg" alt="Part 1 at 5:59, caption: I like to comment, I'm not gonna do that"><img src="img/isaiah/P1_00-07-34.8_said_it_wasnt_coming_up.jpg" alt="Part 1 at 7:34, caption: but this is an important one"></div>
+</section>
+
+<section class="claim">
+  <h2><span class="n">10</span>In his own words</h2>
+  <div class="side h"><div class="lab">He says · Part 1, 10:04 · Part 2, 1:18 · Part 2, 13:49</div>
+    <q>my book, <b>The Cost of Freedom, a true story based on the lie.</b></q>
+    <q>my book the cost of freedom <b>a true story based on a lie</b></q>
+    <q>But it's so crazy to think you can watch backfire read all this and <b>still think I'm right.</b></q></div>
+  <div class="shots"><img src="img/isaiah/P1_00-10-04.5_true_story_based_on_lie.jpg" alt="Part 1 at 10:04, caption: the cost of freedom a true story based on a lie"><img src="img/isaiah/P2_00-13-49.0_still_think_im_right.jpg" alt="Part 2 at 13:49, caption: read all this and still think I'm right"></div>
+</section>
+
+<p class="kicker">"Come now, and let us reason together, saith the LORD." Isaiah 1:18, the last verse he reads.</p>
+
+<footer>
+  <span><a href="index.html" style="color:inherit">More from backfire-tracking</a></span>
+  <span>Quotes transcribed from the posted videos and left as spoken. Frames are from the same videos.</span>
+  <span>Scripture: King James Version.</span>
+</footer>
+</div>
+</body></html>
