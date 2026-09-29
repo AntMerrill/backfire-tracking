@@ -1,0 +1,124 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Tim Ballard's video to Matt Holland splices in Elder Jack Gerard's 2024 conference talk and labels him the GOOD GUY. How it's built, and what's claim versus footage.">
+<meta property="og:type" content="article"><meta property="og:title" content="The Good Guy Edit">
+<meta property="og:description" content="Ballard's video to Matt Holland, with Elder Jack Gerard spliced in as the 'GOOD GUY.' How it's built.">
+<meta property="og:url" content="https://antmerrill.github.io/backfire-tracking/good-guy-edit.html"><meta property="og:image" content="https://antmerrill.github.io/backfire-tracking/img/v037/t40.jpg">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style>
+<title>The Good Guy Edit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700;1,7..72,400&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap">
+<style>
+:root{
+  --paper:#f3f4f6; --sheet:#ffffff; --ink:#1c2230; --muted:#5a6273; --rule:#d6d9e0;
+  --accent:#1f5a85; --claim:#9a3b2a; --claim-bg:#f7e9e5; --ok:#2e6a4d; --ok-bg:#e5f1ea;
+  --quote-bg:#eef1f6; --bar1:#2b3a52; --bar2:#c9a227; --bar2-ink:#1c1a10;
+  --serif:"Literata",Georgia,"Times New Roman",serif;
+  --label:"IBM Plex Sans Condensed","Arial Narrow",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --paper:#12151c; --sheet:#1a1f29; --ink:#e6e8ee; --muted:#a2a9b8; --rule:#2e3544;
+  --accent:#7fb4dc; --claim:#e39a88; --claim-bg:#3a2320; --ok:#8fcfae; --ok-bg:#1d3329; --quote-bg:#202837;
+  --bar1:#3b4d6b; --bar2:#e0b93a;
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#12151c; --sheet:#1a1f29; --ink:#e6e8ee; --muted:#a2a9b8; --rule:#2e3544;
+  --accent:#7fb4dc; --claim:#e39a88; --claim-bg:#3a2320; --ok:#8fcfae; --ok-bg:#1d3329; --quote-bg:#202837;
+  --bar1:#3b4d6b; --bar2:#e0b93a;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font:17px/1.62 var(--serif);padding-inline:16px;padding-block:32px 64px}
+main{max-width:760px;margin:0 auto;background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:clamp(20px,5vw,48px)}
+.eyebrow{font:600 13px var(--label);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+h1{font-size:clamp(30px,6vw,44px);line-height:1.12;margin:.2em 0 .3em;text-wrap:balance}
+h2{font-size:23px;line-height:1.25;margin:2em 0 .5em;text-wrap:balance}
+p,li{max-width:65ch}
+.dek{color:var(--muted);font-size:19px}
+.meta{font:500 14px var(--label);color:var(--muted);letter-spacing:.02em}
+a{color:var(--accent)}
+blockquote{margin:1.2em 0;padding:14px 18px;background:var(--claim-bg);border-left:4px solid var(--claim);font-size:18px}
+blockquote .src{display:block;margin-top:8px;font:500 14px var(--label);color:var(--muted)}
+.card{display:block;margin:1.5em auto;width:100%;max-width:min(460px,100%);border:1px solid var(--rule)}
+.bars{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;margin:1.4em 0}
+.bars .lab{font:600 14px var(--label);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.bar{display:flex;height:46px;border-radius:3px;overflow:hidden}
+.bar .one{background:var(--bar1);color:#fff;flex:1;min-width:0;display:flex;align-items:center;padding:6px 12px;font:600 15px/1.25 var(--label)}
+.bar:has(.one){height:auto;min-height:46px}
+.bar .seg{background:var(--bar2);color:var(--bar2-ink);display:flex;align-items:center;justify-content:center;font:600 14px var(--label);border-right:2px solid var(--sheet);overflow:hidden;white-space:nowrap}
+.bar .seg:last-child{border-right:0}
+.bars .note{font:500 14px var(--label);color:var(--muted);margin-top:6px}
+.tablewrap{overflow-x:auto;margin:1em 0}
+table{border-collapse:collapse;width:100%;font:500 14px var(--label);font-variant-numeric:tabular-nums}
+th,td{border-bottom:1px solid var(--rule);padding:7px 8px;text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600;letter-spacing:.04em;text-transform:uppercase;font-size:12px}
+td.num{text-align:right;white-space:nowrap} td.id{font-family:ui-monospace,monospace;font-size:12px;white-space:nowrap}
+tr.film td{font-weight:600}
+ol.findings{padding-left:1.2em;display:grid;gap:.6em}
+.fair{background:var(--ok-bg);border-left:4px solid var(--ok);padding:14px 18px;margin:1.5em 0}
+.fair h3{margin:0 0 .4em;font:600 15px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ok)}
+.fair p{margin:.5em 0}
+.stills{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:10px;margin:1em 0}
+figure{margin:0}
+figure img{display:block;width:100%;border:1px solid var(--rule)}
+figcaption{font:500 13px var(--label);color:var(--muted);margin-top:4px}
+.shot{margin:1.2em 0}
+footer{margin-top:2.5em;padding-top:1em;border-top:1px solid var(--rule);font:500 14px var(--label);color:var(--muted)}
+</style>
+<style>
+.gl{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,150px),1fr));gap:14px;margin:1em 0}
+.gl figure{margin:0}.gl img{display:block;width:100%;border:1px solid var(--rule);border-radius:3px}
+.gl figcaption{font:500 13.5px/1.4 var(--label);color:var(--muted);margin-top:5px}.gl figcaption b{color:var(--ink)}
+.tag{display:inline-block;font:600 11px var(--label);letter-spacing:.1em;text-transform:uppercase;padding:2px 7px;border-radius:3px;background:var(--claim-bg);color:var(--claim);vertical-align:2px;margin-right:6px}
+.tag.ok{background:var(--ok-bg);color:var(--ok)}
+</style>
+</head><body>
+<main>
+<div class="eyebrow">The SRA Loop · Backfire</div>
+<h1>The Good Guy Edit</h1>
+<p class="dek">On September 22, Tim Ballard posted a 4½-minute video speaking directly to Matt Holland, son of Elder Jeffrey R. Holland. In the middle he splices in a 2024 General Conference talk by Elder Jack N. Gerard and labels Gerard the "GOOD GUY." Here is how it's put together.</p>
+<p class="meta">Compiled September 26, 2026 · TB Backfire Log V037 (Instagram) · same caption as V020 (Facebook, Sept 22) · quotes from his own on-screen captions</p>
+
+<h2>How the video is built</h2>
+<div class="tablewrap"><table>
+<tr><th>Time</th><th>What's on screen</th><th>What he says</th></tr>
+<tr><td class="num">0:00</td><td>Ballard, driving</td><td>Backfire "clearly shows the obscene lie by the LDS Church." Invites "a friend of mine, Matt Holland."</td></tr>
+<tr><td class="num">0:24</td><td>Ballard; a still of Gerard captioned <b>GOOD GUY</b> (0:40)</td><td>"You were in those meetings… I don't know if you sided with Jack Gerard or not."</td></tr>
+<tr><td class="num">1:33</td><td>Ballard, then Gerard's portrait: "Jack Gerard: former Director Church Communications (2023)"</td><td>"If you agreed to the decision in those meetings that you were in in the fall of 2023, repent… If you didn't agree, like Jack Gerard, I don't think agreed, then say that."</td></tr>
+<tr><td class="num">1:47</td><td>Gerard at the Conference Center pulpit, with Ballard's overlays</td><td>Gerard's own words (below). Ballard doesn't speak.</td></tr>
+<tr><td class="num">2:58</td><td>Ballard, driving</td><td>Straight out of Gerard's last line: "Come out, live your covenant, Matt. What would your father say?" Then "You're going to meet your maker, Matt Holland."</td></tr>
+<tr><td class="num">4:17</td><td>"Please watch Backfire: The Excommunication Story of Tim Ballard"</td><td>"Angels above us are silent notes taking right now."</td></tr>
+</table></div>
+
+<div class="gl">
+<figure><img src="img/v037/t40.jpg" alt="Gerard's official portrait with GOOD GUY stamped over it"><figcaption><b>0:40</b> · "I don't know if you sided with Jack Gerrard or not" · GOOD GUY</figcaption></figure>
+<figure><img src="img/v037/t104.jpg" alt="Gerard portrait with overlay: Jack Gerard, former Director Church Communications (2023)"><figcaption><b>1:44</b> · "If you didn't agree, like Jack Gerard, I don't think agreed"</figcaption></figure>
+<figure><img src="img/v037/t132.jpg" alt="Gerard at pulpit with overlay: Shortly after the sinful decision was made in 2023, Gerard was removed to Europe"><figcaption><b>2:12</b> · Ballard's overlay over Gerard's talk</figcaption></figure>
+<figure><img src="img/v037/t174.jpg" alt="Gerard at pulpit with overlay: Months later, he addressed the church here at General Conference (April 2024)"><figcaption><b>2:54</b> · "Months later, he addressed the church…" (April 2024)</figcaption></figure>
+</div>
+
+<h2>What Gerard says in the clip</h2>
+<blockquote>"As a covenant people and as leaders of his church, we must be beyond reproach and align with the standards the Lord has set… We go out of our way to avoid any perception that our actions may be influenced by the honors of men. Some organizations train employees to consider what their decisions… would look like if published online or on the front page of a major newspaper."<span class="src">Elder Jack N. Gerard, General Conference, as excerpted by Ballard (1:47–2:58)</span></blockquote>
+<p>Nothing in the excerpt mentions Ballard, Operation Underground Railroad, any meeting, or any 2023 decision. It's about integrity in general. The link to Ballard comes from the overlays he added and from where he placed the clip. It runs right after "If you didn't agree, like Jack Gerard," and the moment Gerard finishes with "the front page of a major newspaper," Ballard cuts back to himself: "Come out, live your covenant, Matt. What would your father say?" (2:58). Gerard's general words about integrity are made to read as a message aimed at Matt Holland.</p>
+
+<h2>His claims, sorted</h2>
+<ul>
+<li><span class="tag">His claim</span>Matt Holland "was in those meetings" in fall 2023 where a "decision to lie" was made. No document, date or other attendee is shown.</li>
+<li><span class="tag">His claim</span>Gerard disagreed with that decision. His own wording is uncertain: first "I don't know if you sided with Jack Gerrard or not," then "like Jack Gerard, I don't <i>think</i> agreed."</li>
+<li><span class="tag">His claim</span>"Shortly after the sinful decision was made in 2023, Gerard was removed to Europe." The overlay is in quotation marks but names no source.</li>
+<li><span class="tag ok">On screen</span>The General Conference footage is real footage of Elder Gerard. Ballard's overlay dates it April 2024. We haven't yet matched the excerpt against the Church's conference archive.</li>
+<li><span class="tag ok">On screen</span>Ballard calls Holland "a friend of mine" and "a good person," then says "is your cushy life just too good for you?" and "it's going to be a bad meeting" with Jesus.</li>
+</ul>
+
+<div class="fair">
+<h3>What this page does not claim</h3>
+<p>It doesn't say what was discussed in any Church meeting, who attended, or why Elder Gerard was given any assignment. It reports only what Ballard's video says and shows.</p>
+</div>
+
+<footer>
+<p><b>Source.</b> instagram.com/p/DdngYO5ojM0 (timballard89), 4:24, posted the evening of September 22, 2026 (Mountain Time). The same caption went out on his Facebook page that afternoon (V020, 4:37). Quotes follow his burned-in captions; the auto-transcript heard "Jack Gerard" as "Jagger art."</p>
+<p>Every Ballard video we've catalogued: <a href="https://github.com/antmerrill/backfire-tracking/blob/main/TB_BACKFIRE_LOG.md">TB Backfire Log</a>. The SRA Loop: <a href="sra-loop-guide.html">Reader's guide</a> · <a href="sunday-school-at-2am.html">Sunday School at 2 AM</a> · <a href="episode-1-explained.html">Episode 1</a>.</p>
+</footer>
+</main>
+</body></html>
