@@ -255,3 +255,25 @@ Appended to as work happens, not written after the fact.
   wikitext block + placement + edit summary to John via
   `veritastimmy/drafts/wiki_edit_pt_backfire_2026-09-22_FOR_JOHN.md`
   (opened in Geany) for him to post manually. Not posted automatically.
+
+## 2026-10-01 — The Good-Guy Re-Re-Edit (Good Guy Edit ch. 2): DONE
+
+- V054 logged (Facebook 975302382278936, Sept 30 = V017 Ep 7 "The Hope"); vault BV0157.
+- Workup: Gerard's April 2024 talk compared with Ballard's cut. Sentences re-ordered ("front page" moved from first to last), the councils sentence dropped, and "will you be embarrassed?" isn't in the talk. Certainty runs from "never met" to "I don't know." Kevin chain hedges. "[Kevin / Catherine] said he was really nice" is slurred: stored transcripts have "Kevin," Whisper small has "Catherine."
+- Draft MD `docs/good-guy-edit-ch2_2026-10-01.md`, PDF, 4 cards (mild to extra hot).
+- Published: https://antmerrill.github.io/backfire-tracking/good-guy-edit-ch2.html (commits 752394f, c4bf4e7).
+- Facebook (Merrill, hot card "The watchman got one thing wrong"): https://www.facebook.com/merrill.p.jensen/posts/10234420539554909. The first live attempt failed at the Post click; the second succeeded.
+- Follow-up: the corrected master SRT and the Kevin name-munges doc still read "Kevin" at 2:43:34.
+
+## 2026-10-01 — wearethepeopleutah scrape: Tim cross-post identified
+
+- Ran `igp.profile_history` once on IG **wearethepeopleutah** (Jason Preston), using the instagram.cookies.txt account. 12 posts, probably only the first page because the feed didn't paginate. No second live run (per the no-repeated-live-IG rule). Output: `boner_vault/dl_wm_outputs/ig_timelines/wearethepeopleutah_2026-10-01/wearethepeopleutah_timeline.jsonl`.
+- None of the 12 has timballard89 as a collaborator. Collaborator tags seen: thefitbroker (5 recent posts); latterdaychad + theemmapreneurofficial (Aug 1).
+- **Cross-post found:** IG `Ddj3dRopCNN` (Sept 21, 12:05, 2:50, collaborator thefitbroker, "There are moments when doing what is right costs you something…") = Tim's **V019** (FB 1959541814741163, Sept 21, 16:59, 2:52, "This is pure EVIL!…"), about 5 hours later. Transcripts: 85% word match, longest shared run 138 words.
+- Pipeline: Ddj3dRopCNN downloaded + watermarked + SRT (`dl_wm/outputs/2026-10-01/instagram__Ddj3dRopCNN/`). Vault catalog **BV0158**.
+- Log edits: V019's relation column in `TB_BACKFIRE_LOG.csv` and `.md` now reads "plays Jason Preston's audio = IG Ddj3dRopCNN (wearethepeopleutah, 2026-09-21 12:05; 85% word match, checked 2026-10-01)". Also added today: **V054** (FB 975302382278936, Ep 7 cross-post).
+
+## 2026-10-01 — Wikipedia edit (A) posted as JustinR1970
+
+- "Tim Ballard" → Backfire → Subsequent episodes and status: added the Episode 7 "The Hope" paragraph on Jack N. Gerard (Ballard's statements, attributed: "righteous watchman," "I've never met this person," "only could imagine…," "we'll find out through discovery"). Cites the FB video (0:09–2:40) and Gerard's April 2024 talk. "Executive director" is attributed to Ballard. The re-ordering finding is left out (WP:OR).
+- Rev 1377493407 → **1377909506** via `wiki_replace_edit.py` (dry run first). Draft: `veritastimmy/drafts/wiki_edit_backfire_gerard_2026-10-01_FOR_JOHN.md`.

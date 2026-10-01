@@ -519,3 +519,6 @@ items dropped from this round, not rejected — just Backfire for now.
 - Ep 6 repost scenes 50→28 (V031, 2:34–4:37): stock-style imagery over "200 kids", "I saw the videos",
   etc. Reverse image search on scenes 42, 44, 29, 41 not yet run.
 - LDS Living Feb 28, 2015 "former CIA" item captured + archived: docs/ldsliving_2015-02-28_ballard_former_cia.md
+
+## 2026-10-01 (parked)
+- Russell M. Nelson / "Skull and Bones": the quote is real and accurate. *From Heart to Heart* (1979), p. 48: "elected to the honorary societies of Skull and Bones in the junior year, Owl and Key in the senior year…" But this is the **University of Utah's** Skull and Bones (Honorary Junior Class Society, founded 1908), not Yale's. To do when we come back: find his name on the roster in the 1944 Utonian (junior year 1943–44) or the 1945 Utonian (collections.lib.utah.edu, 1945 = id 753399; the library search is behind a bot check, so search by hand). Book plus metadata: ~/Documents/reference/2026-10-01_nelson_from_heart_to_heart/
