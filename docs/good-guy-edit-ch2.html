@@ -1,0 +1,199 @@
+<title>The Good-Guy Re-Re-Edit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700;1,7..72,400&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap">
+<style>
+:root{
+  --paper:#f3f4f6; --sheet:#ffffff; --ink:#1c2230; --muted:#5a6273; --rule:#d6d9e0;
+  --accent:#1f5a85; --claim:#9a3b2a; --claim-bg:#f7e9e5; --ok:#2e6a4d; --ok-bg:#e5f1ea;
+  --quote-bg:#eef1f6; --bar1:#2b3a52; --bar2:#c9a227; --bar2-ink:#1c1a10;
+  --serif:"Literata",Georgia,"Times New Roman",serif;
+  --label:"IBM Plex Sans Condensed","Arial Narrow",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --paper:#12151c; --sheet:#1a1f29; --ink:#e6e8ee; --muted:#a2a9b8; --rule:#2e3544;
+  --accent:#7fb4dc; --claim:#e39a88; --claim-bg:#3a2320; --ok:#8fcfae; --ok-bg:#1d3329; --quote-bg:#202837;
+  --bar1:#3b4d6b; --bar2:#e0b93a;
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#12151c; --sheet:#1a1f29; --ink:#e6e8ee; --muted:#a2a9b8; --rule:#2e3544;
+  --accent:#7fb4dc; --claim:#e39a88; --claim-bg:#3a2320; --ok:#8fcfae; --ok-bg:#1d3329; --quote-bg:#202837;
+  --bar1:#3b4d6b; --bar2:#e0b93a;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font:17px/1.62 var(--serif);padding-inline:16px;padding-block:32px 64px}
+main{max-width:760px;margin:0 auto;background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:clamp(20px,5vw,48px)}
+.eyebrow{font:600 13px var(--label);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+h1{font-size:clamp(30px,6vw,44px);line-height:1.12;margin:.2em 0 .3em;text-wrap:balance}
+h2{font-size:23px;line-height:1.25;margin:2em 0 .5em;text-wrap:balance}
+p,li{max-width:65ch}
+.dek{color:var(--muted);font-size:19px}
+.meta{font:500 14px var(--label);color:var(--muted);letter-spacing:.02em}
+a{color:var(--accent)}
+blockquote{margin:1.2em 0;padding:14px 18px;background:var(--claim-bg);border-left:4px solid var(--claim);font-size:18px}
+blockquote .src{display:block;margin-top:8px;font:500 14px var(--label);color:var(--muted)}
+.card{display:block;margin:1.5em auto;width:100%;max-width:min(460px,100%);border:1px solid var(--rule)}
+.bars{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;margin:1.4em 0}
+.bars .lab{font:600 14px var(--label);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.bar{display:flex;height:46px;border-radius:3px;overflow:hidden}
+.bar .one{background:var(--bar1);color:#fff;flex:1;min-width:0;display:flex;align-items:center;padding:6px 12px;font:600 15px/1.25 var(--label)}
+.bar:has(.one){height:auto;min-height:46px}
+.bar .seg{background:var(--bar2);color:var(--bar2-ink);display:flex;align-items:center;justify-content:center;font:600 14px var(--label);border-right:2px solid var(--sheet);overflow:hidden;white-space:nowrap}
+.bar .seg:last-child{border-right:0}
+.bars .note{font:500 14px var(--label);color:var(--muted);margin-top:6px}
+.tablewrap{overflow-x:auto;margin:1em 0}
+table{border-collapse:collapse;width:100%;font:500 14px var(--label);font-variant-numeric:tabular-nums}
+th,td{border-bottom:1px solid var(--rule);padding:7px 8px;text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600;letter-spacing:.04em;text-transform:uppercase;font-size:12px}
+td.num{text-align:right;white-space:nowrap} td.id{font-family:ui-monospace,monospace;font-size:12px;white-space:nowrap}
+tr.film td{font-weight:600}
+ol.findings{padding-left:1.2em;display:grid;gap:.6em}
+.fair{background:var(--ok-bg);border-left:4px solid var(--ok);padding:14px 18px;margin:1.5em 0}
+.fair h3{margin:0 0 .4em;font:600 15px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--ok)}
+.fair p{margin:.5em 0}
+.stills{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:10px;margin:1em 0}
+figure{margin:0}
+figure img{display:block;width:100%;border:1px solid var(--rule)}
+figcaption{font:500 13px var(--label);color:var(--muted);margin-top:4px}
+.shot{margin:1.2em 0}
+footer{margin-top:2.5em;padding-top:1em;border-top:1px solid var(--rule);font:500 14px var(--label);color:var(--muted)}
+
+.gl{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,150px),1fr));gap:14px;margin:1em 0}
+.gl figure{margin:0}.gl img{display:block;width:100%;border:1px solid var(--rule);border-radius:3px}
+.gl figcaption{font:500 13.5px/1.4 var(--label);color:var(--muted);margin-top:5px}.gl figcaption b{color:var(--ink)}
+.tag{display:inline-block;font:600 11px var(--label);letter-spacing:.1em;text-transform:uppercase;padding:2px 7px;border-radius:3px;background:var(--claim-bg);color:var(--claim);vertical-align:2px;margin-right:6px}
+.tag.ok{background:var(--ok-bg);color:var(--ok)}
+
+.ladder{list-style:none;padding:0;margin:1.2em 0;display:grid;gap:8px}
+.ladder li{display:grid;grid-template-columns:72px minmax(0,1fr) auto;gap:12px;align-items:baseline;padding:10px 14px;border-left:6px solid var(--rule);background:var(--quote-bg);border-radius:3px}
+.ladder .t{font:600 14px var(--label);color:var(--muted);font-variant-numeric:tabular-nums}
+.ladder .q{font-size:17px;max-width:none}
+.ladder .k{font:600 11px var(--label);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.ladder .l-fact{border-left-color:var(--claim)}.ladder .l-fact .k{color:var(--claim)}
+.ladder .l-assume{border-left-color:color-mix(in srgb,var(--claim) 70%,var(--rule))}
+.ladder .l-imagine{border-left-color:color-mix(in srgb,var(--claim) 45%,var(--rule))}
+.ladder .l-think{border-left-color:color-mix(in srgb,var(--claim) 25%,var(--rule))}
+.ladder .l-none,.ladder .l-dk{border-left-color:var(--bar2)}.ladder .l-dk .k,.ladder .l-none .k{color:var(--ink)}
+@media (max-width:520px){.ladder li{grid-template-columns:minmax(0,1fr)}.ladder .k{order:-1}}
+.order{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:1.2em 0}
+@media (max-width:620px){.order{grid-template-columns:minmax(0,1fr)}}
+.order .lab{font:600 13px var(--label);letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.order ol{list-style:none;padding:0;margin:0;display:grid;gap:6px}
+.order li{font:500 14px/1.4 var(--label);padding:7px 10px 7px 38px;position:relative;border:1px solid var(--rule);border-radius:3px;background:var(--sheet);max-width:none}
+.order li b{position:absolute;left:10px;top:7px;font-variant-numeric:tabular-nums;color:var(--accent)}
+.order li.hl{background:var(--claim-bg);border-color:var(--claim)}.order li.hl b{color:var(--claim)}
+.order li.cut{text-decoration:line-through;color:var(--muted);border-style:dashed}
+.order li.ballard{background:var(--quote-bg);font-style:italic}
+.order .mut{color:var(--muted)}
+.chain{display:grid;gap:0;margin:1.2em 0;max-width:520px}
+.chain .node{border:1px solid var(--rule);background:var(--quote-bg);padding:10px 14px;border-radius:3px;display:grid;gap:2px}
+.chain .node b{font:600 16px var(--label)}
+.chain .node span{font:500 14px/1.35 var(--label);color:var(--muted)}
+.chain .edge{font:italic 500 14px var(--label);color:var(--claim);padding:6px 0 6px 22px;border-left:2px dashed var(--claim);margin-left:18px}
+.src-list li{font-size:15px}
+</style>
+<main>
+<div class="eyebrow">The SRA Loop · Backfire · The Good Guy Edit, Chapter 2</div>
+<h1>The Good-Guy Re-Re-Edit</h1>
+<p class="dek">Ballard's September 22 video called Elder Jack N. Gerard the "GOOD GUY." Gerard already had a full segment in Backfire Episode 7, "The Hope," which Ballard has now posted three times. Given seven minutes instead of seventy seconds, here is what he says.</p>
+<p class="meta">Compiled October 1, 2026 · TB Backfire Log V054 (Facebook, Sept 30) = V017 (YouTube, Sept 20) · cut from the Sept 4 Backfire video, 3:21:36–3:28:49 · Chapter 1: <a href="good-guy-edit.html">The Good Guy Edit</a></p>
+
+<h2>One segment, three postings</h2>
+<div class="tablewrap"><table>
+<tr><th>Posted</th><th>Where</th><th>What</th></tr>
+<tr><td class="num">Sept 4</td><td>YouTube, <i>Backfire: The Excommunication Story of Tim Ballard</i> (3:52:13)</td><td>Gerard segment at 3:21:36–3:28:49</td></tr>
+<tr><td class="num">Sept 20</td><td>YouTube, "BACKFIRE EPISODE 7: The Hope (Spanish Subs)" (7:14)</td><td>The same segment, cut out on its own</td></tr>
+<tr><td class="num">Sept 30</td><td>Facebook (7:14)</td><td>The same cut again. Caption: "Notwithstanding this craziness re: the church people vs. the Ballard Family……There is, and ALWAYS has been, HOPE."</td></tr>
+</table></div>
+
+<div class="gl">
+<figure><img src="img/v054/t0-00-31.jpg" alt="Frame at 0:31 of Episode 7 as Ballard names Jack Gerard"><figcaption><b>0:31</b> "a man named Jack Gerard"</figcaption></figure>
+<figure><img src="img/v054/t0-01-44.jpg" alt="Frame at 1:44 of Episode 7, the cut to the Count of Monte Cristo prison scene"><figcaption><b>1:44</b> cut to <i>The Count of Monte Cristo</i></figcaption></figure>
+<figure><img src="img/v054/t0-02-16.jpg" alt="Frame at 2:16 of Episode 7"><figcaption><b>2:16</b> "Kevin Pearson for bad or Jack Gerard for good"</figcaption></figure>
+<figure><img src="img/v054/t0-03-02.jpg" alt="Frame at 3:02 of Episode 7 as the Gerard talk begins"><figcaption><b>3:02</b> the Gerard excerpt begins</figcaption></figure>
+</div>
+
+<h2>How sure is he?</h2>
+<p>He opens by saying he has no first-hand knowledge. Then the claims run from certain to unsure, in that order.</p>
+<ol class="ladder">
+<li class="l-none"><span class="t">0:17</span><span class="q">"I've never met this person. He's never said a word to me."</span><span class="k">No contact</span></li>
+<li class="l-fact"><span class="t">0:38</span><span class="q">"…his voice would have been listened to. And in this case, clearly was rejected."</span><span class="k">Stated as fact</span></li>
+<li class="l-assume"><span class="t">0:53</span><span class="q">"I assume he was in that capacity or something like that"</span><span class="k">Assumption</span></li>
+<li class="l-imagine"><span class="t">1:09</span><span class="q">"I only could imagine that he fought for me"</span><span class="k">Imagined</span></li>
+<li class="l-think"><span class="t">1:30</span><span class="q">"he would have stood up for me I think he did"</span><span class="k">Belief</span></li>
+<li class="l-dk"><span class="t">2:31</span><span class="q">"I don't know what his intent was, but we'll find out through discovery."</span><span class="k">Doesn't know</span></li>
+<li class="l-dk"><span class="t">Sept 22</span><span class="q">"I don't know if you sided with Jack Gerard or not."</span><span class="k">Doesn't know</span></li>
+</ol>
+<p>The firmest claim, that Gerard's voice "clearly was rejected," comes first. The basis for it, "I only could imagine," comes after. His job title also shifts within fifteen seconds, from "executive director of the church communication department" (0:38) to "put in as the PR director … or something like that" (0:53).</p>
+<img class="card" src="img/v054/card_how_sure_is_he.jpg" alt="Card titled How sure is he? listing seven Ballard quotes about Jack Gerard, from I've never met this person to I don't know if you sided with Jack Gerard or not">
+
+<h2>Europe, both ways</h2>
+<blockquote>"He got mysteriously swept away to Europe … Like Kevin Pearson for bad or Jack Gerard for good. I guess that's where you go."<span class="src">Episode 7, 1:35–2:16</span></blockquote>
+<p>In the full Backfire video, Kevin Pearson, the man Ballard blames, is "moved to Europe" (1:10:05). Gerard, the man he praises, is "swept away to Europe." So a European assignment gets read as punishment for the bad Kevin and as exile for the good watchman. Between the two, Ballard cuts to the prison scene from <i>The Count of Monte Cristo</i>: "I know perfectly well that you are innocent. Why else would you be here?"</p>
+
+<h2>The talk, re-ordered</h2>
+<p>From 3:02 to 4:11 Episode 7 plays Elder Gerard's April 2024 general conference talk, <a href="https://www.churchofjesuschrist.org/study/general-conference/2024/04/17gerard?lang=eng">"Integrity: A Christlike Attribute."</a> Set beside the published text, the sentences come in a different order.</p>
+<div class="order">
+<div class="col"><div class="lab">In the talk</div>
+<ol>
+<li class="hl"><b>1</b>"…what their decisions or decision-making process would look like if published online or on the front page of a major newspaper."</li>
+<li><b>2</b>"As the Church comes out of obscurity and darkness, we, like Daniel, must rise above…"</li>
+<li><b>3</b>"As a covenant people … we must be beyond reproach…"</li>
+<li><b>4</b>"Acting with integrity builds faith and trust…"</li>
+<li class="cut"><b>5</b>"In our councils, we resist outside influences and follow the Lord's revealed process…"</li>
+<li><b>6</b>"Our focus is on the Savior, and we are careful to avoid actions that may be perceived as serving our own interests…"</li>
+<li><b>7</b>"We go out of our way to avoid any perception that our actions may be influenced by the honors of men…"</li>
+</ol></div>
+<div class="col"><div class="lab">In Ballard's cut</div>
+<ol>
+<li><b>3</b>covenant people, beyond reproach</li>
+<li><b>4</b>acting with integrity</li>
+<li><b>2</b>obscurity and darkness <span class="mut">("like Daniel" dropped)</span></li>
+<li><b>6</b>focus on the Savior <span class="mut">("benefiting our family" dropped)</span></li>
+<li><b>7</b>honors of men <span class="mut">("personal recognition, generate more likes…" dropped)</span></li>
+<li class="hl"><b>1</b>front page of a major newspaper</li>
+<li class="ballard"><b>B</b>Ballard: "I think he's talking about what happened just months earlier."</li>
+</ol></div>
+</div>
+<ol class="findings">
+<li><b>The "front page" line moves from first to last.</b> In the talk it opens the passage. In Ballard's cut it is the punchline, followed straight away by his own "I think he's talking about what happened just months earlier."</li>
+<li><b>Sentence 5 is left out.</b> It says Church councils "follow the Lord's revealed process." That runs against Ballard's story of a council that ignored it.</li>
+<li><b>"Will you be embarrassed?" isn't in the talk.</b> After the clip, Ballard says in his own voice: "He says, the decisions you make and the process you use to make a decision assume that someday that will be headline. And will you be embarrassed?" The nearest thing in the talk is a question Elder Uchtdorf once asked Gerard about his own life: "Has there been anything in your life that, if brought to the attention of the public, would be an embarrassment to you or the Church?"</li>
+</ol>
+<p>Then he corrects the man he has just called a watchman: "I would say he's prophetic, except he got one thing wrong. It's not just going to be headlines. It's going to be Sound of Freedom 2. It's going to be a docuseries … an international bestselling book."</p>
+
+<h2>The Kevin story</h2>
+<p>Episode 7 mentions Kevin Pearson only in passing ("for bad"). The story behind it is at 2:41:54–2:44:01 of the September 4 video. Here it is in his order, with his own qualifiers.</p>
+<div class="chain">
+<div class="node"><b>Kevin Pearson</b><span>Area President</span></div>
+<div class="edge">"sent" … "purportedly ordered"</div>
+<div class="node"><b>Elder Kevin S. Hamilton</b><span>"working in the genealogy department I believe"</span></div>
+<div class="edge">"I believe he's the one who instructed" … "probably tells"</div>
+<div class="node"><b>The new "state president"</b><span>"his first order of business": "go do this to Tim Ballard"</span></div>
+<div class="edge">same stake conference</div>
+<div class="node"><b>Sister Ballard, in the congregation</b><span>"[Kevin / Catherine] said he was really nice"</span></div>
+</div>
+<ul>
+<li><b>Who gives the order changes.</b> First Pearson "sent" Hamilton, then Pearson "purportedly ordered" him, then Hamilton "orders the hit job."</li>
+<li><b>Every link is hedged except the quote.</b> "I believe … purportedly … I believe … probably." Then "go do this to Tim Ballard" is told as words actually spoken, at a setting-apart Ballard doesn't say he witnessed.</li>
+<li><b>"[Kevin / Catherine] said he was really nice."</b> He slurs the name. Our stored transcripts hear "Kevin." A second machine pass hears "Catherine," his wife, which is presumably what he means. If it's Catherine, she found the man "really nice" at the time, and it becomes "kind of creepy" only "once you know the background," a background Ballard himself says he "believe[s]" and calls "purported." If it's Kevin, a Kevin is vouching for the Kevin he just accused.</li>
+<li><b>"State president."</b> He says "state president" and "State Conference" for <i>stake</i> president and stake conference. Quoted as spoken.</li>
+</ul>
+<p>Elder Kevin S. Hamilton is a General Authority Seventy who spoke at the <a href="https://www.churchofjesuschrist.org/study/general-conference/2022/04/28hamilton?lang=eng">April 2022 general conference</a>. Every claim about him on this page is Ballard's. Ballard also quotes "Elder Hamilton" on substituting "the Savior" for "the Church" (2:44:11). That line isn't in the 2022 talk, and we haven't found its source.</p>
+
+<div class="fair">
+<h3>What this page does not claim</h3>
+<p>It doesn't say what was decided in any Church meeting, who attended, why anyone was given an assignment in Europe, or what anyone said to Ballard's wife. It reports what Ballard's videos say, set against the published talk.</p>
+</div>
+
+<h2>Sources and method</h2>
+<ul class="src-list">
+<li>Facebook video 975302382278936, Tim Ballard page, Sept 30, 2026, 7:14 (TB Backfire Log V054). Stills are from this file.</li>
+<li>YouTube AYhFyEz092o, Sept 20 (V017), and pBo_2DYxfrY, Sept 4 (3:21:36–3:28:49 and 2:41:54–2:44:01). Quotes come from our corrected transcript of the Sept 4 video. Two unclear spots were re-checked with a second transcription pass.</li>
+<li>Jack N. Gerard, "Integrity: A Christlike Attribute," April 2024 general conference. Compared sentence by sentence, retrieved Oct 1, 2026.</li>
+<li>Kevin S. Hamilton, "Then Will I Make Weak Things Become Strong," April 2022 general conference.</li>
+</ul>
+<p class="meta">Every Ballard video we've catalogued: TB Backfire Log · Chapter 1: <a href="good-guy-edit.html">The Good Guy Edit</a></p>
+</main>
