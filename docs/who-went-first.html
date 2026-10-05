@@ -1,0 +1,677 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Tim Ballard posted with Latter Day Chad on December 20, 2025, sixty days before the group posts began. A correction, the timeline, and how the group around them is built.">
+<meta property="og:type" content="article"><meta property="og:title" content="Who went first">
+<meta property="og:description" content="Ballard did. His own post, crediting Latter Day Chad, 60 days before the group posts began.">
+<meta property="og:url" content="https://antmerrill.github.io/backfire-tracking/who-went-first.html"><meta property="og:image" content="https://antmerrill.github.io/backfire-tracking/img/whofirst/og_card.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style>
+<title>Who Went First</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,700;1,7..72,400&family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+/* Layout: one reading column, a case file (sequel to "How the Instagram apostasy started"): correction first, then the post, the timeline, the group's structure, the words, the method. */
+:root{
+  --bg:#f3f1ec; --sheet:#fbfaf7; --ink:#1d2129; --muted:#5c6170; --rule:#d9d6cf;
+  --gold:#9a7412; --gold-bg:#f3e8c8; --accent:#2c4a73; --red:#a3271f; --red-bg:#f6e3df; --ldc:#c86f5c; --node:#8b93a3;
+  --e1:#c9d6e8; --e2:#9cb5d6; --e3:#6b90c0; --e4:#3d6aa6; --e5:#163e78;
+  --serif:"Literata",Georgia,"Times New Roman",serif;
+  --label:"IBM Plex Sans Condensed","Arial Narrow",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12151c; --sheet:#181c25; --ink:#e6e8ee; --muted:#a2a9b8; --rule:#2e3544;
+  --gold:#e0b93a; --gold-bg:#2e2715; --accent:#8fb3df; --red:#f08a7e; --red-bg:#3a1f1c; --ldc:#e39a8a; --node:#6c7486;
+  --e1:#24364f; --e2:#2f5584; --e3:#3f78bd; --e4:#7eaee6; --e5:#d6e7fb; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12151c; --sheet:#181c25; --ink:#e6e8ee; --muted:#a2a9b8; --rule:#2e3544;
+  --gold:#e0b93a; --gold-bg:#2e2715; --accent:#8fb3df; --red:#f08a7e; --red-bg:#3a1f1c; --ldc:#e39a8a; --node:#6c7486;
+  --e1:#24364f; --e2:#2f5584; --e3:#3f78bd; --e4:#7eaee6; --e5:#d6e7fb; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:17px/1.65 var(--serif);padding-inline:16px;padding-block:28px 64px}
+main{max-width:780px;margin:0 auto;background:var(--sheet);border:1px solid var(--rule);border-radius:4px;padding:clamp(20px,5vw,52px)}
+.eyebrow{font:600 13px var(--label);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+h1{font-size:clamp(34px,7vw,54px);line-height:1.06;margin:.25em 0 .35em;text-wrap:balance}
+h2{font-size:24px;line-height:1.25;margin:2.2em 0 .5em;text-wrap:balance}
+.dek{color:var(--muted);font-size:19px;margin:0}
+.meta{font:500 14px var(--label);color:var(--muted);margin-top:14px}
+p{margin:.7em 0}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin:26px 0 8px}
+.fact{border-top:3px solid var(--gold);padding-top:8px;min-width:0}
+.fact b{display:block;font:700 28px/1.1 var(--serif);font-variant-numeric:tabular-nums}
+.fact span{font:500 15px/1.3 var(--label);color:var(--muted)}
+.corr{background:var(--red-bg);border-left:4px solid var(--red);padding:14px 18px;margin:24px 0}
+.corr h3,.note h3{margin:0 0 .3em;font:600 14px var(--label);letter-spacing:.08em;text-transform:uppercase}
+.corr h3{color:var(--red)} .note h3{color:var(--gold)}
+.note{background:var(--gold-bg);border-left:4px solid var(--gold);padding:14px 18px;margin:20px 0}
+figure{margin:22px 0}
+figure img{display:block;width:100%;max-width:100%;border:1px solid var(--rule)}
+figcaption{font:500 14px var(--label);color:var(--muted);margin-top:6px}
+.pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.pair figure{margin:0}
+.tablewrap{overflow-x:auto;margin:14px 0}
+table{border-collapse:collapse;width:100%;font:500 15px var(--label);font-variant-numeric:tabular-nums}
+th,td{border-bottom:1px solid var(--rule);padding:7px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+th{color:var(--muted);font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+td.d{white-space:nowrap} td.code{font:400 13px var(--mono);white-space:nowrap}
+.tag{display:inline-block;font:600 11px var(--label);letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:3px;white-space:nowrap}
+.t-conf{background:var(--gold-bg);color:var(--gold);border:1px solid var(--gold)}
+.t-data{color:var(--accent);border:1px solid var(--accent)}
+.t-corr{background:var(--red-bg);color:var(--red);border:1px solid var(--red)}
+.nets{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin:16px 0 6px}
+.net{min-width:0}
+.net h4{margin:0 0 4px;font:600 15px var(--label);letter-spacing:.04em}
+.net .sub{font:500 13px var(--label);color:var(--muted)}
+.net svg{width:100%;height:auto;display:block}
+.net line{stroke-linecap:round}
+.e1{stroke:var(--e1)} .e2{stroke:var(--e2)} .e3{stroke:var(--e3)} .e4{stroke:var(--e4)} .e5{stroke:var(--e5)}
+.n{stroke:var(--sheet);stroke-width:2.5} .n.tb{fill:var(--gold)} .n.ldc{fill:var(--ldc)} .n.o{fill:var(--node)}
+.nl{font:600 13px var(--label);text-anchor:middle;fill:#fff} .nl.tb{fill:#1d2129}
+.key{border:1px solid var(--rule);border-radius:4px;padding:10px 14px;font:500 14px/1.5 var(--label);color:var(--muted);display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:4px 18px}
+.key b,.key2 b{color:var(--ink);font-weight:600}
+.key2{border:1px solid var(--rule);border-radius:4px;padding:10px 14px;font:500 14px/1.5 var(--label);color:var(--muted);display:flex;flex-direction:column;gap:6px}
+.krow{display:flex;flex-wrap:wrap;gap:4px 18px;align-items:center}
+.sw{display:inline-block;vertical-align:middle;margin-right:8px;border-radius:2px}
+.dot{display:inline-block;width:12px;height:12px;border-radius:50%;vertical-align:middle;margin-right:8px}
+.bars{margin:14px 0}
+.bar{display:grid;grid-template-columns:110px 1fr 28px;align-items:center;gap:10px;font:500 15px var(--label);font-variant-numeric:tabular-nums}
+.bar i{display:block;height:14px;background:var(--accent);border-radius:2px}
+.bar span:last-child{color:var(--muted);text-align:right}
+ul{padding-left:1.2em} li{margin:.35em 0}
+a{color:var(--accent)}
+.bf{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:2em;border:2px dashed var(--rule);padding:14px 18px}
+.bf b{font:700 26px var(--label);letter-spacing:.04em;color:var(--gold)}
+
+.alg{overflow-x:auto;margin:14px 0}
+.alg svg{display:block;max-width:100%;height:auto;margin:0 auto}
+.alg .ax{font:500 12px var(--label);fill:var(--muted)}
+.alg .rl{font:600 14px var(--label);fill:var(--ink)}
+.alg .gl{font:600 12px var(--label);fill:var(--gold);letter-spacing:.04em;text-transform:uppercase}
+.alg .br{fill:none;stroke:var(--gold);stroke-width:1.5}
+.alg .cell{fill:none;stroke:var(--rule)}
+.alg .on.tb{fill:var(--gold)} .alg .on.ldc{fill:var(--ldc)} .alg .on.o{fill:var(--node)}
+.alg .diag{fill:var(--rule)} .alg .g0{fill:none;stroke:var(--rule);stroke-width:.6}
+.alg .g1{fill:var(--e1)} .alg .g2{fill:var(--e2)} .alg .g3{fill:var(--e3)} .alg .g4{fill:var(--e5)}
+.alg .orb{fill:none;stroke:var(--gold);stroke-width:2.5;stroke-dasharray:5 3}
+.math{font:400 15px var(--mono);background:var(--gold-bg);padding:1px 6px;border-radius:3px;white-space:nowrap}
+.triples{font:600 18px var(--mono);letter-spacing:.06em;text-align:center;margin:12px 0;overflow-wrap:anywhere}
+.foot{margin-top:2.6em;border-top:1px solid var(--rule);padding-top:14px;font:500 14px var(--label);color:var(--muted)}
+</style>
+
+</head><body><main>
+<div class="eyebrow">Latter Day Chad × Tim Ballard · Instagram · update of October 5, 2026</div>
+<h1>Who went first</h1>
+<p class="dek">Tim Ballard did. Sixty days before the group posts began, Ballard posted a video and credited Latter Day Chad. This page corrects what we said on October 4 and lays out how the group around them is built.</p>
+<div class="meta">From our captures of Instagram’s own post data, October 4–5, 2026, plus one post checked live on Instagram. Public accounts are named; smaller accounts are letters A–K, the same letters as on our cards.</div>
+
+<div class="corr"><h3>Correction to our October 4 post</h3>
+<p>On October 4 we wrote that February 18, 2026 was “the first time Tim Ballard and Latter Day Chad appear on a post together,” and that none of Chad’s earlier posts tied to Ballard. <b>That was wrong.</b> On December 20, 2025, Ballard posted a video and credited Chad as a collaborator. February 18 is still the first of the seven group posts.</p>
+<p style="margin-bottom:0">The claim appeared on our card “The day it started,” <a href="https://www.facebook.com/merrill.p.jensen/posts/10234462890453655">our Facebook post</a>, and our first write-up, “How the Instagram apostasy started.”</p></div>
+
+<div class="facts">
+  <div class="fact"><b>Dec 20, 2025</b><span>first shared post. Ballard posted it and credited Chad</span></div>
+  <div class="fact"><b>60 days</b><span>before the group posts began on Feb 18, 2026</span></div>
+  <div class="fact"><b>1 of 1,463</b><span>of Chad’s captured posts before Feb 18 ties to Ballard: this one</span></div>
+  <div class="fact"><b>7 posts</b><span>in the group run, Feb 18 – Apr 18, all uploaded by one host account</span></div>
+</div>
+
+<h2>The post</h2>
+<p>The header reads <b>“timballard89 and latterdaychad.”</b> The caption is Ballard’s own, and opens: “Brandon, are you saying my doctrine is wrong?” Instagram dates it December 20, 2025. <span class="tag t-conf">Checked on Instagram</span></p>
+<figure><img src="img/whofirst/dec20_post.jpg" alt="Instagram post with header timballard89 and latterdaychad. Caption by timballard89 opens: Brandon, are you saying my doctrine is wrong? Dated December 20, 2025.">
+<figcaption>instagram.com/p/DSghot5ET_3 · screenshot taken October 5, 2026 (cropped; mouse pointer removed)</figcaption></figure>
+
+<h2>Timeline</h2>
+<div class="tablewrap"><table>
+<tr><th>Date</th><th>What happened</th><th>Who posted</th><th>Status</th></tr>
+<tr><td class="d">Mar 2024 →</td><td>Chad and C start co-posting. By Feb 18, 2026 they share 434 posts.</td><td>—</td><td><span class="tag t-data">Our data</span></td></tr>
+<tr><td class="d">Nov 9, 2025</td><td>Ballard credits F on a post. His first post with anyone in the group.</td><td>Ballard</td><td><span class="tag t-data">Our data</span></td></tr>
+<tr><td class="d">Dec 20, 2025</td><td>Ballard credits Chad. Their first shared post.</td><td>Ballard</td><td><span class="tag t-conf">Checked</span></td></tr>
+<tr><td class="d">Feb 18, 2026</td><td>First group post: five credited accounts plus the host. Ballard and Chad are two of the five.</td><td>latterdayavenger</td><td><span class="tag t-conf">Checked</span></td></tr>
+<tr><td class="d">Feb 20 – Apr 18</td><td>Six more group posts. Ballard and Chad on every one; the other three seats rotate through 11 accounts.</td><td>latterdayavenger</td><td><span class="tag t-data">Our data</span></td></tr>
+<tr><td class="d">Jun 22, Sep 21</td><td>Joint posts, now uploaded by Chad himself.</td><td>Chad</td><td><span class="tag t-data">Our data</span></td></tr>
+</table></div>
+<p class="legend" style="font:500 14px var(--label);color:var(--muted)"><span class="tag t-conf">Checked</span> seen on Instagram itself, screenshot kept. <span class="tag t-data">Our data</span> from our captures of Instagram’s post data, not re-checked by hand.</p>
+
+<h2>The group was already there</h2>
+<p>These are the same 13 accounts as on our card “It started as a group”: Ballard (TB), Chad (LDC), and the 11 accounts that filled the other seats (A–K). Each line is a pair of accounts credited on the same post, counted across everything we have captured for them. The left map is everything before Ballard’s first group post. The right map is from February 18 on.</p>
+<div class="nets">
+ <div class="net"><h4>Before Feb 18, 2026</h4><div class="sub">25 links · 634 shared posts</div><svg viewBox="0 0 420 430" role="img" aria-label="before">
+<line x1="210.0" y1="50.0" x2="373.3" y2="238.5" class="e1" stroke-width="1.1"><title>A–D: 1 shared post</title></line>
+<line x1="210.0" y1="50.0" x2="256.5" y2="373.3" class="e1" stroke-width="1.1"><title>A–F: 1 shared post</title></line>
+<line x1="210.0" y1="50.0" x2="120.8" y2="76.2" class="e1" stroke-width="1.1"><title>A–K: 1 shared post</title></line>
+<line x1="334.7" y1="323.1" x2="299.2" y2="76.2" class="e1" stroke-width="1.1"><title>E–B: 1 shared post</title></line>
+<line x1="334.7" y1="323.1" x2="360.1" y2="146.5" class="e1" stroke-width="1.1"><title>E–C: 1 shared post</title></line>
+<line x1="334.7" y1="323.1" x2="373.3" y2="238.5" class="e1" stroke-width="1.1"><title>E–D: 1 shared post</title></line>
+<line x1="256.5" y1="373.3" x2="360.1" y2="146.5" class="e1" stroke-width="1.1"><title>F–C: 1 shared post</title></line>
+<line x1="256.5" y1="373.3" x2="388.0" y2="34.0" class="e1" stroke-width="1.1"><title>F–TB: 1 shared post</title></line>
+<line x1="120.8" y1="76.2" x2="299.2" y2="76.2" class="e1" stroke-width="1.1"><title>K–B: 1 shared post</title></line>
+<line x1="210.0" y1="225.0" x2="388.0" y2="34.0" class="e1" stroke-width="1.1"><title>LDC–TB: 1 shared post</title></line>
+<line x1="210.0" y1="50.0" x2="299.2" y2="76.2" class="e2" stroke-width="1.9"><title>A–B: 2 shared posts</title></line>
+<line x1="210.0" y1="50.0" x2="334.7" y2="323.1" class="e2" stroke-width="1.9"><title>A–E: 2 shared posts</title></line>
+<line x1="334.7" y1="323.1" x2="120.8" y2="76.2" class="e2" stroke-width="1.9"><title>E–K: 2 shared posts</title></line>
+<line x1="210.0" y1="225.0" x2="256.5" y2="373.3" class="e2" stroke-width="1.9"><title>LDC–F: 2 shared posts</title></line>
+<line x1="210.0" y1="225.0" x2="46.7" y2="238.5" class="e2" stroke-width="1.9"><title>LDC–I: 2 shared posts</title></line>
+<line x1="210.0" y1="50.0" x2="210.0" y2="225.0" class="e3" stroke-width="3.0"><title>A–LDC: 8 shared posts</title></line>
+<line x1="299.2" y1="76.2" x2="373.3" y2="238.5" class="e3" stroke-width="3.0"><title>B–D: 5 shared posts</title></line>
+<line x1="334.7" y1="323.1" x2="210.0" y2="225.0" class="e3" stroke-width="3.0"><title>E–LDC: 6 shared posts</title></line>
+<line x1="85.3" y1="323.1" x2="360.1" y2="146.5" class="e3" stroke-width="3.0"><title>H–C: 13 shared posts</title></line>
+<line x1="120.8" y1="76.2" x2="210.0" y2="225.0" class="e3" stroke-width="3.0"><title>K–LDC: 8 shared posts</title></line>
+<line x1="210.0" y1="225.0" x2="299.2" y2="76.2" class="e3" stroke-width="3.0"><title>LDC–B: 11 shared posts</title></line>
+<line x1="360.1" y1="146.5" x2="373.3" y2="238.5" class="e4" stroke-width="4.4"><title>C–D: 29 shared posts</title></line>
+<line x1="210.0" y1="225.0" x2="373.3" y2="238.5" class="e4" stroke-width="4.4"><title>LDC–D: 37 shared posts</title></line>
+<line x1="210.0" y1="225.0" x2="85.3" y2="323.1" class="e4" stroke-width="4.4"><title>LDC–H: 63 shared posts</title></line>
+<line x1="210.0" y1="225.0" x2="360.1" y2="146.5" class="e5" stroke-width="6.5"><title>LDC–C: 434 shared posts</title></line>
+<circle cx="210.0" cy="225.0" r="23" class="n ldc"/><text x="210.0" y="230.0" class="nl ldc">LDC</text>
+<circle cx="388.0" cy="34.0" r="23" class="n tb"/><text x="388.0" y="39.0" class="nl tb">TB</text>
+<circle cx="210.0" cy="50.0" r="17" class="n o"/><text x="210.0" y="55.0" class="nl o">A</text>
+<circle cx="299.2" cy="76.2" r="17" class="n o"/><text x="299.2" y="81.2" class="nl o">B</text>
+<circle cx="360.1" cy="146.5" r="17" class="n o"/><text x="360.1" y="151.5" class="nl o">C</text>
+<circle cx="373.3" cy="238.5" r="17" class="n o"/><text x="373.3" y="243.5" class="nl o">D</text>
+<circle cx="334.7" cy="323.1" r="17" class="n o"/><text x="334.7" y="328.1" class="nl o">E</text>
+<circle cx="256.5" cy="373.3" r="17" class="n o"/><text x="256.5" y="378.3" class="nl o">F</text>
+<circle cx="163.5" cy="373.3" r="17" class="n o"/><text x="163.5" y="378.3" class="nl o">G</text>
+<circle cx="85.3" cy="323.1" r="17" class="n o"/><text x="85.3" y="328.1" class="nl o">H</text>
+<circle cx="46.7" cy="238.5" r="17" class="n o"/><text x="46.7" y="243.5" class="nl o">I</text>
+<circle cx="59.9" cy="146.5" r="17" class="n o"/><text x="59.9" y="151.5" class="nl o">J</text>
+<circle cx="120.8" cy="76.2" r="17" class="n o"/><text x="120.8" y="81.2" class="nl o">K</text>
+</svg></div>
+ <div class="net"><h4>Feb 18, 2026 onward</h4><div class="sub">48 links · 339 shared posts</div><svg viewBox="0 0 420 430" role="img" aria-label="after">
+<line x1="210.0" y1="50.0" x2="334.7" y2="323.1" class="e1" stroke-width="1.1"><title>A–E: 1 shared post</title></line>
+<line x1="299.2" y1="76.2" x2="360.1" y2="146.5" class="e1" stroke-width="1.1"><title>B–C: 1 shared post</title></line>
+<line x1="299.2" y1="76.2" x2="373.3" y2="238.5" class="e1" stroke-width="1.1"><title>B–D: 1 shared post</title></line>
+<line x1="334.7" y1="323.1" x2="360.1" y2="146.5" class="e1" stroke-width="1.1"><title>E–C: 1 shared post</title></line>
+<line x1="334.7" y1="323.1" x2="373.3" y2="238.5" class="e1" stroke-width="1.1"><title>E–D: 1 shared post</title></line>
+<line x1="334.7" y1="323.1" x2="85.3" y2="323.1" class="e1" stroke-width="1.1"><title>E–H: 1 shared post</title></line>
+<line x1="334.7" y1="323.1" x2="388.0" y2="34.0" class="e1" stroke-width="1.1"><title>E–TB: 1 shared post</title></line>
+<line x1="256.5" y1="373.3" x2="299.2" y2="76.2" class="e1" stroke-width="1.1"><title>F–B: 1 shared post</title></line>
+<line x1="256.5" y1="373.3" x2="360.1" y2="146.5" class="e1" stroke-width="1.1"><title>F–C: 1 shared post</title></line>
+<line x1="256.5" y1="373.3" x2="163.5" y2="373.3" class="e1" stroke-width="1.1"><title>F–G: 1 shared post</title></line>
+<line x1="256.5" y1="373.3" x2="388.0" y2="34.0" class="e1" stroke-width="1.1"><title>F–TB: 1 shared post</title></line>
+<line x1="85.3" y1="323.1" x2="163.5" y2="373.3" class="e1" stroke-width="1.1"><title>H–G: 1 shared post</title></line>
+<line x1="85.3" y1="323.1" x2="46.7" y2="238.5" class="e1" stroke-width="1.1"><title>H–I: 1 shared post</title></line>
+<line x1="85.3" y1="323.1" x2="59.9" y2="146.5" class="e1" stroke-width="1.1"><title>H–J: 1 shared post</title></line>
+<line x1="85.3" y1="323.1" x2="388.0" y2="34.0" class="e1" stroke-width="1.1"><title>H–TB: 1 shared post</title></line>
+<line x1="46.7" y1="238.5" x2="59.9" y2="146.5" class="e1" stroke-width="1.1"><title>I–J: 1 shared post</title></line>
+<line x1="46.7" y1="238.5" x2="388.0" y2="34.0" class="e1" stroke-width="1.1"><title>I–TB: 1 shared post</title></line>
+<line x1="59.9" y1="146.5" x2="388.0" y2="34.0" class="e1" stroke-width="1.1"><title>J–TB: 1 shared post</title></line>
+<line x1="120.8" y1="76.2" x2="163.5" y2="373.3" class="e1" stroke-width="1.1"><title>K–G: 1 shared post</title></line>
+<line x1="210.0" y1="225.0" x2="46.7" y2="238.5" class="e1" stroke-width="1.1"><title>LDC–I: 1 shared post</title></line>
+<line x1="210.0" y1="225.0" x2="59.9" y2="146.5" class="e1" stroke-width="1.1"><title>LDC–J: 1 shared post</title></line>
+<line x1="210.0" y1="50.0" x2="299.2" y2="76.2" class="e2" stroke-width="1.9"><title>A–B: 2 shared posts</title></line>
+<line x1="210.0" y1="50.0" x2="360.1" y2="146.5" class="e2" stroke-width="1.9"><title>A–C: 2 shared posts</title></line>
+<line x1="299.2" y1="76.2" x2="163.5" y2="373.3" class="e2" stroke-width="1.9"><title>B–G: 2 shared posts</title></line>
+<line x1="299.2" y1="76.2" x2="388.0" y2="34.0" class="e2" stroke-width="1.9"><title>B–TB: 3 shared posts</title></line>
+<line x1="334.7" y1="323.1" x2="210.0" y2="225.0" class="e2" stroke-width="1.9"><title>E–LDC: 2 shared posts</title></line>
+<line x1="163.5" y1="373.3" x2="360.1" y2="146.5" class="e2" stroke-width="1.9"><title>G–C: 2 shared posts</title></line>
+<line x1="163.5" y1="373.3" x2="373.3" y2="238.5" class="e2" stroke-width="1.9"><title>G–D: 3 shared posts</title></line>
+<line x1="163.5" y1="373.3" x2="388.0" y2="34.0" class="e2" stroke-width="1.9"><title>G–TB: 2 shared posts</title></line>
+<line x1="85.3" y1="323.1" x2="373.3" y2="238.5" class="e2" stroke-width="1.9"><title>H–D: 3 shared posts</title></line>
+<line x1="120.8" y1="76.2" x2="360.1" y2="146.5" class="e2" stroke-width="1.9"><title>K–C: 3 shared posts</title></line>
+<line x1="120.8" y1="76.2" x2="388.0" y2="34.0" class="e2" stroke-width="1.9"><title>K–TB: 2 shared posts</title></line>
+<line x1="210.0" y1="225.0" x2="299.2" y2="76.2" class="e2" stroke-width="1.9"><title>LDC–B: 4 shared posts</title></line>
+<line x1="210.0" y1="225.0" x2="256.5" y2="373.3" class="e2" stroke-width="1.9"><title>LDC–F: 2 shared posts</title></line>
+<line x1="210.0" y1="225.0" x2="85.3" y2="323.1" class="e2" stroke-width="1.9"><title>LDC–H: 4 shared posts</title></line>
+<line x1="388.0" y1="34.0" x2="360.1" y2="146.5" class="e2" stroke-width="1.9"><title>TB–C: 2 shared posts</title></line>
+<line x1="210.0" y1="50.0" x2="373.3" y2="238.5" class="e3" stroke-width="3.0"><title>A–D: 5 shared posts</title></line>
+<line x1="210.0" y1="50.0" x2="210.0" y2="225.0" class="e3" stroke-width="3.0"><title>A–LDC: 6 shared posts</title></line>
+<line x1="210.0" y1="50.0" x2="388.0" y2="34.0" class="e3" stroke-width="3.0"><title>A–TB: 5 shared posts</title></line>
+<line x1="85.3" y1="323.1" x2="360.1" y2="146.5" class="e3" stroke-width="3.0"><title>H–C: 5 shared posts</title></line>
+<line x1="120.8" y1="76.2" x2="373.3" y2="238.5" class="e3" stroke-width="3.0"><title>K–D: 6 shared posts</title></line>
+<line x1="120.8" y1="76.2" x2="210.0" y2="225.0" class="e3" stroke-width="3.0"><title>K–LDC: 7 shared posts</title></line>
+<line x1="210.0" y1="225.0" x2="163.5" y2="373.3" class="e3" stroke-width="3.0"><title>LDC–G: 6 shared posts</title></line>
+<line x1="210.0" y1="225.0" x2="388.0" y2="34.0" class="e3" stroke-width="3.0"><title>LDC–TB: 12 shared posts</title></line>
+<line x1="388.0" y1="34.0" x2="373.3" y2="238.5" class="e3" stroke-width="3.0"><title>TB–D: 6 shared posts</title></line>
+<line x1="360.1" y1="146.5" x2="373.3" y2="238.5" class="e4" stroke-width="4.4"><title>C–D: 32 shared posts</title></line>
+<line x1="210.0" y1="225.0" x2="373.3" y2="238.5" class="e4" stroke-width="4.4"><title>LDC–D: 51 shared posts</title></line>
+<line x1="210.0" y1="225.0" x2="360.1" y2="146.5" class="e5" stroke-width="6.5"><title>LDC–C: 139 shared posts</title></line>
+<circle cx="210.0" cy="225.0" r="23" class="n ldc"/><text x="210.0" y="230.0" class="nl ldc">LDC</text>
+<circle cx="388.0" cy="34.0" r="23" class="n tb"/><text x="388.0" y="39.0" class="nl tb">TB</text>
+<circle cx="210.0" cy="50.0" r="17" class="n o"/><text x="210.0" y="55.0" class="nl o">A</text>
+<circle cx="299.2" cy="76.2" r="17" class="n o"/><text x="299.2" y="81.2" class="nl o">B</text>
+<circle cx="360.1" cy="146.5" r="17" class="n o"/><text x="360.1" y="151.5" class="nl o">C</text>
+<circle cx="373.3" cy="238.5" r="17" class="n o"/><text x="373.3" y="243.5" class="nl o">D</text>
+<circle cx="334.7" cy="323.1" r="17" class="n o"/><text x="334.7" y="328.1" class="nl o">E</text>
+<circle cx="256.5" cy="373.3" r="17" class="n o"/><text x="256.5" y="378.3" class="nl o">F</text>
+<circle cx="163.5" cy="373.3" r="17" class="n o"/><text x="163.5" y="378.3" class="nl o">G</text>
+<circle cx="85.3" cy="323.1" r="17" class="n o"/><text x="85.3" y="328.1" class="nl o">H</text>
+<circle cx="46.7" cy="238.5" r="17" class="n o"/><text x="46.7" y="243.5" class="nl o">I</text>
+<circle cx="59.9" cy="146.5" r="17" class="n o"/><text x="59.9" y="151.5" class="nl o">J</text>
+<circle cx="120.8" cy="76.2" r="17" class="n o"/><text x="120.8" y="81.2" class="nl o">K</text>
+</svg></div>
+</div>
+<div class="key2">
+ <div class="krow"><b>Key</b></div>
+ <div class="krow"><span><span class="dot" style="background:var(--gold)"></span>TB · Tim Ballard</span><span><span class="dot" style="background:var(--ldc)"></span>LDC · Latter Day Chad</span><span><span class="dot" style="background:var(--node)"></span>A–K · the other seat-fillers</span></div>
+ <div class="krow"><b>Line colour = shared posts for that pair</b> (count of links: before · after)</div>
+ <div class="krow"><span><span class="sw" style="width:34px;height:2px;background:var(--e1)"></span>1 post (10 · 21)</span><span><span class="sw" style="width:34px;height:3px;background:var(--e2)"></span>2–4 (5 · 15)</span><span><span class="sw" style="width:34px;height:4px;background:var(--e3)"></span>5–19 (6 · 9)</span><span><span class="sw" style="width:34px;height:5px;background:var(--e4)"></span>20–99 (3 · 2)</span><span><span class="sw" style="width:34px;height:7px;background:var(--e5)"></span>100+ (1 · 1)</span></div>
+</div>
+
+<p>What the structure shows:</p>
+<ul>
+<li><b>One host, assigned seats.</b> All seven group posts were uploaded by latterdayavenger, which is not one of the 13. Ballard and Chad hold two fixed seats; the other three rotate.</li>
+<li><b>The host is a regular.</b> latterdayavenger is also credited on 42 other posts in Chad’s and C’s grids, May 31, 2025 to June 14, 2026, usually as one of three to five credited accounts. Posts with four or more credited accounts are common across this whole crowd: 808 in our captures, 20 to 60 a month since January 2025. Ballard was slotted into a format that was already running. <span class="tag t-data">Our data</span> We have not yet captured latterdayavenger’s own grid.</li>
+<li><b>An old core.</b> Before Ballard arrived there were already 25 links and 634 shared posts. Chad and C alone had 434. Chad–D, C–D and Chad–H were also established.</li>
+<li><b>Thin new links.</b> From Feb 18 the number of links nearly doubles, but most new ones are a single post (21 of 48). Accounts appear once or twice, then drop out. Part of that is arithmetic: one post with five credited accounts makes ten pairs at once (see the algebra below).</li>
+<li><b>Ballard hangs on Chad.</b> Ballard has 13 shared posts with Chad and between 1 and 6 with anyone else. Before Feb 18 he had exactly two posts with this group, and he posted both himself.</li>
+</ul>
+<p>The data shows who was credited with whom, and when. It does not show who is behind the smaller accounts.</p>
+
+
+<h2>The seven posts as algebra</h2>
+<div class="note"><h3>Not yet peer reviewed</h3><p style="margin:0">The math in this section has not been reviewed by anyone outside our team. The counts come straight from the posts; the design-theory reading and the symmetry calculation are our own and may contain errors. Corrections are welcome.</p></div>
+<p>Treat the accounts as points and the seven group posts as blocks: 13 points, 7 blocks, 5 points in each block. That is an incidence structure, and its algebra says a lot about how the posts were put together.</p>
+<p><b>The incidence matrix N.</b> One row per account, one column per post; a filled cell means the account is credited on that post. Rows are grouped by symmetry (explained below). The right-hand column is <span class="math">r</span>, the number of posts each account is on.</p>
+<div class="alg"><svg viewBox="0 0 542 422" role="img" aria-label="Incidence matrix N">
+<text x="173.0" y="28" class="ax" text-anchor="middle">Feb 18</text>
+<text x="219.0" y="28" class="ax" text-anchor="middle">Feb 20</text>
+<text x="265.0" y="28" class="ax" text-anchor="middle">Feb 22</text>
+<text x="311.0" y="28" class="ax" text-anchor="middle">Feb 25</text>
+<text x="357.0" y="28" class="ax" text-anchor="middle">Mar 30</text>
+<text x="403.0" y="28" class="ax" text-anchor="middle">Apr 10</text>
+<text x="449.0" y="28" class="ax" text-anchor="middle">Apr 18</text>
+<text x="486" y="28" class="ax">r</text>
+<text x="140" y="57.68" class="rl tb" text-anchor="end">TB</text>
+<rect x="151" y="41" width="44" height="24" class="cell"/>
+<rect x="157" y="46" width="32" height="14" rx="3" class="on tb"/>
+<rect x="197" y="41" width="44" height="24" class="cell"/>
+<rect x="203" y="46" width="32" height="14" rx="3" class="on tb"/>
+<rect x="243" y="41" width="44" height="24" class="cell"/>
+<rect x="249" y="46" width="32" height="14" rx="3" class="on tb"/>
+<rect x="289" y="41" width="44" height="24" class="cell"/>
+<rect x="295" y="46" width="32" height="14" rx="3" class="on tb"/>
+<rect x="335" y="41" width="44" height="24" class="cell"/>
+<rect x="341" y="46" width="32" height="14" rx="3" class="on tb"/>
+<rect x="381" y="41" width="44" height="24" class="cell"/>
+<rect x="387" y="46" width="32" height="14" rx="3" class="on tb"/>
+<rect x="427" y="41" width="44" height="24" class="cell"/>
+<rect x="433" y="46" width="32" height="14" rx="3" class="on tb"/>
+<text x="486" y="57.68" class="ax">7</text>
+<text x="140" y="83.68" class="rl ldc" text-anchor="end">LDC</text>
+<rect x="151" y="67" width="44" height="24" class="cell"/>
+<rect x="157" y="72" width="32" height="14" rx="3" class="on ldc"/>
+<rect x="197" y="67" width="44" height="24" class="cell"/>
+<rect x="203" y="72" width="32" height="14" rx="3" class="on ldc"/>
+<rect x="243" y="67" width="44" height="24" class="cell"/>
+<rect x="249" y="72" width="32" height="14" rx="3" class="on ldc"/>
+<rect x="289" y="67" width="44" height="24" class="cell"/>
+<rect x="295" y="72" width="32" height="14" rx="3" class="on ldc"/>
+<rect x="335" y="67" width="44" height="24" class="cell"/>
+<rect x="341" y="72" width="32" height="14" rx="3" class="on ldc"/>
+<rect x="381" y="67" width="44" height="24" class="cell"/>
+<rect x="387" y="72" width="32" height="14" rx="3" class="on ldc"/>
+<rect x="427" y="67" width="44" height="24" class="cell"/>
+<rect x="433" y="72" width="32" height="14" rx="3" class="on ldc"/>
+<text x="486" y="83.68" class="ax">7</text>
+<path d="M 104 43 h -6 V 89 h 6" class="br"/>
+<text x="92" y="70.0" class="gl" text-anchor="end">orbit</text>
+<text x="140" y="121.68" class="rl o" text-anchor="end">A</text>
+<rect x="151" y="105" width="44" height="24" class="cell"/>
+<rect x="157" y="110" width="32" height="14" rx="3" class="on o"/>
+<rect x="197" y="105" width="44" height="24" class="cell"/>
+<rect x="203" y="110" width="32" height="14" rx="3" class="on o"/>
+<rect x="243" y="105" width="44" height="24" class="cell"/>
+<rect x="249" y="110" width="32" height="14" rx="3" class="on o"/>
+<rect x="289" y="105" width="44" height="24" class="cell"/>
+<rect x="295" y="110" width="32" height="14" rx="3" class="on o"/>
+<rect x="335" y="105" width="44" height="24" class="cell"/>
+<rect x="381" y="105" width="44" height="24" class="cell"/>
+<rect x="427" y="105" width="44" height="24" class="cell"/>
+<text x="486" y="121.68" class="ax">4</text>
+<text x="140" y="147.68" class="rl o" text-anchor="end">B</text>
+<rect x="151" y="131" width="44" height="24" class="cell"/>
+<rect x="157" y="136" width="32" height="14" rx="3" class="on o"/>
+<rect x="197" y="131" width="44" height="24" class="cell"/>
+<rect x="243" y="131" width="44" height="24" class="cell"/>
+<rect x="289" y="131" width="44" height="24" class="cell"/>
+<rect x="295" y="136" width="32" height="14" rx="3" class="on o"/>
+<rect x="335" y="131" width="44" height="24" class="cell"/>
+<rect x="341" y="136" width="32" height="14" rx="3" class="on o"/>
+<rect x="381" y="131" width="44" height="24" class="cell"/>
+<rect x="427" y="131" width="44" height="24" class="cell"/>
+<text x="486" y="147.68" class="ax">3</text>
+<text x="140" y="173.68" class="rl o" text-anchor="end">C</text>
+<rect x="151" y="157" width="44" height="24" class="cell"/>
+<rect x="157" y="162" width="32" height="14" rx="3" class="on o"/>
+<rect x="197" y="157" width="44" height="24" class="cell"/>
+<rect x="203" y="162" width="32" height="14" rx="3" class="on o"/>
+<rect x="243" y="157" width="44" height="24" class="cell"/>
+<rect x="289" y="157" width="44" height="24" class="cell"/>
+<rect x="335" y="157" width="44" height="24" class="cell"/>
+<rect x="381" y="157" width="44" height="24" class="cell"/>
+<rect x="427" y="157" width="44" height="24" class="cell"/>
+<text x="486" y="173.68" class="ax">2</text>
+<text x="140" y="199.68" class="rl o" text-anchor="end">D</text>
+<rect x="151" y="183" width="44" height="24" class="cell"/>
+<rect x="197" y="183" width="44" height="24" class="cell"/>
+<rect x="203" y="188" width="32" height="14" rx="3" class="on o"/>
+<rect x="243" y="183" width="44" height="24" class="cell"/>
+<rect x="249" y="188" width="32" height="14" rx="3" class="on o"/>
+<rect x="289" y="183" width="44" height="24" class="cell"/>
+<rect x="295" y="188" width="32" height="14" rx="3" class="on o"/>
+<rect x="335" y="183" width="44" height="24" class="cell"/>
+<rect x="381" y="183" width="44" height="24" class="cell"/>
+<rect x="427" y="183" width="44" height="24" class="cell"/>
+<rect x="433" y="188" width="32" height="14" rx="3" class="on o"/>
+<text x="486" y="199.68" class="ax">4</text>
+<text x="140" y="225.68" class="rl o" text-anchor="end">E</text>
+<rect x="151" y="209" width="44" height="24" class="cell"/>
+<rect x="197" y="209" width="44" height="24" class="cell"/>
+<rect x="243" y="209" width="44" height="24" class="cell"/>
+<rect x="249" y="214" width="32" height="14" rx="3" class="on o"/>
+<rect x="289" y="209" width="44" height="24" class="cell"/>
+<rect x="335" y="209" width="44" height="24" class="cell"/>
+<rect x="381" y="209" width="44" height="24" class="cell"/>
+<rect x="427" y="209" width="44" height="24" class="cell"/>
+<text x="486" y="225.68" class="ax">1</text>
+<text x="140" y="251.68" class="rl o" text-anchor="end">F</text>
+<rect x="151" y="235" width="44" height="24" class="cell"/>
+<rect x="197" y="235" width="44" height="24" class="cell"/>
+<rect x="243" y="235" width="44" height="24" class="cell"/>
+<rect x="289" y="235" width="44" height="24" class="cell"/>
+<rect x="335" y="235" width="44" height="24" class="cell"/>
+<rect x="341" y="240" width="32" height="14" rx="3" class="on o"/>
+<rect x="381" y="235" width="44" height="24" class="cell"/>
+<rect x="427" y="235" width="44" height="24" class="cell"/>
+<text x="486" y="251.68" class="ax">1</text>
+<text x="140" y="277.68" class="rl o" text-anchor="end">G</text>
+<rect x="151" y="261" width="44" height="24" class="cell"/>
+<rect x="197" y="261" width="44" height="24" class="cell"/>
+<rect x="243" y="261" width="44" height="24" class="cell"/>
+<rect x="289" y="261" width="44" height="24" class="cell"/>
+<rect x="335" y="261" width="44" height="24" class="cell"/>
+<rect x="341" y="266" width="32" height="14" rx="3" class="on o"/>
+<rect x="381" y="261" width="44" height="24" class="cell"/>
+<rect x="427" y="261" width="44" height="24" class="cell"/>
+<rect x="433" y="266" width="32" height="14" rx="3" class="on o"/>
+<text x="486" y="277.68" class="ax">2</text>
+<text x="140" y="303.68" class="rl o" text-anchor="end">K</text>
+<rect x="151" y="287" width="44" height="24" class="cell"/>
+<rect x="197" y="287" width="44" height="24" class="cell"/>
+<rect x="243" y="287" width="44" height="24" class="cell"/>
+<rect x="289" y="287" width="44" height="24" class="cell"/>
+<rect x="335" y="287" width="44" height="24" class="cell"/>
+<rect x="381" y="287" width="44" height="24" class="cell"/>
+<rect x="427" y="287" width="44" height="24" class="cell"/>
+<rect x="433" y="292" width="32" height="14" rx="3" class="on o"/>
+<text x="486" y="303.68" class="ax">1</text>
+<path d="M 104 107 h -6 V 309 h 6" class="br"/>
+<text x="92" y="212.0" class="gl" text-anchor="end">fixed</text>
+<text x="140" y="341.68" class="rl o" text-anchor="end">H</text>
+<rect x="151" y="325" width="44" height="24" class="cell"/>
+<rect x="197" y="325" width="44" height="24" class="cell"/>
+<rect x="243" y="325" width="44" height="24" class="cell"/>
+<rect x="289" y="325" width="44" height="24" class="cell"/>
+<rect x="335" y="325" width="44" height="24" class="cell"/>
+<rect x="381" y="325" width="44" height="24" class="cell"/>
+<rect x="387" y="330" width="32" height="14" rx="3" class="on o"/>
+<rect x="427" y="325" width="44" height="24" class="cell"/>
+<text x="486" y="341.68" class="ax">1</text>
+<text x="140" y="367.68" class="rl o" text-anchor="end">I</text>
+<rect x="151" y="351" width="44" height="24" class="cell"/>
+<rect x="197" y="351" width="44" height="24" class="cell"/>
+<rect x="243" y="351" width="44" height="24" class="cell"/>
+<rect x="289" y="351" width="44" height="24" class="cell"/>
+<rect x="335" y="351" width="44" height="24" class="cell"/>
+<rect x="381" y="351" width="44" height="24" class="cell"/>
+<rect x="387" y="356" width="32" height="14" rx="3" class="on o"/>
+<rect x="427" y="351" width="44" height="24" class="cell"/>
+<text x="486" y="367.68" class="ax">1</text>
+<text x="140" y="393.68" class="rl o" text-anchor="end">J</text>
+<rect x="151" y="377" width="44" height="24" class="cell"/>
+<rect x="197" y="377" width="44" height="24" class="cell"/>
+<rect x="243" y="377" width="44" height="24" class="cell"/>
+<rect x="289" y="377" width="44" height="24" class="cell"/>
+<rect x="335" y="377" width="44" height="24" class="cell"/>
+<rect x="381" y="377" width="44" height="24" class="cell"/>
+<rect x="387" y="382" width="32" height="14" rx="3" class="on o"/>
+<rect x="427" y="377" width="44" height="24" class="cell"/>
+<text x="486" y="393.68" class="ax">1</text>
+<path d="M 104 327 h -6 V 399 h 6" class="br"/>
+<text x="92" y="367.0" class="gl" text-anchor="end">orbit</text>
+</svg></div>
+<div class="key2"><div class="krow"><b>Key</b></div><div class="krow"><span><span class="dot" style="background:var(--gold);border-radius:3px"></span>TB credited on the post</span><span><span class="dot" style="background:var(--ldc);border-radius:3px"></span>LDC credited</span><span><span class="dot" style="background:var(--node);border-radius:3px"></span>A–K credited</span><span>empty cell = not on that post</span><span><b style="color:var(--gold)">bracket</b> = an orbit or the fixed points</span></div></div>
+
+<p><b>Pairs come in bundles of ten.</b> The pair counts are <span class="math">N·Nᵀ = Σ<sub>B</sub> 𝟙<sub>B</sub>𝟙<sub>B</sub>ᵀ</span>, a sum over the posts. Each post with five credited accounts adds a complete set of ten pairs at once. So the lines in the maps above arrive ten at a time: that is the arithmetic of the format, not ten separate choices.</p>
+<div class="alg"><svg viewBox="0 0 366 366" role="img" aria-label="Pair counts N N transpose" style="max-width:440px">
+<text x="38" y="60.32" class="ax" text-anchor="end">TB</text>
+<text x="56.0" y="36" class="ax" text-anchor="middle">TB</text>
+<rect x="45" y="45" width="22" height="22" class="diag"/>
+<rect x="69" y="45" width="22" height="22" class="g4"><title>TB–LDC: 7</title></rect>
+<rect x="93" y="45" width="22" height="22" class="g3"><title>TB–A: 4</title></rect>
+<rect x="117" y="45" width="22" height="22" class="g3"><title>TB–B: 3</title></rect>
+<rect x="141" y="45" width="22" height="22" class="g2"><title>TB–C: 2</title></rect>
+<rect x="165" y="45" width="22" height="22" class="g3"><title>TB–D: 4</title></rect>
+<rect x="189" y="45" width="22" height="22" class="g1"><title>TB–E: 1</title></rect>
+<rect x="213" y="45" width="22" height="22" class="g1"><title>TB–F: 1</title></rect>
+<rect x="237" y="45" width="22" height="22" class="g2"><title>TB–G: 2</title></rect>
+<rect x="261" y="45" width="22" height="22" class="g1"><title>TB–K: 1</title></rect>
+<rect x="285" y="45" width="22" height="22" class="g1"><title>TB–H: 1</title></rect>
+<rect x="309" y="45" width="22" height="22" class="g1"><title>TB–I: 1</title></rect>
+<rect x="333" y="45" width="22" height="22" class="g1"><title>TB–J: 1</title></rect>
+<text x="38" y="84.32" class="ax" text-anchor="end">LDC</text>
+<text x="80.0" y="36" class="ax" text-anchor="middle">LDC</text>
+<rect x="45" y="69" width="22" height="22" class="g4"><title>LDC–TB: 7</title></rect>
+<rect x="69" y="69" width="22" height="22" class="diag"/>
+<rect x="93" y="69" width="22" height="22" class="g3"><title>LDC–A: 4</title></rect>
+<rect x="117" y="69" width="22" height="22" class="g3"><title>LDC–B: 3</title></rect>
+<rect x="141" y="69" width="22" height="22" class="g2"><title>LDC–C: 2</title></rect>
+<rect x="165" y="69" width="22" height="22" class="g3"><title>LDC–D: 4</title></rect>
+<rect x="189" y="69" width="22" height="22" class="g1"><title>LDC–E: 1</title></rect>
+<rect x="213" y="69" width="22" height="22" class="g1"><title>LDC–F: 1</title></rect>
+<rect x="237" y="69" width="22" height="22" class="g2"><title>LDC–G: 2</title></rect>
+<rect x="261" y="69" width="22" height="22" class="g1"><title>LDC–K: 1</title></rect>
+<rect x="285" y="69" width="22" height="22" class="g1"><title>LDC–H: 1</title></rect>
+<rect x="309" y="69" width="22" height="22" class="g1"><title>LDC–I: 1</title></rect>
+<rect x="333" y="69" width="22" height="22" class="g1"><title>LDC–J: 1</title></rect>
+<text x="38" y="108.32" class="ax" text-anchor="end">A</text>
+<text x="104.0" y="36" class="ax" text-anchor="middle">A</text>
+<rect x="45" y="93" width="22" height="22" class="g3"><title>A–TB: 4</title></rect>
+<rect x="69" y="93" width="22" height="22" class="g3"><title>A–LDC: 4</title></rect>
+<rect x="93" y="93" width="22" height="22" class="diag"/>
+<rect x="117" y="93" width="22" height="22" class="g2"><title>A–B: 2</title></rect>
+<rect x="141" y="93" width="22" height="22" class="g2"><title>A–C: 2</title></rect>
+<rect x="165" y="93" width="22" height="22" class="g3"><title>A–D: 3</title></rect>
+<rect x="189" y="93" width="22" height="22" class="g1"><title>A–E: 1</title></rect>
+<rect x="213" y="93" width="22" height="22" class="g0"><title>A–F: 0</title></rect>
+<rect x="237" y="93" width="22" height="22" class="g0"><title>A–G: 0</title></rect>
+<rect x="261" y="93" width="22" height="22" class="g0"><title>A–K: 0</title></rect>
+<rect x="285" y="93" width="22" height="22" class="g0"><title>A–H: 0</title></rect>
+<rect x="309" y="93" width="22" height="22" class="g0"><title>A–I: 0</title></rect>
+<rect x="333" y="93" width="22" height="22" class="g0"><title>A–J: 0</title></rect>
+<text x="38" y="132.32" class="ax" text-anchor="end">B</text>
+<text x="128.0" y="36" class="ax" text-anchor="middle">B</text>
+<rect x="45" y="117" width="22" height="22" class="g3"><title>B–TB: 3</title></rect>
+<rect x="69" y="117" width="22" height="22" class="g3"><title>B–LDC: 3</title></rect>
+<rect x="93" y="117" width="22" height="22" class="g2"><title>B–A: 2</title></rect>
+<rect x="117" y="117" width="22" height="22" class="diag"/>
+<rect x="141" y="117" width="22" height="22" class="g1"><title>B–C: 1</title></rect>
+<rect x="165" y="117" width="22" height="22" class="g1"><title>B–D: 1</title></rect>
+<rect x="189" y="117" width="22" height="22" class="g0"><title>B–E: 0</title></rect>
+<rect x="213" y="117" width="22" height="22" class="g1"><title>B–F: 1</title></rect>
+<rect x="237" y="117" width="22" height="22" class="g1"><title>B–G: 1</title></rect>
+<rect x="261" y="117" width="22" height="22" class="g0"><title>B–K: 0</title></rect>
+<rect x="285" y="117" width="22" height="22" class="g0"><title>B–H: 0</title></rect>
+<rect x="309" y="117" width="22" height="22" class="g0"><title>B–I: 0</title></rect>
+<rect x="333" y="117" width="22" height="22" class="g0"><title>B–J: 0</title></rect>
+<text x="38" y="156.32" class="ax" text-anchor="end">C</text>
+<text x="152.0" y="36" class="ax" text-anchor="middle">C</text>
+<rect x="45" y="141" width="22" height="22" class="g2"><title>C–TB: 2</title></rect>
+<rect x="69" y="141" width="22" height="22" class="g2"><title>C–LDC: 2</title></rect>
+<rect x="93" y="141" width="22" height="22" class="g2"><title>C–A: 2</title></rect>
+<rect x="117" y="141" width="22" height="22" class="g1"><title>C–B: 1</title></rect>
+<rect x="141" y="141" width="22" height="22" class="diag"/>
+<rect x="165" y="141" width="22" height="22" class="g1"><title>C–D: 1</title></rect>
+<rect x="189" y="141" width="22" height="22" class="g0"><title>C–E: 0</title></rect>
+<rect x="213" y="141" width="22" height="22" class="g0"><title>C–F: 0</title></rect>
+<rect x="237" y="141" width="22" height="22" class="g0"><title>C–G: 0</title></rect>
+<rect x="261" y="141" width="22" height="22" class="g0"><title>C–K: 0</title></rect>
+<rect x="285" y="141" width="22" height="22" class="g0"><title>C–H: 0</title></rect>
+<rect x="309" y="141" width="22" height="22" class="g0"><title>C–I: 0</title></rect>
+<rect x="333" y="141" width="22" height="22" class="g0"><title>C–J: 0</title></rect>
+<text x="38" y="180.32" class="ax" text-anchor="end">D</text>
+<text x="176.0" y="36" class="ax" text-anchor="middle">D</text>
+<rect x="45" y="165" width="22" height="22" class="g3"><title>D–TB: 4</title></rect>
+<rect x="69" y="165" width="22" height="22" class="g3"><title>D–LDC: 4</title></rect>
+<rect x="93" y="165" width="22" height="22" class="g3"><title>D–A: 3</title></rect>
+<rect x="117" y="165" width="22" height="22" class="g1"><title>D–B: 1</title></rect>
+<rect x="141" y="165" width="22" height="22" class="g1"><title>D–C: 1</title></rect>
+<rect x="165" y="165" width="22" height="22" class="diag"/>
+<rect x="189" y="165" width="22" height="22" class="g1"><title>D–E: 1</title></rect>
+<rect x="213" y="165" width="22" height="22" class="g0"><title>D–F: 0</title></rect>
+<rect x="237" y="165" width="22" height="22" class="g1"><title>D–G: 1</title></rect>
+<rect x="261" y="165" width="22" height="22" class="g1"><title>D–K: 1</title></rect>
+<rect x="285" y="165" width="22" height="22" class="g0"><title>D–H: 0</title></rect>
+<rect x="309" y="165" width="22" height="22" class="g0"><title>D–I: 0</title></rect>
+<rect x="333" y="165" width="22" height="22" class="g0"><title>D–J: 0</title></rect>
+<text x="38" y="204.32" class="ax" text-anchor="end">E</text>
+<text x="200.0" y="36" class="ax" text-anchor="middle">E</text>
+<rect x="45" y="189" width="22" height="22" class="g1"><title>E–TB: 1</title></rect>
+<rect x="69" y="189" width="22" height="22" class="g1"><title>E–LDC: 1</title></rect>
+<rect x="93" y="189" width="22" height="22" class="g1"><title>E–A: 1</title></rect>
+<rect x="117" y="189" width="22" height="22" class="g0"><title>E–B: 0</title></rect>
+<rect x="141" y="189" width="22" height="22" class="g0"><title>E–C: 0</title></rect>
+<rect x="165" y="189" width="22" height="22" class="g1"><title>E–D: 1</title></rect>
+<rect x="189" y="189" width="22" height="22" class="diag"/>
+<rect x="213" y="189" width="22" height="22" class="g0"><title>E–F: 0</title></rect>
+<rect x="237" y="189" width="22" height="22" class="g0"><title>E–G: 0</title></rect>
+<rect x="261" y="189" width="22" height="22" class="g0"><title>E–K: 0</title></rect>
+<rect x="285" y="189" width="22" height="22" class="g0"><title>E–H: 0</title></rect>
+<rect x="309" y="189" width="22" height="22" class="g0"><title>E–I: 0</title></rect>
+<rect x="333" y="189" width="22" height="22" class="g0"><title>E–J: 0</title></rect>
+<text x="38" y="228.32" class="ax" text-anchor="end">F</text>
+<text x="224.0" y="36" class="ax" text-anchor="middle">F</text>
+<rect x="45" y="213" width="22" height="22" class="g1"><title>F–TB: 1</title></rect>
+<rect x="69" y="213" width="22" height="22" class="g1"><title>F–LDC: 1</title></rect>
+<rect x="93" y="213" width="22" height="22" class="g0"><title>F–A: 0</title></rect>
+<rect x="117" y="213" width="22" height="22" class="g1"><title>F–B: 1</title></rect>
+<rect x="141" y="213" width="22" height="22" class="g0"><title>F–C: 0</title></rect>
+<rect x="165" y="213" width="22" height="22" class="g0"><title>F–D: 0</title></rect>
+<rect x="189" y="213" width="22" height="22" class="g0"><title>F–E: 0</title></rect>
+<rect x="213" y="213" width="22" height="22" class="diag"/>
+<rect x="237" y="213" width="22" height="22" class="g1"><title>F–G: 1</title></rect>
+<rect x="261" y="213" width="22" height="22" class="g0"><title>F–K: 0</title></rect>
+<rect x="285" y="213" width="22" height="22" class="g0"><title>F–H: 0</title></rect>
+<rect x="309" y="213" width="22" height="22" class="g0"><title>F–I: 0</title></rect>
+<rect x="333" y="213" width="22" height="22" class="g0"><title>F–J: 0</title></rect>
+<text x="38" y="252.32" class="ax" text-anchor="end">G</text>
+<text x="248.0" y="36" class="ax" text-anchor="middle">G</text>
+<rect x="45" y="237" width="22" height="22" class="g2"><title>G–TB: 2</title></rect>
+<rect x="69" y="237" width="22" height="22" class="g2"><title>G–LDC: 2</title></rect>
+<rect x="93" y="237" width="22" height="22" class="g0"><title>G–A: 0</title></rect>
+<rect x="117" y="237" width="22" height="22" class="g1"><title>G–B: 1</title></rect>
+<rect x="141" y="237" width="22" height="22" class="g0"><title>G–C: 0</title></rect>
+<rect x="165" y="237" width="22" height="22" class="g1"><title>G–D: 1</title></rect>
+<rect x="189" y="237" width="22" height="22" class="g0"><title>G–E: 0</title></rect>
+<rect x="213" y="237" width="22" height="22" class="g1"><title>G–F: 1</title></rect>
+<rect x="237" y="237" width="22" height="22" class="diag"/>
+<rect x="261" y="237" width="22" height="22" class="g1"><title>G–K: 1</title></rect>
+<rect x="285" y="237" width="22" height="22" class="g0"><title>G–H: 0</title></rect>
+<rect x="309" y="237" width="22" height="22" class="g0"><title>G–I: 0</title></rect>
+<rect x="333" y="237" width="22" height="22" class="g0"><title>G–J: 0</title></rect>
+<text x="38" y="276.32" class="ax" text-anchor="end">K</text>
+<text x="272.0" y="36" class="ax" text-anchor="middle">K</text>
+<rect x="45" y="261" width="22" height="22" class="g1"><title>K–TB: 1</title></rect>
+<rect x="69" y="261" width="22" height="22" class="g1"><title>K–LDC: 1</title></rect>
+<rect x="93" y="261" width="22" height="22" class="g0"><title>K–A: 0</title></rect>
+<rect x="117" y="261" width="22" height="22" class="g0"><title>K–B: 0</title></rect>
+<rect x="141" y="261" width="22" height="22" class="g0"><title>K–C: 0</title></rect>
+<rect x="165" y="261" width="22" height="22" class="g1"><title>K–D: 1</title></rect>
+<rect x="189" y="261" width="22" height="22" class="g0"><title>K–E: 0</title></rect>
+<rect x="213" y="261" width="22" height="22" class="g0"><title>K–F: 0</title></rect>
+<rect x="237" y="261" width="22" height="22" class="g1"><title>K–G: 1</title></rect>
+<rect x="261" y="261" width="22" height="22" class="diag"/>
+<rect x="285" y="261" width="22" height="22" class="g0"><title>K–H: 0</title></rect>
+<rect x="309" y="261" width="22" height="22" class="g0"><title>K–I: 0</title></rect>
+<rect x="333" y="261" width="22" height="22" class="g0"><title>K–J: 0</title></rect>
+<text x="38" y="300.32" class="ax" text-anchor="end">H</text>
+<text x="296.0" y="36" class="ax" text-anchor="middle">H</text>
+<rect x="45" y="285" width="22" height="22" class="g1"><title>H–TB: 1</title></rect>
+<rect x="69" y="285" width="22" height="22" class="g1"><title>H–LDC: 1</title></rect>
+<rect x="93" y="285" width="22" height="22" class="g0"><title>H–A: 0</title></rect>
+<rect x="117" y="285" width="22" height="22" class="g0"><title>H–B: 0</title></rect>
+<rect x="141" y="285" width="22" height="22" class="g0"><title>H–C: 0</title></rect>
+<rect x="165" y="285" width="22" height="22" class="g0"><title>H–D: 0</title></rect>
+<rect x="189" y="285" width="22" height="22" class="g0"><title>H–E: 0</title></rect>
+<rect x="213" y="285" width="22" height="22" class="g0"><title>H–F: 0</title></rect>
+<rect x="237" y="285" width="22" height="22" class="g0"><title>H–G: 0</title></rect>
+<rect x="261" y="285" width="22" height="22" class="g0"><title>H–K: 0</title></rect>
+<rect x="285" y="285" width="22" height="22" class="diag"/>
+<rect x="309" y="285" width="22" height="22" class="g1"><title>H–I: 1</title></rect>
+<rect x="333" y="285" width="22" height="22" class="g1"><title>H–J: 1</title></rect>
+<text x="38" y="324.32" class="ax" text-anchor="end">I</text>
+<text x="320.0" y="36" class="ax" text-anchor="middle">I</text>
+<rect x="45" y="309" width="22" height="22" class="g1"><title>I–TB: 1</title></rect>
+<rect x="69" y="309" width="22" height="22" class="g1"><title>I–LDC: 1</title></rect>
+<rect x="93" y="309" width="22" height="22" class="g0"><title>I–A: 0</title></rect>
+<rect x="117" y="309" width="22" height="22" class="g0"><title>I–B: 0</title></rect>
+<rect x="141" y="309" width="22" height="22" class="g0"><title>I–C: 0</title></rect>
+<rect x="165" y="309" width="22" height="22" class="g0"><title>I–D: 0</title></rect>
+<rect x="189" y="309" width="22" height="22" class="g0"><title>I–E: 0</title></rect>
+<rect x="213" y="309" width="22" height="22" class="g0"><title>I–F: 0</title></rect>
+<rect x="237" y="309" width="22" height="22" class="g0"><title>I–G: 0</title></rect>
+<rect x="261" y="309" width="22" height="22" class="g0"><title>I–K: 0</title></rect>
+<rect x="285" y="309" width="22" height="22" class="g1"><title>I–H: 1</title></rect>
+<rect x="309" y="309" width="22" height="22" class="diag"/>
+<rect x="333" y="309" width="22" height="22" class="g1"><title>I–J: 1</title></rect>
+<text x="38" y="348.32" class="ax" text-anchor="end">J</text>
+<text x="344.0" y="36" class="ax" text-anchor="middle">J</text>
+<rect x="45" y="333" width="22" height="22" class="g1"><title>J–TB: 1</title></rect>
+<rect x="69" y="333" width="22" height="22" class="g1"><title>J–LDC: 1</title></rect>
+<rect x="93" y="333" width="22" height="22" class="g0"><title>J–A: 0</title></rect>
+<rect x="117" y="333" width="22" height="22" class="g0"><title>J–B: 0</title></rect>
+<rect x="141" y="333" width="22" height="22" class="g0"><title>J–C: 0</title></rect>
+<rect x="165" y="333" width="22" height="22" class="g0"><title>J–D: 0</title></rect>
+<rect x="189" y="333" width="22" height="22" class="g0"><title>J–E: 0</title></rect>
+<rect x="213" y="333" width="22" height="22" class="g0"><title>J–F: 0</title></rect>
+<rect x="237" y="333" width="22" height="22" class="g0"><title>J–G: 0</title></rect>
+<rect x="261" y="333" width="22" height="22" class="g0"><title>J–K: 0</title></rect>
+<rect x="285" y="333" width="22" height="22" class="g1"><title>J–H: 1</title></rect>
+<rect x="309" y="333" width="22" height="22" class="g1"><title>J–I: 1</title></rect>
+<rect x="333" y="333" width="22" height="22" class="diag"/>
+<rect x="44" y="44" width="48" height="48" class="orb"/>
+<rect x="284" y="284" width="72" height="72" class="orb"/>
+</svg></div>
+<div class="key2"><div class="krow"><b>Key</b> · each square is a pair of accounts, coloured by <span class="math">λ</span> = how many of the seven posts they share (count of pairs in each band)</div>
+<div class="krow"><span><span class="sw" style="width:16px;height:16px;border:1px solid var(--rule)"></span>never together (38)</span><span><span class="sw" style="width:16px;height:16px;background:var(--e1)"></span>1 post (26)</span><span><span class="sw" style="width:16px;height:16px;background:var(--e2)"></span>2 posts (6)</span><span><span class="sw" style="width:16px;height:16px;background:var(--e3)"></span>3–4 posts (7)</span><span><span class="sw" style="width:16px;height:16px;background:var(--e5)"></span>all 7 posts (1: TB–LDC)</span><span><span class="sw" style="width:16px;height:16px;background:var(--rule)"></span>diagonal (the account itself)</span><span><span class="sw" style="width:16px;height:16px;border:2px dashed var(--gold)"></span>orbit</span></div></div>
+
+<p><b>Deliberately unbalanced.</b> In a balanced design every account would be on the same number of posts and every pair would meet equally often. Here <span class="math">r = 7</span> for Ballard and Chad and 1 to 4 for everyone else; the pair TB–LDC meets on all 7 posts, and only 40 of the 78 possible pairs ever meet at all.</p>
+<p><b>Take out the fixed pair.</b> Ballard and Chad are in every block, so remove them and look at what is left: seven triples on the other eleven accounts.</p>
+<div class="triples">ABC · ACD · AED · ABD · FBG · HIJ · KGD</div>
+<p>The first four triples all sit inside {A, B, C, D, E}, and A is in all four: a core. Then it branches, with B, D and G carrying over as bridges. HIJ stands on its own and shares no account with any other post.</p>
+<p><b>Symmetry.</b> The automorphism group <span class="math">Aut(N)</span> is every way of relabelling the 13 accounts that carries the set of seven posts onto itself. Computed on these posts: <span class="math">|Aut(N)| = 12 ≅ S₂ × S₃</span>, with orbits <b>{TB, LDC}</b> and <b>{H, I, J}</b>, and every other account fixed.</p>
+<ul>
+<li><b>{TB, LDC}:</b> from the group posts alone, swapping Ballard and Chad changes nothing. The format treats them as one unit, the two fixed seats. What tells them apart lies outside these posts: Ballard’s own December 20 post, and Chad’s 434 posts with C.</li>
+<li><b>{H, I, J}:</b> interchangeable. They appear once, together, as a whole block: a batch swapped in as a unit.</li>
+<li><b>Fixed points:</b> A, B, C, D, E, F, G and K each have a footprint no other account shares.</li>
+</ul>
+<p>Large orbits mark interchangeable seat-fillers; fixed points mark accounts the structure depends on. This describes the posting pattern only, not who is behind any account. With latterdayavenger’s own grid captured, every post it hosts becomes another block, and the same calculation can be run on the whole design.</p>
+
+<h2>What the joint videos say</h2>
+<p>We transcribed the seven joint posts that have speech (two others are photos, one video is silent). After removing common words, these are the words said most, across all seven together:</p>
+<div class="bars" aria-label="Top words in seven transcripts">
+<div class="bar"><span>god</span><i style="width:100%"></i><span>7</span></div>
+<div class="bar"><span>zion</span><i style="width:100%"></i><span>7</span></div>
+<div class="bar"><span>213th</span><i style="width:86%"></i><span>6</span></div>
+<div class="bar"><span>gathered</span><i style="width:86%"></i><span>6</span></div>
+<div class="bar"><span>joseph</span><i style="width:86%"></i><span>6</span></div>
+<div class="bar"><span>utah</span><i style="width:86%"></i><span>6</span></div>
+<div class="bar"><span>verse</span><i style="width:86%"></i><span>6</span></div>
+<div class="bar"><span>children</span><i style="width:71%"></i><span>5</span></div>
+<div class="bar"><span>chinese</span><i style="width:71%"></i><span>5</span></div>
+<div class="bar"><span>covenants</span><i style="width:71%"></i><span>5</span></div>
+<div class="bar"><span>name</span><i style="width:71%"></i><span>5</span></div>
+<div class="bar"><span>people</span><i style="width:71%"></i><span>5</span></div>
+<div class="bar"><span>scriptures</span><i style="width:71%"></i><span>5</span></div>
+<div class="bar"><span>soldiers</span><i style="width:71%"></i><span>5</span></div>
+</div>
+<div class="key" style="grid-template-columns:1fr"><div><b>Key</b> · bar length = times the word is said, all seven transcripts together (1,762 words; 1,026 common words removed; 506 different words left)</div></div>
+<p>Small numbers from short videos: scripture and gathering language (God, Zion, gathered, covenants, scriptures, Joseph Smith, Utah), plus a Korean War segment (Chinese, soldiers, Gapyeong). The names “Ballard,” “Tim” and “Chad” are not said in any of the seven.</p>
+
+<h2>How we missed it</h2>
+<p>Instagram’s collaborator list on a post names the credited accounts but leaves out the account that posted it. On October 4 we counted Chad’s posts whose collaborator list named Ballard. A post Ballard made himself never names him, so the December 20 post didn’t count. It was in our captures of both accounts the whole time.</p>
+<div class="note"><h3>The fixed rule</h3><p style="margin:0">A post ties two accounts if either one credits the other, or if the same post appears in both accounts’ grids. Recounted that way, Chad’s 1,463 captured posts before February 18 include exactly one tied to Ballard: December 20, 2025.</p></div>
+<p>Limits: Chad’s posts come from two captures merged (October 1 and October 4, 2026), 1,888 posts reaching back to June 20, 2024. Ballard’s capture reaches back to September 11, 2025. The October 1 capture did not show Ballard’s credit even on the February group posts, likely because Ballard blocks the account we viewed it from, so it cannot fully rule out an earlier tie in Chad’s oldest posts (June 2024 to January 2025). Nothing before June 2024 is covered.</p>
+
+
+
+<div class="foot">Compiled October 5, 2026; Chad’s two captures merged. Sources: Instagram post pages and post data for timballard89, latterdaychad and the accounts credited with them; screenshot of instagram.com/p/DSghot5ET_3 (Oct 5, 2026); transcripts made from the posts’ own audio. More pages: <a href="index.html">Backfire tracking</a>. Data and corrections: <a href="https://github.com/AntMerrill/backfire-tracking">github.com/AntMerrill/backfire-tracking</a>.</div>
+</main>
+
+</body></html>
