@@ -659,7 +659,7 @@ a{color:var(--accent)}
 </ul>
 <p>Large orbits mark interchangeable seat-fillers; fixed points mark accounts the structure depends on. This describes the posting pattern only, not who is behind any account. With latterdayavenger’s own grid captured, every post it hosts becomes another block, and the same calculation can be run on the whole design.</p>
 <div class="verify" id="check-it">
- <div class="vh"><h3>Check it yourself</h3><span>Prediction · Oct 5, 2026</span></div>
+ <div class="vh"><h3>Check it yourself</h3><span>Confirmed in SageMath 10.9 · Oct 5, 2026</span></div>
  <div class="vb">
   <p style="margin:0;font-size:16px">The seven posts and the matrix N are published. Standard, free math software can compute the symmetry group on its own, without anything of ours:</p>
   <div class="tools">
@@ -670,10 +670,11 @@ a{color:var(--accent)}
 <pre>B = [["TB","LDC","A","B","C"], ["TB","LDC","A","C","D"], ["TB","LDC","A","E","D"],
      ["TB","LDC","A","B","D"], ["TB","LDC","F","B","G"], ["TB","LDC","H","I","J"],
      ["TB","LDC","K","G","D"]]
-D = designs.IncidenceStructure(B)
+D = IncidenceStructure(B)
 G = D.automorphism_group()
 G.order(), G.orbits()</pre>
-  <div class="pred">We predict <b>order 12</b>, with orbits <b>{TB, LDC}</b> and <b>{H, I, J}</b>, and every other account alone. We have not yet run it in Sage ourselves. If you get a different answer, tell us.</div>
+  <div class="pred">We predicted <b>order 12</b>, with orbits <b>{TB, LDC}</b> and <b>{H, I, J}</b>, and every other account alone. <b>SageMath 10.9 confirms it</b>, as do networkx and our own count. If you get a different answer, tell us.</div>
+  <div class="pred" style="font-size:13.5px;color:var(--muted)">Our first version of this code said <code>designs.IncidenceStructure</code>, which Sage 10.9 does not have. Corrected October 5, 2026. Software agreeing is not peer review: what the symmetry means is still our reading.</div>
   <a class="btn" href="https://github.com/AntMerrill/backfire-tracking/tree/main/docs/data/who-went-first">Get the data on GitHub →</a>
  </div>
 </div>

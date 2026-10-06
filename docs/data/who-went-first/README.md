@@ -70,18 +70,24 @@ Everything on the page's algebra section can be recomputed from `incidence_matri
 |Aut(N)| = 12, orbits {TB, LDC} and {H, I, J}, every other account fixed. The math on the page has not
 been peer reviewed. Corrections welcome.
 
-### Prediction (made October 5, 2026; not yet run by us in Sage)
+### Prediction (made October 5, 2026), now confirmed in Sage
 # Type into SageMath (free, https://www.sagemath.org), with the seven posts from `group_posts.csv`:
 
     B = [["TB","LDC","A","B","C"], ["TB","LDC","A","C","D"], ["TB","LDC","A","E","D"],
          ["TB","LDC","A","B","D"], ["TB","LDC","F","B","G"], ["TB","LDC","H","I","J"],
          ["TB","LDC","K","G","D"]]
-    D = designs.IncidenceStructure(B)
+    D = IncidenceStructure(B)
     G = D.automorphism_group()
     G.order(), G.orbits()
 
 We predict Sage prints **12** for the order, and orbits **[TB, LDC]** and **[H, I, J]**, with each of
 A, B, C, D, E, F, G and K alone in its own orbit. GAP or nauty, run on the account-post incidence graph,
 should give the same group. If anyone gets a different answer, tell us.
+
+**Result:** confirmed October 5, 2026 in SageMath 10.9, which printed
+`12 (('F',), ('C',), ('A',), ('G',), ('H', 'I', 'J'), ('K',), ('LDC', 'TB'), ('E',), ('B',), ('D',))`.
+The same result came from networkx 3.4.2 and from our own count. Our first version of the snippet
+used `designs.IncidenceStructure`, which Sage 10.9 does not have; it is corrected above.
+Software agreeing is not peer review: the reading of what the symmetry means is still ours to defend.
 
 "Watch Buttfire"
