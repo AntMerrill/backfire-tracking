@@ -1,0 +1,313 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="All 492 of Tim Ballard's Instagram collaborations run through group theory: 73 one-of-a-kind anchors and 99 interchangeable seat-fillers.">
+<meta property="og:type" content="article"><meta property="og:title" content="Sun, Moon and Starlink">
+<meta property="og:description" content="73 one of a kind. 99 interchangeable. What the shape of Tim Ballard's Instagram collaborations says, using a little algebra.">
+<meta property="og:url" content="https://antmerrill.github.io/backfire-tracking/sun-moon-starlink.html"><meta property="og:image" content="https://antmerrill.github.io/backfire-tracking/img/sunmoon/og_card.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}.exp{display:inline-block;font-size:.46em;line-height:1;vertical-align:.95em;margin-left:.04em;font-variant-numeric:lining-nums tabular-nums;font-feature-settings:"lnum" 1,"tnum" 1;letter-spacing:0}
+</style>
+<title>Sun, Moon and Starlink</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a night-sky reading column. One committed dark look (a sky chart), deliberately single-theme. */
+:root{
+  --sky:#0b0f1a; --panel:#121828; --ink:#e8ecf4; --muted:#9aa4b8; --rule:#24304a;
+  --sun:#ffc94a; --moon:#d9dfeb; --fix:#e6b450; --sat:#f4f7ff; --shell:#2a3a5c; --accent:#7fb0ff; --warn:#ff9b8a;
+  --display:"Space Grotesk","Arial Narrow",system-ui,sans-serif;
+  --body:"Newsreader",Georgia,"Times New Roman",serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--sky);color:var(--ink);font:19px/1.6 var(--body);padding-inline:16px;padding-block:30px 80px;
+  background-image:radial-gradient(1px 1px at 12% 18%,#fff8 50%,transparent 51%),radial-gradient(1px 1px at 72% 9%,#fff6 50%,transparent 51%),radial-gradient(1px 1px at 88% 41%,#fff5 50%,transparent 51%),radial-gradient(1px 1px at 33% 66%,#fff4 50%,transparent 51%),radial-gradient(1px 1px at 55% 88%,#fff5 50%,transparent 51%)}
+.col{max-width:760px;margin:0 auto}
+.eyebrow{font:500 13px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+h1{font:700 clamp(42px,9vw,84px)/.98 var(--display);letter-spacing:-.02em;margin:.2em 0 .25em;text-wrap:balance}
+h1 span{color:var(--sun)}
+h2{font:700 clamp(26px,4.6vw,36px)/1.15 var(--display);margin:2.1em 0 .45em;text-wrap:balance}
+h3{font:700 19px var(--display);margin:0 0 .3em}
+p{margin:.7em 0;max-width:66ch} a{color:var(--accent)} b{font-weight:600}
+.dek{font-size:22px;color:var(--muted);max-width:60ch}
+.lead{background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:18px 22px;margin:22px 0}
+.diagram{margin:20px auto 8px;max-width:640px}
+.diagram svg{width:100%;height:auto;display:block}
+.sun{fill:var(--sun)} .moon{fill:var(--moon)} .fix{fill:var(--fix)} .sat{fill:var(--sat)}
+.shell{fill:none;stroke:var(--shell);stroke-width:1.2;stroke-dasharray:3 4}
+.sl{font:700 20px var(--display);fill:#1a1405;text-anchor:middle} .ml{font:500 13px var(--mono);fill:var(--muted);text-anchor:middle}
+.key{display:flex;flex-wrap:wrap;gap:6px 18px;font:500 13.5px/1.5 var(--mono);color:var(--muted);border:1px solid var(--rule);border-radius:8px;padding:10px 14px;background:var(--panel)}
+.key b{color:var(--ink);font-weight:500}
+.k{display:inline-block;border-radius:50%;vertical-align:-1px;margin-right:7px}
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin:16px 0}
+.split .lead{margin:0}
+.big{font:700 clamp(46px,9vw,72px)/1 var(--display);color:var(--sun)}
+.bars{font:500 15px/1.9 var(--mono);color:var(--muted)}
+.bars .row{display:grid;grid-template-columns:150px 1fr 44px;gap:10px;align-items:center}
+.bars i{display:block;height:12px;border-radius:3px;background:var(--fix)}
+.bars .row span:last-child{text-align:right;color:var(--ink)}
+.batch{font:500 15px/1.8 var(--mono);color:var(--muted)} .batch .dots{color:var(--sat);letter-spacing:2px}
+table{border-collapse:collapse;width:100%;font:500 15px var(--mono);margin:12px 0}
+th,td{border-bottom:1px solid var(--rule);padding:8px;text-align:left;vertical-align:top}
+th{color:var(--muted);font-size:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:500}
+.note{border-left:4px solid var(--warn);background:var(--panel);padding:12px 16px;border-radius:0 8px 8px 0;margin:18px 0}
+.note h3{color:var(--warn)}
+.fields{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.fields span{font:500 14px var(--mono);border:1px solid var(--rule);border-radius:999px;padding:5px 12px;background:var(--panel)}
+.foot{margin-top:3em;border-top:1px solid var(--rule);padding-top:14px;font:500 14px/1.6 var(--mono);color:var(--muted)}
+</style>
+
+</head><body><div class="col">
+<div class="eyebrow">Tim Ballard's Instagram collaborations · a little algebra</div>
+<h1>Sun, Moon and <span>Starlink</span></h1>
+<p class="dek">Every account credited alongside Ballard, sorted by one question: could it trade places with another account without anything looking different?</p>
+
+<div class="lead"><p style="margin:0">We took every Instagram post we've captured where Ballard shares the credit with other accounts: <b>492 posts, 172 accounts</b>. The answer splits them cleanly. <b>73 are one of a kind</b>, like the Sun and the Moon. <b>99 are interchangeable</b>, like Starlink satellites in the same shell: swap any two and the constellation looks exactly the same. Ballard, his foundation and his own projects are the Sun and Moon. Most of the accounts credited beside him are satellites.</p></div>
+
+<div class="diagram"><svg viewBox="0 0 920 920" role="img" aria-label="Fixed points at the centre, interchangeable batches as rings of identical satellites">
+<circle cx="460" cy="460" r="64" class="sun"/><text x="460" y="466" class="sl">Ballard</text>
+<circle cx="460.0" cy="310.0" r="46.9" class="moon"/>
+<text x="460.0" y="372.9" class="ml">Foundation</text>
+<text x="460.0" y="387.9" class="ml">Ecuador</text>
+<circle cx="589.9" cy="535.0" r="43.4" class="moon"/>
+<text x="589.9" y="594.4" class="ml">tbfrescue</text>
+<circle cx="330.1" cy="535.0" r="24.8" class="moon"/>
+<text x="330.1" y="575.8" class="ml">Hidden War</text>
+<text x="330.1" y="590.8" class="ml">film</text>
+<circle cx="330.1" cy="385.0" r="20.2" class="moon"/>
+<text x="330.1" y="421.2" class="ml">Latter Day</text>
+<text x="330.1" y="436.2" class="ml">Chad</text>
+<circle cx="460.0" cy="220.0" r="5.5" class="fix"/>
+<circle cx="482.1" cy="221.0" r="5.5" class="fix"/>
+<circle cx="504.1" cy="224.1" r="5.5" class="fix"/>
+<circle cx="525.7" cy="229.2" r="5.5" class="fix"/>
+<circle cx="546.7" cy="236.2" r="5.5" class="fix"/>
+<circle cx="567.0" cy="245.2" r="5.5" class="fix"/>
+<circle cx="586.3" cy="255.9" r="5.5" class="fix"/>
+<circle cx="604.6" cy="268.5" r="5.5" class="fix"/>
+<circle cx="621.7" cy="282.6" r="5.5" class="fix"/>
+<circle cx="637.4" cy="298.3" r="5.5" class="fix"/>
+<circle cx="651.5" cy="315.4" r="5.5" class="fix"/>
+<circle cx="664.1" cy="333.7" r="5.5" class="fix"/>
+<circle cx="674.8" cy="353.0" r="5.5" class="fix"/>
+<circle cx="683.8" cy="373.3" r="5.5" class="fix"/>
+<circle cx="690.8" cy="394.3" r="5.5" class="fix"/>
+<circle cx="695.9" cy="415.9" r="5.5" class="fix"/>
+<circle cx="699.0" cy="437.9" r="5.5" class="fix"/>
+<circle cx="700.0" cy="460.0" r="5.5" class="fix"/>
+<circle cx="699.0" cy="482.1" r="5.5" class="fix"/>
+<circle cx="695.9" cy="504.1" r="5.5" class="fix"/>
+<circle cx="690.8" cy="525.7" r="5.5" class="fix"/>
+<circle cx="683.8" cy="546.7" r="5.5" class="fix"/>
+<circle cx="674.8" cy="567.0" r="5.5" class="fix"/>
+<circle cx="664.1" cy="586.3" r="5.5" class="fix"/>
+<circle cx="651.5" cy="604.6" r="5.5" class="fix"/>
+<circle cx="637.4" cy="621.7" r="5.5" class="fix"/>
+<circle cx="621.7" cy="637.4" r="5.5" class="fix"/>
+<circle cx="604.6" cy="651.5" r="5.5" class="fix"/>
+<circle cx="586.3" cy="664.1" r="5.5" class="fix"/>
+<circle cx="567.0" cy="674.8" r="5.5" class="fix"/>
+<circle cx="546.7" cy="683.8" r="5.5" class="fix"/>
+<circle cx="525.7" cy="690.8" r="5.5" class="fix"/>
+<circle cx="504.1" cy="695.9" r="5.5" class="fix"/>
+<circle cx="482.1" cy="699.0" r="5.5" class="fix"/>
+<circle cx="460.0" cy="700.0" r="5.5" class="fix"/>
+<circle cx="437.9" cy="699.0" r="5.5" class="fix"/>
+<circle cx="415.9" cy="695.9" r="5.5" class="fix"/>
+<circle cx="394.3" cy="690.8" r="5.5" class="fix"/>
+<circle cx="373.3" cy="683.8" r="5.5" class="fix"/>
+<circle cx="353.0" cy="674.8" r="5.5" class="fix"/>
+<circle cx="333.7" cy="664.1" r="5.5" class="fix"/>
+<circle cx="315.4" cy="651.5" r="5.5" class="fix"/>
+<circle cx="298.3" cy="637.4" r="5.5" class="fix"/>
+<circle cx="282.6" cy="621.7" r="5.5" class="fix"/>
+<circle cx="268.5" cy="604.6" r="5.5" class="fix"/>
+<circle cx="255.9" cy="586.3" r="5.5" class="fix"/>
+<circle cx="245.2" cy="567.0" r="5.5" class="fix"/>
+<circle cx="236.2" cy="546.7" r="5.5" class="fix"/>
+<circle cx="229.2" cy="525.7" r="5.5" class="fix"/>
+<circle cx="224.1" cy="504.1" r="5.5" class="fix"/>
+<circle cx="221.0" cy="482.1" r="5.5" class="fix"/>
+<circle cx="220.0" cy="460.0" r="5.5" class="fix"/>
+<circle cx="221.0" cy="437.9" r="5.5" class="fix"/>
+<circle cx="224.1" cy="415.9" r="5.5" class="fix"/>
+<circle cx="229.2" cy="394.3" r="5.5" class="fix"/>
+<circle cx="236.2" cy="373.3" r="5.5" class="fix"/>
+<circle cx="245.2" cy="353.0" r="5.5" class="fix"/>
+<circle cx="255.9" cy="333.7" r="5.5" class="fix"/>
+<circle cx="268.5" cy="315.4" r="5.5" class="fix"/>
+<circle cx="282.6" cy="298.3" r="5.5" class="fix"/>
+<circle cx="298.3" cy="282.6" r="5.5" class="fix"/>
+<circle cx="315.4" cy="268.5" r="5.5" class="fix"/>
+<circle cx="333.7" cy="255.9" r="5.5" class="fix"/>
+<circle cx="353.0" cy="245.2" r="5.5" class="fix"/>
+<circle cx="373.3" cy="236.2" r="5.5" class="fix"/>
+<circle cx="394.3" cy="229.2" r="5.5" class="fix"/>
+<circle cx="415.9" cy="224.1" r="5.5" class="fix"/>
+<circle cx="437.9" cy="221.0" r="5.5" class="fix"/>
+<circle cx="460" cy="460" r="300" class="shell"/>
+<circle cx="474.6" cy="759.6" r="5" class="sat"/>
+<circle cx="343.2" cy="736.3" r="5" class="sat"/>
+<circle cx="234.9" cy="658.3" r="5" class="sat"/>
+<circle cx="171.1" cy="540.9" r="5" class="sat"/>
+<circle cx="164.6" cy="407.6" r="5" class="sat"/>
+<circle cx="216.6" cy="284.6" r="5" class="sat"/>
+<circle cx="316.8" cy="196.4" r="5" class="sat"/>
+<circle cx="445.4" cy="160.4" r="5" class="sat"/>
+<circle cx="576.8" cy="183.7" r="5" class="sat"/>
+<circle cx="685.1" cy="261.7" r="5" class="sat"/>
+<circle cx="748.9" cy="379.1" r="5" class="sat"/>
+<circle cx="755.4" cy="512.4" r="5" class="sat"/>
+<circle cx="703.4" cy="635.4" r="5" class="sat"/>
+<circle cx="603.2" cy="723.6" r="5" class="sat"/>
+<circle cx="460" cy="460" r="330" class="shell"/>
+<circle cx="375.0" cy="778.9" r="5" class="sat"/>
+<circle cx="216.1" cy="682.3" r="5" class="sat"/>
+<circle cx="134.6" cy="515.2" r="5" class="sat"/>
+<circle cx="156.5" cy="330.5" r="5" class="sat"/>
+<circle cx="274.7" cy="187.0" r="5" class="sat"/>
+<circle cx="451.7" cy="130.1" r="5" class="sat"/>
+<circle cx="631.4" cy="178.0" r="5" class="sat"/>
+<circle cx="756.6" cy="315.4" r="5" class="sat"/>
+<circle cx="787.7" cy="498.7" r="5" class="sat"/>
+<circle cx="714.7" cy="669.8" r="5" class="sat"/>
+<circle cx="560.9" cy="774.2" r="5" class="sat"/>
+<circle cx="460" cy="460" r="360" class="shell"/>
+<circle cx="265.8" cy="763.1" r="5" class="sat"/>
+<circle cx="116.4" cy="567.4" r="5" class="sat"/>
+<circle cx="127.8" cy="321.4" r="5" class="sat"/>
+<circle cx="294.6" cy="140.3" r="5" class="sat"/>
+<circle cx="538.8" cy="108.7" r="5" class="sat"/>
+<circle cx="746.2" cy="241.6" r="5" class="sat"/>
+<circle cx="819.6" cy="476.6" r="5" class="sat"/>
+<circle cx="724.8" cy="703.9" r="5" class="sat"/>
+<circle cx="506.1" cy="817.0" r="5" class="sat"/>
+<circle cx="460" cy="460" r="390" class="shell"/>
+<circle cx="159.7" cy="708.8" r="5" class="sat"/>
+<circle cx="71.7" cy="423.5" r="5" class="sat"/>
+<circle cx="211.2" cy="159.7" r="5" class="sat"/>
+<circle cx="496.5" cy="71.7" r="5" class="sat"/>
+<circle cx="760.3" cy="211.2" r="5" class="sat"/>
+<circle cx="848.3" cy="496.5" r="5" class="sat"/>
+<circle cx="708.8" cy="760.3" r="5" class="sat"/>
+<circle cx="423.5" cy="848.3" r="5" class="sat"/>
+<circle cx="460" cy="460" r="430" class="shell"/>
+<circle cx="460.0" cy="30.0" r="4.5" class="sat"/>
+<circle cx="488.3" cy="30.9" r="4.5" class="sat"/>
+<circle cx="516.5" cy="33.7" r="4.5" class="sat"/>
+<circle cx="544.4" cy="38.4" r="4.5" class="sat"/>
+<circle cx="615.0" cy="58.9" r="4.5" class="sat"/>
+<circle cx="641.1" cy="70.0" r="4.5" class="sat"/>
+<circle cx="666.4" cy="82.8" r="4.5" class="sat"/>
+<circle cx="690.7" cy="97.2" r="4.5" class="sat"/>
+<circle cx="749.2" cy="141.8" r="4.5" class="sat"/>
+<circle cx="769.5" cy="161.5" r="4.5" class="sat"/>
+<circle cx="788.5" cy="182.5" r="4.5" class="sat"/>
+<circle cx="806.0" cy="204.7" r="4.5" class="sat"/>
+<circle cx="844.5" cy="267.4" r="4.5" class="sat"/>
+<circle cx="856.3" cy="293.2" r="4.5" class="sat"/>
+<circle cx="866.4" cy="319.6" r="4.5" class="sat"/>
+<circle cx="884.4" cy="390.9" r="4.5" class="sat"/>
+<circle cx="888.0" cy="419.0" r="4.5" class="sat"/>
+<circle cx="889.8" cy="447.3" r="4.5" class="sat"/>
+<circle cx="885.7" cy="520.7" r="4.5" class="sat"/>
+<circle cx="880.8" cy="548.6" r="4.5" class="sat"/>
+<circle cx="874.0" cy="576.1" r="4.5" class="sat"/>
+<circle cx="848.2" cy="644.9" r="4.5" class="sat"/>
+<circle cx="835.2" cy="670.1" r="4.5" class="sat"/>
+<circle cx="793.9" cy="730.9" r="4.5" class="sat"/>
+<circle cx="775.3" cy="752.3" r="4.5" class="sat"/>
+<circle cx="720.9" cy="801.8" r="4.5" class="sat"/>
+<circle cx="697.9" cy="818.2" r="4.5" class="sat"/>
+<circle cx="633.3" cy="853.5" r="4.5" class="sat"/>
+<circle cx="607.1" cy="864.1" r="4.5" class="sat"/>
+<circle cx="536.1" cy="883.2" r="4.5" class="sat"/>
+<circle cx="508.0" cy="887.3" r="4.5" class="sat"/>
+<circle cx="434.5" cy="889.2" r="4.5" class="sat"/>
+<circle cx="406.3" cy="886.6" r="4.5" class="sat"/>
+<circle cx="334.4" cy="871.3" r="4.5" class="sat"/>
+<circle cx="307.6" cy="862.1" r="4.5" class="sat"/>
+<circle cx="241.3" cy="830.2" r="4.5" class="sat"/>
+<circle cx="217.4" cy="815.1" r="4.5" class="sat"/>
+<circle cx="160.5" cy="768.5" r="4.5" class="sat"/>
+<circle cx="140.8" cy="748.1" r="4.5" class="sat"/>
+<circle cx="96.4" cy="689.5" r="4.5" class="sat"/>
+<circle cx="82.1" cy="665.1" r="4.5" class="sat"/>
+<circle cx="52.6" cy="597.7" r="4.5" class="sat"/>
+<circle cx="44.5" cy="570.6" r="4.5" class="sat"/>
+<circle cx="31.7" cy="498.2" r="4.5" class="sat"/>
+<circle cx="30.1" cy="469.9" r="4.5" class="sat"/>
+<circle cx="34.7" cy="396.5" r="4.5" class="sat"/>
+<circle cx="39.8" cy="368.7" r="4.5" class="sat"/>
+<circle cx="61.5" cy="298.4" r="4.5" class="sat"/>
+<circle cx="73.0" cy="272.5" r="4.5" class="sat"/>
+<circle cx="110.6" cy="209.3" r="4.5" class="sat"/>
+<circle cx="127.9" cy="186.9" r="4.5" class="sat"/>
+<circle cx="179.3" cy="134.3" r="4.5" class="sat"/>
+<circle cx="201.3" cy="116.5" r="4.5" class="sat"/>
+<circle cx="263.6" cy="77.4" r="4.5" class="sat"/>
+<circle cx="289.3" cy="65.4" r="4.5" class="sat"/>
+<circle cx="359.0" cy="42.0" r="4.5" class="sat"/>
+<circle cx="386.7" cy="36.3" r="4.5" class="sat"/>
+</svg></div>
+<div class="key"><b>Key</b>
+<span><span class="k" style="width:14px;height:14px;background:var(--sun)"></span>Ballard (on all 492 posts)</span>
+<span><span class="k" style="width:12px;height:12px;background:var(--moon)"></span>named anchors: his foundation, his rescue project, his film, Latter Day Chad (size = posts)</span>
+<span><span class="k" style="width:9px;height:9px;background:var(--fix)"></span>68 other one-of-a-kind accounts</span>
+<span><span class="k" style="width:9px;height:9px;background:var(--sat)"></span>an interchangeable account; a dashed ring = one batch that can be swapped freely</span>
+<span>outer ring: the 24 smaller batches (groups of 4, 3 and 2), spaced apart</span></div>
+
+<h2>The idea: orbits and fixed points</h2>
+<p>The math comes from a branch of algebra called <b>group theory</b>, and its key word happens to be <b>orbit</b>. The astronomy picture fits better than you'd expect.</p>
+<div class="split">
+ <div class="lead"><h3>Fixed point: the Sun</h3><p style="margin:0">Something no swap can move without being noticed. There's only one Sun; swap it with anything and you'd see at once.</p></div>
+ <div class="lead"><h3>Orbit: a Starlink shell</h3><p style="margin:0">A set of things that can be swapped among themselves with nothing changing. Thousands of identical satellites in one shell: swap any two and the network works the same.</p></div>
+</div>
+<p>The test is the <a href="https://antmerrill.github.io/backfire-tracking/name-tag-test.html">name-tag test</a> from our earlier page: if two accounts swapped name tags, would the record of who was credited with whom read any differently? If not, they're in the same orbit. SageMath, free software mathematicians use, checks every possible swap at once across a sign-in sheet of 172 accounts by 492 posts.</p>
+
+<h2>The Sun and the Moons: 73 fixed points</h2>
+<p>These accounts each have a pattern of credits nobody else shares. The structure depends on them.</p>
+<div class="bars" role="img" aria-label="Posts per named anchor">
+ <div class="row"><span>Ballard</span><i style="width:100%"></i><span>492</span></div>
+ <div class="row"><span>Foundation Ecuador</span><i style="width:45%"></i><span>223</span></div>
+ <div class="row"><span>tbfrescue</span><i style="width:36%"></i><span>179</span></div>
+ <div class="row"><span>Hidden War film</span><i style="width:5%"></i><span>24</span></div>
+ <div class="row"><span>Latter Day Chad</span><i style="width:1.6%"></i><span>8</span></div>
+</div>
+<div class="key"><b>Key</b><span>bar length = posts the account is credited on, out of 492</span><span>plus 68 more one-of-a-kind accounts, mostly partners, venues and media, 1 to 19 posts each</span></div>
+<p>Ballard is on every post because we chose his collaborations. What matters is who else is irreplaceable: his own foundation, his own projects, and a short list of regulars, <b>Latter Day Chad among them</b>.</p>
+
+<h2>The satellites: 99 accounts in 28 batches</h2>
+<p>Every large batch is made of accounts that appear <b>exactly once</b>, plugged into posts with the same shape. Any of them could have filled any of those seats.</p>
+<div class="batch">
+ <div><span class="dots">●●●●●●●●●●●●●●</span> 14 one-off guests on 5 small posts: Ballard, the same partner, and one guest each</div>
+ <div><span class="dots">●●●●●●●●●●●</span> 11</div>
+ <div><span class="dots">●●●●●●●●●</span> 9 one-off guests on 3 four-account posts</div>
+ <div><span class="dots">●●●●●●●●</span> 8 on two five-account posts, including the official Sound of Freedom account</div>
+ <div><span class="dots">●●●● ●●●● ●●●● ●●● ●●● ●●●</span> six small batches, 21 accounts</div>
+ <div><span class="dots">●● ×18</span> eighteen interchangeable pairs, 36 accounts</div>
+</div>
+<div class="key"><b>Key</b><span>● = one account; each row is one or more batches whose accounts can be swapped freely</span></div>
+<div class="lead"><h3>The cross-check</h3><p style="margin:0">On our earlier page we studied just seven group posts and found a trio of accounts, H, I and J, that could be swapped freely. This time Sage got all 492 posts, with no hint, and found <b>the same three accounts</b> forming their own orbit. A small input and a large one, the same answer.</p></div>
+
+<h2>How many ways to swap?</h2>
+<div class="big">3.3 × 10<span class="exp">30</span></div>
+<p>Shuffling the satellites within each batch, in every combination, gives about 3.3 × 10³⁰ rearrangements that leave everything looking the same. That's far more than the number of stars in the observable universe. The batch of 14 alone can be ordered about <b>87 billion</b> ways. In plain terms: across Ballard's collaborations, an enormous number of seats could have been filled by anyone in the same batch. Only 73 accounts carry real structure.</p>
+
+<h2>Why this is a new kind of evidence</h2>
+<p>Online accounts usually get judged one at a time: does this one look real? This method looks at the shape of the whole network instead. It ignores what any account posts or says. It only asks who is credited with whom, then lets algebra sort the irreplaceable from the interchangeable. It joins three fields that rarely meet:</p>
+<div class="fields"><span>social media forensics</span><span>design theory</span><span>group theory</span></div>
+
+<h2>What it shows, and what it doesn't</h2>
+<table>
+<tr><th>It shows</th><th>It doesn't show</th></tr>
+<tr><td>which accounts the network depends on (73)</td><td>who runs any account</td></tr>
+<tr><td>which accounts are interchangeable seat-fillers (99, in 28 batches)</td><td>why anyone posts</td></tr>
+<tr><td>that one-off guests arrive in batches with identical slots</td><td>that interchangeable means fake by itself</td></tr>
+<tr><td>that a larger, independent run reproduces the H, I, J result</td><td>anything outside the posts we've captured</td></tr>
+</table>
+<div class="note"><h3>Not yet peer reviewed</h3><p style="margin:0">Software agreeing is not the same as experts checking the reasoning. Corrections welcome.</p></div>
+
+<div class="foot">Data: our captures of Instagram's own post records, October 2026: 492 posts where Ballard shares credit with at least one other account (74 posts that only mention him were left out). Math: SageMath 10.9, automorphism group of the incidence structure and its orbits. Background: Joseph A. Gallian, <i>Contemporary Abstract Algebra</i>, Ch. 7. Smaller accounts are counted, not named. Earlier pages: <a href="https://antmerrill.github.io/backfire-tracking/who-went-first.html">Who went first</a> · <a href="https://antmerrill.github.io/backfire-tracking/name-tag-test.html">The Name-Tag Test</a>. The data: <a href="https://github.com/AntMerrill/backfire-tracking/tree/main/docs/data/sun-moon-starlink">docs/data/sun-moon-starlink</a>. More pages: <a href="index.html">Backfire tracking</a>. Compiled October 6, 2026.</div>
+</div>
+
+</body></html>
