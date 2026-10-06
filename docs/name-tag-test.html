@@ -1,0 +1,289 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="The math behind the Ballard and Latter Day Chad group posts in plain English: two permanent seats, ten pairs per photo, and a name-tag test that finds the 12 swaps nobody could detect.">
+<meta property="og:type" content="article"><meta property="og:title" content="The Name-Tag Test">
+<meta property="og:description" content="Swap two name tags. Could anyone tell? Seven Instagram posts, thirteen accounts, and 2 x 6 = 12 ways nobody could.">
+<meta property="og:url" content="https://antmerrill.github.io/backfire-tracking/name-tag-test.html"><meta property="og:image" content="https://antmerrill.github.io/backfire-tracking/img/nametag/og_card.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style>
+<title>The Name-Tag Test</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Kalam:wght@700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a meeting-room explainer. Sign-in sheet and "HELLO my name is" tags are the visual language; one reading column, wide figures. */
+:root{
+  --paper:#f4f5f2; --sheet:#fffffd; --ink:#1b2333; --muted:#5d6577; --rule:#d6d9d2;
+  --tag:#c8322b; --tb:#c99a1c; --ldc:#d4705c; --slate:#7d8798; --ok:#2f7d4f; --ok-bg:#e3f1e7; --bad:#b4372c; --bad-bg:#f8e1dd;
+  --line:#3a5f9a; --soft:#eef0eb;
+  --display:"Bricolage Grotesque","Arial Narrow",system-ui,sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --hand:"Kalam","Comic Sans MS","Marker Felt",cursive;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#11141b; --sheet:#181c25; --ink:#e7e9ee; --muted:#a3aab8; --rule:#2d3442;
+  --tag:#e0574e; --tb:#e2b53d; --ldc:#e8907c; --slate:#7b8496; --ok:#6fcf97; --ok-bg:#16301f; --bad:#f08a7e; --bad-bg:#3a1f1c;
+  --line:#8fb3e6; --soft:#1f2430; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#11141b; --sheet:#181c25; --ink:#e7e9ee; --muted:#a3aab8; --rule:#2d3442;
+  --tag:#e0574e; --tb:#e2b53d; --ldc:#e8907c; --slate:#7b8496; --ok:#6fcf97; --ok-bg:#16301f; --bad:#f08a7e; --bad-bg:#3a1f1c;
+  --line:#8fb3e6; --soft:#1f2430; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font:18px/1.62 var(--body);padding-inline:16px;padding-block:28px 72px}
+.col{max-width:760px;margin:0 auto}
+.eyebrow{font:500 14px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--tag)}
+h1{font:800 clamp(44px,10vw,92px)/.95 var(--display);letter-spacing:-.02em;margin:.15em 0 .25em;text-wrap:balance}
+h2{font:800 clamp(28px,5vw,38px)/1.1 var(--display);letter-spacing:-.01em;margin:2.2em 0 .45em;text-wrap:balance}
+h3{font:800 20px/1.2 var(--display);margin:0 0 .3em}
+.dek{font-size:21px;color:var(--muted);margin:0 0 6px;max-width:62ch}
+p{margin:.7em 0;max-width:66ch}
+a{color:var(--line)}
+b{font-weight:600}
+.small{font:500 14px/1.45 var(--mono);color:var(--muted)}
+/* name tags */
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 8px}
+.nt{--c:var(--slate);width:96px;border-radius:9px;background:var(--sheet);border:2px solid var(--c);overflow:hidden;text-align:center;box-shadow:0 2px 0 var(--rule);font:inherit;color:inherit;padding:0;cursor:default}
+.nt .hd{background:var(--c);color:#fff;font:800 11px/1.1 var(--display);letter-spacing:.08em;padding:5px 2px 4px}
+.nt .hd small{display:block;font:500 8.5px var(--display);letter-spacing:.06em;opacity:.9}
+.nt .nm{font:700 26px/1.25 var(--hand);padding:5px 2px 7px;color:var(--ink)}
+.nt.tb{--c:var(--tb)} .nt.ldc{--c:var(--ldc)}
+.hero-tags .nt:nth-child(odd){transform:rotate(-2deg)} .hero-tags .nt:nth-child(3n){transform:rotate(1.5deg)}
+/* panel */
+.box{background:var(--sheet);border:1px solid var(--rule);border-radius:8px;padding:18px 20px;margin:20px 0}
+.corr{border-left:5px solid var(--tag)}
+.corr h3{color:var(--tag)}
+/* seats */
+.seats{display:grid;gap:8px;margin:14px 0}
+.seat-row{display:grid;grid-template-columns:74px repeat(5,minmax(0,1fr));gap:6px;align-items:center}
+.seat-row .d{font:500 13px var(--mono);color:var(--muted)}
+.chair{height:34px;border-radius:7px 7px 3px 3px;display:grid;place-items:center;font:700 16px var(--hand);color:#fff;background:var(--slate)}
+.chair.tb{background:var(--tb);color:#1b2333} .chair.ldc{background:var(--ldc);color:#1b2333}
+.key{display:flex;flex-wrap:wrap;gap:6px 18px;font:500 13.5px/1.4 var(--mono);color:var(--muted);border:1px solid var(--rule);border-radius:6px;padding:9px 12px;margin-top:10px;background:var(--sheet)}
+.key b{color:var(--ink);font-weight:500}
+.sw{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-2px;margin-right:6px}
+/* k5 */
+.fig{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:22px;align-items:center;margin:14px 0}
+@media (max-width:560px){.fig{grid-template-columns:1fr}}
+.fig svg{width:100%;height:auto;max-width:260px;display:block;margin:0 auto}
+.k5 line{stroke:var(--line);stroke-width:2.2;stroke-linecap:round}
+.k5 circle{fill:var(--slate);stroke:var(--sheet);stroke-width:3}
+.k5 .tbn{fill:var(--tb)} .k5 .ldcn{fill:var(--ldc)}
+.k5 text{font:700 15px var(--hand);fill:#fff;text-anchor:middle} .k5 .tbt{fill:#1b2333}
+.big{font:800 64px/1 var(--display);color:var(--line)}
+/* sheet + swapper */
+.sheetwrap{overflow-x:auto;margin:10px 0}
+table.sheet{border-collapse:collapse;min-width:520px;width:100%;font:500 14px var(--mono);font-variant-numeric:tabular-nums;background:var(--sheet)}
+.sheet th,.sheet td{border:1px solid var(--rule);padding:5px 6px;text-align:center}
+.sheet th{font-weight:500;color:var(--muted);background:var(--soft)}
+.sheet td.who{text-align:left;font:700 18px var(--hand);white-space:nowrap}
+.sheet td.mk{font:700 20px/1 var(--hand);color:var(--ink)}
+.sheet td.diff{background:var(--bad-bg);color:var(--bad);outline:2px solid var(--bad);outline-offset:-2px}
+.sheet tr.moved td.who{color:var(--tag)}
+.swapper .tags{margin:8px 0}
+.swapper .nt{cursor:pointer;transition:transform .12s ease}
+.swapper .nt:hover{transform:translateY(-2px)}
+.swapper .nt:focus-visible{outline:3px solid var(--line);outline-offset:3px}
+.swapper .nt[aria-pressed="true"]{outline:3px solid var(--tag);outline-offset:3px;transform:translateY(-3px) rotate(-2deg)}
+.verdict{border-radius:8px;padding:12px 16px;font:600 17px/1.4 var(--body);margin:10px 0}
+.verdict.ok{background:var(--ok-bg);color:var(--ok);border:1px solid var(--ok)}
+.verdict.bad{background:var(--bad-bg);color:var(--bad);border:1px solid var(--bad)}
+.verdict.idle{background:var(--soft);color:var(--muted);border:1px dashed var(--rule)}
+.btnrow{display:flex;flex-wrap:wrap;gap:8px}
+.btn{font:600 14px var(--mono);border:1px solid var(--rule);background:var(--sheet);color:var(--ink);border-radius:6px;padding:7px 12px;cursor:pointer}
+.btn:hover{border-color:var(--line)} .btn:focus-visible{outline:3px solid var(--line);outline-offset:2px}
+.found{font:500 14px/1.5 var(--mono);color:var(--muted)}
+.found b{color:var(--ok)}
+/* twelve */
+.twelve{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin:16px 0}
+.term{text-align:center}
+.term .n{font:800 56px/1 var(--display)}
+.term .l{font:500 13px var(--mono);color:var(--muted)}
+.op{font:800 40px var(--display);color:var(--muted)}
+.n.eq{color:var(--tag)}
+.otable{border-collapse:collapse;font:500 15px var(--mono);font-variant-numeric:tabular-nums;margin:10px 0;width:100%;max-width:520px}
+.otable th,.otable td{border-bottom:1px solid var(--rule);padding:6px 8px;text-align:left}
+.otable th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.ref{border-left:5px solid var(--line)}
+.ref cite{font-style:italic}
+/* checks */
+.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:12px 0}
+.check{background:var(--sheet);border:1px solid var(--rule);border-radius:8px;padding:12px 14px;min-width:0}
+.check .st{font:700 13px var(--mono);color:var(--ok);letter-spacing:.04em}
+.check b{display:block;font:800 18px var(--display)}
+.check span{font:500 14px/1.4 var(--mono);color:var(--muted)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.two .box{margin:0}
+.yes h3{color:var(--ok)} .no h3{color:var(--bad)}
+ul{padding-left:1.15em;margin:.4em 0} li{margin:.3em 0}
+.foot{margin-top:3em;border-top:1px solid var(--rule);padding-top:14px;font:500 14px/1.6 var(--mono);color:var(--muted)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.hero-tags .nt{transform:none!important}}
+</style>
+
+</head><body><div class="col">
+<div class="eyebrow">Tim Ballard × Latter Day Chad · the math, in plain English</div>
+<h1>The Name-Tag Test</h1>
+<p class="dek">Seven Instagram posts, thirteen accounts, and one simple question: if two of them swapped name tags, could anyone tell?</p>
+<div class="tags hero-tags" aria-hidden="true">
+ <div class="nt tb"><div class="hd">HELLO<small>my name is</small></div><div class="nm">TB</div></div>
+ <div class="nt ldc"><div class="hd">HELLO<small>my name is</small></div><div class="nm">LDC</div></div>
+ <div class="nt"><div class="hd">HELLO<small>my name is</small></div><div class="nm">H</div></div>
+ <div class="nt"><div class="hd">HELLO<small>my name is</small></div><div class="nm">I</div></div>
+ <div class="nt"><div class="hd">HELLO<small>my name is</small></div><div class="nm">J</div></div>
+ <div class="nt"><div class="hd">HELLO<small>my name is</small></div><div class="nm">A</div></div>
+</div>
+<p class="small">TB = Tim Ballard · LDC = Latter Day Chad · A–K = eleven smaller accounts, kept as letters</p>
+
+<h2>The short version</h2>
+<p>Tim Ballard and Latter Day Chad started posting together on Instagram earlier than we first said. It was <b>December 20, 2025</b>, and <b>Ballard was the one who posted it</b>, crediting Chad as a collaborator.</p>
+<p>Then we looked at the group of accounts around them. The way their posts are put together says a lot about how this crowd works.</p>
+<div class="box corr"><h3>What we got wrong</h3>
+<p style="margin:0">On October 4 we said February 18, 2026 was the first time they shared a post. Instagram’s collaborator list leaves out whoever made the post, so a post Ballard made himself never lists Ballard, and our count missed it. It was in our data the whole time. We corrected it publicly on October 5. Counted properly, out of 1,463 Chad posts before February 18, exactly one ties to Ballard: December 20.</p></div>
+
+<h2>Two permanent seats</h2>
+<p>From February 18 to April 18, 2026, one account, <b>latterdayavenger</b>, uploaded seven group posts. Each one credited five accounts. Think of a panel show: two hosts who never miss an episode, and three guest chairs.</p>
+<div class="seats" role="img" aria-label="Seven group posts, five seats each: TB and LDC in every post, three rotating seats">
+ <div class="seat-row"><span class="d">Feb 18</span><span class="chair tb">TB</span><span class="chair ldc">LDC</span><span class="chair">A</span><span class="chair">B</span><span class="chair">C</span></div>
+ <div class="seat-row"><span class="d">Feb 20</span><span class="chair tb">TB</span><span class="chair ldc">LDC</span><span class="chair">A</span><span class="chair">C</span><span class="chair">D</span></div>
+ <div class="seat-row"><span class="d">Feb 22</span><span class="chair tb">TB</span><span class="chair ldc">LDC</span><span class="chair">A</span><span class="chair">E</span><span class="chair">D</span></div>
+ <div class="seat-row"><span class="d">Feb 25</span><span class="chair tb">TB</span><span class="chair ldc">LDC</span><span class="chair">A</span><span class="chair">B</span><span class="chair">D</span></div>
+ <div class="seat-row"><span class="d">Mar 30</span><span class="chair tb">TB</span><span class="chair ldc">LDC</span><span class="chair">F</span><span class="chair">B</span><span class="chair">G</span></div>
+ <div class="seat-row"><span class="d">Apr 10</span><span class="chair tb">TB</span><span class="chair ldc">LDC</span><span class="chair">H</span><span class="chair">I</span><span class="chair">J</span></div>
+ <div class="seat-row"><span class="d">Apr 18</span><span class="chair tb">TB</span><span class="chair ldc">LDC</span><span class="chair">K</span><span class="chair">G</span><span class="chair">D</span></div>
+</div>
+<div class="key"><b>Key</b><span><span class="sw" style="background:var(--tb)"></span>Tim Ballard</span><span><span class="sw" style="background:var(--ldc)"></span>Latter Day Chad</span><span><span class="sw" style="background:var(--slate)"></span>a smaller account (same letter = same account)</span><span>one row = one post, all uploaded by latterdayavenger</span></div>
+<p>The format wasn’t new. latterdayavenger is credited on 42 other posts in this crowd, and posts crediting four or more accounts are everywhere here: 808 in what we’ve captured. Ballard was slotted into a show that was already running.</p>
+
+<h2>One photo, ten pairs</h2>
+<div class="fig">
+<svg class="k5" viewBox="0 0 260 250" role="img" aria-label="Five accounts on one post, every pair joined: ten lines">
+ <line x1="130" y1="30" x2="225" y2="99"/><line x1="130" y1="30" x2="189" y2="210"/><line x1="130" y1="30" x2="71" y2="210"/><line x1="130" y1="30" x2="35" y2="99"/>
+ <line x1="225" y1="99" x2="189" y2="210"/><line x1="225" y1="99" x2="71" y2="210"/><line x1="225" y1="99" x2="35" y2="99"/>
+ <line x1="189" y1="210" x2="71" y2="210"/><line x1="189" y1="210" x2="35" y2="99"/><line x1="71" y1="210" x2="35" y2="99"/>
+ <circle cx="130" cy="30" r="21" class="tbn"/><text x="130" y="36" class="tbt">TB</text>
+ <circle cx="225" cy="99" r="21" class="ldcn"/><text x="225" y="105" class="tbt">LDC</text>
+ <circle cx="189" cy="210" r="21"/><text x="189" y="216">A</text>
+ <circle cx="71" cy="210" r="21"/><text x="71" y="216">B</text>
+ <circle cx="35" cy="99" r="21"/><text x="35" y="105">C</text>
+</svg>
+<div><div class="big">10</div>
+<p>Picture a group photo of five people. Every pair of them is “in a photo together.” That’s ten pairs from one photo.</p>
+<p>Our network maps draw a line for each pair, so <b>every group post adds ten lines at once</b>. That’s why the map after February 18 suddenly looks crowded. Most of those lines come from a single post: an effect of the format, not ten friendships.</p></div>
+</div>
+<div class="key"><b>Key</b><span><span class="sw" style="background:var(--line);height:3px;width:22px;border-radius:2px"></span>a line = these two were credited on the same post</span><span>shown: the Feb 18 post (TB, LDC, A, B, C)</span></div>
+
+<h2>The sign-in sheet</h2>
+<p>Treat the seven posts like a sign-in sheet: a row for each account, a column for each post, and a mark where the account was credited. Mathematicians call this an <i>incidence matrix</i>.</p>
+
+<div class="box swapper" id="swapper">
+ <h3>Try the name-tag test</h3>
+ <p style="margin-top:0">Tap two name tags to swap them. If the sheet still reads exactly the same, nobody could tell the swap happened.</p>
+ <div class="tags" id="tagrow"></div>
+ <div class="verdict idle" id="verdict" aria-live="polite">Pick a first name tag.</div>
+ <div class="sheetwrap"><table class="sheet" id="sheet"></table></div>
+ <div class="key"><b>Key</b><span>✔ = credited on that post</span><span><span class="sw" style="background:var(--bad-bg);outline:2px solid var(--bad);outline-offset:-2px"></span>a mark that no longer matches the real sheet</span><span style="color:var(--tag)">red name = a swapped tag</span></div>
+ <div class="btnrow" style="margin-top:10px"><button class="btn" id="reset" type="button">Put the tags back</button><button class="btn" id="tryall" type="button">Try every pair for me</button></div>
+ <p class="found" id="found">Unnoticed swaps found so far: none yet.</p>
+</div>
+
+<p>What the test shows:</p>
+<ul>
+<li><b>Swap Ballard and Chad: nobody can tell.</b> They signed in at exactly the same seven posts. As far as these posts go, the two of them are one unit: the two permanent seats. What tells them apart is outside these posts: Ballard’s own December 20 post, and Chad’s hundreds of earlier posts with one of the regulars.</li>
+<li><b>Swap any of H, I and J: nobody can tell.</b> Those three appeared once, together, on the same post, and never again. They were swapped in as a set, like a three-pack.</li>
+<li><b>Swap anyone else: you’d notice.</b> Each of the other accounts has its own pattern of marks.</li>
+</ul>
+
+<h2>Why the answer is 12</h2>
+<p>Count every way of rearranging the tags that nobody could detect. Ballard and Chad can sit either way round. H, I and J can be arranged in six orders. Everyone else has to stay put.</p>
+<div class="twelve" aria-label="2 times 6 equals 12">
+ <div class="term"><div class="n" style="color:var(--tb)">2</div><div class="l">TB ⇄ LDC</div></div>
+ <div class="op">×</div>
+ <div class="term"><div class="n">6</div><div class="l">orders of H, I, J</div></div>
+ <div class="op">=</div>
+ <div class="term"><div class="n eq">12</div><div class="l">undetectable swaps</div></div>
+</div>
+<p>In the language of algebra, those 12 rearrangements form the <b>symmetry group</b> of the sheet. The sets of accounts that can trade places are its <b>orbits</b>: {TB, LDC}, {H, I, J}, and each other account alone. SageMath adds a fun detail: this group has the same shape as the symmetries of a hexagon (mathematicians call it D6).</p>
+
+<div class="box ref"><h3>Where the orbit idea comes from</h3>
+<p style="margin-top:0">Orbits are classroom algebra. The standard undergraduate text is Joseph A. Gallian, <cite>Contemporary Abstract Algebra</cite> (Chapman &amp; Hall/CRC; 10th ed. 2021, 11th ed. available). Chapter 7 covers orbits, stabilizers and the <b>orbit-stabilizer theorem</b>; a later chapter, “Symmetry and Counting,” uses them to count arrangements. The theorem says: for any account, (how many places it can move to) × (how many swaps leave it alone) = the size of the whole group. Our sheet obeys it:</p>
+<table class="otable">
+<tr><th>Account</th><th>Orbit (places it can go)</th><th>Stabilizer (swaps that leave it alone)</th><th>Product</th></tr>
+<tr><td>TB</td><td>2</td><td>6</td><td>12</td></tr>
+<tr><td>H</td><td>3</td><td>4</td><td>12</td></tr>
+<tr><td>A</td><td>1</td><td>12</td><td>12</td></tr>
+</table>
+<p class="small" style="margin:0">Computed in SageMath 10.9, October 5, 2026.</p></div>
+
+<h2>How we checked</h2>
+<p>We wrote the answer down publicly <b>before</b> running the standard math software, as a prediction: 12, with Ballard and Chad as one pair and H, I, J as one trio. Then three different methods checked it.</p>
+<div class="checks">
+ <div class="check"><div class="st">✔ AGREES</div><b>Our own count</b><span>a short script over the sheet</span></div>
+ <div class="check"><div class="st">✔ AGREES</div><b>networkx 3.4.2</b><span>a common free graph library</span></div>
+ <div class="check"><div class="st">✔ AGREES</div><b>SageMath 10.9</b><span>free software mathematicians use for this</span></div>
+</div>
+<p>One honest note: the Sage code we first published had a wrong command name, so anyone who tried it got an error. We fixed it the same day and said so on the page. The answer itself didn’t change.</p>
+
+<h2>What this does and doesn’t show</h2>
+<div class="two">
+ <div class="box yes"><h3>It shows</h3><ul><li>who was credited with whom, and when</li><li>one account hosted all seven group posts</li><li>Ballard posted first, two months before the group posts</li><li>most guest seats went to interchangeable accounts</li></ul></div>
+ <div class="box no"><h3>It doesn’t show</h3><ul><li>who is behind any of these accounts</li><li>why they post</li><li>expert review: software agreeing is not peer review, and the math is marked “not yet peer reviewed” until someone qualified has looked</li></ul></div>
+</div>
+
+<div class="foot">
+The full write-up, with the timeline, the maps and the data: <a href="https://antmerrill.github.io/backfire-tracking/who-went-first.html">antmerrill.github.io/backfire-tracking/who-went-first.html</a><br>
+The data (sign-in sheet, pair counts, README with notation): <a href="https://github.com/AntMerrill/backfire-tracking/tree/main/docs/data/who-went-first">github.com/AntMerrill/backfire-tracking</a><br>
+Reference: J. A. Gallian, <i>Contemporary Abstract Algebra</i>, Ch. 7. Compiled October 5, 2026. More pages: <a href="index.html">Backfire tracking</a>.
+</div>
+</div>
+
+<script>
+(function(){
+  const POSTS=["Feb 18","Feb 20","Feb 22","Feb 25","Mar 30","Apr 10","Apr 18"];
+  const BLOCKS=[["TB","LDC","A","B","C"],["TB","LDC","A","C","D"],["TB","LDC","A","E","D"],["TB","LDC","A","B","D"],["TB","LDC","F","B","G"],["TB","LDC","H","I","J"],["TB","LDC","K","G","D"]];
+  const ROWS=["TB","LDC","A","B","C","D","E","F","G","K","H","I","J"];
+  const truth={}; ROWS.forEach(p=>truth[p]=BLOCKS.map(b=>b.includes(p)));
+  let tagOf={}; ROWS.forEach(p=>tagOf[p]=p);      // row (real account) -> tag it wears
+  let first=null; const unnoticed=new Set();
+  const cls=p=>p==="TB"?"tb":p==="LDC"?"ldc":"";
+  const tagrow=document.getElementById("tagrow"), sheet=document.getElementById("sheet"),
+        verdict=document.getElementById("verdict"), found=document.getElementById("found");
+  function renderTags(){
+    tagrow.innerHTML="";
+    ROWS.forEach(p=>{
+      const b=document.createElement("button"); b.type="button"; b.className="nt "+cls(p); b.id="tag-"+p;
+      b.setAttribute("aria-pressed", first===p?"true":"false"); b.setAttribute("aria-label","Name tag "+p);
+      b.innerHTML='<div class="hd">HELLO<small>my name is</small></div><div class="nm">'+p+'</div>';
+      b.addEventListener("click",()=>pick(p)); tagrow.appendChild(b);
+    });
+  }
+  function renderSheet(){
+    // the sheet as people now read it: the row labelled with tag t shows the real marks of whoever wears t
+    let h="<tr><th>name tag</th>"+POSTS.map(d=>"<th>"+d+"</th>").join("")+"</tr>"; let diffs=0;
+    ROWS.forEach(p=>{
+      const t=tagOf[p], moved=t!==p;
+      h+='<tr class="'+(moved?"moved":"")+'"><td class="who">'+t+"</td>";
+      truth[p].forEach((m,j)=>{const d=m!==truth[t][j]; if(d)diffs++; h+='<td class="mk'+(d?" diff":"")+'">'+(m?"✔":"")+"</td>";});
+      h+="</tr>";
+    });
+    sheet.innerHTML=h; return diffs;
+  }
+  function pick(p){
+    if(first===null){first=p; verdict.className="verdict idle"; verdict.textContent="Now pick the name tag to swap with "+p+"."; renderTags(); return;}
+    if(first===p){first=null; verdict.className="verdict idle"; verdict.textContent="Pick a first name tag."; renderTags(); return;}
+    const a=first,b=p; first=null;
+    ROWS.forEach(q=>tagOf[q]=q); tagOf[a]=b; tagOf[b]=a;
+    const diffs=renderSheet(); renderTags();
+    if(diffs===0){unnoticed.add([a,b].sort().join("⇄")); verdict.className="verdict ok"; verdict.textContent="Swapped "+a+" and "+b+": nobody could tell. The sheet reads exactly the same.";}
+    else{verdict.className="verdict bad"; verdict.textContent="Swapped "+a+" and "+b+": you’d notice. "+diffs+" mark"+(diffs>1?"s":"")+" no longer match.";}
+    showFound();
+  }
+  function showFound(){found.innerHTML=unnoticed.size?"Unnoticed swaps found so far: <b>"+[...unnoticed].join(", ")+"</b>":"Unnoticed swaps found so far: none yet.";}
+  document.getElementById("reset").addEventListener("click",()=>{ROWS.forEach(q=>tagOf[q]=q);first=null;renderSheet();renderTags();verdict.className="verdict idle";verdict.textContent="Pick a first name tag.";});
+  document.getElementById("tryall").addEventListener("click",()=>{
+    let n=0; for(let i=0;i<ROWS.length;i++)for(let j=i+1;j<ROWS.length;j++){const a=ROWS[i],b=ROWS[j];n++;
+      if(truth[a].every((m,k)=>m===truth[b][k]))unnoticed.add([a,b].sort().join("⇄"));}
+    showFound(); verdict.className="verdict ok";
+    verdict.textContent="Tried all "+n+" pairs of name tags. Only "+unnoticed.size+" swaps go unnoticed: Ballard with Chad, and any two of H, I, J.";
+  });
+  renderTags(); renderSheet();
+})();
+</script>
+
+</body></html>
