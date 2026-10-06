@@ -1,0 +1,179 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="A preprint-style treatment of the collaborator network around timballard89: the automorphism group of the incidence structure, its orbits, wreath products from pendant stars, orbit-stabilizer and Burnside.">
+<meta property="og:type" content="article"><meta property="og:title" content="Automorphism Group of the Incidence Structure and Its Orbits">
+<meta property="og:description" content="A wreath product that came out of real data: the symmetry group of 492 Instagram collaborations, computed in SageMath. Not yet peer reviewed.">
+<meta property="og:url" content="https://antmerrill.github.io/backfire-tracking/automorphism-group.html"><meta property="og:image" content="https://antmerrill.github.io/backfire-tracking/img/autgroup/og_card.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style>
+<title>Automorphism Group of the Incidence Structure and Its Orbits</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap">
+<script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]},svg:{fontCache:"global"}};</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.min.js"></script>
+<style>
+/* Layout: a mathematics preprint. One column, numbered statements, proofs set off, Sage sessions as figures. */
+:root{
+  --paper:#fbfaf6; --ink:#1c1d22; --muted:#5d6070; --rule:#d9d6cc; --accent:#6b2d2d; --code:#f2efe6; --hl:#efe6cf;
+  --serif:"EB Garamond",Garamond,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --label:"IBM Plex Sans Condensed","Arial Narrow",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#15161a; --ink:#e8e6df; --muted:#a6a8b3; --rule:#33343c; --accent:#e0a39a; --code:#1e2026; --hl:#2a2619; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#15161a; --ink:#e8e6df; --muted:#a6a8b3; --rule:#33343c; --accent:#e0a39a; --code:#1e2026; --hl:#2a2619; color-scheme:dark}
+body{background:var(--paper);color:var(--ink);font:20px/1.6 var(--serif);padding-inline:16px;padding-block:36px 80px}
+main{max-width:740px;margin:0 auto}
+h1{font:600 clamp(30px,5.4vw,44px)/1.15 var(--serif);text-align:center;margin:0 0 .4em;text-wrap:balance}
+.byline{text-align:center;font:500 15px var(--label);letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+.ded{text-align:center;font-style:italic;margin:2.2em auto 0;max-width:34em}
+.epi{text-align:center;margin:.6em auto 2.2em;max-width:30em;color:var(--muted)}
+h2{font:600 26px/1.25 var(--serif);margin:2em 0 .5em;border-bottom:1px solid var(--rule);padding-bottom:.2em}
+h2 .n{color:var(--accent);margin-right:.4em}
+p{margin:.65em 0} a{color:var(--accent)}
+.abs{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:.8em 0;margin:1.4em 0;font-size:18.5px}
+.abs b{font-variant:small-caps;letter-spacing:.04em}
+.st{margin:1.1em 0;padding:.2em 0 .2em 1em;border-left:3px solid var(--accent)}
+.st > .h{font-weight:600;font-variant:small-caps;letter-spacing:.03em}
+.st.def{border-left-color:var(--muted)}
+.pf{margin:.4em 0 1.1em;padding-left:1em;font-size:19px}
+.pf::before{content:"Proof. ";font-style:italic}
+.pf .qed{float:right}
+.tw{overflow-x:auto;margin:.8em 0}
+table{border-collapse:collapse;margin:0 auto;font:400 17px var(--serif);font-variant-numeric:tabular-nums}
+th,td{border-bottom:1px solid var(--rule);padding:.32em .7em;text-align:left;vertical-align:top}
+th{font:600 13px var(--label);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+pre{background:var(--code);border:1px solid var(--rule);border-radius:4px;padding:12px 14px;overflow-x:auto;font:400 13.5px/1.55 var(--mono);color:var(--ink)}
+.cap{font:500 14px var(--label);color:var(--muted);margin-top:-.3em}
+.note{background:var(--hl);padding:.7em 1em;border-radius:4px;font-size:18px}
+.ack{font-size:18px}
+.acct{font-family:var(--mono);font-size:.86em}
+.refs{font-size:17px} .refs li{margin:.35em 0}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+</style>
+
+</head><body><main>
+<h1>Automorphism Group of the Incidence Structure and Its Orbits</h1>
+<div class="byline">On the collaborator network of the timballard89 Instagram account · October 6, 2026 · not yet peer reviewed</div>
+<p class="ded">Dedicated to the memory of Dean Neumann.</p>
+<p class="epi">“When you’re the smartest guy in the room, you don’t need to say so.”</p>
+
+<div class="abs"><b>Abstract.</b> We model Instagram collaboration credits as a finite incidence structure: accounts are points, posts are blocks. For the seven “group posts” of February to April 2026 we show \(\operatorname{Aut}(\mathcal S_7)\cong S_2\times S_3\cong D_6\), with orbits \(\{p_{1},p_{2}\}\) and \(\{p_{10},p_{11},p_{12}\}\), and verify the orbit-stabilizer theorem and Burnside’s lemma on it. For all 492 posts in which \(p_{1}\) shares credit we prove
+\[\begin{aligned}\operatorname{Aut}(\mathcal S_{492})\;\cong\;&(S_2\wr S_7)\times S_{11}\times(S_3\wr S_3)\times(S_4\wr S_2)\\&\times(S_2\wr S_2)^2\times S_4\times S_3^{\,3}\times S_2^{\,18},\end{aligned}\]
+of order \(2^{60}\,3^{16}\,5^{3}\,7^{2}\,11\approx3.34\times10^{30}\), with 73 fixed points and 28 nontrivial orbits. The wreath factors come from one mechanism, the <i>pendant star</i>: posts consisting of \(p_{1}\) and one-off guests. All computations are in SageMath 10.9.</div>
+
+
+<h2><span class="n">0</span>Notation</h2>
+<p>The plain-English pages and cards name accounts with letters: TB, LDC, and A to K for the eleven smaller accounts of the group posts, lettered by first appearance. In group theory single capital letters already have jobs (a subgroup, the group, a block, a set), so this paper writes the accounts as points \(p_1,\dots,p_{13}\).</p>
+<div class="tw"><table><tr><th>Plain pages</th><th>This paper</th><th>Who</th></tr><tr><td><span class="acct">TB</span></td><td>\(p_{1}\)</td><td>timballard89</td></tr><tr><td><span class="acct">LDC</span></td><td>\(p_{2}\)</td><td>latterdaychad</td></tr><tr><td><span class="acct">A</span> to <span class="acct">K</span>, in alphabetical order</td><td>\(p_3,\dots,p_{13}\)</td><td>the eleven smaller accounts, in order of first appearance (Feb 18 to Apr 18)</td></tr></table></div>
+<p>So the pair the plain pages call <span class="acct">TB</span>, <span class="acct">LDC</span> is \(\{p_1,p_2\}\), and the trio that appeared once, together, on April 10 is \(\{p_{10},p_{11},p_{12}\}\). Elsewhere: \(B_1,\dots,B_7\) are the seven group posts in date order; \(G=\operatorname{Aut}(\mathcal S)\); \(C\) is the centre of a pendant star (Lemma 3.1); \(r_x\) and \(\lambda_{xy}\) are replication and pair counts. In the 492-post structure the other 159 points carry IDs from the published data (F001–F068, S001–S099), with \(p_1\) = timballard89 throughout.</p>
+<h2><span class="n">1</span>Setting</h2>
+<div class="st def"><span class="h">Definition 1.1.</span> An <i>incidence structure</i> is \(\mathcal S=(P,\mathcal B)\) with \(P\) a finite set of points and \(\mathcal B\) a finite multiset of subsets of \(P\) (blocks). Its incidence matrix \(N\in\{0,1\}^{P\times\mathcal B}\) has \(N_{x,B}=1\) iff \(x\in B\). The <i>automorphism group</i> is
+\[\operatorname{Aut}(\mathcal S)=\{\sigma\in\operatorname{Sym}(P):\ \sigma(\mathcal B)=\mathcal B\ \text{as multisets}\},\]
+equivalently the \(\sigma\) for which some permutation matrix \(Q\) gives \(P_\sigma N Q = N\).</div>
+<p>The Levi (incidence) graph \(L(\mathcal S)\) is bipartite on \(P\sqcup\mathcal B\), with \(x\sim B\) iff \(x\in B\). Colour-preserving automorphisms of \(L\), restricted to \(P\), are exactly \(\operatorname{Aut}(\mathcal S)\); this is how Sage computes it (canonical labelling of a coloured graph).</p>
+<div class="st def"><span class="h">Data.</span> Points are accounts; a block is the set of accounts on one post: those Instagram credits as collaborators, plus the account whose grid the post came from (Instagram omits the uploader from the credit list). Points are written \(p_1,\dots,p_{13}\) (labels <code>"p1"</code>…<code>"p13"</code> in Sage); the plain-English pages use letters instead. The translation is in the notation block above.</div>
+
+<h2><span class="n">2</span>The seven group posts</h2>
+<div class="tw"><table>
+<tr><th>Block</th><th>Date (2026)</th><th>Points</th></tr>
+<tr><td>\(B_1\)</td><td>Feb 18</td><td>\(p_{1}\), \(p_{2}\), \(p_{3}\), \(p_{4}\), \(p_{5}\)</td></tr>
+<tr><td>\(B_2\)</td><td>Feb 20</td><td>\(p_{1}\), \(p_{2}\), \(p_{3}\), \(p_{5}\), \(p_{6}\)</td></tr>
+<tr><td>\(B_3\)</td><td>Feb 22</td><td>\(p_{1}\), \(p_{2}\), \(p_{3}\), \(p_{7}\), \(p_{6}\)</td></tr>
+<tr><td>\(B_4\)</td><td>Feb 25</td><td>\(p_{1}\), \(p_{2}\), \(p_{3}\), \(p_{4}\), \(p_{6}\)</td></tr>
+<tr><td>\(B_5\)</td><td>Mar 30</td><td>\(p_{1}\), \(p_{2}\), \(p_{8}\), \(p_{4}\), \(p_{9}\)</td></tr>
+<tr><td>\(B_6\)</td><td>Apr 10</td><td>\(p_{1}\), \(p_{2}\), \(p_{10}\), \(p_{11}\), \(p_{12}\)</td></tr>
+<tr><td>\(B_7\)</td><td>Apr 18</td><td>\(p_{1}\), \(p_{2}\), \(p_{13}\), \(p_{9}\), \(p_{6}\)</td></tr>
+</table></div>
+<p>So \(v=13\), \(b=7\), \(k=5\), with replication numbers \(r_{p_{1}}=r_{p_{2}}=7\), \(r_{p_{3}}=r_{p_{6}}=4\), \(r_{p_{4}}=3\), \(r_{p_{5}}=r_{p_{9}}=2\), and \(r=1\) for \(p_{7}\), \(p_{8}\), \(p_{10}\), \(p_{11}\), \(p_{12}\) and \(p_{13}\). Only 40 of the \(\binom{13}{2}=78\) pairs have \(\lambda_{xy}>0\); since \(b\lt v\), Fisher’s inequality rules out any 2-design structure, and Sage confirms \(\mathcal S_7\) is only a trivial \(0\)-design. The Gram matrix is \(NN^{\mathsf T}=\operatorname{diag}(r)+\Lambda\), and \(NN^{\mathsf T}=\sum_{B}\mathbf 1_B\mathbf 1_B^{\mathsf T}\): each block contributes a \(K_5\) to the pair graph.</p>
+
+<div class="st def"><span class="h">Definition 2.1.</span> Points \(x,y\) are <i>twins</i> if their rows of \(N\) agree: \(x\) and \(y\) lie on exactly the same blocks.</div>
+<div class="st"><span class="h">Lemma 2.2.</span> If \(T\) is a twin class, \(\operatorname{Sym}(T)\le\operatorname{Aut}(\mathcal S)\), acting trivially off \(T\).</div>
+<div class="pf">A permutation of \(T\) fixes every block setwise, since each block contains all of \(T\) or none of it. <span class="qed">□</span></div>
+<div class="st"><span class="h">Proposition 2.3.</span> \(\operatorname{Aut}(\mathcal S_7)=\operatorname{Sym}\{p_{1},p_{2}\}\times\operatorname{Sym}\{p_{10},p_{11},p_{12}\}\cong S_2\times S_3\cong D_6\), of order 12.</div>
+<div class="pf">The twin classes of size \(>1\) are \(\{p_{1},p_{2}\}\) (both on every block) and \(\{p_{10},p_{11},p_{12}\}\) (all on \(B_6\) only), so by Lemma 2.2 the group contains \(S_2\times S_3\). Sage returns \(|\operatorname{Aut}(\mathcal S_7)|=12\) with generators \((p_1\ p_2),(p_{10}\ p_{11}),(p_{10}\ p_{12})\), hence equality. The isomorphism \(S_2\times S_3\cong D_6\) is the familiar \(D_{2n}\cong C_2\times D_n\) for odd \(n\) (here \(D_3\cong S_3\)); Sage’s <code>structure_description()</code> reports <code>D6</code>. <span class="qed">□</span></div>
+
+<p><b>Orbit-stabilizer.</b> With \(G=\operatorname{Aut}(\mathcal S_7)\), \(|G|=|\operatorname{Orb}(x)|\,|\operatorname{Stab}(x)|\) for every point (Gallian, Ch. 7):</p>
+<div class="tw"><table>
+<tr><th>\(x\)</th><th>\(\operatorname{Orb}(x)\)</th><th>\(\operatorname{Stab}(x)\)</th><th>Check</th></tr>
+<tr><td>\(p_{1}\)</td><td>\(\{p_{1},p_{2}\}\)</td><td>\(\operatorname{Sym}\{p_{10},p_{11},p_{12}\}\cong S_3\)</td><td>\(2\cdot6=12\)</td></tr>
+<tr><td>\(p_{10}\)</td><td>\(\{p_{10},p_{11},p_{12}\}\)</td><td>\(\langle(p_{1}\ p_{2}),(p_{11}\ p_{12})\rangle\cong C_2\times C_2\)</td><td>\(3\cdot4=12\)</td></tr>
+<tr><td>\(p_{3}\)</td><td>\(\{A\}\)</td><td>\(G\cong D_6\)</td><td>\(1\cdot12=12\)</td></tr>
+</table></div>
+
+<p><b>Burnside.</b> The number of orbits is \(\frac1{|G|}\sum_{g\in G}|\operatorname{Fix}(g)|\). By cycle type on \(\{p_{1},p_{2}\}\times\{p_{10},p_{11},p_{12}\}\):</p>
+<div class="tw"><table>
+<tr><th>Element type</th><th>How many</th><th>\(|\operatorname{Fix}(g)|\)</th><th>Subtotal</th></tr>
+<tr><td>identity</td><td>1</td><td>13</td><td>13</td></tr>
+<tr><td>\((p_{1}\ p_{2})\)</td><td>1</td><td>11</td><td>11</td></tr>
+<tr><td>transposition in \(\{p_{10},p_{11},p_{12}\}\)</td><td>3</td><td>11</td><td>33</td></tr>
+<tr><td>3-cycle on \(\{p_{10},p_{11},p_{12}\}\)</td><td>2</td><td>10</td><td>20</td></tr>
+<tr><td>\((p_{1}\ p_{2})\) · transposition</td><td>3</td><td>9</td><td>27</td></tr>
+<tr><td>\((p_{1}\ p_{2})\) · 3-cycle</td><td>2</td><td>8</td><td>16</td></tr>
+<tr><td colspan="3"><b>Sum</b></td><td><b>120</b></td></tr>
+</table></div>
+<p>So there are \(120/12=10\) orbits: \(\{p_{1},p_{2}\}\), \(\{p_{10},p_{11},p_{12}\}\) and the eight singletons \(p_{3}\), \(p_{4}\), \(p_{5}\), \(p_{6}\), \(p_{7}\), \(p_{8}\), \(p_{9}\) and \(p_{13}\). Sage’s fixed-point counts over \(G\) are exactly \([8,8,9,9,9,10,10,11,11,11,11,13]\). The six element types are the six conjugacy classes of \(D_6\).</p>
+<p class="note">Reading: in the group-post format \(p_{1}\) and \(p_{2}\) are indistinguishable (one unit occupying two fixed seats), and \(\{p_{10},p_{11},p_{12}\}\) was a batch swapped in whole. What separates \(p_{1}\) from \(p_{2}\) lies outside \(\mathcal S_7\): \(p_{1}\)’s own post crediting \(p_{2}\) on December 20, 2025.</p>
+
+<h2><span class="n">3</span>All 492 collaborations</h2>
+<p>Let \(\mathcal S_{492}\) have as blocks every captured post on which \(p_{1}\) and at least one other account appear (492 posts; 74 caption-only mentions excluded), on \(v=172\) points, block sizes 2 to 5. Sage finds \(|G|=3{,}343{,}786{,}911{,}907{,}539{,}166{,}867{,}488{,}768{,}000=2^{60}3^{16}5^{3}7^{2}11\) and 101 orbits: 73 fixed points and 28 nontrivial orbits containing 99 points. There are 33 twin classes (25 of size 2, six of size 3, two of size 4).</p>
+
+<div class="st"><span class="h">Lemma 3.1 (pendant stars).</span> Let \(C\subseteq P\) and let \(T_1,\dots,T_m\) be pairwise disjoint \(k\)-subsets of \(P\setminus C\) such that \(C\cup T_i\in\mathcal B\) for each \(i\), and no point of \(T=\bigcup T_i\) lies on any other block. Then \(S_k\wr S_m\le\operatorname{Aut}(\mathcal S)\), acting on \(T\) imprimitively with block system \(\{T_1,\dots,T_m\}\) and trivially off \(T\).</div>
+<div class="pf">Each \(T_i\) is a twin class, so the base group \(\prod_i\operatorname{Sym}(T_i)\cong S_k^{\,m}\) lies in \(\operatorname{Aut}\) by Lemma 2.2. For \(\pi\in S_m\), fix bijections \(T_i\to T_{\pi(i)}\) and let \(\hat\pi\) act by them on \(T\) and trivially elsewhere; \(\hat\pi\) maps \(C\cup T_i\) to \(C\cup T_{\pi(i)}\) and fixes every other block, so \(\hat\pi\in\operatorname{Aut}\). Base group and these lifts generate \(S_k\wr S_m\). <span class="qed">□</span></div>
+
+<p class="note"><i>Remark.</i> One of us has called Lemma 3.1 the “pedant-star lemon” for years without ever having an example of it. Here are four at once, all centred on \(p_{1}\).</p>
+<div class="st"><span class="h">Theorem 3.2.</span> \[\begin{aligned}\operatorname{Aut}(\mathcal S_{492})\cong\;&(S_2\wr S_7)\times S_{11}\times(S_3\wr S_3)\times(S_4\wr S_2)\\&\times(S_2\wr S_2)^2\times S_4\times S_3^{\,3}\times S_2^{\,18}.\end{aligned}\]</div>
+<div class="pf">Write \(G=\operatorname{Aut}(\mathcal S_{492})\) and, for an orbit \(O\), \(G^O\le\operatorname{Sym}(O)\) for the induced group. The restriction map \(\rho:G\to\prod_O G^O\) is injective, since \(G\le\operatorname{Sym}(P)\) and \(P\) is the union of the orbits. Sage computes each \(|G^O|\) (table below), and \(\prod_O|G^O|=|G|\); hence \(\rho\) is an isomorphism and \(G\) is the direct product of its orbit groups. For the four large orbits the centre is \(C=\{p_{1}\}\) and every point lies only on its star’s posts, so Lemma 3.1 gives \(S_k\wr S_m\le G^O\); the orders agree, so \(G^O=S_k\wr S_m\). The remaining orbits are twin classes (Lemma 2.2) or small stars with a common centre, and their induced orders match the factors listed. <span class="qed">□</span></div>
+
+<div class="tw"><table>
+<tr><th>Orbit size</th><th>Structure</th><th>\(G^O\)</th><th>\(|G^O|\)</th><th>Primitive</th></tr>
+<tr><td>14</td><td>7 posts \(\{p_{1}\}\cup T_i\), \(|T_i|=2\)</td><td>\(S_2\wr S_7\)</td><td>\(2^7\cdot7!=645{,}120\)</td><td>no</td></tr>
+<tr><td>11</td><td>11 posts \(\{p_{1}\}\cup\{y_i\}\)</td><td>\(S_1\wr S_{11}=S_{11}\)</td><td>39,916,800</td><td>yes</td></tr>
+<tr><td>9</td><td>3 posts \(\{p_{1}\}\cup T_i\), \(|T_i|=3\)</td><td>\(S_3\wr S_3\)</td><td>\((3!)^3\cdot3!=1{,}296\)</td><td>no</td></tr>
+<tr><td>8</td><td>2 posts \(\{p_{1}\}\cup T_i\), \(|T_i|=4\)</td><td>\(S_4\wr S_2\)</td><td>\((4!)^2\cdot2=1{,}152\)</td><td>no</td></tr>
+<tr><td>4 (×2)</td><td>2 posts, twin pairs, common centre</td><td>\(S_2\wr S_2\cong D_4\)</td><td>8</td><td>no</td></tr>
+<tr><td>4</td><td>4 one-guest posts, common centre</td><td>\(S_4\)</td><td>24</td><td>yes</td></tr>
+<tr><td>3 (×3)</td><td>twin triples; one is \(\{p_{10},p_{11},p_{12}\}\)</td><td>\(S_3\)</td><td>6</td><td>yes</td></tr>
+<tr><td>2 (×18)</td><td>twin pairs or two-post stars</td><td>\(S_2\)</td><td>2</td><td>yes</td></tr>
+</table></div>
+<p class="cap">Primitivity as reported by Sage’s <code>is_primitive()</code>; in the imprimitive cases the block system is the set of twin classes.</p>
+
+<p><b>Burnside, factor by factor.</b> Summing \(|\operatorname{Fix}(g)|\) over \(3.3\times10^{30}\) elements is out of the question, but Theorem 3.2 makes Burnside’s lemma easy. For a direct product \(G=\prod_O G^O\) acting on the disjoint union of the \(O\), \(\operatorname{Fix}(g)\) splits over the factors, so
+\[\frac1{|G|}\sum_{g\in G}|\operatorname{Fix}(g)|=\sum_{O}\frac1{|G^O|}\sum_{h\in G^O}|\operatorname{Fix}_O(h)|=\sum_O\#\{\text{orbits of }G^O\text{ on }O\}.\]
+Each \(G^O\) is transitive on its \(O\) (one orbit each, 28 in all), and each of the 73 fixed points is its own orbit: \(28+73=101\), matching Sage. On \(\mathcal S_7\) the same formula gives \(2+8=10\), matching the 120/12 computed by hand above.</p>
+<p><b>The cross-check.</b> \(\{p_{10},p_{11},p_{12}\}\) reappears as one of the three \(S_3\) orbits of \(\mathcal S_{492}\), found with no reference to \(\mathcal S_7\).</p>
+<p><b>Size.</b> The pendant-star factors dominate: \(|S_2\wr S_7|\cdot|S_{11}|\cdot|S_3\wr S_3|\cdot|S_4\wr S_2|\approx3.8\times10^{19}\) before the smaller factors multiply in. Sage finds the orbits from the generators (Schreier–Sims), not by enumerating \(G\).</p>
+<p class="note">Reading: 73 accounts are fixed points, the anchors the structure depends on (\(p_{1}\) on all 492 blocks, his foundation on 223, tbfrescue on 179, his film on 24, \(p_{2}\) on 8). The large orbits are pendant stars: posts made of \(p_{1}\) and one-off guests, whose guests are interchangeable both within a post (twins) and across posts (the top group of the wreath product).</p>
+
+<h2><span class="n">4</span>Sage session</h2>
+<pre>B = [["p1","p2","p3","p4","p5"], ["p1","p2","p3","p5","p6"], ["p1","p2","p3","p7","p6"],
+     ["p1","p2","p3","p4","p6"], ["p1","p2","p8","p4","p9"], ["p1","p2","p10","p11","p12"],
+     ["p1","p2","p13","p9","p6"]]
+S = IncidenceStructure(B); G = S.automorphism_group()
+G.order(), G.structure_description(), G.gens()
+#  (12, 'D6', (('p1','p2'), ('p10','p11'), ('p12','p10')))
+G.orbits()
+#  (('p9',), ('p8',), ('p12','p11','p10'), ('p7',), ('p3',), ('p1','p2'), ('p13',), ('p6',), ('p4',), ('p5',))
+G.stabilizer('p10').structure_description()        #  'C2 x C2'
+sum(len([p for p in S.ground_set() if g(p) == p]) for g in G) / G.order()   #  10
+S.is_t_design(return_parameters=True)             #  (True, (0, 13, 5, 7))
+L = S.incidence_graph(); L.order(), L.size()       #  (20, 35)</pre>
+<p class="cap">SageMath 10.9. The 492-post blocks are published as <a href="https://github.com/AntMerrill/backfire-tracking/tree/main/docs/data/sun-moon-starlink">posts.csv</a> (smaller accounts as IDs); the same calls on them give Theorem 3.2.</p>
+
+<h2><span class="n">5</span>Scope</h2>
+<p>The structure is only as complete as the captures: \(p_{1}\)’s grid back to September 11, 2025; some accounts capped; captions truncated (which affects only the excluded mention-only posts). “Same orbit” means identical position in this incidence structure, not common control. The argument has not been peer reviewed; corrections are welcome.</p>
+
+<h2><span class="n">6</span>Acknowledgements</h2>
+<p class="ack">With thanks to <b>Dave Meronk</b>, for explaining Gallian’s text; <b>Charles Holland</b>, for algebra; <b>Charles Ford</b>, for representation theory; <b>Jay Goldman</b>, for combinatorics; and <b>Stephen H. McCleary</b>, on telling left from right [4].</p>
+
+<h2><span class="n">7</span>References</h2>
+<ol class="refs">
+<li>J. A. Gallian, <i>Contemporary Abstract Algebra</i>, Chapman &amp; Hall/CRC (10th ed. 2021; 11th ed.). Ch. 7: orbits, stabilizers, the orbit-stabilizer theorem; “Symmetry and Counting”: Burnside’s lemma.</li>
+<li>J. D. Dixon and B. Mortimer, <i>Permutation Groups</i>, Graduate Texts in Mathematics 163, Springer, 1996 (wreath products, primitivity).</li>
+<li>B. D. McKay and A. Piperno, “Practical graph isomorphism, II,” <i>J. Symbolic Comput.</i> 60 (2014) 94–112 (nauty/Traces).</li>
+<li>S. H. McCleary, “Telling Left from Right,” in <i>Ordered Algebraic Structures</i>, Springer (Kluwer), 1989, doi:<a href="https://link.springer.com/chapter/10.1007/978-94-009-2472-7_7">10.1007/978-94-009-2472-7_7</a>.</li>
+<li>The SageMath Developers, <i>SageMath</i> 10.9: <code>IncidenceStructure</code>, <code>automorphism_group</code>.</li>
+<li>Companion pages (<a href="index.html">all pages</a>): <a href="https://antmerrill.github.io/backfire-tracking/who-went-first.html">Who went first</a>, <a href="https://antmerrill.github.io/backfire-tracking/name-tag-test.html">The Name-Tag Test</a>, <a href="https://antmerrill.github.io/backfire-tracking/sun-moon-starlink.html">Sun, Moon and Starlink</a>.</li>
+</ol>
+</main>
+
+</body></html>
