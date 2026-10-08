@@ -43,7 +43,7 @@ host account latterdayavenger. The key from letters to accounts, the raw capture
 | block | a group post, as the set of 5 accounts credited on it (7 blocks) |
 | N | the incidence matrix, 13 x 7: N[p][b] = 1 if account p is credited on post b, else 0 (`incidence_matrix.csv`) |
 | r_p | the number of posts account p is on: the row sum of N |
-| λ_pq (lambda) | the number of posts accounts p and q share |
+| λ_pq (lambda) | the number of posts accounts p and q share (the "pair multiplicity" of design theory; nothing to do with lambda calculus) |
 | N·Nᵀ (N N^T) | the 13 x 13 matrix of pair counts: λ_pq off the diagonal, r_p on it |
 | 𝟙_B (1_B) | the 0/1 column for block B. N·Nᵀ = Σ_B 𝟙_B 𝟙_Bᵀ: each post adds 1 to every pair inside it |
 | K₅ (K5) | a complete set of pairs on 5 accounts: 10 pairs. One group post makes one K₅ |
@@ -89,5 +89,34 @@ should give the same group. If anyone gets a different answer, tell us.
 The same result came from networkx 3.4.2 and from our own count. Our first version of the snippet
 used `designs.IncidenceStructure`, which Sage 10.9 does not have; it is corrected above.
 Software agreeing is not peer review: the reading of what the symmetry means is still ours to defend.
+
+### Three ways it was checked (all agree)
+
+1. **Our own count, plain Python, no packages:** `verify_automorphisms.py` in this folder.
+
+       python3 verify_automorphisms.py incidence_matrix.csv
+
+   It prints r for every account, the number of pairs that ever meet (40 of 78), |Aut(N)| = 12, and the orbits.
+   How it works: it builds each relabelling σ one account at a time (backtracking). Two numbers every symmetry
+   must keep the same prune the search:
+   - **r:** σ(p) must be on as many posts as p;
+   - **λ:** for every account x already placed, λ(p, x) = λ(σ(p), σ(x)).
+
+   Pruning only throws candidates away. Each complete σ is then tested directly: the 7 blocks, relabelled, must be
+   exactly the 7 blocks again. So the count is exact, not an estimate.
+2. **networkx 3.4.2 (a free graph library):** turn the design into its incidence graph (13 account nodes, 7 post
+   nodes, an edge when an account is on a post) and count the graph's symmetries that keep accounts on the account
+   side. They are exactly Aut(N).
+3. **SageMath 10.9:** the snippet above.
+
+**About the λ.** λ here is design theory's standard letter for how many blocks contain a given pair. It comes from
+"2-(v, k, λ) designs", where every pair meets exactly λ times. The other standard letters are v = 13 accounts,
+b = 7 posts, k = 5 per post and r = posts per account. It is **not** the λ of lambda calculus (Church's notation for
+functions). The script calls it `lam` because `lambda` is a reserved word in Python, which borrowed it from lambda
+calculus.
+
+**Why 12.** TB and LDC are on all 7 posts, so they can swap: S₂. H, I and J are each on exactly one post, the same
+one, so they can be put in any order: S₃. Every other account's row of N is unique, so it stays put.
+Aut(N) ≅ S₂ × S₃, which has order 2 × 6 = 12 (the same group as D₆, the symmetries of a hexagon).
 
 "Watch Buttfire"
