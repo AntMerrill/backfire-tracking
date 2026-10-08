@@ -14,6 +14,8 @@ sources he reposts or plays, responses, amplifiers, and Ballard appearing on som
 - **Placeholders allowed**: a P-number can exist before the video is found (P011), so a V row's "plays someone's audio" always has a place to point.
 - **Scope rule**: in if it's part of the Backfire/Ballard story. The Instagram bot network (sandrabronzina etc.) stays in the private `timbot-network` repo, not here.
 
+**Files:** every downloaded item is in the master catalog on the drive, `/mnt/ubuntu26/boner_vault/BONER_VAULT.csv` (BV-numbers). Look up by ID. Refresh it with `~/Desktop/claude/scripts/boner_vault_index.py` after each download batch. Gaps are in `BONER_VAULT_REPORT.md`.
+
 ## Items
 
 | P | Platform | ID | Person (account) | Speaker | Posted (MT) | Length | Title (verbatim) | What it is | Tags | Status |

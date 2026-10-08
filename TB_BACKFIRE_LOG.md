@@ -6,6 +6,8 @@ Numbers are never reused or renumbered. His own title is kept word for word as `
 "= V0xx" note. Seeded 2026-09-25 in date order; entries added after that go at the end.
 
 Times are Mountain Time. "Sept 4 video" = V008. Local files: `dl_wm/outputs/<date>/<platform>__<id>/`.
+**Files:** every downloaded item is in the master catalog on the drive, `/mnt/ubuntu26/boner_vault/BONER_VAULT.csv` (BV-numbers). Look up by ID. Refresh it with `~/Desktop/claude/scripts/boner_vault_index.py` after each download batch. Gaps are in `BONER_VAULT_REPORT.md`.
+
 
 | V | Platform | ID | Posted (MT) | Length | His title (verbatim) | What it is / relation | Status |
 |---|---|---|---|---|---|---|---|
@@ -27,7 +29,7 @@ Times are Mountain Time. "Sept 4 video" = V008. Local files: `dl_wm/outputs/<dat
 | V016 | YouTube | `3zgujfJhRkg` | 2026-09-20 21:07 | 6:17 | BACKFIRE EPISODE 6: The Cover-Up (Spanish Subs) | Sept 4 video ~3:15:18–3:21:35 (Ballard's own stake-president story at 0:15) | live |
 | V017 | YouTube | `AYhFyEz092o` | 2026-09-20 21:07 | 7:14 | BACKFIRE EPISODE 7: The Hope (Spanish Subs) | Sept 4 video ~3:21:36–3:28:49 | live |
 | V018 | YouTube | `sYuCqWc24Ys` | 2026-09-20 21:12 | 23:24 | BACKFIRE EPISODE 8: #Retract (Spanish subs) | Sept 4 video ~3:28:49–3:52:13 | live |
-| V019 | Facebook | `1959541814741163` | 2026-09-21 16:59 | 2:52 | This is pure EVIL! Destroying a man’s life! A stake president’s life…Destroying his family, his identity.. Why | plays Jason Preston's audio (We Are The People 4hNRNZFOh1M, 5:49) | live |
+| V019 | Facebook | `1959541814741163` | 2026-09-21 16:59 | 2:52 | This is pure EVIL! Destroying a man’s life! A stake president’s life…Destroying his family, his identity.. Why | plays Jason Preston's audio = IG Ddj3dRopCNN (wearethepeopleutah, 2026-09-21 12:05; 85% word match, checked 2026-10-01) (We Are The People 4hNRNZFOh1M, 5:49) | live |
 | V020 | Facebook | `3952177328410518` | 2026-09-22 14:02 | 4:37 | EVERYONE who was part of this truly EVIL ACT that is hurting children RIGHT NOW……please remember two things in | Sheri Dew video ("Sister Dew… we're friends, right?"); same caption as IG V037, which is a different video (Matt Holland) | live |
 | V021 | Facebook | `1774065160384040` | 2026-09-22 15:11 | 8:07 | Yes. They LIED about Elder Ballard and LIED about EVERYTHING else…. Three years later, the WHOLE WORLD is WATC |  | live |
 | V022 | Facebook | `1448684630495196` | 2026-09-22 16:20 | 0:37 | Watch Backfire: The Excommunication Story of Tim Ballard. Now streaming on my YouTube channel (and with Spanis |  | live |
@@ -62,3 +64,4 @@ Times are Mountain Time. "Sept 4 video" = V008. Local files: `dl_wm/outputs/<dat
 | V051 | Instagram | `DdRvwOXoAaP` | 2026-09-14 12:26 | 11:28 | 🚨🚨New Warning from London 🇬🇧🚨🚨 ✅Listen carefully as I update you on the Gang Rape Report ✅Watch Backfire: The Excommunication Story of Tim Ballard (streaming now on my YouTube channel) ✅READ and ASSIM | "New Warning from London"; Europe promotion claim cited on en.wiki Sound of Freedom (09-16, 9:17–9:21); logged late 2026-09-27 (downloaded earlier, missed) | live |
 | V052 | Facebook | `2587858431667336` | 2026-09-14 14:12 | 7:47 | Thank you, Troy Ables, for being one of the very few LDS podcasters to live your Matthew-18 COVENANT. Please watch the Syria Safe House interview on my YouTube Channel—the last I did with Troy Ables b | Troy Ables thank-you; Hidden War Nov 14 release + Latin America claim cited on en.wiki Sound of Freedom (09-16, 1:51–2:01). Share link 1JxN5fQ1BH; logged late 2026-09-27 (downloaded earlier, missed) | live |
 | V053 | Facebook | `2327863764698593` | 2026-09-18 08:49 | 6:30 | This is the final scene of Backfire: The Excommunication Story of Tim Ballard. The entire Season One will be dropping episodically on my YouTube channel tonight with Spanish Subs. Arabic Subs will be  | "final scene of Backfire" (#Retract ending); announces the Sept 20 YouTube drop with Spanish subs; logged late 2026-09-27 (downloaded earlier, missed) | live |
+| V054 | Facebook | `975302382278936` | 2026-09-30 09:29 | 7:14 | Notwithstanding this craziness re: the church people vs. the Ballard Family……There is, and ALWAYS has been, HOPE. Enjoy Episode #7 of Backfire: THE HOPE. | = V017 (Ep 7 The Hope, FB cross-post; Spanish subs + English overlays); Sept 4 video ~3:21:36–3:28:49; logged 2026-10-01 | live |
