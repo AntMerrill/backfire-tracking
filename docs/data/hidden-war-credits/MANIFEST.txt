@@ -1,0 +1,18 @@
+Forensic frames — instagram__Da7-1LpIR89 (dr.venus_sh, posted 2026-07-18)
+extracted: 2026-10-09T20:08:15-07:00
+post: https://www.instagram.com/p/Da7-1LpIR89/
+source (original download, NOT the watermarked copy): instagram__Da7-1LpIR89.mp4
+source sha256: abc67ac00faed6ca0c54d1bce438973be1f0b8b153d3d11e0003308cc80113df
+source: h264 720x1280 30/1 fps, 5400 frames
+tool: ffmpeg version 8.0.1-3ubuntu2 Copyright (c) 2000-2025 the FFmpeg developers
+method: exact decoded frame by index (select=eq(n,N)), full resolution, no scaling/cropping/overlay, lossless PNG (rgb24)
+
+frame 1350  t=45.0s  Da7-1LpIR89_f1350_00m45s.png  sha256 b5234618e0d7c66bf33e922b6a384940d3cdb87ea3adb82db33e863e6dcd4ef7
+frame 1530  t=51.0s  Da7-1LpIR89_f1530_00m51s.png  sha256 d9548c61932cab19f4ab549e8b5923b402b777db037a2b82ee7f7e2f73abf6b4
+frame 1650  t=55.0s  Da7-1LpIR89_f1650_00m55s.png  sha256 7e5d0c6ee0a4f871b5260cf7b3fb47ba525ec33802d441d99b20d565ccaeb012
+frame 1710  t=57.0s  Da7-1LpIR89_f1710_00m57s.png  sha256 f74644ef8f03c63c764d29d854139d2d1854bd69c26a18a3229d06d6eb09dab1
+frame 1758  t=58.6s  Da7-1LpIR89_f1758_00m58.6s.png  sha256 383b77810d53b32238feae9b58f034c393fb6f6e9593a7dd52f89e4543a31dc5
+
+command per frame: ffmpeg -i SRC -vf "select=eq(n\,N)" -fps_mode passthrough -frames:v 1 -pix_fmt rgb24 OUT.png
+zoom_f1758_shareholder_4x.png = crop 320x70 at (140,130) of f1758, 4x lanczos upscale (viewing aid only, not evidence)
+2026-10-09_card_shareholder_f1758.png = presentation card (frame + 4x zoom + hashes), made by shareholder_card.py, sha256 c7bca362559b9a22252556d2b336582d66dc089cf999aa8e3624c6d77914c62b  (v2: header no longer mentions the logo)
