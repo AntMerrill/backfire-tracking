@@ -53,7 +53,7 @@ mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
 
 </head><body><main>
 <h1>Automorphism Group of the Incidence Structure and Its Orbits</h1>
-<div class="byline">On the collaborator network of the timballard89 Instagram account · October 6, 2026 · not yet peer reviewed</div>
+<div class="byline">On the collaborator network of the timballard89 Instagram account · October 6, 2026 · revised October 11 · proofs machine-checked; results reviewed by Claude and Grok</div>
 <p class="ded">Dedicated to the memory of Dean Neumann.</p>
 <p class="epi">“When you’re the smartest guy in the room, you don’t need to say so.”</p>
 
@@ -97,7 +97,7 @@ equivalently the \(\sigma\) for which some permutation matrix \(Q\) gives \(P_\s
 <tr><th>\(x\)</th><th>\(\operatorname{Orb}(x)\)</th><th>\(\operatorname{Stab}(x)\)</th><th>Check</th></tr>
 <tr><td>\(p_{1}\)</td><td>\(\{p_{1},p_{2}\}\)</td><td>\(\operatorname{Sym}\{p_{10},p_{11},p_{12}\}\cong S_3\)</td><td>\(2\cdot6=12\)</td></tr>
 <tr><td>\(p_{10}\)</td><td>\(\{p_{10},p_{11},p_{12}\}\)</td><td>\(\langle(p_{1}\ p_{2}),(p_{11}\ p_{12})\rangle\cong C_2\times C_2\)</td><td>\(3\cdot4=12\)</td></tr>
-<tr><td>\(p_{3}\)</td><td>\(\{A\}\)</td><td>\(G\cong D_6\)</td><td>\(1\cdot12=12\)</td></tr>
+<tr><td>\(p_{3}\)</td><td>\(\{p_{3}\}\)</td><td>\(G\cong D_6\)</td><td>\(1\cdot12=12\)</td></tr>
 </table></div>
 
 <p><b>Burnside.</b> The number of orbits is \(\frac1{|G|}\sum_{g\in G}|\operatorname{Fix}(g)|\). By cycle type on \(\{p_{1},p_{2}\}\times\{p_{10},p_{11},p_{12}\}\):</p>
@@ -159,20 +159,53 @@ S.is_t_design(return_parameters=True)             #  (True, (0, 13, 5, 7))
 L = S.incidence_graph(); L.order(), L.size()       #  (20, 35)</pre>
 <p class="cap">SageMath 10.9. The 492-post blocks are published as <a href="https://github.com/AntMerrill/backfire-tracking/tree/main/docs/data/sun-moon-starlink">posts.csv</a> (smaller accounts as IDs); the same calls on them give Theorem 3.2.</p>
 
-<h2><span class="n">5</span>Scope</h2>
-<p>The structure is only as complete as the captures: \(p_{1}\)’s grid back to September 11, 2025; some accounts capped; captions truncated (which affects only the excluded mention-only posts). “Same orbit” means identical position in this incidence structure, not common control. The argument has not been peer reviewed; corrections are welcome.</p>
+<h2><span class="n">5</span>Results and replication</h2>
+<p><b>Results.</b> Every claim above was computed more than once, by independent methods, before and after the fact.</p>
+<div class="tw"><table>
+<tr><th>Claim</th><th>Result</th><th>Checked by</th></tr>
+<tr><td>\(|\operatorname{Aut}(\mathcal S_7)|\)</td><td>12, \(\cong S_2\times S_3\cong D_6\)</td><td>Predicted Oct 5, 2026 before computing; then a plain-Python backtracking count, networkx 3.4.2 and SageMath 10.9 (all agree)</td></tr>
+<tr><td>Orbits of \(\mathcal S_7\)</td><td>\(\{p_1,p_2\}\), \(\{p_{10},p_{11},p_{12}\}\), eight fixed points (10 orbits)</td><td>Same three methods; Burnside by hand (120/12 = 10)</td></tr>
+<tr><td>Pairs meeting in \(\mathcal S_7\)</td><td>40 of 78</td><td>Plain-Python count</td></tr>
+<tr><td>\(|\operatorname{Aut}(\mathcal S_{492})|\)</td><td>\(2^{60}3^{16}5^{3}7^{2}11\approx3.34\times10^{30}\), 101 orbits (73 fixed)</td><td>SageMath 10.9; product of the orbit groups (Theorem 3.2); Burnside factor by factor</td></tr>
+<tr><td>Cross-check</td><td>\(\{p_{10},p_{11},p_{12}\}\) is an \(S_3\) orbit of both \(\mathcal S_7\) and \(\mathcal S_{492}\)</td><td>Found independently in each</td></tr>
+</table></div>
 
-<h2><span class="n">6</span>Acknowledgements</h2>
-<p class="ack">With thanks to <b>Dave Meronk</b>, for explaining Gallian’s text; <b>Charles Holland</b>, for algebra; <b>Charles Ford</b>, for representation theory; <b>Jay Goldman</b>, for combinatorics; and <b>Stephen H. McCleary</b>, on telling left from right [4].</p>
+<p><b>Replication of the data.</b> The mathematics is only as good as the incidence matrix. Anyone can rebuild \(N\) for \(\mathcal S_7\) from Instagram itself:</p>
+<ol>
+<li>open the seven posts (links in <a href="https://github.com/AntMerrill/backfire-tracking/tree/main/docs/data/who-went-first">group_posts.csv</a>);</li>
+<li>record each post’s uploader and its Collaborators list;</li>
+<li>run <code>build_matrix.py</code> and then <code>verify_automorphisms.py</code>.</li>
+</ol>
+<p>The test needs no knowledge of our labels, because \(|\operatorname{Aut}(\mathcal S)|\) and the orbit sizes are invariant under relabelling the points. The step-by-step procedure and pass/fail table are in <code>TEST.md</code> beside the data.</p>
 
-<h2><span class="n">7</span>References</h2>
+<div class="tw"><table>
+<tr><th>Date</th><th>What was re-done</th><th>Outcome</th></tr>
+<tr><td>Oct 5, 2026</td><td>Credits from Instagram’s own post records (profile captures of Oct 1, 4, 5)</td><td>\(N\) as published; order 12</td></tr>
+<tr><td>Oct 11, 2026</td><td>After a storage failure destroyed our first copies, the posts were downloaded again from Instagram through the same pipeline, watermarked, and hashed</td><td>Six of seven re-downloaded (\(B_1\)–\(B_6\)): 12 watermarked files, hashed; uploader latterdayavenger and post dates confirmed on all six. \(B_7\) was refused by Instagram on Oct 11 (HTTP 400 during a rate limit) and is pending. The downloader records the uploader only, so the credits are re-checked by the test in <code>TEST.md</code>.</td></tr>
+</table></div>
+<p class="note"><b>Evidence package.</b> The posts as we hold them (\(B_1\)–\(B_6\) so far; \(B_7\) pending) are released in <a href="https://github.com/AntMerrill/backfire-tracking/tree/main/docs/data/who-went-first/evidence">evidence/</a>, with a manifest:
+<ul>
+<li>each watermarked file, with the block it belongs to (\(B_1,\dots,B_7\));</li>
+<li>the post link;</li>
+<li>Instagram’s upload time and uploader;</li>
+<li>SHA-256 hashes of both the original and the watermarked file.</li>
+</ul>
+A reader can check that our files are the posts named, and that the posts carry the credits in \(N\).</p>
+
+<h2><span class="n">6</span>Scope</h2>
+<p>The structure is only as complete as the captures: \(p_{1}\)’s grid back to September 11, 2025; some accounts capped; captions truncated (which affects only the excluded mention-only posts). “Same orbit” means identical position in this incidence structure, not common control. The proofs are machine-checked (SageMath 10.9, networkx) and the results were reviewed by two AI systems, Claude and Grok; the paper has not yet been refereed by mathematicians. Corrections are welcome.</p>
+
+<h2><span class="n">7</span>Acknowledgements</h2>
+<p class="ack">With thanks to <b>Dave Meronk</b>, for explaining Gallian’s text; <b>Charles Holland</b>, for algebra; <b>Charles Ford</b>, for representation theory; <b>Jay Goldman</b>, for combinatorics; and <b>Stephen H. McCleary</b>, on telling left from right [4]. Results reviewed by <b>Claude</b> (Anthropic, @claude) and <b>Grok</b> (xAI, @grok), October 2026.</p>
+
+<h2><span class="n">8</span>References</h2>
 <ol class="refs">
 <li>J. A. Gallian, <i>Contemporary Abstract Algebra</i>, Chapman &amp; Hall/CRC (10th ed. 2021; 11th ed.). Ch. 7: orbits, stabilizers, the orbit-stabilizer theorem; “Symmetry and Counting”: Burnside’s lemma.</li>
 <li>J. D. Dixon and B. Mortimer, <i>Permutation Groups</i>, Graduate Texts in Mathematics 163, Springer, 1996 (wreath products, primitivity).</li>
 <li>B. D. McKay and A. Piperno, “Practical graph isomorphism, II,” <i>J. Symbolic Comput.</i> 60 (2014) 94–112 (nauty/Traces).</li>
 <li>S. H. McCleary, “Telling Left from Right,” in <i>Ordered Algebraic Structures</i>, Springer (Kluwer), 1989, doi:<a href="https://link.springer.com/chapter/10.1007/978-94-009-2472-7_7">10.1007/978-94-009-2472-7_7</a>.</li>
 <li>The SageMath Developers, <i>SageMath</i> 10.9: <code>IncidenceStructure</code>, <code>automorphism_group</code>.</li>
-<li>Companion pages (<a href="index.html">all pages</a>): <a href="https://antmerrill.github.io/backfire-tracking/who-went-first.html">Who went first</a>, <a href="https://antmerrill.github.io/backfire-tracking/name-tag-test.html">The Name-Tag Test</a>, <a href="https://antmerrill.github.io/backfire-tracking/sun-moon-starlink.html">Sun, Moon and Starlink</a>.</li>
+<li>Companion pages (<a href="index.html">all pages</a>): <a href="https://antmerrill.github.io/backfire-tracking/who-went-first.html">Who went first</a>, <a href="https://antmerrill.github.io/backfire-tracking/name-tag-test.html">The Name-Tag Test</a>, <a href="https://antmerrill.github.io/backfire-tracking/sun-moon-starlink.html">Sun, Moon and Starlink</a>; related: <a href="https://roadshowpractice.github.io/mimesis/cases/ldsabuse-twins/b7.html">B<sub>7</sub> and the Lettering of the Twin Structure</a>.</li>
 </ol>
 </main>
 
