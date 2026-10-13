@@ -1,0 +1,209 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="The incidence structure of one Instagram host account: its automorphism group is C2^4, from four twin pairs, with 105 fixed points; a time-ordered relay; and an untested congruence hypothesis.">
+<meta property="og:type" content="article"><meta property="og:title" content="A Rigid Grid and a Relay">
+<meta property="og:description" content="113 accounts, 354 posts, 16 symmetries: pinhead on one side, perfect symmetry on the other. A proof, the data, and a hypothesis. Not yet peer reviewed.">
+<meta property="og:url" content="https://antmerrill.github.io/backfire-tracking/rigid-grid.html"><meta property="og:image" content="https://antmerrill.github.io/backfire-tracking/img/rigid-grid/og_card.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">
+<title>A Rigid Grid and a Relay</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap">
+<script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]},svg:{fontCache:"global"}};</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.min.js"></script>
+<style>
+/* Layout: a mathematics preprint, companion to "Automorphism Group of the Incidence Structure and Its Orbits". */
+:root{
+  --paper:#fbfaf6; --ink:#1c1d22; --muted:#5d6070; --rule:#d9d6cc; --accent:#6b2d2d; --code:#f2efe6; --hl:#efe6cf;
+  --serif:"EB Garamond",Garamond,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --label:"IBM Plex Sans Condensed","Arial Narrow",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#15161a; --ink:#e8e6df; --muted:#a6a8b3; --rule:#33343c; --accent:#e0a39a; --code:#1e2026; --hl:#2a2619; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#15161a; --ink:#e8e6df; --muted:#a6a8b3; --rule:#33343c; --accent:#e0a39a; --code:#1e2026; --hl:#2a2619; color-scheme:dark}
+body{background:var(--paper);color:var(--ink);font:20px/1.6 var(--serif);padding-inline:16px;padding-block:36px 80px;margin:0}
+main{max-width:740px;margin:0 auto}
+h1{font:600 clamp(30px,5.4vw,44px)/1.15 var(--serif);text-align:center;margin:0 0 .4em;text-wrap:balance}
+.byline{text-align:center;font:500 15px var(--label);letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+h2{font:600 26px/1.25 var(--serif);margin:2em 0 .5em;border-bottom:1px solid var(--rule);padding-bottom:.2em}
+h2 .n{color:var(--accent);margin-right:.4em}
+p{margin:.65em 0} a{color:var(--accent)}
+.abs{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:.8em 0;margin:1.4em 0;font-size:18.5px}
+.abs b{font-variant:small-caps;letter-spacing:.04em}
+.st{margin:1.1em 0;padding:.2em 0 .2em 1em;border-left:3px solid var(--accent)}
+.st > .h{font-weight:600;font-variant:small-caps;letter-spacing:.03em}
+.st.def{border-left-color:var(--muted)}
+.pf{margin:.4em 0 1.1em;padding-left:1em;font-size:19px}
+.pf::before{content:"Proof. ";font-style:italic}
+.pf .qed{float:right}
+.tw{overflow-x:auto;margin:.8em 0}
+table{border-collapse:collapse;margin:0 auto;font:400 17px var(--serif);font-variant-numeric:tabular-nums}
+th,td{border-bottom:1px solid var(--rule);padding:.32em .7em;text-align:left;vertical-align:top}
+th{font:600 13px var(--label);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+pre{background:var(--code);border:1px solid var(--rule);border-radius:4px;padding:12px 14px;overflow-x:auto;font:400 13.5px/1.55 var(--mono);color:var(--ink)}
+.note{background:var(--hl);padding:.7em 1em;border-radius:4px;font-size:18px}
+.acct{font-family:var(--mono);font-size:.86em}
+.ded{text-align:center;font-style:italic;margin:2.2em auto 0;max-width:34em}
+.refs{font-size:17px} .refs li{margin:.35em 0}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+</style></head><body><main>
+
+<h1>A Rigid Grid and a Relay: the Incidence Structure of One Host Account</h1>
+<div class="byline">Companion to <a href="automorphism-group.html">“Automorphism Group of the Incidence Structure and Its Orbits”</a> · October 13, 2026 · preprint, not peer reviewed</div>
+<div class="ded">Dedicated to Louis Graue, who taught John linear algebra, which is what this paper is about.</div>
+
+<div class="abs"><b>Abstract.</b> We study the incidence structure \(\mathcal S_h\) whose points are the 113 accounts credited on the 354
+posts of one Instagram host account \(h\) (latterdayavenger), and whose blocks are those posts. We prove
+\(\operatorname{Aut}(\mathcal S_h)=\langle\tau_1,\tau_2,\tau_3,\tau_4\rangle\cong C_2^{\,4}\), generated by four transpositions of
+<em>twins</em>, with 105 fixed points and 109 orbits. The proof uses only the stable colouring of the Levi graph (colour refinement)
+and a twin lemma; an exhaustive search for automorphisms agrees. We then order the blocks by time and record two facts about the points
+\(p_1\) (timballard89) and \(p_2\) (latterdaychad): \(p_2\) lies on 109 of the first 253 blocks and on none of the last 101, and after the
+block of April 10, 2026 no block contains both \(p_1\) and \(p_2\). Finally we state, without testing it, a congruence hypothesis
+\(p_1\equiv h\equiv p_2\) due to John, show that it cannot be a symmetry of \(\mathcal S_h\), and say what data would test it.</div>
+
+<h2><span class="n">0</span>Notation</h2>
+<div class="tw"><table><tr><th>Here</th><th>Plain pages</th><th>Account</th></tr>
+<tr><td>\(h\)</td><td>LDA</td><td class="acct">latterdayavenger</td></tr>
+<tr><td>\(p_1\)</td><td>TB</td><td class="acct">timballard89</td></tr>
+<tr><td>\(p_2\)</td><td>LDC</td><td class="acct">latterdaychad</td></tr>
+<tr><td>\(s_{1},\dots,s_{110}\)</td><td>s001–s110</td><td>the other accounts, numbered by first appearance on \(h\)’s grid</td></tr></table></div>
+<p>\(p_1,p_2\) keep their names from the companion paper. The labels \(s_i\) are those of the published data
+(<a href="https://antmerrill.github.io/backfire-tracking/data/congruence/">data/congruence</a>); the key to accounts is not published.
+Blocks are written \(B_1,\dots,B_{354}\) in order of posting time (UTC). For a point \(x\), \(r_x\) is its replication number and
+\(\operatorname{supp}(x)=\{i: x\in B_i\}\); for points \(x\ne y\), \(\lambda_{xy}=|\operatorname{supp}(x)\cap\operatorname{supp}(y)|\).</p>
+
+<h2><span class="n">1</span>The structure</h2>
+<div class="st def"><span class="h">Definition 1.1.</span> \(\mathcal S_h=(P,\mathcal B)\) where \(\mathcal B=(B_1,\dots,B_{354})\) is the multiset of posts on
+\(h\)’s grid (captured Oct 13, 2026, complete: Apr 1, 2025 to Oct 13, 2026), each \(B_i\) the set of accounts Instagram credits on it
+together with \(h\), and \(P=\bigcup_i B_i\). As in the companion paper, \[\operatorname{Aut}(\mathcal S_h)=\{\sigma\in\operatorname{Sym}(P):\ \sigma(\mathcal B)=\mathcal B\text{ as multisets}\},\]equivalently the \(\sigma\) for which some permutation matrix \(Q\) gives \(P_\sigma N Q=N\), where
+\(N\in\{0,1\}^{P\times\mathcal B}\) is the incidence matrix; and \(L(\mathcal S_h)\) is the bipartite Levi graph on \(P\sqcup\mathcal B\).</div>
+<p>Basic counts: \(|P|=113\), \(|\mathcal B|=354\), of which 295 are distinct as sets. Block sizes:</p>
+<div class="tw"><table><tr><th>\(|B|\)</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+<tr><th>blocks</th><td>34</td><td>17</td><td>23</td><td>35</td><td>83</td><td>162</td></tr></table></div>
+<p>\(h\in B_i\) for every \(i\) (so \(r_h=354\)), and the 34 blocks of size 1 are all \(\{h\}\). The replication numbers take 32 distinct
+values; \(r_{p_2}=109\), \(r_{p_1}=7\), and the largest other value is 132. Of the \(\binom{113}{2}=6328\) pairs of points, 902 have
+\(\lambda_{xy}>0\).</p>
+
+<h2><span class="n">2</span>The automorphism group</h2>
+<div class="st def"><span class="h">Definition 2.1.</span> Points \(x\ne y\) are <em>twins</em> if \(\operatorname{supp}(x)=\operatorname{supp}(y)\).</div>
+<div class="st"><span class="h">Lemma 2.2 (twins).</span> If \(x,y\) are twins, the transposition \((x\,y)\) lies in \(\operatorname{Aut}(\mathcal S_h)\).</div>
+<div class="pf">Every block contains both of \(x,y\) or neither, so swapping them maps each block to itself. <span class="qed">∎</span></div>
+
+<div class="st def"><span class="h">Definition 2.3 (colour refinement).</span> Colour every vertex of \(L(\mathcal S_h)\) by its side (point or block). Repeatedly
+recolour each vertex by the pair (its colour, the multiset of its neighbours’ colours), until the partition into colour classes stops
+getting finer. The final partition \(\pi\) of \(P\) is the <em>stable partition</em>.</div>
+<div class="st"><span class="h">Lemma 2.4.</span> Every orbit of \(\operatorname{Aut}(\mathcal S_h)\) on \(P\) lies inside one cell of \(\pi\). Consequently each
+automorphism maps each cell of \(\pi\) onto itself.</div>
+<div class="pf">An automorphism \(\sigma\) of \(\mathcal S_h\), together with the induced permutation of blocks, is a side-preserving automorphism
+of \(L(\mathcal S_h)\). Each refinement round is defined from the graph and the current colouring alone, so by induction on the rounds
+\(\sigma\) preserves every colour: \(c(\sigma v)=c(v)\) for all \(v\). Hence \(x\) and \(\sigma x\) are in the same cell. <span class="qed">∎</span></div>
+
+<div class="st"><span class="h">Proposition 2.5 (computation).</span> For \(\mathcal S_h\), colour refinement is stable after round 3, with 109 point cells and 295
+block cells. The point cells are 105 singletons and the four pairs
+\[\{s_{38},s_{39}\},\quad\{s_{44},s_{46}\},\quad\{s_{48},s_{49}\},\quad\{s_{103},s_{104}\}.\]
+Each of these pairs is a pair of twins, with support a single block:
+<div class="tw"><table><tr><th>Pair</th><th>Their one block</th><th>Posted (UTC)</th><th>Whole block</th></tr>
+<tr><td>\(\tau_1=(s_{38}\,s_{39})\)</td><td class="acct">DSIecu2jxNs</td><td>2025-12-11</td><td>\(\{h,p_2,s_{2},s_{38},s_{39}\}\)</td></tr>
+<tr><td>\(\tau_2=(s_{44}\,s_{46})\)</td><td class="acct">DSaCqZlgQFX</td><td>2025-12-18</td><td>\(\{h,s_{28},s_{43},s_{44},s_{45},s_{46}\}\)</td></tr>
+<tr><td>\(\tau_3=(s_{48}\,s_{49})\)</td><td class="acct">DS5TDINAs5H</td><td>2025-12-30</td><td>\(\{h,s_{25},s_{48},s_{49},s_{50}\}\)</td></tr>
+<tr><td>\(\tau_4=(s_{103}\,s_{104})\)</td><td class="acct">Db7Kx9xA9AY</td><td>2026-08-11</td><td>\(\{h,s_{7},s_{80},s_{102},s_{103},s_{104}\}\)</td></tr></table></div>
+</div>
+<p>The rounds run 1 → 32 → 70 → 109 → 109 point cells (and 1 → 6 → 293 → 295 → 295 block cells); the script and its output are
+published as <span class="acct">refine.py</span>, <span class="acct">refine_output.txt</span>. That the block cells number 295, the
+number of distinct blocks, says refinement separates every pair of different posts.</p>
+
+<div class="st"><span class="h">Theorem 2.6.</span>
+\[\operatorname{Aut}(\mathcal S_h)=\langle\tau_1,\tau_2,\tau_3,\tau_4\rangle\cong C_2\times C_2\times C_2\times C_2,\]
+of order 16. Its orbits on \(P\) are the cells of \(\pi\): 105 fixed points, including \(h\), \(p_1\) and \(p_2\), and the four twin pairs.</div>
+<div class="pf">By Lemma 2.2 each \(\tau_i\in\operatorname{Aut}(\mathcal S_h)\). The \(\tau_i\) are transpositions on disjoint pairs, so they commute,
+each has order 2, and \(\langle\tau_1,\dots,\tau_4\rangle\cong C_2^{\,4}\). Conversely let \(\sigma\in\operatorname{Aut}(\mathcal S_h)\). By
+Lemma 2.4 and Proposition 2.5, \(\sigma\) fixes each of the 105 singleton cells pointwise and maps each pair cell \(\{a_i,b_i\}\) onto itself,
+so on that pair it is either the identity or \(\tau_i\). A permutation of \(P\) is determined by what it does on the cells, so
+\(\sigma=\tau_1^{e_1}\tau_2^{e_2}\tau_3^{e_3}\tau_4^{e_4}\) with \(e_i\in\{0,1\}\). Hence \(\operatorname{Aut}(\mathcal S_h)=\langle\tau_1,\dots,\tau_4\rangle\),
+and its orbits are exactly the cells. <span class="qed">∎</span></div>
+
+<div class="note"><b>Independent check.</b> The exhaustive backtracking search of the companion paper’s
+<span class="acct">verify_automorphisms.py</span> (unchanged), run on the published incidence matrix, lists every automorphism and
+returns \(|\operatorname{Aut}(\mathcal S_h)|=16\) with the same four pairs as the only non-trivial orbits. The proof above does not depend on it.</div>
+
+<div class="st"><span class="h">Remark 2.7.</span> \(\mathcal S_h\) is <em>almost rigid</em>: \(|\operatorname{Aut}|=2^4\) on 113 points, against
+\(|\operatorname{Aut}(\mathcal S_{492})|\approx3.34\times10^{30}\) for the structure around \(p_1\) in the companion paper. There the size came
+from pendant stars (posts of \(p_1\) with one-off guests); here the only one-off guests that come in pairs are the four twin pairs, and every
+other point is pinned by its counts. In particular \(h,p_1,p_2\) are pairwise in different orbits, already separated by
+\(r_h=354\), \(r_{p_2}=109\), \(r_{p_1}=7\).</div>
+<div class="st"><span class="h">Remark 2.8 (John’s picture).</span> John described the shape of Theorem 2.6 as “pinhead on one side, perfect
+symmetry on the other”; in his first wording, “the direct product of pinhead with 113-5 satellites and then a completely symmetrical
+group.” In the theorem’s terms: the pinhead is \(h\), on every block and fixed; the satellites are the other 104 fixed points; and the
+symmetric side is the part that moves, the four twin pairs, on which \(\operatorname{Aut}(\mathcal S_h)\) acts as the full group
+\[\operatorname{Sym}(\{s_{38},s_{39}\})\times\cdots\times\operatorname{Sym}(\{s_{103},s_{104}\})\cong C_2^{\,4}:\]every swap the
+data allow is a symmetry. On the four pairs, John: “looks like quadruplets to me.” So
+\[\operatorname{Aut}(\mathcal S_h)\;=\;\underbrace{1_{\{h\}}\times 1_{104}}_{\text{pinhead and satellites}}\;\times\;\underbrace{C_2^{\,4}}_{\text{twins}}.\]
+(Timing, for the record: this was said after the automorphism run of 10:58 on Oct 13, 2026 and before the scrape of three fixed points;
+John confirmed the reading 1 + 104 + 8. “Quadruplets” was said later the same day, while this paper was being written.)</div>
+
+<h2><span class="n">3</span>Time: the relay</h2>
+<p>Ordering the blocks by posting time turns \(\mathcal S_h\) into a filtered structure \(\mathcal S_h^{\le t}=(P,(B_1,\dots,B_t))\).
+The automorphism group of Section 2 ignores this order; the following statements use it.</p>
+<div class="st"><span class="h">Proposition 3.1.</span> \(\operatorname{supp}(p_2)\subseteq\{1,\dots,253\}\) with \(1,253\in\operatorname{supp}(p_2)\) and
+\(|\operatorname{supp}(p_2)|=109\). That is, \(p_2\) lies on \(h\)’s first block (\(B_1\), 2025-04-01) and on 109 of the first 253
+blocks; its last block is \(B_{253}\) (2026-06-11 18:26 UTC), and none of \(B_{254},\dots,B_{354}\) (101 blocks) contains it.</div>
+<div class="pf">Read off the published <span class="acct">posts_with_dates.csv</span>; the count by month is
+<span class="acct">ldc_on_lda_grid_by_month.csv</span>. <span class="qed">∎</span></div>
+<div class="st"><span class="h">Proposition 3.2.</span> \[\operatorname{supp}(p_1)=\{121,124,129,136,166,180,228\},\]\[\operatorname{supp}(p_1)\cap\operatorname{supp}(p_2)=\{121,124,129,136,166,180\},\]so \(\lambda_{p_1p_2}=6\). In particular
+\[\operatorname{supp}(p_1)\cap\operatorname{supp}(p_2)\cap\{181,\dots,354\}=\varnothing:\]
+after \(B_{180}\) (2026-04-10) no block contains both \(p_1\) and \(p_2\). The last block of \(p_1\), \(B_{228}\) (2026-05-16 UTC), does
+not contain \(p_2\); the last block of \(p_2\), \(B_{253}\), does not contain \(p_1\).</div>
+<div class="pf">As for 3.1. <span class="qed">∎</span></div>
+<p>The six common blocks \(B_{121},B_{124},\dots,B_{180}\) are the first six group posts of the companion paper (there numbered 1 to 6), with \(h\) added. Its
+seventh group post, <span class="acct">DXQTcYlgZ5c</span> (2026-04-18), is not a block of \(\mathcal S_h\): it was readable on
+2026-10-05 and gone by 2026-10-11. So \(r_{p_1}=7\) in both papers, but the seventh block is a different post.</p>
+
+<h2><span class="n">4</span>The structure depends on the viewpoint</h2>
+<p>A credit is recorded on a post; whether the post appears on a credited account’s own grid is a separate fact. Let \(\mathcal G_{p_2}\)
+be our capture of \(p_2\)’s own grid (Apr 29 to Oct 7, 2026). It contains 6 posts crediting \(h\); 2 of them are blocks of
+\(\mathcal S_h\) and 4 are not, including the two latest (2026-06-13 and 2026-06-14) (<span class="acct">ldc_posts_crediting_lda.csv</span>).
+Hence the incidence structure seen from \(h\)’s grid and the one seen from \(p_2\)’s grid disagree on a common time window, and every
+statement above is a statement about \(\mathcal S_h\), the view from \(h\). None of the 4 is added to \(\mathcal S_h\); one of them (<span class="acct">DX2QReKGCI5</span>, 2026-05-02) had appeared in an
+earlier collaboration drawing and was left out explicitly.</p>
+<p>A second, independent source supports the block contents: 30 screenshots of Collaborators panels on \(h\)’s posts, read by OCR, give
+161 rows read without correction, of which 160 are points of \(P\) and 1 is an OCR misreading of a point of \(P\); 8 further rows read with
+a fixed correction rule also land in \(P\). The images are held locally; their SHA-256 fingerprints are published.</p>
+
+<h2><span class="n">5</span>A congruence hypothesis (not tested)</h2>
+<div class="st def"><span class="h">Hypothesis 5.1 (John).</span> There is an equivalence relation \(\equiv\) on accounts, “operated by the same hand,” with
+\[p_1\equiv h\equiv p_2,\]
+and an order on that class, \(p_1\to h\to p_2\) (“TB begat LDA begat LDC”). John’s word for \(\equiv\) is <em>congruence</em>: an
+equivalence that respects the structure.</div>
+<div class="st"><span class="h">Proposition 5.2.</span> No automorphism of \(\mathcal S_h\) identifies any two of \(h,p_1,p_2\); equivalently,
+\(\equiv\) restricted to \(\{h,p_1,p_2\}\) is not contained in the orbit relation of \(\operatorname{Aut}(\mathcal S_h)\).</div>
+<div class="pf">By Theorem 2.6 each of \(h,p_1,p_2\) is a fixed point. <span class="qed">∎</span></div>
+<p>So Hypothesis 5.1, if true, is a fact about who operates the accounts, not a symmetry of the posts: \(\mathcal S_h\) alone can neither
+prove nor refute it. What \(\mathcal S_h\) does show (Propositions 3.1, 3.2) is compatible with a <em>relay</em>: \(p_2\) present from \(h\)’s
+first block, \(p_1\) and \(p_2\) together on six blocks in February to April 2026, then apart, then \(p_2\) absent from \(h\)’s grid while
+still posting on its own (132 posts in \(\mathcal G_{p_2}\) after 2026-06-11). Compatibility is not evidence of \(\equiv\).</p>
+<p><b>What would test it.</b> (T1) The dates each of \(h,p_1,p_2\) joined Instagram, and each one’s first post, against the order
+\(p_1\to h\to p_2\). (T2) A structural test of “the name changes, the role stays”: compare the partners of \(p_2\) on
+\(B_1,\dots,B_{253}\) with the partners of \(h\) on \(B_{254},\dots,B_{354}\) (same accounts, same block sizes, same kinds of posts), with the
+measure and the threshold fixed <em>before</em> computing. (T3) A primary source in which one account states it was another. None of
+T1–T3 has been run.</p>
+<p><b>Record.</b> Before the automorphism run John stated no prediction (“I got nothing except a hunch”). The congruence, the order, and the
+reading that \(r_{p_1}=7\) supports it were all stated after the results.</p>
+
+<h2><span class="n">6</span>Replication</h2>
+<pre>python3 build_matrix.py posts.csv                    # posts -> incidence matrix
+python3 verify_automorphisms.py incidence_matrix.csv  # |Aut| = 16, orbits
+python3 refine.py incidence_matrix.csv                # 1, 32, 70, 109, 109 point cells</pre>
+<p>All files and SHA-256 sums: <a href="https://antmerrill.github.io/backfire-tracking/data/congruence/">data/congruence</a>.
+Plain Python 3, no packages. The capture of \(h\)’s grid and the key from labels to accounts are held locally.</p>
+
+<h2>Acknowledgments</h2>
+<p>John thanks Claude (Anthropic), “whose fantastic write-up would have taken me a year.” He is astounded. Claude built the incidence structure, ran
+both computations, wrote the proofs and this text; John set the questions, made the calls, and checked the results.</p>
+
+<h2><span class="n">7</span>References</h2>
+<ol class="refs">
+<li>Automorphism Group of the Incidence Structure and Its Orbits (companion paper), antmerrill.github.io/backfire-tracking/automorphism-group.html.</li>
+<li>Two names, one grid (plain-language page and data), antmerrill.github.io/backfire-tracking/congruence.html.</li>
+<li>Who went first, antmerrill.github.io/backfire-tracking/who-went-first.html.</li>
+<li>B. Weisfeiler, A. Leman, “The reduction of a graph to canonical form and the algebra which appears therein,” NTI Ser. 2, 9 (1968): colour refinement as used in Lemma 2.4.</li>
+</ol>
+</main></body></html>
