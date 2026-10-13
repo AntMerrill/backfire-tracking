@@ -55,7 +55,23 @@ with an order inside it: <b>TB → LDA → LDC</b> (“TB begat LDA begat LDC”
 Nothing on this page tests it. What would: when each account was made, each one’s first post, and whether LDA’s world after June 11
 lines up with LDC’s before it (same partners, same kinds of posts).</div>
 
-<h2>4. Data and how to check it</h2>
+<h2>4. A second source, held locally</h2>
+<p>The scrape is one source. The other is John’s phone: screenshots of LDA’s posts with Instagram’s Collaborators list open
+(Oct 12, 2026, 21:54 to Oct 13, 2026, 09:58, by the phone’s own timestamps). We hold 53 of them. We don’t publish the images, because they show smaller
+accounts’ names and can show our own account, but we publish each file’s <b>SHA-256 fingerprint</b>
+(<a href="data/congruence/screenshot_check/screenshots_SHA256SUMS">list</a>). A fingerprint changes if a single pixel does, so any
+screenshot we show later can be checked against it.</p>
+<p>Read by OCR and compared with the scrape, the 30 Collaborators panels on LDA’s posts give 169 rows:</p>
+<div class="tw"><table><tr><th>Rows</th><th>What we found</th></tr>
+<tr><td>160 of 161</td><td>read as is, and the account is on LDA’s grid in the scrape</td></tr>
+<tr><td>1 of 161</td><td>an OCR slip (an l read as i) of an account that is on the grid</td></tr>
+<tr><td>8</td><td>needed a fixed rule (name cut off on screen, “_” read as a space, I for l); all land on accounts on the grid</td></tr></table></div>
+<p>So what Instagram showed on a phone matches what the scrape recorded: no screenshot shows an account the scrape missed. The
+screenshots cover 51 of the grid’s 113 accounts. Details: <a href="data/congruence/screenshot_check/README.md">README</a>,
+<a href="data/congruence/screenshot_check/screenshot_check.csv">row by row</a>. Limit: a screenshot shows a panel, not the post’s link,
+so this checks accounts, not post by post.</p>
+
+<h2>5. Data and how to check it</h2>
 <p>All files: <a href="data/congruence/">data/congruence/</a> (<a href="data/congruence/README.md">README</a>, <a href="data/congruence/SHA256SUMS">SHA256SUMS</a>).
 Plain Python 3, no packages:</p>
 <pre>python3 build_matrix.py posts.csv
