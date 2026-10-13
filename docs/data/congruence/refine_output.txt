@@ -1,0 +1,6 @@
+start: 1 account class
+round 1: 32 account classes, 6 post classes
+round 2: 70 account classes, 293 post classes
+round 3: 109 account classes, 295 post classes
+round 4: 109 account classes, 295 post classes
+classes with more than one account: [['s038', 's039'], ['s044', 's046'], ['s048', 's049'], ['s103', 's104']]
