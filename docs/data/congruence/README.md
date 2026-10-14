@@ -34,4 +34,4 @@ python3 build_matrix.py posts.csv            # writes my_incidence_matrix.csv; c
 python3 verify_automorphisms.py incidence_matrix.csv
 python3 refine.py incidence_matrix.csv
 ```
-Twin pairs: τ1 = s038 ↔ s039; τ2 = s044 ↔ s046; τ3 = s048 ↔ s049; τ4 = s103 ↔ s104.
+Swapping pairs (identical rows; the only points a symmetry moves): τ1 = s038 ↔ s039; τ2 = s044 ↔ s046; τ3 = s048 ↔ s049; τ4 = s103 ↔ s104.
