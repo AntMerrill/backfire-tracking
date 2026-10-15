@@ -1,0 +1,34 @@
+~/miniforge3/envs/dl_wm/lib/python3.10/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.7.0) or chardet (7.6.0)/charset_normalizer (3.5.1) doesn't match a supported version!
+  warnings.warn(
+2026-10-11 10:09:36,518 - Logging initialized.
+2026-10-11 10:09:36,518 - 🔁 Task Router Started
+2026-10-11 10:09:36,548 - 📥 No completed download or metadata found — running downloader...
+2026-10-11 10:09:36,548 - 📥 Initiating download for: https://www.instagram.com/p/DXQTcYlgZ5c/
+2026-10-11 10:09:36,548 - 📡 Streaming downloader output...
+~/miniforge3/envs/dl_wm/lib/python3.10/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.7.0) or chardet (7.6.0)/charset_normalizer (3.5.1) doesn't match a supported version!
+  warnings.warn(
+2026-10-11 10:09:37,119 - Logging initialized.
+2026-10-11 10:09:37,121 - Run directory: ~/Documents/repos/dl_wm/outputs/2026-10-11/instagram__DXQTcYlgZ5c
+2026-10-11 10:09:37,142 - Instagram download attempt 1/5 using cookie file: ~/Documents/repos/dl_wm/conf/instagram.cookies.txt
+Deprecated Feature: Support for Python version 3.10 has been deprecated. Please update to Python 3.11 or above
+[Instagram] Extracting URL: https://www.instagram.com/p/DXQTcYlgZ5c/
+[Instagram] DXQTcYlgZ5c: Downloading video info
+ERROR: [Instagram] DXQTcYlgZ5c: Video info extraction failed: HTTP Error 400: Bad Request (caused by <HTTPError 400: Bad Request>)
+2026-10-11 10:09:38,493 - No yt-dlp downloadable media entries; trying igp carousel capture
+2026-10-11 10:09:38,494 - igp carousel: capturing https://www.instagram.com/p/DXQTcYlgZ5c/
+2026-10-11 10:09:53,313 - igp carousel: no slides captured (~/Documents/repos/dl_wm/outputs/2026-10-11/instagram__DXQTcYlgZ5c/igp_capture/manifest.jsonl)
+2026-10-11 10:09:53,313 - igp capture failed; trying Instagram HTML fallback (cover image only)
+2026-10-11 10:09:55,394 - Instagram HTML fallback HTTP status code: 200
+2026-10-11 10:09:55,394 - Instagram HTML fallback cookies loaded: True
+2026-10-11 10:09:55,395 - Instagram HTML fallback image candidate count: 0
+2026-10-11 10:09:55,395 - Instagram HTML fallback first 3 candidate sources: []
+Unexpected error: No downloadable Instagram media entries were found
+Traceback (most recent call last):
+  File "~/Documents/repos/dl_wm/bin/call_download.py", line 287, in main
+    result = download_instagram(url, run_dir, metadata_dir, registry_record, ydl_cookie, video_download_cfg)
+  File "~/Documents/repos/dl_wm/downloaders/instagram.py", line 629, in download
+    raise RuntimeError("No downloadable Instagram media entries were found")
+RuntimeError: No downloadable Instagram media entries were found
+
+2026-10-11 10:09:55,531 - Download script failed with exit code 1.
+2026-10-11 10:09:55,532 - ❌ Downloader failed before metadata was generated. Fix downloader errors above, then rerun call_router.

@@ -181,16 +181,17 @@ L = S.incidence_graph(); L.order(), L.size()       #  (20, 35)</pre>
 <div class="tw"><table>
 <tr><th>Date</th><th>What was re-done</th><th>Outcome</th></tr>
 <tr><td>Oct 5, 2026</td><td>Credits from Instagram’s own post records (profile captures of Oct 1, 4, 5)</td><td>\(N\) as published; order 12</td></tr>
-<tr><td>Oct 11, 2026</td><td>After a storage failure destroyed our first copies, the posts were downloaded again from Instagram through the same pipeline, watermarked, and hashed</td><td>Six of seven re-downloaded (\(B_1\)–\(B_6\)): 12 watermarked files, hashed; uploader latterdayavenger and post dates confirmed on all six. \(B_7\) was refused by Instagram on Oct 11 (HTTP 400 during a rate limit) and is pending. The downloader records the uploader only, so the credits are re-checked by the test in <code>TEST.md</code>.</td></tr>
+<tr><td>Oct 11, 2026</td><td>After a storage failure destroyed our first copies, the posts were downloaded again from Instagram through the same pipeline, watermarked, and hashed</td><td>Six of seven re-downloaded (\(B_1\)–\(B_6\)): 12 watermarked files, hashed; uploader latterdayavenger and post dates confirmed on all six. \(B_7\) was refused by Instagram on Oct 11 (HTTP 400 during a rate limit). The downloader records the uploader only, so the credits are re-checked by the test in <code>TEST.md</code>.</td></tr>
+<tr><td>Oct 15, 2026</td><td>Checked whether \(B_7\) could still be recovered</td><td>\(B_7\) has been <b>deleted</b> from Instagram. It was already gone from latterdayavenger’s own profile by Oct 13, while its neighbours of Apr 16 and Apr 20 were both still there. On Oct 15 the post URL returned HTTP 200 with an empty page shell and no <code>og:</code> metadata at all — Instagram does not 404 a deleted post, and a live post always serves <code>og:image</code>. There is no Internet Archive snapshot, and the signed CDN URLs in our Oct 5 record have expired. The dated records we still hold are released as <code>evidence/B7_DELETED.md</code>.</td></tr>
 </table></div>
-<p class="note"><b>Evidence package.</b> The posts as we hold them (\(B_1\)–\(B_6\) so far; \(B_7\) pending) are released in <a href="https://github.com/AntMerrill/backfire-tracking/tree/main/docs/data/who-went-first/evidence">evidence/</a>, with a manifest:
+<p class="note"><b>Evidence package.</b> The posts as we hold them (\(B_1\)–\(B_6\); \(B_7\) was deleted from Instagram between Oct 5 and Oct 13, 2026, so what survives of it is released as dated capture records rather than media) are released in <a href="https://github.com/AntMerrill/backfire-tracking/tree/main/docs/data/who-went-first/evidence">evidence/</a>, with a manifest:
 <ul>
-<li>each watermarked file, with the block it belongs to (\(B_1,\dots,B_7\));</li>
+<li>each watermarked file, with the block it belongs to (\(B_1\)–\(B_6\));</li>
 <li>the post link;</li>
 <li>Instagram’s upload time and uploader;</li>
 <li>SHA-256 hashes of both the original and the watermarked file.</li>
 </ul>
-A reader can check that our files are the posts named, and that the posts carry the credits in \(N\).</p>
+A reader can check that our files are the posts named, and that the posts carry the credits in \(N\). For \(B_7\) there is no file: the post has been deleted, so what we release instead is the dated capture record, the two successful downloads of Oct 5, and the evidence of the loss. Its credits are the one part of \(N\) that can no longer be re-collected from Instagram; <code>TEST.md</code> says so, and lets a reader confirm on the remaining six posts that \(B_7\)’s row is load-bearing.</p>
 
 <h2><span class="n">6</span>Scope</h2>
 <p>The structure is only as complete as the captures: \(p_{1}\)’s grid back to September 11, 2025; some accounts capped; captions truncated (which affects only the excluded mention-only posts). “Same orbit” means identical position in this incidence structure, not common control. The proofs are machine-checked (SageMath 10.9, networkx) and the results were reviewed by two AI systems, Claude and Grok; the paper has not yet been refereed by mathematicians. Corrections are welcome.</p>

@@ -1,0 +1,106 @@
+~/miniforge3/envs/dl_wm/lib/python3.10/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.7.0) or chardet (7.6.0)/charset_normalizer (3.5.1) doesn't match a supported version!
+  warnings.warn(
+2026-10-05 07:58:40,163 - Logging initialized.
+2026-10-05 07:58:40,163 - 🔁 Task Router Started
+⚠️ URL not found in metadata directory.
+2026-10-05 07:58:41,128 - 📥 No completed download or metadata found — running downloader...
+2026-10-05 07:58:41,129 - 📥 Initiating download for: https://www.instagram.com/p/DXQTcYlgZ5c/
+2026-10-05 07:58:41,129 - 📡 Streaming downloader output...
+~/miniforge3/envs/dl_wm/lib/python3.10/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.7.0) or chardet (7.6.0)/charset_normalizer (3.5.1) doesn't match a supported version!
+  warnings.warn(
+2026-10-05 07:58:41,680 - Logging initialized.
+2026-10-05 07:58:41,693 - Run directory: ~/Documents/repos/dl_wm/outputs/2026-10-05/instagram__DXQTcYlgZ5c
+2026-10-05 07:58:41,714 - Instagram download attempt 1/5 using cookie file: ~/Documents/repos/dl_wm/conf/instagram.cookies.txt
+Deprecated Feature: Support for Python version 3.10 has been deprecated. Please update to Python 3.11 or above
+[Instagram] Extracting URL: https://www.instagram.com/p/DXQTcYlgZ5c/
+[Instagram] DXQTcYlgZ5c: Downloading video info
+Deprecated Feature: Support for Python version 3.10 has been deprecated. Please update to Python 3.11 or above
+[info] DXQTcYlgZ5c: Downloading 1 format(s): dash-1277865443797487v
+[download] Destination: ~/Documents/repos/dl_wm/outputs/2026-10-05/instagram__DXQTcYlgZ5c/instagram__DXQTcYlgZ5c.mp4
+
+[download]   0.1% of    1.92MiB at  325.37KiB/s ETA 00:06
+[download]   0.2% of    1.92MiB at  217.19KiB/s ETA 00:09
+[download]   0.4% of    1.92MiB at  236.13KiB/s ETA 00:08
+[download]   0.8% of    1.92MiB at   83.81KiB/s ETA 00:23
+[download]   1.6% of    1.92MiB at  171.28KiB/s ETA 00:11
+[download]   3.2% of    1.92MiB at  163.82KiB/s ETA 00:11
+[download]   6.5% of    1.92MiB at  283.75KiB/s ETA 00:06
+[download]  13.0% of    1.92MiB at  490.00KiB/s ETA 00:03
+[download]  26.0% of    1.92MiB at  858.03KiB/s ETA 00:01
+[download]  52.1% of    1.92MiB at    1.36MiB/s ETA 00:00
+[download] 100.0% of    1.92MiB at    2.34MiB/s ETA 00:00
+[download] 100% of    1.92MiB in 00:00:06 at 295.33KiB/s 
+2026-10-05 07:58:50,276 - Downloaded video entry 1
+2026-10-05 07:58:50,276 - 🔴 Entering load_default_tasks routine... 🚀
+2026-10-05 07:58:50,278 - Writing raw metadata to: ~/Documents/repos/dl_wm/metadata/raw/instagram__DXQTcYlgZ5c/instagram__DXQTcYlgZ5c.raw.json.gz
+2026-10-05 07:58:50,293 - Download complete: ~/Documents/repos/dl_wm/outputs/2026-10-05/instagram__DXQTcYlgZ5c/instagram__DXQTcYlgZ5c.mp4
+~/Documents/repos/dl_wm/outputs/2026-10-05/instagram__DXQTcYlgZ5c/instagram__DXQTcYlgZ5c.mp4
+2026-10-05 07:58:50,391 - ✅ Downloader completed successfully.
+Found in: ~/Documents/repos/dl_wm/metadata/instagram__DXQTcYlgZ5c.json
+{
+  "video_title": "Video by latterdayavenger",
+  "video_date": "20260418",
+  "uploader": "Latter-Day Avenger",
+  "url": "https://www.instagram.com/p/DXQTcYlgZ5c/",
+  "default_tasks": {
+    "perform_download": "~/Documents/repos/dl_wm/outputs/2026-10-05/instagram__DXQTcYlgZ5c/instagram__DXQTcYlgZ5c.mp4",
+    "apply_watermark": true,
+    "extract_audio": true,
+    "generate_srt": false,
+    "burn_srt": false,
+    "post_processed": false,
+    "split_scenes": false,
+    "render_reverse": false
+  }
+}
+2026-10-05 07:58:50,393 - 🛠 Tasks to evaluate: ['perform_download', 'apply_watermark', 'extract_audio', 'generate_srt', 'burn_srt', 'post_processed', 'split_scenes', 'render_reverse']
+~/miniforge3/envs/dl_wm/lib/python3.10/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.7.0) or chardet (7.6.0)/charset_normalizer (3.5.1) doesn't match a supported version!
+  warnings.warn(
+2026-10-05 07:58:50,882 - Logging initialized.
+2026-10-05 07:58:50,884 - Processing video file: ~/Documents/repos/dl_wm/outputs/2026-10-05/instagram__DXQTcYlgZ5c/instagram__DXQTcYlgZ5c.mp4
+2026-10-05 07:58:50,891 - Loaded metadata from: ~/Documents/repos/dl_wm/./metadata/instagram__DXQTcYlgZ5c.json
+2026-10-05 07:58:50,891 - Starting watermarking process...
+2026-10-05 07:58:50,892 - Processing video: ~/Documents/repos/dl_wm/outputs/2026-10-05/instagram__DXQTcYlgZ5c/instagram__DXQTcYlgZ5c.mp4
+2026-10-05 07:58:50,892 - Exporting watermarked video with ffmpeg (memory-optimized path)...
+2026-10-05 07:58:59,816 - Watermarked video saved to: ~/Documents/repos/dl_wm/outputs/2026-10-05/instagram__DXQTcYlgZ5c/instagram__DXQTcYlgZ5c_watermarked.mp4
+2026-10-05 07:58:59,816 - 🛠 Updating task output path for 'apply_watermark' in: ~/Documents/repos/dl_wm/./metadata/instagram__DXQTcYlgZ5c.json
+2026-10-05 07:58:59,816 - ✅ Task 'apply_watermark' updated to: ~/Documents/repos/dl_wm/outputs/2026-10-05/instagram__DXQTcYlgZ5c/instagram__DXQTcYlgZ5c_watermarked.mp4
+2026-10-05 07:58:59,817 - Watermarked video created successfully: ~/Documents/repos/dl_wm/outputs/2026-10-05/instagram__DXQTcYlgZ5c/instagram__DXQTcYlgZ5c_watermarked.mp4
+~/Documents/repos/dl_wm/outputs/2026-10-05/instagram__DXQTcYlgZ5c/instagram__DXQTcYlgZ5c_watermarked.mp4
+~/miniforge3/envs/dl_wm/lib/python3.10/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.7.0) or chardet (7.6.0)/charset_normalizer (3.5.1) doesn't match a supported version!
+  warnings.warn(
+2026-10-05 07:59:00,370 - Logging initialized.
+Running transcription command: python bin/transcribe_media_faster_whisper.py ~/Documents/repos/dl_wm/outputs/2026-10-05/instagram__DXQTcYlgZ5c/instagram__DXQTcYlgZ5c.mp4 --srt --txt --chunk-seconds 300
+repo_root=~/Documents/repos/dl_wm
+input_path=/mnt/ubuntu26/boner_vault/dl_wm_outputs/2026-10-05/instagram__DXQTcYlgZ5c/instagram__DXQTcYlgZ5c.mp4
+outdir=/mnt/ubuntu26/boner_vault/dl_wm_outputs/2026-10-05/instagram__DXQTcYlgZ5c
+engine=faster_whisper model=base
+Traceback (most recent call last):
+  File "~/Documents/repos/dl_wm/bin/transcribe_media_faster_whisper.py", line 112, in <module>
+    raise SystemExit(main())
+  File "~/Documents/repos/dl_wm/bin/transcribe_media_faster_whisper.py", line 101, in main
+    return run_cli(
+  File "~/Documents/repos/dl_wm/lib/transcribe_common.py", line 535, in run_cli
+    result = run_chunked_transcription(
+  File "~/Documents/repos/dl_wm/lib/transcribe_common.py", line 263, in run_chunked_transcription
+    return transcribe_one(str(input_path), **transcribe_kwargs)
+  File "~/Documents/repos/dl_wm/bin/transcribe_media_faster_whisper.py", line 57, in transcribe_one
+    segments_iter, info = model.transcribe(
+  File "~/miniforge3/envs/dl_wm/lib/python3.10/site-packages/faster_whisper/transcribe.py", line 876, in transcribe
+    audio = decode_audio(audio, sampling_rate=sampling_rate)
+  File "~/miniforge3/envs/dl_wm/lib/python3.10/site-packages/faster_whisper/audio.py", line 52, in decode_audio
+    for frame in frames:
+  File "~/miniforge3/envs/dl_wm/lib/python3.10/site-packages/faster_whisper/audio.py", line 107, in _resample_frames
+    for frame in itertools.chain(frames, [None]):
+  File "~/miniforge3/envs/dl_wm/lib/python3.10/site-packages/faster_whisper/audio.py", line 94, in _group_frames
+    for frame in frames:
+  File "~/miniforge3/envs/dl_wm/lib/python3.10/site-packages/faster_whisper/audio.py", line 84, in _ignore_invalid_frames
+    yield next(iterator)
+  File "av/container/input.py", line 240, in decode
+  File "av/container/input.py", line 154, in demux
+  File "av/container/streams.py", line 151, in av.container.streams.StreamContainer.get
+  File "av/container/streams.py", line 118, in _get_streams
+IndexError: tuple index out of range
+Transcription command failed with exit code 1
+2026-10-05 07:59:07,452 - Transcription failed for txt output: ~/Documents/repos/dl_wm/outputs/2026-10-05/instagram__DXQTcYlgZ5c/instagram__DXQTcYlgZ5c.txt
+ERROR:root:Task failed: extract_audio (exit code: 1)

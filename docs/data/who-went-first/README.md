@@ -15,7 +15,7 @@ host account latterdayavenger. The key from letters to accounts, the raw capture
 | `2026-10-05_DSghot5ET_3_screenshot_cropped.jpg` | The December 20, 2025 post as Instagram showed it on Oct 5, 2026 (cropped; mouse pointer removed) |
 | `TEST.md` | **Test it yourself:** rebuild the matrix from Instagram, then run `build_matrix.py` and `verify_automorphisms.py`. Pass/fail table inside |
 | `build_matrix.py` | Turns your own record of the 7 posts into an incidence matrix (plain Python 3) |
-| `evidence/` | The group posts as re-downloaded Oct 11, 2026: watermarked files, `manifest.csv` (block, link, time, uploader, sha256 of original and watermarked file), `SHA256SUMS`. B1–B6; B7 pending |
+| `evidence/` | The group posts as re-downloaded Oct 11, 2026: watermarked files, `manifest.csv` (block, link, time, uploader, sha256 of original and watermarked file), `SHA256SUMS`. B1–B6. **B7 was deleted from Instagram between Oct 5 and Oct 13, 2026** — its dated capture records and the full account of the loss are in `evidence/B7_DELETED.md` |
 
 ## Notation
 

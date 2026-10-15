@@ -1,0 +1,42 @@
+{
+  "url": "https://www.instagram.com/p/DXQTcYlgZ5c/",
+  "vendor": "instagram",
+  "vendor_id": "DXQTcYlgZ5c",
+  "id": "DXQTcYlgZ5c",
+  "shortcode": "DXQTcYlgZ5c",
+  "video_title": "Video by latterdayavenger",
+  "video_date": "20260418",
+  "uploader": "Latter-Day Avenger",
+  "duration": 16.365999221801758,
+  "width": 720,
+  "height": 1280,
+  "resolution": "720x1280",
+  "fps": null,
+  "ext": "mp4",
+  "filesize": 2011350,
+  "view_count": null,
+  "like_count": 105,
+  "comment_count": 4,
+  "default_tasks": {
+    "apply_watermark": true,
+    "extract_audio": true,
+    "generate_srt": false,
+    "burn_srt": false,
+    "post_processed": false,
+    "split_scenes": false,
+    "render_reverse": false
+  },
+  "source_url": "https://www.instagram.com/p/DXQTcYlgZ5c/",
+  "media_type": "video",
+  "title": "Video by latterdayavenger",
+  "caption": null,
+  "items": [
+    {
+      "index": 1,
+      "type": "video",
+      "filename": "instagram__DXQTcYlgZ5c.mp4",
+      "duration": 16.365999221801758
+    }
+  ],
+  "raw_metadata_path": "~/Documents/repos/dl_wm/metadata/raw/instagram__DXQTcYlgZ5c/instagram__DXQTcYlgZ5c.raw.json.gz"
+}

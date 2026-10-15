@@ -1,0 +1,26 @@
+~/miniforge3/envs/dl_wm/lib/python3.10/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.7.0) or chardet (7.6.0)/charset_normalizer (3.5.1) doesn't match a supported version!
+  warnings.warn(
+2026-10-05 09:18:08,360 - Logging initialized.
+2026-10-05 09:18:08,479 - 🔁 Task Router Started
+Found in: ~/Documents/repos/dl_wm/metadata/instagram__DXQTcYlgZ5c.json
+{
+  "video_title": "Video by latterdayavenger",
+  "video_date": "20260418",
+  "uploader": "Latter-Day Avenger",
+  "url": "https://www.instagram.com/p/DXQTcYlgZ5c/",
+  "default_tasks": {
+    "perform_download": "~/Documents/repos/dl_wm/outputs/2026-10-05/instagram__DXQTcYlgZ5c/instagram__DXQTcYlgZ5c.mp4",
+    "apply_watermark": "~/Documents/repos/dl_wm/outputs/2026-10-05/instagram__DXQTcYlgZ5c/instagram__DXQTcYlgZ5c_watermarked.mp4",
+    "extract_audio": true,
+    "generate_srt": false,
+    "burn_srt": false,
+    "post_processed": false,
+    "split_scenes": false,
+    "render_reverse": false
+  }
+}
+2026-10-05 09:18:08,538 - 🛠 Tasks to evaluate: ['perform_download', 'apply_watermark', 'extract_audio', 'generate_srt', 'burn_srt', 'post_processed', 'split_scenes', 'render_reverse']
+~/miniforge3/envs/dl_wm/lib/python3.10/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.7.0) or chardet (7.6.0)/charset_normalizer (3.5.1) doesn't match a supported version!
+  warnings.warn(
+2026-10-05 09:18:12,202 - Logging initialized.
+2026-10-05 09:18:16,136 - No audio stream in ~/Documents/repos/dl_wm/outputs/2026-10-05/instagram__DXQTcYlgZ5c/instagram__DXQTcYlgZ5c.mp4; skipping transcription.
