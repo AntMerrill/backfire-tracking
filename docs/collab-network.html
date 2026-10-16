@@ -5,115 +5,133 @@
 <meta property="og:url" content="https://antmerrill.github.io/backfire-tracking/collab-network.html"><meta property="og:image" content="https://antmerrill.github.io/backfire-tracking/img/whofirst/collab-network-2026-10-15.png">
 <meta property="og:image:width" content="1748"><meta property="og:image:height" content="1309"><meta name="twitter:card" content="summary_large_image">
 <title>The co-posting network — Backfire tracking</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,700;1,7..72,400&family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
+/* Network view — deliberately its own thing: a dark console that matches the graph,
+   not the light "case file" style of who-went-first.html. */
 :root{
-  --bg:#f3f1ec; --sheet:#fbfaf7; --ink:#1d2129; --muted:#5c6170; --rule:#d9d6cf;
-  --gold:#9a7412; --gold-bg:#f3e8c8; --accent:#2c4a73; --red:#a3271f; --red-bg:#f6e3df; --node:#8b93a3;
-  --e1:#c9d6e8; --e2:#9cb5d6; --e3:#6b90c0; --e4:#3d6aa6; --e5:#163e78;
-  --serif:"Literata",Georgia,"Times New Roman",serif;
-  --label:"IBM Plex Sans Condensed","Arial Narrow",system-ui,sans-serif;
+  --bg:#0e1116; --panel:#12151c; --panel2:#181d27; --ink:#e9ecf2; --muted:#98a1b3; --rule:#252c3a;
+  --gold:#e0b93a; --accent:#86b6ef;
+  --e1:#184f95; --e2:#256abf; --e3:#3987e5; --e4:#86b6ef; --e5:#cde2fb;
+  --sans:"IBM Plex Sans Condensed","Arial Narrow",system-ui,-apple-system,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#12151c; --sheet:#181c25; --ink:#e6e8ee; --muted:#a2a9b8; --rule:#2e3544;
-  --gold:#e0b93a; --gold-bg:#2e2715; --accent:#8fb3df; --red:#f08a7e; --red-bg:#3a1f1c; --node:#6c7486;
-  --e1:#24364f; --e2:#2f5584; --e3:#3f78bd; --e4:#7eaee6; --e5:#d6e7fb; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#12151c; --sheet:#181c25; --ink:#e6e8ee; --muted:#a2a9b8; --rule:#2e3544;
-  --gold:#e0b93a; --gold-bg:#2e2715; --accent:#8fb3df; --red:#f08a7e; --red-bg:#3a1f1c; --node:#6c7486;
-  --e1:#24364f; --e2:#2f5584; --e3:#3f78bd; --e4:#7eaee6; --e5:#d6e7fb; color-scheme:dark}
-body{background:var(--bg);color:var(--ink);font:17px/1.65 var(--serif);padding-inline:16px;padding-block:28px 64px}
-main{max-width:780px;margin:0 auto;background:var(--sheet);border:1px solid var(--rule);border-radius:4px;padding:clamp(20px,5vw,52px)}
-.eyebrow{font:600 13px var(--label);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
-h1{font-size:clamp(32px,6.5vw,50px);line-height:1.06;margin:.25em 0 .35em;text-wrap:balance}
-h2{font-size:24px;line-height:1.25;margin:2.2em 0 .5em;text-wrap:balance}
-.dek{color:var(--muted);font-size:19px;margin:0}
-.meta{font:500 14px var(--label);color:var(--muted);margin-top:14px}
-p{margin:.7em 0}
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:26px 0 8px}
-.fact{border-top:3px solid var(--gold);padding-top:8px;min-width:0}
-.fact b{display:block;font:700 28px/1.1 var(--serif);font-variant-numeric:tabular-nums}
-.fact span{font:500 15px/1.3 var(--label);color:var(--muted)}
-figure{margin:22px 0}
-figure img{display:block;width:100%;max-width:100%;border:1px solid var(--rule)}
-figcaption{font:500 14px var(--label);color:var(--muted);margin-top:6px}
-.key{border:1px solid var(--rule);border-radius:4px;padding:12px 14px;font:500 14px/1.6 var(--label);color:var(--muted);margin:16px 0}
-.key b{color:var(--ink);font-weight:600}
-.krow{display:flex;flex-wrap:wrap;gap:6px 20px;align-items:center;margin:3px 0}
-.sw{display:inline-block;width:24px;height:5px;border-radius:3px;vertical-align:middle;margin-right:8px}
-.dot{display:inline-block;width:12px;height:12px;border-radius:50%;vertical-align:middle;margin-right:8px}
-.tablewrap{overflow-x:auto;margin:14px 0}
-table{border-collapse:collapse;width:100%;font:500 15px var(--label);font-variant-numeric:tabular-nums}
-th,td{border-bottom:1px solid var(--rule);padding:7px 8px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
-th{color:var(--muted);font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
-td.n{text-align:right}
-ul{padding-left:1.2em} li{margin:.35em 0}
+body{margin:0;background:radial-gradient(1200px 700px at 70% -10%,#17203a 0%,var(--bg) 60%);color:var(--ink);
+     font:16px/1.6 var(--sans);padding-inline:16px;padding-block:0 72px}
+main{max-width:940px;margin:0 auto}
+.top{border-bottom:1px solid var(--rule);padding:16px 2px}
+.top a{color:var(--muted);text-decoration:none;font:600 13px var(--sans);letter-spacing:.16em;text-transform:uppercase}
+.top a:hover{color:var(--accent)}
+header{padding:44px 2px 8px}
+.eyebrow{font:600 13px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+h1{font:700 clamp(34px,7vw,60px)/1.02 var(--sans);letter-spacing:-.01em;margin:.3em 0 .4em;max-width:16ch}
+.lede{color:var(--muted);font-size:19px;max-width:62ch;margin:0}
+.lede b{color:var(--ink);font-weight:600}
+.meta{font:500 13px var(--mono);color:var(--muted);margin-top:16px;letter-spacing:.02em}
+h2{font:700 21px var(--sans);letter-spacing:.01em;margin:2.4em 0 .5em;padding-bottom:.25em;border-bottom:1px solid var(--rule)}
+p{margin:.7em 0;max-width:70ch}
 a{color:var(--accent)}
-.btn{display:inline-flex;align-items:center;gap:8px;font:600 15px var(--label);text-decoration:none;color:var(--sheet);background:var(--accent);padding:9px 16px;border-radius:4px;margin:6px 0}
-.btn:hover,.btn:focus-visible{filter:brightness(1.1);outline:2px solid var(--gold);outline-offset:2px}
-.note{background:var(--gold-bg);border-left:4px solid var(--gold);padding:14px 18px;margin:20px 0}
-.note h3{margin:0 0 .3em;font:600 14px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
-.foot{margin-top:2.6em;border-top:1px solid var(--rule);padding-top:14px;font:500 14px var(--label);color:var(--muted)}
-</style>
-</head><body><main>
-<div class="eyebrow">Instagram co-posting · latterdayavenger and its group of 13 · October 15, 2026</div>
-<h1>The network around the group</h1>
-<p class="dek">Every pair of accounts Instagram credited together, counted across our captures of the host account <b>latterdayavenger</b> and the thirteen accounts credited on its seven group posts. That is the group of “Who went first,” plus everyone those fourteen accounts ever co-posted with.</p>
-<div class="meta">Metadata only, from Instagram’s own post data (October 15, 2026 captures). No media was downloaded for the walk. Accounts are named by their public handle.</div>
 
-<div class="facts">
-  <div class="fact"><b>319</b><span>accounts in the network</span></div>
-  <div class="fact"><b>823</b><span>co-posting links</span></div>
-  <div class="fact"><b>14</b><span>accounts we started from</span></div>
-  <div class="fact"><b>302</b><span>seen only as collaborators</span></div>
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--rule);
+       border:1px solid var(--rule);border-radius:6px;overflow:hidden;margin:30px 0 8px}
+.stat{background:var(--panel);padding:16px 16px 14px}
+.stat b{display:block;font:500 40px/1 var(--mono);font-variant-numeric:tabular-nums;color:var(--ink)}
+.stat span{display:block;font:600 12px var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+
+figure{margin:20px 0}
+figure img{display:block;width:100%;border:1px solid var(--rule);border-radius:6px;background:var(--panel)}
+figcaption{font:500 13px var(--mono);color:var(--muted);margin-top:8px}
+
+.key{border:1px solid var(--rule);border-radius:6px;background:var(--panel);padding:16px 18px;margin:18px 0;
+     font:500 14px var(--mono);color:var(--muted);display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px 26px}
+.key b{color:var(--ink);font-weight:500}
+.krow{display:flex;align-items:center;gap:10px}
+.sw{display:inline-block;width:26px;height:5px;border-radius:3px;flex:none}
+.dot{display:inline-block;width:12px;height:12px;border-radius:50%;flex:none}
+
+.tablewrap{overflow-x:auto;margin:14px 0;border:1px solid var(--rule);border-radius:6px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;font:500 15px var(--mono);font-variant-numeric:tabular-nums}
+th,td{border-bottom:1px solid var(--rule);padding:9px 14px;text-align:left;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+th{color:var(--muted);font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+td.n,th.n{text-align:right}
+td small{color:var(--muted);font-size:12px}
+
+.note{border-left:3px solid var(--gold);background:var(--panel);padding:14px 18px;margin:20px 0;border-radius:0 6px 6px 0}
+.note h3{margin:0 0 .3em;font:700 12px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.note p{margin:0;color:var(--muted)}
+
+.links{list-style:none;padding:0;margin:12px 0;display:grid;gap:8px}
+.links li{display:flex;gap:12px;align-items:baseline;border-bottom:1px solid var(--rule);padding:10px 2px}
+.links a{font-weight:600;text-decoration:none}
+.links a:hover{text-decoration:underline}
+.links span{color:var(--muted);font-size:14px}
+
+.foot{margin-top:48px;border-top:1px solid var(--rule);padding-top:16px;font:500 13px var(--mono);color:var(--muted)}
+.foot a{color:var(--accent)}
+@media (max-width:560px){h1{font-size:34px}.stat b{font-size:32px}}
+</style>
+</head><body>
+<div class="top"><main style="padding:0"><a href="index.html">← Backfire tracking</a> &nbsp;·&nbsp; <a href="who-went-first.html">Who went first</a></main></div>
+<main>
+<header>
+  <div class="eyebrow">Instagram co-posting · October 15, 2026</div>
+  <h1>The network around the group</h1>
+  <p class="lede">Every pair of accounts Instagram credited together, counted across our captures of the host account <b>latterdayavenger</b> and the thirteen accounts credited on its seven group posts — the group of “Who went first,” plus everyone those fourteen accounts ever co-posted with.</p>
+  <div class="meta">metadata only · Instagram’s own post data · no media downloaded for the walk · accounts named by public handle</div>
+</header>
+
+<div class="stats">
+  <div class="stat"><b>319</b><span>accounts</span></div>
+  <div class="stat"><b>823</b><span>links</span></div>
+  <div class="stat"><b>14</b><span>seeds</span></div>
+  <div class="stat"><b>302</b><span>collaborator-only</span></div>
 </div>
 
 <h2>The map</h2>
 <figure>
   <img src="img/whofirst/collab-network-2026-10-15.png" alt="Co-posting network of 319 Instagram accounts and 823 links. A dense hub sits at the centre with the host account latterdayavenger, and spokes run out to large one-off clusters. Gold dots are accounts we scraped; grey dots are accounts seen only as collaborators. Edge colour runs from faint to bright blue with the number of shared posts." width="1748" height="1309">
-  <figcaption>The co-posting network, October 15, 2026. Dot size is an account’s total shared posts; line colour is how many posts the two accounts share. The key is inside the image.</figcaption>
+  <figcaption>Co-posting network · dot size = an account’s total shared posts · line colour = posts the two accounts share · key inside the image.</figcaption>
 </figure>
 
 <div class="key">
-  <div class="krow"><span class="dot" style="background:#e0b93a"></span><b>Gold dot</b> = an account we scraped directly.</div>
-  <div class="krow"><span class="dot" style="background:#7d8798"></span><b>Grey dot</b> = an account seen only as a collaborator.</div>
-  <div class="krow"><span class="dot" style="background:var(--node)"></span><b>Dot size</b> = all shared posts for that account.</div>
-  <div class="krow"><b>Line colour</b> = posts the two accounts share:</div>
-  <div class="krow"><span class="sw" style="background:#184f95"></span>1 shared post <span style="color:var(--ink)">· 410 links</span></div>
-  <div class="krow"><span class="sw" style="background:#256abf"></span>2–4 shared posts <span style="color:var(--ink)">· 224 links</span></div>
-  <div class="krow"><span class="sw" style="background:#3987e5"></span>5–19 shared posts <span style="color:var(--ink)">· 144 links</span></div>
-  <div class="krow"><span class="sw" style="background:#86b6ef"></span>20–99 shared posts <span style="color:var(--ink)">· 42 links</span></div>
-  <div class="krow"><span class="sw" style="background:#cde2fb"></span>100+ shared posts <span style="color:var(--ink)">· 3 links</span></div>
+  <div class="krow"><span class="dot" style="background:var(--gold)"></span><span><b>gold dot</b> — scraped</span></div>
+  <div class="krow"><span class="dot" style="background:#7d8798"></span><span><b>grey dot</b> — collaborator only</span></div>
+  <div class="krow"><span class="dot" style="background:var(--muted)"></span><span><b>size</b> — total shared posts</span></div>
+  <div class="krow"><span><b>line = shared posts</b></span></div>
+  <div class="krow"><span class="sw" style="background:var(--e1)"></span><span>1</span></div>
+  <div class="krow"><span class="sw" style="background:var(--e2)"></span><span>2–4</span></div>
+  <div class="krow"><span class="sw" style="background:var(--e3)"></span><span>5–19</span></div>
+  <div class="krow"><span class="sw" style="background:var(--e4)"></span><span>20–99</span></div>
+  <div class="krow"><span class="sw" style="background:var(--e5)"></span><span>100+</span></div>
 </div>
 
 <h2>What the map shows</h2>
-<p>The host account <b>latterdayavenger</b> is the hub: 121 partners and 1,450 shared posts, more than twice any other account. Two accounts sit next to it — <b>truthismytribe</b> (830 shared posts) and <b>latterdaychad</b> (792) — and then the graph falls away into a long tail of accounts seen only as collaborators, most of them one-off.</p>
+<p>The host account <b>latterdayavenger</b> is the hub: 121 partners and 1,450 shared posts, more than twice any other account. Two accounts sit beside it — <b>truthismytribe</b> (830 shared posts) and <b>latterdaychad</b> (792) — and then the graph falls away into a long tail of accounts seen only as collaborators, most of them one-off.</p>
 <div class="tablewrap">
 <table>
 <tr><th>account</th><th>scraped</th><th class="n">partners</th><th class="n">shared posts</th></tr>
-<tr><td>latterdayavenger <small>(host)</small></td><td>yes</td><td class="n">121</td><td class="n">1450</td></tr>
+<tr><td>latterdayavenger <small>· host</small></td><td>yes</td><td class="n">121</td><td class="n">1450</td></tr>
 <tr><td>truthismytribe</td><td>yes</td><td class="n">76</td><td class="n">830</td></tr>
 <tr><td>latterdaychad</td><td>yes</td><td class="n">91</td><td class="n">792</td></tr>
 <tr><td>latterday_rants</td><td>—</td><td class="n">14</td><td class="n">385</td></tr>
 <tr><td>priesthoodmen</td><td>yes</td><td class="n">85</td><td class="n">310</td></tr>
 <tr><td>londonthefamilyhistorian</td><td>yes</td><td class="n">65</td><td class="n">307</td></tr>
-<tr><td>timballard89 <small>(Ballard)</small></td><td>yes</td><td class="n">107</td><td class="n">298</td></tr>
+<tr><td>timballard89 <small>· Ballard</small></td><td>yes</td><td class="n">107</td><td class="n">298</td></tr>
 </table>
 </div>
-<p>The heaviest links are also the plainest: <b>latterday_rants–latterdayavenger</b> (136 shared posts), <b>latterdayavenger–latterdaychad</b> (115) and <b>latterdayavenger–truthismytribe</b> (109). Only three links in the whole map reach the 100+ band; the great majority are a single shared post.</p>
+<p>The heaviest links are the plainest: <b>latterday_rants–latterdayavenger</b> (136 shared posts), <b>latterdayavenger–latterdaychad</b> (115), <b>latterdayavenger–truthismytribe</b> (109). Only three links reach the 100+ band; the great majority are a single shared post.</p>
 
-<div class="note"><h3>How a link is counted</h3><p style="margin:0">A post links two accounts if both are on it: the account that posted it plus everyone Instagram listed as a collaborator. A link’s weight is the number of distinct posts behind it, merged across every capture we hold for the accounts involved. Instagram leaves the poster out of its own collaborator list, which is why a self-post still links the poster to the people credited with them.</p></div>
+<div class="note"><h3>How a link is counted</h3><p>A post links two accounts if both are on it — the account that posted it plus everyone Instagram listed as a collaborator. A link’s weight is the number of distinct posts behind it, merged across every capture we hold. Instagram leaves the poster out of its own collaborator list, which is why a self-post still links the poster to the people credited with them.</p></div>
 
 <h2>Read it yourself</h2>
-<p>The full network, and the data behind it:</p>
-<ul>
-  <li><a class="btn" href="data/who-went-first/graph/collab_graph_2026-10-15.html">Open the interactive network</a></li>
-  <li><a href="data/who-went-first/graph/edges.tsv">edges.tsv</a> — every link, with the number of shared posts and the first and last date on it.</li>
-  <li><a href="data/who-went-first/graph/nodes.tsv">nodes.tsv</a> — every account, whether we scraped it, and its partner and shared-post totals.</li>
-  <li><a href="who-went-first.html">Who went first</a> — the seven group posts themselves, and the math of the seats.</li>
+<ul class="links">
+  <li><a href="data/who-went-first/graph/collab_graph_2026-10-15.html">Interactive network</a><span>the whole graph, zoomable, with the full account and link tables</span></li>
+  <li><a href="data/who-went-first/graph/edges.tsv">edges.tsv</a><span>every link: shared posts, first date, last date</span></li>
+  <li><a href="data/who-went-first/graph/nodes.tsv">nodes.tsv</a><span>every account, scraped or not, with its totals</span></li>
+  <li><a href="who-went-first.html">Who went first</a><span>the seven group posts themselves, and the math of the seats</span></li>
 </ul>
 
-<div class="foot">Compiled October 15, 2026, from Instagram post data for the host account latterdayavenger and the 13 accounts credited on the seven group posts. Public accounts are named; the account handles for the group’s letters A–K are still unpublished on the <a href="who-went-first.html">Who went first</a> page. More pages: <a href="index.html">Backfire tracking</a>.</div>
+<div class="foot">Compiled October 15, 2026, from Instagram post data for the host account latterdayavenger and the 13 accounts credited on the seven group posts. Public accounts are named by handle; the letters A–K on <a href="who-went-first.html">Who went first</a> are still unpublished. <a href="index.html">Backfire tracking</a>.</div>
 </main>
 </body></html>
