@@ -7,8 +7,7 @@
 <title>The co-posting network — Backfire tracking</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Network view — deliberately its own thing: a dark console that matches the graph,
-   not the light "case file" style of who-went-first.html. */
+/* Network view: dark, to match the graph; kept plain (no tiles or banners). */
 :root{
   --bg:#0e1116; --panel:#12151c; --panel2:#181d27; --ink:#e9ecf2; --muted:#98a1b3; --rule:#252c3a;
   --gold:#e0b93a; --accent:#86b6ef;
@@ -16,7 +15,7 @@
   --sans:"IBM Plex Sans Condensed","Arial Narrow",system-ui,-apple-system,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
 }
-body{margin:0;background:radial-gradient(1200px 700px at 70% -10%,#17203a 0%,var(--bg) 60%);color:var(--ink);
+body{margin:0;background:var(--bg);color:var(--ink);
      font:16px/1.6 var(--sans);padding-inline:16px;padding-block:0 72px}
 main{max-width:940px;margin:0 auto}
 .top{border-bottom:1px solid var(--rule);padding:16px 2px}
@@ -32,24 +31,21 @@ h2{font:700 21px var(--sans);letter-spacing:.01em;margin:2.4em 0 .5em;padding-bo
 p{margin:.7em 0;max-width:70ch}
 a{color:var(--accent)}
 
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--rule);
-       border:1px solid var(--rule);border-radius:6px;overflow:hidden;margin:30px 0 8px}
-.stat{background:var(--panel);padding:16px 16px 14px}
-.stat b{display:block;font:500 40px/1 var(--mono);font-variant-numeric:tabular-nums;color:var(--ink)}
-.stat span{display:block;font:600 12px var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+.counts{font:500 15px var(--mono);color:var(--muted);margin:22px 0 0}
+.counts b{color:var(--ink);font-weight:500}
 
 figure{margin:20px 0}
 figure img{display:block;width:100%;border:1px solid var(--rule);border-radius:6px;background:var(--panel)}
 figcaption{font:500 13px var(--mono);color:var(--muted);margin-top:8px}
 
-.key{border:1px solid var(--rule);border-radius:6px;background:var(--panel);padding:16px 18px;margin:18px 0;
-     font:500 14px var(--mono);color:var(--muted);display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px 26px}
+.key{margin:14px 0;font:500 14px var(--mono);color:var(--muted)}
+.key .row{display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px;margin:6px 0}
 .key b{color:var(--ink);font-weight:500}
 .krow{display:flex;align-items:center;gap:10px}
 .sw{display:inline-block;width:26px;height:5px;border-radius:3px;flex:none}
 .dot{display:inline-block;width:12px;height:12px;border-radius:50%;flex:none}
 
-.tablewrap{overflow-x:auto;margin:14px 0;border:1px solid var(--rule);border-radius:6px;background:var(--panel)}
+.tablewrap{overflow-x:auto;margin:14px 0}
 table{border-collapse:collapse;width:100%;font:500 15px var(--mono);font-variant-numeric:tabular-nums}
 th,td{border-bottom:1px solid var(--rule);padding:9px 14px;text-align:left;white-space:nowrap}
 tr:last-child td{border-bottom:0}
@@ -57,9 +53,6 @@ th{color:var(--muted);font-weight:500;font-size:12px;letter-spacing:.08em;text-t
 td.n,th.n{text-align:right}
 td small{color:var(--muted);font-size:12px}
 
-.note{border-left:3px solid var(--gold);background:var(--panel);padding:14px 18px;margin:20px 0;border-radius:0 6px 6px 0}
-.note h3{margin:0 0 .3em;font:700 12px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
-.note p{margin:0;color:var(--muted)}
 
 .links{list-style:none;padding:0;margin:12px 0;display:grid;gap:8px}
 .links li{display:flex;gap:12px;align-items:baseline;border-bottom:1px solid var(--rule);padding:10px 2px}
@@ -69,7 +62,7 @@ td small{color:var(--muted);font-size:12px}
 
 .foot{margin-top:48px;border-top:1px solid var(--rule);padding-top:16px;font:500 13px var(--mono);color:var(--muted)}
 .foot a{color:var(--accent)}
-@media (max-width:560px){h1{font-size:34px}.stat b{font-size:32px}}
+@media (max-width:560px){h1{font-size:34px}}
 </style>
 </head><body>
 <div class="top"><main style="padding:0"><a href="index.html">← Backfire tracking</a> &nbsp;·&nbsp; <a href="who-went-first.html">Who went first</a></main></div>
@@ -77,52 +70,57 @@ td small{color:var(--muted);font-size:12px}
 <header>
   <div class="eyebrow">Instagram co-posting · October 15, 2026</div>
   <h1>The network around the group</h1>
-  <p class="lede">Every pair of accounts Instagram credited together, counted across our captures of the host account <b>latterdayavenger</b> and the thirteen accounts credited on its seven group posts — the group of “Who went first,” plus everyone those fourteen accounts ever co-posted with.</p>
+  <p class="lede">Every pair of accounts Instagram credited together on a post that touches the host account <b>latterdayavenger</b> or one of the thirteen accounts credited on its seven group posts — the group of “Who went first” — plus every account they co-posted with, as far back as our captures reach.</p>
   <div class="meta">metadata only · Instagram’s own post data · no media downloaded for the walk · accounts named by public handle</div>
 </header>
 
-<div class="stats">
-  <div class="stat"><b>319</b><span>accounts</span></div>
-  <div class="stat"><b>823</b><span>links</span></div>
-  <div class="stat"><b>14</b><span>seeds</span></div>
-  <div class="stat"><b>302</b><span>collaborator-only</span></div>
-</div>
+<p class="counts"><b>319</b> accounts = <b>17</b> whose own posts we captured + <b>302</b> seen only as collaborators · <b>823</b> links</p>
 
 <h2>The map</h2>
 <figure>
-  <img src="img/whofirst/collab-network-2026-10-15.png" alt="Co-posting network of 319 Instagram accounts and 823 links. A dense hub sits at the centre with the host account latterdayavenger, and spokes run out to large one-off clusters. Gold dots are accounts we scraped; grey dots are accounts seen only as collaborators. Edge colour runs from faint to bright blue with the number of shared posts." width="1748" height="1309">
-  <figcaption>Co-posting network · dot size = an account’s total shared posts · line colour = posts the two accounts share · key inside the image.</figcaption>
+  <img src="img/whofirst/collab-network-2026-10-15.png" alt="Co-posting network of 319 Instagram accounts and 823 links. A dense hub sits at the centre with the host account latterdayavenger, and spokes run out to large one-off clusters. Gold dots are accounts whose own posts we captured; grey dots are accounts seen only as collaborators. Edge colour runs from faint to bright blue with the number of shared posts." width="1748" height="1309">
+  <figcaption>Co-posting network · dot size = an account’s total link weight (see below) · line colour = posts the two accounts share · key inside the image.</figcaption>
 </figure>
 
 <div class="key">
-  <div class="krow"><span class="dot" style="background:var(--gold)"></span><span><b>gold dot</b> — scraped</span></div>
-  <div class="krow"><span class="dot" style="background:#7d8798"></span><span><b>grey dot</b> — collaborator only</span></div>
-  <div class="krow"><span class="dot" style="background:var(--muted)"></span><span><b>size</b> — total shared posts</span></div>
-  <div class="krow"><span><b>line = shared posts</b></span></div>
-  <div class="krow"><span class="sw" style="background:var(--e1)"></span><span>1</span></div>
-  <div class="krow"><span class="sw" style="background:var(--e2)"></span><span>2–4</span></div>
-  <div class="krow"><span class="sw" style="background:var(--e3)"></span><span>5–19</span></div>
-  <div class="krow"><span class="sw" style="background:var(--e4)"></span><span>20–99</span></div>
-  <div class="krow"><span class="sw" style="background:var(--e5)"></span><span>100+</span></div>
+  <div class="row">
+    <span class="krow"><span class="dot" style="background:var(--gold)"></span><span><b>gold dot</b> — own posts captured</span></span>
+    <span class="krow"><span class="dot" style="background:#7d8798"></span><span><b>grey dot</b> — collaborator only</span></span>
+    <span class="krow"><span><b>size</b> — total link weight</span></span>
+  </div>
+  <div class="row"><b>line = shared posts</b>
+    <span class="krow"><span class="sw" style="background:var(--e1)"></span>1</span>
+    <span class="krow"><span class="sw" style="background:var(--e2)"></span>2–4</span>
+    <span class="krow"><span class="sw" style="background:var(--e3)"></span>5–19</span>
+    <span class="krow"><span class="sw" style="background:var(--e4)"></span>20–99</span>
+    <span class="krow"><span class="sw" style="background:var(--e5)"></span>100+</span>
+  </div>
+</div>
 </div>
 
 <h2>What the map shows</h2>
-<p>The host account <b>latterdayavenger</b> is the hub: 121 partners and 1,450 shared posts, more than twice any other account. Two accounts sit beside it — <b>truthismytribe</b> (830 shared posts) and <b>latterdaychad</b> (792) — and then the graph falls away into a long tail of accounts seen only as collaborators, most of them one-off.</p>
+<p>The host account <b>latterdayavenger</b> is the hub: linked to 121 accounts, with a total link weight of 1,450, more than any other account. Two accounts sit beside it — <b>truthismytribe</b> (830) and <b>latterdaychad</b> (792) — and then the graph falls away into a long tail of accounts seen only as collaborators, most of them one-off.</p>
+<p>Total link weight is not a post count. It adds up the weights of an account’s links, so one post with five accounts on it counts once on each of that account’s four links. That is how the host reaches 1,450 from a capture of 354 posts.</p>
 <div class="tablewrap">
 <table>
-<tr><th>account</th><th>scraped</th><th class="n">partners</th><th class="n">shared posts</th></tr>
-<tr><td>latterdayavenger <small>· host</small></td><td>yes</td><td class="n">121</td><td class="n">1450</td></tr>
-<tr><td>truthismytribe</td><td>yes</td><td class="n">76</td><td class="n">830</td></tr>
-<tr><td>latterdaychad</td><td>yes</td><td class="n">91</td><td class="n">792</td></tr>
-<tr><td>latterday_rants</td><td>—</td><td class="n">14</td><td class="n">385</td></tr>
-<tr><td>priesthoodmen</td><td>yes</td><td class="n">85</td><td class="n">310</td></tr>
-<tr><td>londonthefamilyhistorian</td><td>yes</td><td class="n">65</td><td class="n">307</td></tr>
-<tr><td>timballard89 <small>· Ballard</small></td><td>yes</td><td class="n">107</td><td class="n">298</td></tr>
+<tr><th>account</th><th class="n">posts captured</th><th class="n">linked accounts</th><th class="n">total link weight</th></tr>
+<tr><td>latterdayavenger <small>· host</small></td><td class="n">354</td><td class="n">121</td><td class="n">1450</td></tr>
+<tr><td>truthismytribe</td><td class="n">396</td><td class="n">76</td><td class="n">830</td></tr>
+<tr><td>latterdaychad</td><td class="n">276</td><td class="n">91</td><td class="n">792</td></tr>
+<tr><td>latterday_rants</td><td class="n">—</td><td class="n">14</td><td class="n">385</td></tr>
+<tr><td>priesthoodmen</td><td class="n">396</td><td class="n">85</td><td class="n">310</td></tr>
+<tr><td>londonthefamilyhistorian</td><td class="n">55</td><td class="n">65</td><td class="n">307</td></tr>
+<tr><td>timballard89 <small>· Ballard</small></td><td class="n">420</td><td class="n">107</td><td class="n">298</td></tr>
 </table>
 </div>
-<p>The heaviest links are the plainest: <b>latterday_rants–latterdayavenger</b> (136 shared posts), <b>latterdayavenger–latterdaychad</b> (115), <b>latterdayavenger–truthismytribe</b> (109). Only three links reach the 100+ band; the great majority are a single shared post.</p>
+<p>The heaviest links are the plainest: <b>latterday_rants–latterdayavenger</b> (136 shared posts), <b>latterdayavenger–latterdaychad</b> (115), <b>latterdayavenger–truthismytribe</b> (109). Only three links reach the 100+ band; half of all links (410 of 823) rest on a single shared post.</p>
 
-<div class="note"><h3>How a link is counted</h3><p>A post links two accounts if both are on it — the account that posted it plus everyone Instagram listed as a collaborator. A link’s weight is the number of distinct posts behind it, merged across every capture we hold. Instagram leaves the poster out of its own collaborator list, which is why a self-post still links the poster to the people credited with them.</p></div>
+<h2>How a link is counted</h2>
+<p>A post links two accounts if both are on it — the account that posted it plus everyone Instagram listed as a collaborator. A link’s weight is the number of distinct posts behind it, merged across every capture we hold. Instagram leaves the poster out of its own collaborator list, which is why a self-post still links the poster to the people credited with them.</p>
+
+<h2>What the captures cover</h2>
+<p>Of the fourteen group accounts, twelve were captured. <b>partisanrocktactical</b> and <b>roofkoreanactual</b> came back empty, so they appear only where other accounts credited them. Four captures stopped at our scrolling limit before reaching their oldest posts: <b>truthismytribe</b>, <b>king__mosiah</b>, <b>priesthoodmen</b> and <b>mount_of_oliveslds</b>. Their older co-posts are not in the graph.</p>
+<p>Five accounts outside the group were also captured for other work, and their posts count wherever they touch the group: <b>ldsabuseonx</b>, <b>dignidadyderecho</b>, <b>daily_dose_of_orthodox</b>, <b>letstalkhaydencarroll</b> and <b>sanctus_maximus</b>. Together they add 8 links.</p>
 
 <h2>Read it yourself</h2>
 <ul class="links">
@@ -132,6 +130,6 @@ td small{color:var(--muted);font-size:12px}
   <li><a href="who-went-first.html">Who went first</a><span>the seven group posts themselves, and the math of the seats</span></li>
 </ul>
 
-<div class="foot">Compiled October 15, 2026, from Instagram post data for the host account latterdayavenger and the 13 accounts credited on the seven group posts. Public accounts are named by handle; the letters A–K on <a href="who-went-first.html">Who went first</a> are still unpublished. <a href="index.html">Backfire tracking</a>.</div>
+<div class="foot">Compiled October 15, 2026, from Instagram post data: our captures of the host account latterdayavenger, eleven of the 13 accounts credited on its seven group posts, and five other accounts captured for other work. Public accounts are named by handle; which account holds which letter A–K on <a href="who-went-first.html">Who went first</a> is not published here. <a href="index.html">Backfire tracking</a>.</div>
 </main>
 </body></html>
