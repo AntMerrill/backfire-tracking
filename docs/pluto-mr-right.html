@@ -1,0 +1,124 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Justin Riggs on The Imagination Podcast: one guest photo on all three of his episodes, the host portrait reused for three seasons, and Seasons 1 to 5 all &quot;1 year ago&quot;. Data, crops and a replication script.">
+<meta property="og:type" content="article"><meta property="og:title" content="The early provenance of Pluto&#39;s Mr. Right">
+<meta property="og:description" content="Three episodes, one headshot. Fingerprinted from the thumbnails; replicate it yourself.">
+<meta property="og:url" content="https://antmerrill.github.io/backfire-tracking/pluto-mr-right.html"><meta property="og:image" content="https://antmerrill.github.io/backfire-tracking/data/pluto-mr-right/cards/2026-10-17_144012_imagination_fp_spicy1_stamped.png">
+<meta property="og:image:width" content="1600"><meta property="og:image:height" content="900"><meta name="twitter:card" content="summary_large_image">
+<title>The early provenance of Pluto&#39;s Mr. Right — Backfire tracking</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Network view: dark, to match the graph; kept plain (no tiles or banners). */
+:root{
+  --bg:#0e1116; --panel:#12151c; --panel2:#181d27; --ink:#e9ecf2; --muted:#98a1b3; --rule:#252c3a;
+  --gold:#e0b93a; --accent:#86b6ef;
+  --e1:#184f95; --e2:#256abf; --e3:#3987e5; --e4:#86b6ef; --e5:#cde2fb;
+  --sans:"IBM Plex Sans Condensed","Arial Narrow",system-ui,-apple-system,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+body{margin:0;background:var(--bg);color:var(--ink);
+     font:16px/1.6 var(--sans);padding-inline:16px;padding-block:0 72px}
+main{max-width:940px;margin:0 auto}
+.top{border-bottom:1px solid var(--rule);padding:16px 2px}
+.top a{color:var(--muted);text-decoration:none;font:600 13px var(--sans);letter-spacing:.16em;text-transform:uppercase}
+.top a:hover{color:var(--accent)}
+header{padding:44px 2px 8px}
+.eyebrow{font:600 13px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+h1{font:700 clamp(34px,7vw,60px)/1.02 var(--sans);letter-spacing:-.01em;margin:.3em 0 .4em;max-width:16ch}
+.lede{color:var(--muted);font-size:19px;max-width:62ch;margin:0}
+.lede b{color:var(--ink);font-weight:600}
+.meta{font:500 13px var(--mono);color:var(--muted);margin-top:16px;letter-spacing:.02em}
+h2{font:700 21px var(--sans);letter-spacing:.01em;margin:2.4em 0 .5em;padding-bottom:.25em;border-bottom:1px solid var(--rule)}
+p{margin:.7em 0;max-width:70ch}
+a{color:var(--accent)}
+
+.counts{font:500 15px var(--mono);color:var(--muted);margin:22px 0 0}
+.counts b{color:var(--ink);font-weight:500}
+
+figure{margin:20px 0}
+figure img{display:block;width:100%;border:1px solid var(--rule);border-radius:6px;background:var(--panel)}
+figcaption{font:500 13px var(--mono);color:var(--muted);margin-top:8px}
+
+.key{margin:14px 0;font:500 14px var(--mono);color:var(--muted)}
+.key .row{display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px;margin:6px 0}
+.key b{color:var(--ink);font-weight:500}
+.krow{display:flex;align-items:center;gap:10px}
+.sw{display:inline-block;width:26px;height:5px;border-radius:3px;flex:none}
+.dot{display:inline-block;width:12px;height:12px;border-radius:50%;flex:none}
+
+.tablewrap{overflow-x:auto;margin:14px 0}
+table{border-collapse:collapse;width:100%;font:500 15px var(--mono);font-variant-numeric:tabular-nums}
+th,td{border-bottom:1px solid var(--rule);padding:9px 14px;text-align:left;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+th{color:var(--muted);font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+td.n,th.n{text-align:right}
+td small{color:var(--muted);font-size:12px}
+
+
+.links{list-style:none;padding:0;margin:12px 0;display:grid;gap:8px}
+.links li{display:flex;gap:12px;align-items:baseline;border-bottom:1px solid var(--rule);padding:10px 2px}
+.links a{font-weight:600;text-decoration:none}
+.links a:hover{text-decoration:underline}
+.links span{color:var(--muted);font-size:14px}
+
+.foot{margin-top:48px;border-top:1px solid var(--rule);padding-top:16px;font:500 13px var(--mono);color:var(--muted)}
+.foot a{color:var(--accent)}
+@media (max-width:560px){h1{font-size:34px}}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:24px 0}
+.card{background:var(--panel2);border:1px solid var(--rule);border-radius:8px;padding:14px 16px}
+.card b{display:block;font:700 28px var(--sans);color:var(--ink)}
+.card b.g{color:var(--gold)}
+.card span{font:500 13px var(--mono);color:var(--muted)}
+.bars{display:flex;align-items:flex-end;gap:2px;height:160px;margin:18px 0 6px;border-bottom:1px solid var(--rule)}
+.bars div{flex:1;display:flex;flex-direction:column-reverse;min-width:3px}
+.bars i{display:block}
+.axis{display:flex;justify-content:space-between;font:500 12px var(--mono);color:var(--muted)}
+</style>
+</head><body>
+
+<div class="top"><main style="padding:0"><a href="index.html">← Backfire tracking</a> &nbsp;·&nbsp; <a href="collab-network.html">The network</a> &nbsp;·&nbsp; <a href="who-went-first.html">Who went first</a></main></div>
+<main>
+<header>
+  <div class="eyebrow">YouTube · captured October 17, 2026</div>
+  <h1>The early provenance of Pluto's Mr. Right</h1>
+  <p class="lede">Justin Riggs (@ldsabuse), <b>Mr. Right</b> of the Chad System's dwarf planet, on <b>The Imagination Podcast</b>: three episodes, one headshot. Plus a host portrait with tenure, and five seasons that all landed "1 year ago".</p>
+  <div class="meta">thumbnails only · screenshots of the channel's Videos tab · fingerprints computed from the pixels · <a href="data/pluto-mr-right/">all the data, crops and the replication script</a></div>
+</header>
+<div class="cards">
+  <div class="card"><b class="g">3 of 3</b><span>Riggs episodes, same guest photo</span></div>
+  <div class="card"><b>S5E25</b><span>his earliest episode here</span></div>
+  <div class="card"><b>28 of 46</b><span>designed thumbnails, same host photo</span></div>
+  <div class="card"><b class="g">45 of 62</b><span>coded videos say "1y ago": Seasons 1 to 5</span></div>
+</div>
+<figure><img src="data/pluto-mr-right/cards/2026-10-17_144012_imagination_fp_spicy1_stamped.png" alt="Card: The Plutonic Mr. Right. Three guest photos of Justin Riggs from S5E25, S5E28 and S6E89, fingerprint distance 2 and 2."><figcaption>Three thumbnails, one image: fingerprint distance 2 and 2 to S6E89 (0–5 = same image).</figcaption></figure>
+<figure><img src="data/pluto-mr-right/cards/2026-10-17_144012_imagination_fp_spicy2_stamped.png" alt="Card: Earliest sighting: S5E25. His three episodes in order."><figcaption>By episode number, S5E25 (The Pace Memo) is his first on this channel.</figcaption></figure>
+<figure><img src="data/pluto-mr-right/cards/2026-10-17_144012_imagination_fp_spicy3_stamped.png" alt="Card: One portrait, three seasons. 28 of 46 designed thumbnails carry the same host photo."><figcaption>The host photo on the designed thumbnails, Season 6 back to Season 4.</figcaption></figure>
+<figure><img src="data/pluto-mr-right/cards/2026-10-17_145047_imagination_season_jumble_spicy_stamped.png" alt="Card: Five seasons, one year. Season/episode codes in Videos-tab order, with YouTube age labels."><figcaption>Videos tab, newest first: Seasons 1 to 5 all say "1y ago", and not in order.</figcaption></figure>
+<h2>Mr. Right's episodes on this channel</h2>
+<div class="tablewrap"><table><tr><th>episode</th><th>title, as listed</th><th>posted (YouTube, Oct 17, 2026)</th><th class="n">views</th><th class="n">length</th></tr>
+<tr><td>S5E25</td><td>The Pace Memo: Ritual Abuse Coverup in the LDS Church and CIA Connections</td><td>1y ago</td><td class="n">7.6K</td><td class="n">1:50:20</td></tr>
+<tr><td>S5E28</td><td>Death of a Church: Greed, Gluttony, and Grift in LDS, Inc.</td><td>1y ago</td><td class="n">4K</td><td class="n">2:31:33</td></tr>
+<tr><td>S6E89</td><td>How Litigation Economics Turns Children of God into Adversaries of the Church</td><td>1mo ago</td><td class="n">3.5K</td><td class="n">2:29:02</td></tr></table></div>
+<p>Each thumbnail credits him as the guest, with his ldsabuse handles. YouTube shows only "1y ago" and "1mo ago"; the exact upload dates were not fetched.</p>
+<h2>One photo, three episodes</h2>
+<p>His guest photo on all three thumbnails is the same image: S5E25 and S5E28 are both at fingerprint distance 2 from S6E89. Fingerprint here is dHash, 64 bits; 0–5 counts as the same image, and pairs we know are different score 9 or more.</p>
+<figure><img src="data/pluto-mr-right/cards/2026-10-17_143513_imagination_fp_riggs_plain.png" alt="Plain card: one photo of Justin Riggs, three episodes, with distances."><figcaption>Plain version: the three crops at 3x (each original pixel repeated, none changed).</figcaption></figure>
+<h2>The host photo</h2>
+<p>Emma Katherine's photo on the designed thumbnails: 28 of 46 are the same image as on S6E89 (distances 1–3), from Season 6 back to Season 4. The first designed thumbnails, S1E39–41, look alike by eye but are not the same image by the rule (7–10). The early seasons' video-call thumbnails are live stills, a different picture each time.</p>
+<figure><img src="data/pluto-mr-right/cards/2026-10-17_143513_imagination_fp_emma_plain.png" alt="Plain card: the host photo, per screenshot, same image vs not."><figcaption>Plain version: per screenshot, how many host photos match S6E89.</figcaption></figure>
+<h2>Five seasons, one year</h2>
+<p>On the Videos tab, 45 of the 62 videos whose title carries a season/episode code say "1y ago": Season 1 through Season 5, with episode numbers into the 90s, in one age bucket (YouTube's "1y" covers 12 to 23 months). Inside it they are out of order: S2E3 next to S5E97, S2E21 among Season 4, and S5E9 among Season 6 at "5mo". Only Seasons 6 and 7 spread out in time. Exact upload dates would show whether the back catalogue went up in a batch; we have not fetched them.</p>
+<figure><img src="data/pluto-mr-right/cards/2026-10-17_144852_imagination_season_jumble_plain.png" alt="Plain card: Seasons 1 to 5, all 1 year ago."><figcaption>Plain version. Codes and ages read by eye from the screenshots: episode_order_by_eye.tsv.</figcaption></figure>
+<h2>The boxes, frame by frame</h2>
+<video controls preload="metadata" style="width:100%;border:1px solid var(--rule);border-radius:6px" src="data/pluto-mr-right/2026-10-17_pluto_mr_right_boxes.mp4"></video>
+<p>Red: the host photo. Yellow: Riggs. Cyan: the season/episode badge. Magenta: the season/episode code in the title. The boxes are drawn on copies; the published screenshots are the original pixels.</p>
+<h2>Check it yourself</h2>
+<ul class="links">
+<li><a href="data/pluto-mr-right/replicate.py">replicate.py</a><span>re-cuts every crop from the screenshots and checks its sha256, recomputes both fingerprint tables, prints REPLICATED (pillow + numpy, about a minute)</span></li>
+<li><a href="data/pluto-mr-right/boxes.tsv">boxes.tsv</a><span>every box, in screenshot pixels</span></li>
+<li><a href="data/pluto-mr-right/fingerprints_aligned_wide_vs_S6E89.tsv">fingerprints_aligned_wide_vs_S6E89.tsv</a><span>the distances behind the cards</span></li>
+<li><a href="data/pluto-mr-right/README.md">README</a><span>what every file is</span></li></ul>
+<h2>How it was read</h2>
+<p>The channel's Videos tab was scrolled from the newest upload to Season 1 and screenshotted: 18 screenshots, kept unchanged. The published screenshots are exact-pixel cuts of the video grid (the browser's sidebar left out); the originals' sha256 are listed with them. Whole thumbnails were found automatically; the guest and host photo boxes were measured on one thumbnail and applied to all, then checked by eye. Each crop is the exact pixels inside a box. The fingerprint is dHash; because the fixed boxes cut the photos at slightly different offsets, the cards use a small alignment search, and the plain fixed-box table is published too.</p>
+<div class="foot">Captured October 17, 2026. Thumbnails and titles as YouTube showed them that day. Public figures and channels named as they present themselves. <a href="index.html">Backfire tracking</a>.</div>
+</main>
+</body></html>

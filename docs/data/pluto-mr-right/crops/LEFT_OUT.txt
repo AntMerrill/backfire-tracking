@@ -1,0 +1,7 @@
+Boxes that reach outside the published grid cut (frame 6 top row: unloaded grey tiles under the page header); not published:
+f06_c1r1_designed_guest.png
+f06_c1r1_designed_host.png
+f06_c2r1_designed_guest.png
+f06_c2r1_designed_host.png
+f06_c3r1_designed_guest.png
+f06_c3r1_designed_host.png

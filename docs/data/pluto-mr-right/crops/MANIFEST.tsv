@@ -1,0 +1,163 @@
+crop	frame	layout	panel	x0	y0	x1	y1	who	episode	sha256
+f02_c1r1_designed_guest.png	f02	designed	guest	30	6	99	184			3ba57c1033949359e4813bfc9321eaa5ad96093b881b016a9623ff4f5e5edd20
+f02_c1r1_designed_host.png	f02	designed	host	282	6	345	146			206c9cbcffd26e258441c81f2dd4a1ab284619a59da0a3c573cf6bea6de11143
+f02_c2r1_designed_guest.png	f02	designed	guest	393	6	462	184			ac500e841aca394b9c9ad314b7dfdc3d0716bd12e77ca3d952b3b7863c0860d3
+f02_c2r1_designed_host.png	f02	designed	host	645	6	708	146			d21602ede6886f6c3f8e5cc3139d86835f3f92e40a9b13844c290cf3fc991040
+f02_c3r1_designed_guest.png	f02	designed	guest	756	6	825	184			d9f95850f6eaeba44c4f5251e9b7e4ddb43b11b142698e4d87d45ea148ad5aa6
+f02_c3r1_designed_host.png	f02	designed	host	1008	6	1071	146			104401f37561496dfaaf74edfe032bcdeeaaca0dfe861cf0f2025d5e4da14788
+f02_c1r2_designed_guest.png	f02	designed	guest	30	292	99	470			ff1e636d4d9fa9c40ef4627c81e3f4c1620f3165ca3f9f97bfa71f776b37e382
+f02_c1r2_designed_host.png	f02	designed	host	282	292	345	432			8e64ea66af2db48a9b80f21b2a6e815fd21fbba4205cb56806b5d3dd5bbbbb7c
+f02_c2r2_designed_guest.png	f02	designed	guest	393	292	462	470			016febaade76f95e5c042533e144c3ef559efd17ae4137d7103326b7bfec36ad
+f02_c2r2_designed_host.png	f02	designed	host	645	292	708	432			f9160854f32e56d2dc04267738e2535c07d0f79dd13248c0c298b22ca45fd247
+f02_c3r2_designed_guest.png	f02	designed	guest	756	292	825	470			243a7ce794e09e48fd418c921032da2536053be042546d5bbcd496568e56aea1
+f02_c3r2_designed_host.png	f02	designed	host	1008	292	1071	432			85e2c9d043dcfed71a38a6a1b9dba9717f72461716b6713f697704548fb121e8
+f03_c1r1_designed_guest.png	f03	designed	guest	30	6	99	184			f221607c4aef2a4013918db18914bd48eb922396352f1cca9cdf84d930033ea5
+f03_c1r1_designed_host.png	f03	designed	host	282	6	345	146	emma		e23cc9a3abb9769c5aa47a6c6b428b50a01a211eee3349a02833d6410573786e
+f03_c2r1_designed_guest.png	f03	designed	guest	393	6	462	184			8923b039b0b56f8cd31fe46494fb0bdcc856510d8a3ce7cc576f80ea2a6d2921
+f03_c2r1_designed_host.png	f03	designed	host	645	6	708	146			aee9eb0443b719981b81ff58f72ac0f76684c1e4301f0e325b890b7f77d13a97
+f03_c3r1_designed_guest.png	f03	designed	guest	756	6	825	184			3d38d3226c038c56c7a057c0bbf901f58954adc8a0ee3036ec93617178e4df37
+f03_c3r1_designed_host.png	f03	designed	host	1008	6	1071	146			98fbc89ac2b32956efbc13b462db4e95796d93c2e4eb1a9b91eb3c8e4e27a4ae
+f03_c1r2_designed_guest.png	f03	designed	guest	30	293	99	471			a494f87ddf3d422a65eb1841926bd92d302ad24a03219f7d3a8473a0fc477e23
+f03_c1r2_designed_host.png	f03	designed	host	282	293	345	432			23dd5f2c66109b23d3f17f76ae0650283eb049e9d28ec3c03986c0ff3cf3e40b
+f03_c2r2_designed_guest.png	f03	designed	guest	393	293	462	471			02f666d6cf557108caa22197923d3c24ffeadbe3c665b0f40316152245ca7619
+f03_c2r2_designed_host.png	f03	designed	host	645	293	708	432	emma		be6d03cd0db6f4753c849f47c44af23019429a4e04f8ec188ccfd986414bcbba
+f03_c3r2_designed_guest.png	f03	designed	guest	756	293	825	471			8060dd32fa4d686b833760f9ce703480310014ee70c77ab5b40b7302f6e9c6b7
+f03_c3r2_designed_host.png	f03	designed	host	1008	293	1071	432			f08fb980932c99953e461a75e43c570722a9ac549ddd95674b428c4dcfc6801a
+f04_c1r1_designed_guest.png	f04	designed	guest	30	74	99	252			e697502ff07583f1fc4496aaede64174f2769ccab2bbe36f58aec7600925211c
+f04_c1r1_designed_host.png	f04	designed	host	282	74	345	214	emma		863391fef6e1c88678683b77ba5c77ca43749880205e9e9d509bbdcd128d0107
+f04_c2r1_designed_guest.png	f04	designed	guest	393	74	462	252	riggs	S6E89	50d84f846d91a7a9742ccd258caa1efdc3921aa20657e982047dd88e672081ef
+f04_c2r1_designed_host.png	f04	designed	host	645	74	708	214	emma		a99caad72a29aa7bc51ebf8b0497819a50a1bf4bd991bd70952742ca1586ad52
+f04_c3r1_designed_guest.png	f04	designed	guest	756	74	825	252			0995d419814a6069e7e3bc645495ecf9f62c9cff71aa62189f78ee7e36f4ae05
+f04_c3r1_designed_host.png	f04	designed	host	1008	74	1071	214			ad30bf797272d0ebf7a611c145e3d4b2599a3d9522e63d5ccb03642a3a94484f
+f05_c1r1_designed_guest.png	f05	designed	guest	30	18	99	194			18cdc58f94dedbc1631988d654e445780c967e74da4db9a776ba54043642d0d6
+f05_c1r1_designed_host.png	f05	designed	host	282	18	345	156	emma		92b16a35ab61f926d6ad593e1193d707ee1c7ee8c19a972c47898dd2eb034140
+f05_c2r1_designed_guest.png	f05	designed	guest	393	18	462	194			c5baa35e7627fe0d3eb065929a8336c15c22d3844b92d432bad472223f76e7f1
+f05_c2r1_designed_host.png	f05	designed	host	645	18	708	156	emma		db8b87b2f3e15e3e04937174b7d9497aa35754039ec348bd637fdc8c37f9d743
+f05_c3r1_designed_guest.png	f05	designed	guest	756	18	825	194			ad6edb7f56a0ef5b831c74a06fe51d69cbc280c590a7c6cd154f70d4d8a4aa40
+f05_c3r1_designed_host.png	f05	designed	host	1008	18	1071	156	emma		2b52f092f60028bd678bf70493b4da7ac253f384bf7ae9acae7a9d337e0c5c9c
+f05_c1r2_designed_guest.png	f05	designed	guest	30	321	99	480			5fc970aee0240b08c29b0826e30d8daf4c3d1dc133054fd6b84b27959d92cab6
+f05_c1r2_designed_host.png	f05	designed	host	282	321	345	446			d780990840b950968910aeb7aa99781b1c8d7be3101b2cf9f8c3ae8fad87153d
+f05_c2r2_designed_guest.png	f05	designed	guest	393	321	462	480			315b459dfa2d1b6fb62174cdc5ee2b2239e7455b88549e391704889571b4aea4
+f05_c2r2_designed_host.png	f05	designed	host	645	321	708	446	emma		058845cfbb5ad0af62ddb14887b49d901fe04fcade926f8546a062128229e88d
+f05_c3r2_designed_guest.png	f05	designed	guest	756	321	825	480			09a0d19ce3a6f793a525c3a40ebbfa4cb68f12523efab94b7f8dfdf0cbbd235b
+f05_c3r2_designed_host.png	f05	designed	host	1008	321	1071	446	emma		aefa68f55d7cf03514c726feaa5981b829bb645a31709f6cef28d73629343c37
+f06_c1r2_designed_guest.png	f06	designed	guest	30	218	99	396			94a9fda701d32df9a205fa792e05b41349c1537c35793f4a6f76285d43cbe9fb
+f06_c1r2_designed_host.png	f06	designed	host	282	218	345	358			c436258b750c48f0d47f8adaa5e50c3fcf675ec553a2b48d1c4b9404232ebfb6
+f06_c2r2_designed_guest.png	f06	designed	guest	393	218	462	396			cb364d895a1fc3f3a5e377b9538542c430673561f22b546e9149365d80273ca3
+f06_c2r2_designed_host.png	f06	designed	host	645	218	708	358			3a6f6675a5c1b2ac2dfa915a097f001156d4b356c37605574247b33f673e1d92
+f06_c3r2_designed_guest.png	f06	designed	guest	756	218	825	396			94a9fda701d32df9a205fa792e05b41349c1537c35793f4a6f76285d43cbe9fb
+f06_c3r2_designed_host.png	f06	designed	host	1008	218	1071	358			c436258b750c48f0d47f8adaa5e50c3fcf675ec553a2b48d1c4b9404232ebfb6
+f07_c1r1_designed_guest.png	f07	designed	guest	30	50	99	227			d31eddce691d59953262dc2a55f5ed3331e39eb1de09b06a43f590c7dc6e15bb
+f07_c1r1_designed_host.png	f07	designed	host	282	50	345	189			f2380b45157465f1773d8d62f71cd2fcfbf280a02b299c6948be7b7c347e1ae7
+f07_c2r1_designed_guest.png	f07	designed	guest	393	50	462	227			faab128bcba6719d5d0b2a2156e3fefce54f864a75333d8cd3a270e1131ff923
+f07_c2r1_designed_host.png	f07	designed	host	645	50	708	189	emma		9745e2ce8884ebd40d9c0d24cc640028add93b86b13dc251a316277ff8542503
+f07_c3r1_designed_guest.png	f07	designed	guest	756	50	825	227			07e22a1df1c256ea5bf63e4dfabb49267f9489c3810dae229459100672c3a164
+f07_c3r1_designed_host.png	f07	designed	host	1008	50	1071	189	emma		f5eee781c38bba7fcadcc3f47efeb0219ade442b441b30f6659e43966d815688
+f07_c1r2_designed_guest.png	f07	designed	guest	30	354	99	482			b40c280d0aa3e3ed03ac5e01c054a43f03c4ba031713763cbb52422c84558fcf
+f07_c1r2_designed_host.png	f07	designed	host	282	354	345	454			47a86a80b4366b8a1bce658cf0648b0b50f1e06df9bddf9a31db66765b93e338
+f07_c2r2_designed_guest.png	f07	designed	guest	393	354	462	482			8bb83833e97fdca7e54ba4f979d501ddc7ec1bde4c0090535cb8db13f816d54b
+f07_c2r2_designed_host.png	f07	designed	host	645	354	708	454	emma		4063ff7a8b69df433b34a2b58ef90d990252d62d7274e55d89bfa27c565c3009
+f07_c3r2_designed_guest.png	f07	designed	guest	756	354	825	482			b07ccda2ae707d0ef1ae49cce12c2271b068472cf55842f70ff466858ea2f196
+f07_c3r2_designed_host.png	f07	designed	host	1008	354	1071	454	emma		99d868fa6fec5d58e78235ada6e853941a965e6657b4ce22d77314b0376705c3
+f08_c1r1_designed_guest.png	f08	designed	guest	30	171	99	349	riggs	S5E28	c37d28059efcf27976c67819c0e5fb9ef3f431646884a80f7125189577abfc45
+f08_c1r1_designed_host.png	f08	designed	host	282	171	345	310	emma		19fecb1c14b0e5b118dea71094d5deb07d568f3d11e021b532e040d6d66fa793
+f08_c2r1_designed_guest.png	f08	designed	guest	393	171	462	349			78617e26e85c09fc179b1cff15c58473be7102118eb79d2376be21d9933c3bcb
+f08_c2r1_designed_host.png	f08	designed	host	645	171	708	310	emma		929118c9b663c5caf2639f15c1770ce9171890a5d6317eae6362506c6fb535cd
+f08_c3r1_designed_guest.png	f08	designed	guest	756	171	825	349			c5de07eade3734b53fc7b4fbd7081b8f34b6ae96980b7c56d61202699b234134
+f08_c3r1_designed_host.png	f08	designed	host	1008	171	1071	310	emma		85ffa60937e5724ba9ac3cafac8aff7ad080615d616a1e3e889ede07e19dd403
+f09_c1r1_designed_guest.png	f09	designed	guest	30	116	99	295	riggs	S5E25	b0f2febb50b94489e73c3d365dccb7b40f8112e6a8109a011313aa0d4bf92e3c
+f09_c1r1_designed_host.png	f09	designed	host	282	116	345	256	emma		7f458f2558dc85c9a55787174e8cad877c353837e97d9350d6742006cd2554c2
+f09_c2r1_designed_guest.png	f09	designed	guest	393	116	462	295			f1bbe8157c9314bebab001b472d185ebbbf86e3639b808eec50ea5b703413991
+f09_c2r1_designed_host.png	f09	designed	host	645	116	708	256	emma		85256f5a84b13fae831b0eb984c02b4bd6227cc93f1d42ce3f96c2f28cd0b1fb
+f09_c3r1_designed_guest.png	f09	designed	guest	756	116	825	295			48b8676686046c348367579d760e04a42b719579b5b53e382d8ad562a257c605
+f09_c3r1_designed_host.png	f09	designed	host	1008	116	1071	256	emma		09394ddd7b263f52c0659fde6a4dbe89cdc51222eb4c584c364f926c9130398a
+f10_c1r1_designed_guest.png	f10	designed	guest	30	7	99	185			7e6d825771d62963e6e304f7c2bb6ee1ecddda4e8060cdb25b3679a6753e57d0
+f10_c1r1_designed_host.png	f10	designed	host	282	7	345	146	emma		f958ed857289eb313ece490b4bef4bc030c6765b8c5a1736c7775ec7c631747e
+f10_c2r1_designed_guest.png	f10	designed	guest	393	7	462	185			3730f466eb4994bd6d6c70244ff3709ed45807857bfff0ad57a99a9250383765
+f10_c2r1_designed_host.png	f10	designed	host	645	7	708	146	emma		d05d4dd387624b28037e1311b5f02dfb9211402b4a2308742fee5e485a23eec2
+f10_c3r1_designed_guest.png	f10	designed	guest	756	7	825	185			ae2b29dbf51ea06cb49c08d4fb83b4a5999cf8c5b99be957b760ed7c4e207e9e
+f10_c3r1_designed_host.png	f10	designed	host	1008	7	1071	146	emma		7be9a3059bad3532431d8e192a0a99dc5cd6c53107d3125db988bc6df16efd52
+f10_c1r2_designed_guest.png	f10	designed	guest	30	301	99	479			3f6d9d220ff42daa85eebea0fa5522ef7893f65707c0a56b9e3b4d9147040226
+f10_c1r2_designed_host.png	f10	designed	host	282	301	345	440	emma		c20730a40577e51daaddde2433cbb069fd98c6c76bafb4f5288b35bc1afeefa9
+f10_c2r2_designed_guest.png	f10	designed	guest	393	301	462	479			07facfe7d4879682851337c6ae111a532cf44b757095df2f0ff2eec65ff24682
+f10_c2r2_designed_host.png	f10	designed	host	645	301	708	440	emma		a2f6c57209cfb5b755043db7d61f5c9c3cd37a4b09c2f2193a381fd8aef694f2
+f10_c3r2_designed_guest.png	f10	designed	guest	756	301	825	479			c5cfdbc4fb9bb54ce65ea9c18e262ae783b5ee782d28594be54277cf3ece746e
+f10_c3r2_designed_host.png	f10	designed	host	1008	301	1071	440	emma		17a4ed9152331975a4862e8691dcbbaecaa9734ba336792c1053b1ebdd30d416
+f11_c1r1_designed_guest.png	f11	designed	guest	30	7	99	185			17c025f2b5c7cd22602d6c71f852b02664d84b911ba17d62dfbe774e502b990a
+f11_c1r1_designed_host.png	f11	designed	host	282	7	345	146	emma		19829d4f63350808ab911bd334eda4bf71ddac61d90e90d7e430e7a8e256a7e9
+f11_c2r1_designed_guest.png	f11	designed	guest	393	7	462	185			91e4990a3449bb2b0fdd98fe9e1426df26701862224da8a380d9040cb4da74b6
+f11_c2r1_designed_host.png	f11	designed	host	645	7	708	146	emma		679e5eabd37b8d9fd35eade5b49b5b57e2ba4a5912f086cd8641b12c7c4b141f
+f11_c3r1_designed_guest.png	f11	designed	guest	756	7	825	185			c1998bf6265f8034c0da6c91f06e153bb690e41dabc0f0ed9dd4458d4fd1919d
+f11_c3r1_designed_host.png	f11	designed	host	1008	7	1071	146	emma		b23cd0ed7b45a800a5568595d06525aad4a6bc46c494dba3c0f3352f5257180b
+f11_c1r2_designed_guest.png	f11	designed	guest	30	351	99	482			c2ad792a74deb61e8b4d8a2dc45739f9e83335a58fa738cd2a69fd56f75ffe55
+f11_c1r2_designed_host.png	f11	designed	host	282	351	345	454	emma		ad447c05e718207f9aca0263b9183682976e21995c568ce2a692cc4bd2da7684
+f11_c2r2_designed_guest.png	f11	designed	guest	393	351	462	482			b1b75b2e73e7fbc6ad8c70a5459ba509be12d9285e45217153cb838a403ef5a5
+f11_c2r2_designed_host.png	f11	designed	host	645	351	708	454	emma		bca4d1f5da9406a066c58fcf732f2016f1428224b6ad58d9162f26191e29f95b
+f11_c3r2_designed_guest.png	f11	designed	guest	756	351	825	482			0c8c06901bd293d402bda9193f0cbb7084769cde72807007af0a8118f0fda657
+f11_c3r2_designed_host.png	f11	designed	host	1008	351	1071	454	emma		fa0bb53ce458161256edc825a4bf3d628353528488b3ffa4d8ddb5b54d775f67
+f12_c1r1_designed_guest.png	f12	designed	guest	30	7	99	185			63c15609de2246097624fe7f403c6f20ef55a967b20d77e8534cbf355e51ea5d
+f12_c1r1_designed_host.png	f12	designed	host	282	7	345	146	emma		cd6db9caba93775c93f84c93a6eefbdd893caa0cd03129de7d5233ff4f6139a6
+f12_c2r1_designed_guest.png	f12	designed	guest	393	7	462	185			b872e5e3ee5b1cbb5b614848bec6bf4595f049f1a19d30559e09ad0c647ed829
+f12_c2r1_designed_host.png	f12	designed	host	645	7	708	146	emma		e1eb7841f1e7cc678eda67a44eaa8b66b92bd80ee83ae90724925f46e251aad1
+f12_c3r1_designed_guest.png	f12	designed	guest	756	7	825	185			366524181a02270d7ce15cc19c7892a422442e139e5e5bc580654a225fe07400
+f12_c3r1_designed_host.png	f12	designed	host	1008	7	1071	146	emma		25dd275be9778e6517c7432ec6422177f73d9d4672d5fa359e7e0693676a0d55
+f12_c1r2_designed_guest.png	f12	designed	guest	30	268	99	449			6d020c4c78cd380d823f9ab4430e7bc032e38bbc2a2786646a4dd53205a064f4
+f12_c1r2_designed_host.png	f12	designed	host	282	268	345	410	emma		af259e6dbafc369a067056fff124bad6806ddc5ed98b50e757d86a2d7c047479
+f12_c2r2_designed_guest.png	f12	designed	guest	393	268	462	449			910bd42ebd600792e30ee834137f5c3bbd30bdbd61f8f79fe9545b6784cd4beb
+f12_c2r2_designed_host.png	f12	designed	host	645	268	708	410	emma		c1f506d4a5a953e8ab2c6bf9de71a41bbbf08e3793a2303b6196ebe6721f6ce0
+f12_c3r2_designed_guest.png	f12	designed	guest	756	268	825	449			737fec8991c6d28378a1f73411c066e0eea5d320ff62b9ca1d995e7b6ebcccef
+f12_c3r2_designed_host.png	f12	designed	host	1008	268	1071	410	emma		0562d61fc849136f48b24916cf6a8fbcd45bbc76ad72dcf055939b1be8c1ec95
+f13_c1r1_designed_guest.png	f13	designed	guest	30	62	99	239			e0475ecc207e74a5c47e0c0c6b80bc53fcde904ec9bd5470be6615cf64dea279
+f13_c1r1_designed_host.png	f13	designed	host	282	62	345	201	emma		29be8f76fa5eb49622315a32b8623da2ccda3e430b7bce7feff21cf25a6b029d
+f13_c2r1_designed_guest.png	f13	designed	guest	393	62	462	239			1bc45e09263f15d378165fe253af3dd74bf349526e673d211b8ec6d73cd58114
+f13_c2r1_designed_host.png	f13	designed	host	645	62	708	201	emma		7ca27f429dd9fa90bf716e38c4a61bc48a3361e1442bbeb312cf3dd24ed28edd
+f13_c3r1_designed_guest.png	f13	designed	guest	756	62	825	239			a79ecae80a9d5bf464b678bccfb59fd01cccc6d1ec6b0081456368df5f198248
+f13_c3r1_designed_host.png	f13	designed	host	1008	62	1071	201	emma		0f5bae268c2f9252b3cb7fb38db9776fa4cc88c4d9d3d7aba954d40ebcc8ea3c
+f13_c1r2_designed_guest.png	f13	designed	guest	30	365	99	483			7b6a89fddfef3ba9290e8ad24d62f3f1dc24d771540230aaf73a4e3e5db392b4
+f13_c1r2_designed_host.png	f13	designed	host	282	365	345	457	emma		767830f605d81f94dd662ae8e47579c0c7034134da7bafe73ac1eeeb26ee7dcd
+f13_c2r2_designed_guest.png	f13	designed	guest	393	365	462	483			b43385e9e89d0a527f3fab8081630861ef0ca301cca4cc11db9ab404dcf71b86
+f13_c2r2_designed_host.png	f13	designed	host	645	365	708	457	emma		5fdd18c6f44c19b9585083a2d2d9aa1ce4b8e9c360606a17e609ebef4c2b6cb5
+f13_c3r2_designed_guest.png	f13	designed	guest	756	365	825	483			1814cffbccaba8faa2ff3f0d64a05d8907aad5494ad8fa0c7a88f47dbd7ece89
+f13_c3r2_designed_host.png	f13	designed	host	1008	365	1071	457	emma		ad2ca19c56b474f807b4eedc2410460fcb22d95d92a69640fdc7f0087ebbbd68
+f14_c1r1_designed_guest.png	f14	designed	guest	30	6	99	184			19e5ac23d73f77297d3dff027486ee14beaddc3842b601b5b9e73f73205e82b0
+f14_c1r1_designed_host.png	f14	designed	host	282	6	345	146	emma		aafe843e1609d5f4af6f16216b791d47209a0db78366ae0264deef36837190e5
+f14_c2r1_designed_guest.png	f14	designed	guest	393	6	462	184			f11b3f698d1653ceaff30410a52f3aaf5714f649282d4e8dd90be8a3b47d269a
+f14_c2r1_designed_host.png	f14	designed	host	645	6	708	146	emma		a43602e8ee6503a7157719dee7b5e9f2a1579aca67536f17fff8dacf482a5abf
+f14_c3r1_designed_guest.png	f14	designed	guest	756	6	825	184			73f688595eff5ba49fe90b1f5734035810abd6b8fc00130ce36b41da82f31601
+f14_c3r1_designed_host.png	f14	designed	host	1008	6	1071	146	emma		17c1a2c5fe057bf4b07762a45dafecb5652182c281fa195900dc000020711a64
+f14_c1r2_call_guest.png	f14	call	guest	2	323	175	417			e37e4e5ce81de4e107ddffa3beadd53d73dc9e16c20bdcf313f3eaeb35ce24cd
+f14_c1r2_call_host.png	f14	call	host	175	323	348	417	emma		0df1abd7304d6c66a7cc256fc53e8f2ff9b3f412429661a1d60a0cb6c29abba3
+f14_c2r2_call_guest.png	f14	call	guest	365	323	538	417			d829f34836742be7dc9c036be1149627532ffe54873b935d305bf040c8614169
+f14_c2r2_call_host.png	f14	call	host	538	323	711	417	emma		56dd4585dc0f9d60a49776bb137e7ed44420de50a6f669242ff31df100c8ddab
+f14_c3r2_call_guest.png	f14	call	guest	728	323	901	417			e7fc8f6eba0d66e0ff26f6f0e707506bfb43246e2e07c517faebb03fb75890cd
+f14_c3r2_call_host.png	f14	call	host	901	323	1074	417	emma		aa937cf5f7324c677950706f610101accb610fa5f165d66c6107c751cf212ddb
+f15_c1r1_call_guest.png	f15	call	guest	2	61	175	154			df87228c0ec542da844a26bc535516ff82c018901166679bd8b17228066dfc21
+f15_c1r1_call_host.png	f15	call	host	175	61	348	154	emma		588bf92b9605e7ddcde09cf6e62253d393f8cbd08e469211cb49a69e45fac42f
+f15_c2r1_call_guest.png	f15	call	guest	365	61	538	154			eb16b4a60121e3c1dee707b6271783d158b62b22af2373e232c883e99b8c9e5f
+f15_c2r1_call_host.png	f15	call	host	538	61	711	154	emma		4c41d6bc3d17eb03358a815bef3055090fd6931cd3fd10802ef66cd6f548d379
+f15_c3r1_call_guest.png	f15	call	guest	728	61	901	154			cf9cfb759769d0e7edf42d8e1b86695d8c7d8d8838cfb34b6f9ead2eb6039789
+f15_c3r1_call_host.png	f15	call	host	901	61	1074	154	emma		c9b3359251881afda8f8292c26ef71318e74d3c86877319a84833b81ab1a0042
+f15_c1r2_call_guest.png	f15	call	guest	2	361	175	444			97ab4c8d69ce7d7e75384f3005a8fb6296f1a8bd739b0b8b4614e7c35be05e0f
+f15_c1r2_call_host.png	f15	call	host	175	361	348	444	emma		eb125c2773a7e2dc519a0562d68ca00f5886cdee804d8de890e17cefbbc0f436
+f15_c2r2_call_guest.png	f15	call	guest	365	361	538	444			23ae38a36d1d1bb818b0b4f0d1e236b4449e0669c9e614dd42fea2ce716d2c15
+f15_c2r2_call_host.png	f15	call	host	538	361	711	444	emma		68a2d904d1f08ed8cc4ede9da130278810e096f7de1babaa2aeff9964f5874ce
+f15_c3r2_call_guest.png	f15	call	guest	728	361	901	444			864b134f896efa4a86dc14b569c8d502a8a189561b4f20acc1fc69d9e4e5571f
+f15_c3r2_call_host.png	f15	call	host	901	361	1074	444	emma		2bfa2612e58d2c502cb98e8c56c80b4396addcb6dbd51d2fc6042ab37c1aa550
+f16_c1r1_designed_guest.png	f16	designed	guest	30	114	99	292			ec59e0512071b76484a01cb8cf55856827745ea93087786822f8f662b0773fc1
+f16_c1r1_designed_host.png	f16	designed	host	282	114	345	254			02fc0edc4a2f80c759a4df3996c458d0978ae0c2c877b2c27ad9f158de0ae225
+f16_c2r1_call_guest.png	f16	call	guest	365	158	538	252			b8c944b5af81a0c828d0e460bc9f22ec1744bd3e27aa8379d1397d6fe5db2cc1
+f16_c2r1_call_host.png	f16	call	host	538	158	711	252	emma		73d063d671c74f74279a2a19a16dbe35dddb60ddfaf61c0642898c92459446b2
+f16_c3r1_call_guest.png	f16	call	guest	728	158	901	252			efa2859e5985b13e3d16a699c7a27a3d9355420bebfec7424867a330f404596a
+f16_c3r1_call_host.png	f16	call	host	901	158	1074	252	emma		cef3a868df7beba6303600aad1a12aa8982e22d78a3b9bb9b0cec0176d18874f
+f17_c1r1_designed_guest.png	f17	designed	guest	30	27	99	205			4708bcfd5e57315466cc8e558740066c88570b6f697bf0d3c2cdcfc3a5a8c372
+f17_c1r1_designed_host.png	f17	designed	host	282	27	345	166	emma		17e69667f041267169d929613bd80816f84e09b8fdb8e0021030409e3c9cda37
+f17_c2r1_designed_guest.png	f17	designed	guest	393	27	462	205			678a1e46b23e108c502506da96710b487b142976c7585e22fdf2b0fab9472463
+f17_c2r1_designed_host.png	f17	designed	host	645	27	708	166	emma		c67459f5e45647e48e48f5936d761c27b4afb03b2a01bc18e4b4b2c0c76814af
+f17_c3r1_designed_guest.png	f17	designed	guest	756	27	825	205			a56d95c859a20c35053d4da45cd8391368a2e3b834f9763b83694fbb566bddfe
+f17_c3r1_designed_host.png	f17	designed	host	1008	27	1071	166	emma		11af1011c545437712801271f945a0652e4dfdb178ffff6768bc3fb7f57cd88a
+f17_c1r2_call_guest.png	f17	call	guest	2	369	175	447			e14b42415512f893aad9dc524e51b3d8f47b9db31f50c3cb8abf29c6c1907ef0
+f17_c1r2_call_host.png	f17	call	host	175	369	348	447	emma		9f88149e90b3f4c390f857cd5b147db03762fe796c5fbea4296eb04795126fa8
+f17_c2r2_call_guest.png	f17	call	guest	365	369	538	447			1916810d413a8ffddff408342735d6c05f9bcc4546f1f7e39b4051b735ba2508
+f17_c2r2_call_host.png	f17	call	host	538	369	711	447	emma		f31004da2111c30bd70d8f87bcf2ec681823254930ac7e1f8c0564bc93eaa4a9
+f17_c3r2_call_guest.png	f17	call	guest	728	369	901	447			c01da51277cd29cfd05a12b0196679bd6d723b4177f7428fed543eb4f73464d9
+f17_c3r2_call_host.png	f17	call	host	901	369	1074	447	emma		5dd684ef97b65ad4881cda7d1a03605fa9df7fd72a1614fde900414a311872c5

@@ -1,0 +1,67 @@
+who	dhash_distance	same_image(0-5)	crop	episode	overlay
+emma	0	yes	f04_c2r1_designed_host.png		
+emma	3	yes	f04_c1r1_designed_host.png		
+emma	15	no	f05_c1r1_designed_host.png		
+emma	15	no	f08_c1r1_designed_host.png		
+emma	15	no	f09_c1r1_designed_host.png		
+emma	16	no	f09_c2r1_designed_host.png		badge:610,214,717,274
+emma	16	no	f09_c3r1_designed_host.png		
+emma	17	no	f03_c2r2_designed_host.png		
+emma	17	no	f12_c1r2_designed_host.png		badge:248,367,296,391
+emma	18	no	f10_c1r2_designed_host.png		
+emma	19	no	f05_c2r1_designed_host.png		
+emma	19	no	f05_c3r1_designed_host.png		
+emma	20	no	f11_c1r1_designed_host.png		
+emma	20	no	f12_c3r2_designed_host.png		
+emma	21	no	f03_c1r1_designed_host.png		
+emma	21	no	f05_c2r2_designed_host.png		
+emma	21	no	f08_c2r1_designed_host.png		badge:610,270,656,318
+emma	21	no	f10_c1r1_designed_host.png		
+emma	21	no	f10_c3r1_designed_host.png		badge:973,105,1045,164
+emma	21	no	f10_c3r2_designed_host.png		
+emma	21	no	f12_c2r2_designed_host.png		
+emma	22	no	f07_c2r1_designed_host.png		
+emma	22	no	f08_c3r1_designed_host.png		
+emma	22	no	f10_c2r1_designed_host.png		
+emma	22	no	f10_c2r2_designed_host.png		
+emma	22	no	f11_c2r1_designed_host.png		badge:610,105,681,173
+emma	22	no	f11_c3r1_designed_host.png		
+emma	24	no	f05_c3r2_designed_host.png		
+emma	25	no	f07_c2r2_designed_host.png		
+emma	26	no	f07_c3r2_designed_host.png		
+emma	26	no	f11_c1r2_designed_host.png		
+emma	27	no	f11_c2r2_designed_host.png		
+emma	27	no	f11_c3r2_designed_host.png		
+emma	27	no	f12_c3r1_designed_host.png		
+emma	27	no	f14_c3r1_designed_host.png		
+emma	28	no	f07_c3r1_designed_host.png		
+emma	28	no	f13_c1r2_designed_host.png		
+emma	28	no	f15_c1r1_call_host.png		
+emma	28	no	f16_c3r1_call_host.png		letterbox
+emma	28	no	f17_c1r1_designed_host.png		
+emma	29	no	f12_c1r1_designed_host.png		
+emma	29	no	f12_c2r1_designed_host.png		
+emma	29	no	f17_c3r1_designed_host.png		
+emma	30	no	f13_c2r1_designed_host.png		
+emma	30	no	f13_c3r1_designed_host.png		
+emma	30	no	f13_c2r2_designed_host.png		
+emma	30	no	f13_c3r2_designed_host.png		
+emma	30	no	f17_c2r1_designed_host.png		badge:610,126,659,193
+emma	31	no	f15_c2r2_call_host.png		letterbox
+emma	32	no	f14_c1r1_designed_host.png		
+emma	32	no	f14_c1r2_call_host.png		letterbox
+emma	32	no	f16_c2r1_call_host.png		letterbox
+emma	33	no	f13_c1r1_designed_host.png		
+emma	33	no	f14_c2r1_designed_host.png		
+emma	34	no	f14_c3r2_call_host.png		
+emma	34	no	f15_c2r1_call_host.png		
+emma	34	no	f17_c2r2_call_host.png		
+emma	36	no	f14_c2r2_call_host.png		letterbox
+emma	36	no	f15_c3r1_call_host.png		
+emma	36	no	f15_c1r2_call_host.png		letterbox
+emma	36	no	f15_c3r2_call_host.png		
+emma	36	no	f17_c3r2_call_host.png		
+emma	37	no	f17_c1r2_call_host.png		
+riggs	0	yes	f04_c2r1_designed_guest.png	S6E89	
+riggs	5	yes	f08_c1r1_designed_guest.png	S5E28	
+riggs	5	yes	f09_c1r1_designed_guest.png	S5E25	
