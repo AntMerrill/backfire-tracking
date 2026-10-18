@@ -4,6 +4,8 @@
 # labels onto existing video; call_extract_audio.py extracts audio): nothing synthesizes sound from data. Lives in the day folder.
 # Input: ../tb_collab_timeline/data.json (1,004 TB collab posts from the owner-complete walk; date, code, owner, others).
 # One note per post. Pitch = number of accounts on the post (2 = lowest). Same-day posts strum together into a chord.
+# v2 (John 10-18): the account's handle flashes by its dot on each strike; the group's REAL avatars (captured 2026-10-11,
+# key in group_avatar_key.tsv) light up on theirs; TB's avatar sits in the centre. No generated images, ever.
 # Time is linear: Apr 2022 .. Oct 17 2026 squeezed into SPAN seconds, so sparse years stay sparse and 2026 gets frenetic.
 import json, math, subprocess, sys, wave, datetime as dt, collections
 from pathlib import Path
@@ -63,18 +65,52 @@ for r in RING: ax.add_patch(plt.Circle((0, 0), r, fill=False, color="#1d2230", l
 dots = ax.scatter(xs, ys, s=np.zeros(N), c=np.zeros((N, 4)))
 spokes = [ax.plot([], [], color=GOLD, lw=.6, alpha=0)[0] for _ in range(60)]
 tbdot = ax.scatter([0], [0], s=160, color="#e8885a", zorder=5)
+from matplotlib.offsetbox import OffsetImage, AnnotationBbox
+from PIL import Image, ImageDraw
+AVD = Path.home() / "Desktop/claude/2026-10-11/left_right_game"
+def circ(fn, px):
+    im = Image.open(AVD / fn).convert("RGBA").resize((px, px), Image.LANCZOS); m = Image.new("L", (px, px), 0)
+    ImageDraw.Draw(m).ellipse((0, 0, px - 1, px - 1), fill=255); im.putalpha(m); return np.asarray(im)
+KEY = [l.split("\t") for l in open(H / "group_avatar_key.tsv").read().splitlines() if l and not l.startswith("#") and not l.startswith("letter")]
+avbox = {}
+for letter, a, fn in KEY:
+    if a == TB:
+        ax.add_artist(AnnotationBbox(OffsetImage(circ(fn, 64), zoom=1), (0, 0), frameon=False, zorder=8)); continue
+    if a in pos:
+        oi = OffsetImage(circ(fn, 38), zoom=1); oi.image.set_alpha(0); ab = AnnotationBbox(oi, pos[a], frameon=False, zorder=9); ax.add_artist(ab); avbox[ix[a]] = oi
+LET = {a: letter for letter, a, fn in KEY}; LET["latterdayavenger"] = "LDA"
+GROUP = set(LET) - {TB}; TIMBOT = {"sandrabronzina", "silviawaiapi"}     # opencode task10b marks (TIMBOT = the Argentina accounts)
+CYAN, MAG = "#5fd3e6", "#e45bb4"
+glab = {}
+for a in order:
+    if a in GROUP or a in TIMBOT:
+        x, y = pos[a]; th = math.atan2(y, x); ux, uy = math.cos(th), math.sin(th)
+        glab[ix[a]] = ax.text(x - .10 * ux, y - .10 * uy, LET.get(a, "@" + a), fontsize=10 if a in GROUP else 8, weight="bold",
+                              color=CYAN if a in GROUP else MAG, ha="center", va="center", alpha=0, zorder=12)
+labels = []
+for i, a in enumerate(order):
+    x, y = pos[a]; th = math.atan2(y, x); ux, uy = math.cos(th), math.sin(th)
+    labels.append(ax.text(x + .035 * ux, y + .035 * uy, "@" + a, fontsize=7.5, color=GOLD, alpha=0, zorder=10,
+                          ha="left" if ux >= 0 else "right", va="center"))
 T = fig.text(.60, .83, "", fontsize=30, weight="bold", color=INK)
 S1 = fig.text(.60, .75, "", fontsize=15, color=MUTED); S2 = fig.text(.60, .70, "", fontsize=15, color=MUTED); S3 = fig.text(.60, .65, "", fontsize=15, color=GOLD)
 fig.text(.60, .97, "Every @timballard89 Instagram collab,\nas sound", fontsize=15, color=INK, va="top", weight="bold")
-fig.text(.60, .52, "One note per collab post (1,004).\nLow note = 2 accounts on the post;\neach extra account = higher note.\nSame-day posts ring together as a chord.\nA dot lights when its account is on the post.\nTB in the centre; around the clock = order of\nfirst collab; inner ring = most posts with TB.",
+fig.text(.60, .565, "One note per collab post (1,004).\nLow note = 2 accounts on the post;\neach extra account = higher note.\nSame-day posts ring together as a chord.\nA dot lights, with its handle, when its account\nis on the post; the group lights with its own avatars.\nTB in the centre; around the clock = order of\nfirst collab; inner ring = most posts with TB.",
          fontsize=12, color=MUTED, va="top", linespacing=1.5)
 fig.text(.60, .03, "Source: owner-complete walk of @timballard89's grid\n(captured Oct 17, 2026). Collab = owner or collaborator.\nTime squeezed: Apr 2022 to Oct 2026 in 100 seconds. claude, 2026-10-18.", fontsize=9, color=MUTED)
 note_t = np.array([n[0] for n in notes])
-ff = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{Hh}", "-r", str(FPS), "-i", "-",
+ff = None if len(sys.argv) > 1 else subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{Hh}", "-r", str(FPS), "-i", "-",
                        "-i", str(H / "tb_collabs_sound.wav"), "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "22", "-preset", "veryfast",
-                       "-c:a", "aac", "-b:a", "160k", "-shortest", str(H / "tb_collabs_sound.mp4")], stdin=subprocess.PIPE)
+                       "-c:a", "aac", "-b:a", "160k", "-shortest", str(H / "tb_collabs_sound_v2.mp4")], stdin=subprocess.PIPE)
 hit_arr = {i: np.array(v) for i, v in hits.items()}
-for f in range(int(DUR * FPS)):
+GI = np.array([ix[a] for a in GROUP if a in ix], dtype=int); TI = np.array([ix[a] for a in TIMBOT if a in ix], dtype=int)
+SPECIAL = np.zeros(N, bool); SPECIAL[GI] = True; SPECIAL[TI] = True
+fig.text(.60, .20, "\u25a0 the group (A-K, LDA, LDC: letters as on 'Who went first')", fontsize=11, color=CYAN)
+fig.text(.60, .17, "\u25a0 the Argentina accounts (@sandrabronzina, @silviawaiapi)", fontsize=11, color=MAG)
+fig.text(.60, .14, "\u25a0 every other account (handle flashes on its note)", fontsize=11, color=GOLD)
+PREVIEW = [float(x) for x in sys.argv[1:]]
+FR = [int(x * FPS) for x in PREVIEW] or range(int(DUR * FPS))
+for f in FR:
     t = f / FPS
     seen = first_t <= t
     glow = np.zeros(N)
@@ -82,17 +118,23 @@ for f in range(int(DUR * FPS)):
         k = np.searchsorted(v, t, side="right")
         if k: glow[i] = max(0.0, 1 - (t - v[k - 1]) / 0.5)
     col = np.zeros((N, 4)); col[:, :3] = [0.49, 0.53, 0.60]; col[:, 3] = np.where(seen, 0.55, 0.0)
-    g = glow > 0; col[g, :3] = [0.88, 0.73, 0.23]; col[g, 3] = 0.4 + 0.6 * glow[g]
+    col[GI, :3] = [0.37, 0.83, 0.90]; col[TI, :3] = [0.89, 0.36, 0.71]
+    g = glow > 0; col[g & ~SPECIAL, :3] = [0.88, 0.73, 0.23]; col[g, 3] = 0.4 + 0.6 * glow[g]
+    for i, tx in glab.items(): tx.set_alpha(1.0 if seen[i] else 0)
     dots.set_sizes(np.where(seen, 9, 0) + 120 * glow); dots.set_facecolors(col)
     lit = np.argsort(-glow)[:60]
     for sp, i in zip(spokes, lit):
         if glow[i] > 0: sp.set_data([0, xs[i]], [0, ys[i]]); sp.set_alpha(0.5 * glow[i])
         else: sp.set_alpha(0)
+    for i, lab in enumerate(labels): lab.set_alpha(min(1, glow[i] * 1.6) if glow[i] > 0.05 and i not in glab else 0)
+    for i, oi in avbox.items(): oi.image.set_alpha(min(1, glow[i] * 1.8) if glow[i] > 0.05 else 0)
     recent = ((note_t <= t) & (note_t > t - 1)).sum()
     tbdot.set_sizes([160 + 25 * min(recent, 20)])
     day = d0 + dt.timedelta(days=max(0, min((d1 - d0).days, (t - INTRO) / SPAN * (d1 - d0).days)))
     T.set_text(day.strftime("%b %Y"))
     S1.set_text(f"collab posts so far: {(note_t <= t).sum():,}"); S2.set_text(f"accounts so far: {seen.sum()}"); S3.set_text(f"notes in the last second: {recent}")
-    fig.canvas.draw(); ff.stdin.write(np.asarray(fig.canvas.buffer_rgba())[:, :, :3].tobytes())
+    fig.canvas.draw()
+    if PREVIEW: fig.savefig(H / f'preview_{t:.0f}s.png', dpi=100, facecolor=BG); continue
+    ff.stdin.write(np.asarray(fig.canvas.buffer_rgba())[:, :, :3].tobytes())
     if f % 240 == 0: print(f"{t:.0f}s", flush=True)
-ff.stdin.close(); ff.wait(); print("done", H / "tb_collabs_sound.mp4")
+ff and (ff.stdin.close(), ff.wait()); print("done", H / "tb_collabs_sound_v2.mp4")
