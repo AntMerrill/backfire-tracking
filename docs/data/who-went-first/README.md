@@ -107,6 +107,8 @@ Software agreeing is not peer review: the reading of what the symmetry means is 
 
    Pruning only throws candidates away. Each complete σ is then tested directly: the 7 blocks, relabelled, must be
    exactly the 7 blocks again. So the count is exact, not an estimate.
+   The same enumerator does not scale past a few hundred accounts (it timed out after 900 s on a 282-account matrix);
+   for anything larger, items 2 and 3 (networkx, or Sage/nauty) are the tools.
 2. **networkx 3.4.2 (a free graph library):** turn the design into its incidence graph (13 account nodes, 7 post
    nodes, an edge when an account is on a post) and count the graph's symmetries that keep accounts on the account
    side. They are exactly Aut(N).
