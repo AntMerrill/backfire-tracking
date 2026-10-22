@@ -1,0 +1,13 @@
+15 accounts, 16 posts (owner + collaborators). Rooms = accounts on exactly the same posts.
+3  posts [2]  julietaagonz, liberal.noticias, piterpaulin
+2  posts [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]  sandrabronzina, timballard89
+2  posts [8]  tbfrescue, timballardfoundationecuador
+1  posts [3]  maaydelara
+1  posts [9]  larinoar
+1  posts [11, 12, 13]  margaritarojoc
+1  posts [11, 12, 13, 14, 15]  expofamily.cl
+1  posts [11, 12, 15]  qntlc
+1  posts [11, 13, 14, 15]  dramariajosemancino
+1  posts [12]  agustinlaje
+1  posts [16]  ivetteavaria
+Holland |Aut_<| = product of room-size factorials = 24

@@ -1,0 +1,5 @@
+15 accounts, 16 posts, block sizes [2, 3, 4, 5, 6]
+r (posts per account): {'agustinlaje': 1, 'dramariajosemancino': 4, 'expofamily.cl': 5, 'ivetteavaria': 1, 'julietaagonz': 1, 'larinoar': 1, 'liberal.noticias': 1, 'maaydelara': 1, 'margaritarojoc': 3, 'piterpaulin': 1, 'qntlc': 3, 'sandrabronzina': 16, 'tbfrescue': 1, 'timballard89': 16, 'timballardfoundationecuador': 1}
+pairs that ever meet: 40 of 105
+|Aut(N)| = 288
+orbits: [['ivetteavaria', 'larinoar', 'maaydelara'], ['julietaagonz', 'liberal.noticias', 'piterpaulin'], ['margaritarojoc', 'qntlc'], ['sandrabronzina', 'timballard89'], ['tbfrescue', 'timballardfoundationecuador'], ['agustinlaje'], ['dramariajosemancino'], ['expofamily.cl']]
