@@ -1,0 +1,40 @@
+TB grid: 3684 posts, 1004 blocks with >=2 points, 424 points
+[base] posts=1004 points=424 |Aut|=20006036652754261866736222092656640 twin_classes=64
+   sandrabronzina: posts=16 class_size=1 class=['sandrabronzina']
+   expofamily.cl: posts=11 class_size=1 class=['expofamily.cl']
+   twin>2/touching: ['camilla_esepas', 'institutobasta', 'protejaseusfilhos', 'thaisrocha.p', 'trmconsulting']
+   twin>2/touching: ['adrianacatanoofficial', 'imagenentertainment', 'somoslarevista', 'unscriptedwithadri']
+   twin>2/touching: ['ali_the_lor', 'joanofjudea', 'keidardoron', 'mansor_ashkar']
+   twin>2/touching: ['indiario', 'josecabanpr', 'ralyantoxiospr', 'republican_latina']
+   twin>2/touching: ['alanserique', 'marcella_bacellar', 'patrickmeloalcantara']
+   twin>2/touching: ['andres.fearless', 'fearless.brothers', 'karim.fearless']
+[no_ef_blocks] posts=997 points=418 |Aut|=60018109958262785600208666277969920 twin_classes=64
+   sandrabronzina: posts=11 class_size=1 class=['sandrabronzina']
+   expofamily.cl: posts=4 class_size=1 class=['expofamily.cl']
+   twin>2/touching: ['camilla_esepas', 'institutobasta', 'protejaseusfilhos', 'thaisrocha.p', 'trmconsulting']
+   twin>2/touching: ['adrianacatanoofficial', 'imagenentertainment', 'somoslarevista', 'unscriptedwithadri']
+   twin>2/touching: ['ali_the_lor', 'joanofjudea', 'keidardoron', 'mansor_ashkar']
+   twin>2/touching: ['indiario', 'josecabanpr', 'ralyantoxiospr', 'republican_latina']
+   twin>2/touching: ['alanserique', 'marcella_bacellar', 'patrickmeloalcantara']
+   twin>2/touching: ['andres.fearless', 'fearless.brothers', 'karim.fearless']
+[no_ef_point] posts=1004 points=423 |Aut|=20006036652754261866736222092656640 twin_classes=64
+   sandrabronzina: posts=16 class_size=1 class=['sandrabronzina']
+   expofamily.cl: absent
+   twin>2/touching: ['camilla_esepas', 'institutobasta', 'protejaseusfilhos', 'thaisrocha.p', 'trmconsulting']
+   twin>2/touching: ['adrianacatanoofficial', 'imagenentertainment', 'somoslarevista', 'unscriptedwithadri']
+   twin>2/touching: ['ali_the_lor', 'joanofjudea', 'keidardoron', 'mansor_ashkar']
+   twin>2/touching: ['indiario', 'josecabanpr', 'ralyantoxiospr', 'republican_latina']
+   twin>2/touching: ['alanserique', 'marcella_bacellar', 'patrickmeloalcantara']
+   twin>2/touching: ['andres.fearless', 'fearless.brothers', 'karim.fearless']
+
+== union with sandra's grid ==
+merged: 6870 posts, 1347 blocks, 631 points
+[tb+sandra] posts=1347 points=631 |Aut|=167822799113587623129398406536236231557120 twin_classes=87
+   sandrabronzina: posts=249 class_size=1 class=['sandrabronzina']
+   expofamily.cl: posts=26 class_size=1 class=['expofamily.cl']
+   twin>2/touching: ['camilla_esepas', 'institutobasta', 'protejaseusfilhos', 'thaisrocha.p', 'trmconsulting']
+   twin>2/touching: ['adrianacatanoofficial', 'imagenentertainment', 'somoslarevista', 'unscriptedwithadri']
+   twin>2/touching: ['ali_the_lor', 'joanofjudea', 'keidardoron', 'mansor_ashkar']
+   twin>2/touching: ['indiario', 'josecabanpr', 'ralyantoxiospr', 'republican_latina']
+   twin>2/touching: ['48contadoallan', 'luis.lacombe', 'maxcardosobr']
+   twin>2/touching: ['alanserique', 'marcella_bacellar', 'patrickmeloalcantara']
