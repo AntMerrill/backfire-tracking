@@ -1,0 +1,53 @@
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  out of bounds vertex number
+------------------------------------------------------------------------
+/home/hogan/miniforge3/envs/sage/lib/python3.13/site-packages/cysignals/signals.cpython-313-x86_64-linux-gnu.so(+0x8677) [0x71e1edac5677]
+/home/hogan/miniforge3/envs/sage/lib/python3.13/site-packages/cysignals/signals.cpython-313-x86_64-linux-gnu.so(+0x8737) [0x71e1edac5737]
+/home/hogan/miniforge3/envs/sage/lib/python3.13/site-packages/cysignals/signals.cpython-313-x86_64-linux-gnu.so(+0x8af8) [0x71e1edac5af8]
+/usr/lib/x86_64-linux-gnu/libc.so.6(+0x45cb0) [0x71e1ee645cb0]
+/usr/lib/x86_64-linux-gnu/libc.so.6(pthread_kill+0x11c) [0x71e1ee6a61ac]
+/usr/lib/x86_64-linux-gnu/libc.so.6(gsignal+0x1e) [0x71e1ee645b7e]
+/usr/lib/x86_64-linux-gnu/libc.so.6(abort+0x27) [0x71e1ee6288ec]
+/home/hogan/miniforge3/envs/sage/lib/python3.13/site-packages/sage/libs/ntl/../../../../../libstdc++.so.6(+0xb2cd2) [0x71e1e78b2cd2]
+/home/hogan/miniforge3/envs/sage/lib/python3.13/site-packages/sage/libs/ntl/../../../../../libstdc++.so.6(+0xc5a1a) [0x71e1e78c5a1a]
+/home/hogan/miniforge3/envs/sage/lib/python3.13/site-packages/sage/libs/ntl/../../../../../libstdc++.so.6(_ZSt10unexpectedv+0x0) [0x71e1e78b284d]
+/home/hogan/miniforge3/envs/sage/lib/python3.13/site-packages/sage/libs/ntl/../../../../../libstdc++.so.6(+0xc5cb7) [0x71e1e78c5cb7]
+/home/hogan/miniforge3/envs/sage/lib/python3.13/site-packages/sage/graphs/../../../../libbliss.so(+0x887d) [0x71e17627287d]
+/home/hogan/miniforge3/envs/sage/lib/python3.13/site-packages/sage/graphs/bliss.cpython-313-x86_64-linux-gnu.so(+0xbf5c) [0x71e17629bf5c]
+/home/hogan/miniforge3/envs/sage/lib/python3.13/site-packages/sage/graphs/bliss.cpython-313-x86_64-linux-gnu.so(+0xfe89) [0x71e17629fe89]
+/home/hogan/miniforge3/envs/sage/lib/python3.13/site-packages/sage/graphs/bliss.cpython-313-x86_64-linux-gnu.so(+0x13460) [0x71e1762a3460]
+/home/hogan/miniforge3/envs/sage/bin/python(PyObject_Vectorcall+0x2e) [0x55764f058f6e]
+/home/hogan/miniforge3/envs/sage/bin/python(_PyEval_EvalFrameDefault+0x8ec4) [0x55764f06ee84]
+/home/hogan/miniforge3/envs/sage/bin/python(PyEval_EvalCode+0x99) [0x55764f131d09]
+/home/hogan/miniforge3/envs/sage/bin/python(+0xdea17) [0x55764ef7ea17]
+/home/hogan/miniforge3/envs/sage/bin/python(+0x1dfacc) [0x55764f07facc]
+/home/hogan/miniforge3/envs/sage/bin/python(PyObject_Vectorcall+0x2e) [0x55764f058f6e]
+/home/hogan/miniforge3/envs/sage/bin/python(_PyEval_EvalFrameDefault+0x3755) [0x55764f069715]
+/home/hogan/miniforge3/envs/sage/bin/python(PyEval_EvalCode+0x99) [0x55764f131d09]
+/home/hogan/miniforge3/envs/sage/bin/python(+0x2ad74b) [0x55764f14d74b]
+/home/hogan/miniforge3/envs/sage/bin/python(+0x1dfacc) [0x55764f07facc]
+/home/hogan/miniforge3/envs/sage/bin/python(_PyEval_EvalFrameDefault+0x41b7) [0x55764f06a177]
+/home/hogan/miniforge3/envs/sage/bin/python(+0x1e6d8a) [0x55764f086d8a]
+/home/hogan/miniforge3/envs/sage/bin/python(PyObject_CallMethodObjArgs+0xea) [0x55764f0bd74a]
+/home/hogan/miniforge3/envs/sage/bin/python(+0x2a8ef8) [0x55764f148ef8]
+/home/hogan/miniforge3/envs/sage/bin/python(PyImport_ImportModuleLevelObject+0xd9f) [0x55764f0bce1f]
+/home/hogan/miniforge3/envs/sage/bin/python(_PyEval_EvalFrameDefault+0x756d) [0x55764f06d52d]
+/home/hogan/miniforge3/envs/sage/bin/python(PyEval_EvalCode+0x99) [0x55764f131d09]
+/home/hogan/miniforge3/envs/sage/bin/python(+0x2d0292) [0x55764f170292]
+/home/hogan/miniforge3/envs/sage/bin/python(+0x2ccf1e) [0x55764f16cf1e]
+/home/hogan/miniforge3/envs/sage/bin/python(+0x2c984d) [0x55764f16984d]
+/home/hogan/miniforge3/envs/sage/bin/python(+0x2c94b1) [0x55764f1694b1]
+/home/hogan/miniforge3/envs/sage/bin/python(+0x2c928c) [0x55764f16928c]
+/home/hogan/miniforge3/envs/sage/bin/python(Py_RunMain+0x395) [0x55764f1679b5]
+/home/hogan/miniforge3/envs/sage/bin/python(Py_BytesMain+0x35) [0x55764f11ff85]
+/usr/lib/x86_64-linux-gnu/libc.so.6(+0x2a601) [0x71e1ee62a601]
+/usr/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x88) [0x71e1ee62a718]
+/home/hogan/miniforge3/envs/sage/bin/python(+0x27f2f8) [0x55764f11f2f8]
+------------------------------------------------------------------------
+cysignals failed to execute cysignals-CSI: No such file or directory
+------------------------------------------------------------------------
+Unhandled SIGABRT: An abort() occurred.
+This probably occurred because a *compiled* module has a bug
+in it and is not properly wrapped with sig_on(), sig_off().
+Python will now terminate.
+------------------------------------------------------------------------

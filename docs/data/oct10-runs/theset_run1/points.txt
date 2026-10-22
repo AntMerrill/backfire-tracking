@@ -1,0 +1,11 @@
+# SEED by claude — John edits. One point per line: label<TAB>regex (case-insensitive, matched against each post's SRT text).
+# A post "contains" a point if the regex hits anywhere in its transcript. Keep it to ~6-12 points (verifier is brute force).
+Catherine	\b(c|k)ath?[ae]?r[iy]n
+God	\b(god|lord|savior|saviour|jesus|christ)\b
+Utah	\butah\b
+Israel	\b(israel|gaza|hamas|jews?)\b
+Isaiah	\b(isaiah|zion|prophet)
+Backfire	\b(backfire|lawfare)\b
+forgive	forgiv
+war	\bwar\b
+children	\b(child|children|kids)\b

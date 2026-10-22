@@ -1,0 +1,5 @@
+9 accounts, 8 posts, block sizes [0, 1, 2, 3, 5, 6]
+r (posts per account): {'Catherine': 1, 'God': 5, 'Utah': 3, 'Israel': 1, 'Isaiah': 1, 'Backfire': 2, 'forgive': 1, 'war': 3, 'children': 6}
+pairs that ever meet: 26 of 36
+|Aut(N)| = 4
+orbits: [['Catherine', 'forgive'], ['Isaiah', 'Israel'], ['Backfire'], ['God'], ['Utah'], ['children'], ['war']]

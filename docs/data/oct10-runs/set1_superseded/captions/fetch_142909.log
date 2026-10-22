@@ -1,0 +1,35 @@
+/home/hogan/miniforge3/envs/dl_wm/lib/python3.10/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.7.0) or chardet (7.6.0)/charset_normalizer (3.5.1) doesn't match a supported version!
+  warnings.warn(
+Deprecated Feature: Support for Python version 3.10 has been deprecated. Please update to Python 3.11 or above
+[Instagram] Extracting URL: https://www.instagram.com/p/DeViUNBoO8T/
+[Instagram] DeViUNBoO8T: Downloading video info
+[info] DeViUNBoO8T: Downloading 1 format(s): dash-29255422390721642v+dash-29255365717393976a
+[info] Writing '%(description)s' to: captions/DeViUNBoO8T.txt
+[Instagram] Extracting URL: https://www.instagram.com/p/DeVw1l9Ivuh/
+[Instagram] DeVw1l9Ivuh: Downloading video info
+[info] DeVw1l9Ivuh: Downloading 1 format(s): dash-1901332570852124v+dash-1901328200852561a
+[info] Writing '%(description)s' to: captions/DeVw1l9Ivuh.txt
+[Instagram] Extracting URL: https://www.instagram.com/p/DeVwi1QIjTD/
+[Instagram] DeVwi1QIjTD: Downloading video info
+[info] DeVwi1QIjTD: Downloading 1 format(s): dash-4489943197942373v+dash-4489938357942857a
+[info] Writing '%(description)s' to: captions/DeVwi1QIjTD.txt
+[Instagram] Extracting URL: https://www.instagram.com/p/DeV2P_UIf8b/
+[Instagram] DeV2P_UIf8b: Downloading video info
+[info] DeV2P_UIf8b: Downloading 1 format(s): dash-1139196132014850v+dash-1139194125348384a
+[info] Writing '%(description)s' to: captions/DeV2P_UIf8b.txt
+[Instagram] Extracting URL: https://www.instagram.com/p/DeXgRo8Sb9b/
+[Instagram] DeXgRo8Sb9b: Downloading video info
+[info] DeXgRo8Sb9b: Downloading 1 format(s): dash-2166059621002831v+dash-2166057857669674a
+[info] Writing '%(description)s' to: captions/DeXgRo8Sb9b.txt
+[Instagram] Extracting URL: https://www.instagram.com/p/DeXsK0dBBB6/
+[Instagram] DeXsK0dBBB6: Downloading video info
+[info] DeXsK0dBBB6: Downloading 1 format(s): dash-1615444763640553v+dash-1615439203641109a
+[info] Writing '%(description)s' to: captions/DeXsK0dBBB6.txt
+[Instagram] Extracting URL: https://www.instagram.com/p/DeXxtYkhN_t/
+[Instagram] DeXxtYkhN_t: Downloading video info
+[info] DeXxtYkhN_t: Downloading 1 format(s): dash-1474408018087442v+dash-1474407778087466a
+[info] Writing '%(description)s' to: captions/DeXxtYkhN_t.txt
+[Instagram] Extracting URL: https://www.instagram.com/p/DeYSftAI_6-/
+[Instagram] DeYSftAI_6-: Downloading video info
+[info] DeYSftAI_6-: Downloading 1 format(s): dash-1657425822592727v+dash-1657425075926135a
+[info] Writing '%(description)s' to: captions/DeYSftAI_6-.txt
