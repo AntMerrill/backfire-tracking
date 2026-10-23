@@ -1,0 +1,5 @@
+N1: 113 accounts x 354 posts;  N2: 15 accounts x 16 posts
+accounts in both: ['timballard89']
+  timballard89: on 7 of N1's posts, 16 of N2's posts -> 7 x 16 = 112
+<N1, N2> = 112
+post pairs (one from each) that share an account: 112 of 5664
