@@ -1,0 +1,58 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Two Worlds, One Vertex</title>
+<meta property="og:title" content="Two bot rooms. One door.">
+<meta property="og:description" content="latterdayavenger's grid (113 accounts) and the first 16 Tim Ballard × sandrabronzina co-posts (15 accounts) share exactly one account: timballard89. Inner product 7 × 16 = 112.">
+<meta property="og:image" content="https://antmerrill.github.io/backfire-tracking/img/two-rooms/fb_card_two_rooms.png"><meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--bg:#12151c;--panel:#171b24;--ink:#e6e8ee;--mute:#98a1b3;--rule:#2a3242;--gold:#e0b93a;--blue:#6ebef0}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,sans-serif;padding:28px 16px}
+main{max-width:1100px;margin:0 auto} h1{margin:0 0 4px;font-size:34px;line-height:1.2} .sub{color:var(--mute);margin:0 0 18px}
+a{color:#7fb4dc} .big{color:var(--gold);font-size:24px;font-weight:700} p{max-width:860px} h2{font-size:22px;margin:30px 0 8px;color:var(--gold)}
+img.full{max-width:100%;border:1px solid var(--rule);border-radius:6px}
+table.t{border-collapse:collapse;margin:10px 0;font-size:15px} .t td,.t th{border-bottom:1px solid var(--rule);padding:6px 10px;text-align:left} .t th{color:var(--gold);font-weight:normal}
+.panel{background:var(--panel);border:1px solid var(--rule);border-radius:8px;padding:14px 18px;margin:14px 0;max-width:900px}
+code,pre{background:#1c212c;border-radius:4px} pre{padding:10px;overflow-x:auto;font-size:14px} .foot{color:var(--mute);font-size:14px;margin-top:24px}
+</style></head><body><main>
+<style>
+.fig{position:relative;width:100%;max-width:1080px;margin:18px auto}
+.fig img,.fig svg.ov{display:block;width:100%;height:auto}
+.fig svg.ov{position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .25s}
+#bs:checked ~ .fig svg.ov{opacity:1}
+label.tog{font:15px/1.4 var(--sans,system-ui);color:var(--muted);cursor:pointer}
+</style>
+<h1>Two worlds, one vertex</h1>
+<p class="sub">The Chadverse core (latterdayavenger's 7 group posts) · Bronzina's Coset (the first 16 timballard89 × sandrabronzina co-posts) · computed by claude, design by John · Oct 26, 2026</p>
+<p class="big">Two groups of accounts, joined at a single point. That point is TB: the only account in both, on 7 of 7 and 16 of 16 posts. No post is in both.</p>
+<input type="checkbox" id="bs"> <label class="tog" for="bs">Show Insta's owner blind spot</label>
+<div class="fig">
+<img src="data/one-vertex/two_worlds_one_vertex.svg" alt="Left: a pyramid of 14 blue dots (the Chadverse core) with its tip at a gold dot labelled TB. Right: a file cabinet whose drawers hold 15 pink folders (Bronzina's Coset); its top-left corner is the same gold dot. The two shapes touch only there.">
+<svg class="ov" viewBox="0 0 1080 720" aria-hidden="true">
+ <circle cx="449.4" cy="321" r="21" fill="none" stroke="#ff8a3d" stroke-width="3" stroke-dasharray="6 4"/>
+ <path d="M330 560 C 360 470, 420 400, 443 342" fill="none" stroke="#ff8a3d" stroke-width="2"/>
+ <rect x="18" y="560" width="500" height="72" rx="8" fill="#141a2b" stroke="#ff8a3d" stroke-width="1.5" opacity="0.97"/>
+ <g font-family="DejaVu Sans, sans-serif" font-size="11.5" fill="#eef0f6">
+  <text x="30" y="579" font-weight="bold" fill="#ff8a3d" font-size="13">Insta's owner blind spot</text>
+  <text x="30" y="597">Instagram leaves a post's owner off its own collaborator list. LDA owns all 7</text>
+  <text x="30" y="613">Chadverse posts, so we add the owner from each post itself. The cabinet's</text>
+  <text x="30" y="627">rows include each post's owner too.</text>
+ </g>
+</svg>
+</div>
+<table class="t">
+<tr><th></th><th>Chadverse core</th><th>Bronzina's Coset</th></tr>
+<tr><td>accounts</td><td>14</td><td>15</td></tr>
+<tr><td>posts</td><td>7</td><td>16</td></tr>
+<tr><td>TB is on</td><td>7 of 7</td><td>16 of 16</td></tr>
+<tr><td>in both</td><td colspan="2">1 account (TB) · 0 posts</td></tr>
+</table>
+<h2>What the math says</h2>
+<p>Join two accounts with a line when they <b>co-post</b> (are on at least one post together, as owner or collaborator). The two worlds then make one graph of 28 accounts and 93 lines.</p>
+<div class="panel"><b>Graph theory.</b> TB is the only <i>cut vertex</i>: take him out and the graph falls into 2 pieces (14 − 1 and 15 − 1 accounts). The graph's two <i>blocks</i> (pieces with no single weak point) are the two worlds, and they share only TB. All 13 × 14 = 182 pairs with one account on each side are joined only through him; his betweenness is 225.5, the next highest 32.2.<br><br>
+<b>Circuit theory.</b> Read every line as a 1-ohm resistor. The two worlds are wired <i>in series</i> at TB: for a in one world and b in the other, R(a, b) = R(a, TB) + R(TB, b). No loop crosses between the worlds, so current from one side to the other has exactly one door.</div>
+<p><b>Conclusion.</b> In these posts, TB alone holds the two worlds together: one shared account, no shared post, no other bridge. That is a fact about the captured posts, not a claim about who runs which account.</p>
+<p>The picture: the pyramid's tiers and the cabinet's drawers count posts (nearer the tip, or higher drawer, = on more posts); a pyramid line goes up to the next account whose posts contain all of its posts. Letters A–K and the initials follow <a href="who-went-first.html">Who went first</a> and <a href="holland24.html">Holland 24</a>. This page extends <a href="two-rooms.html">Two rooms, one door</a> (same overlap, counted against latterdayavenger's whole grid).</p>
+<h2>Check it yourself</h2>
+<p><code>python3 docs/data/one-vertex/one_vertex.py</code> — plain Python 3, no packages. It reads only <a href="data/who-went-first/incidence_matrix.csv">who-went-first/incidence_matrix.csv</a> (+ the host, latterdayavenger, on all 7) and <a href="data/holland24/matrix_first16.csv">holland24/matrix_first16.csv</a>. Output: <a href="data/one-vertex/one_vertex_output.txt">one_vertex_output.txt</a>; hashes in <a href="data/one-vertex/SHA256SUMS">SHA256SUMS</a>.</p>
+<p>Posted to Facebook Oct 26, 2026: <a href="https://www.facebook.com/merrill.p.jensen/posts/10234877580260641">"there's only one. THE vertex."</a></p>
+<p class="foot">Our captures only: the 7 group posts and the first 16 co-posts. The two worlds may meet in posts we have not captured. A live site gives a slightly different set each time.</p>
+</main></body></html>

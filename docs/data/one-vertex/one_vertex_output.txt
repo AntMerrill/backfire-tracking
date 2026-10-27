@@ -1,0 +1,8 @@
+W1 (Chadverse core): 14 accounts x 7 posts;  W2 (Bronzina's Coset): 15 accounts x 16 posts
+posts in both: 0   accounts in both: ['timballard89']
+  timballard89: on 7 of 7 W1 posts, 16 of 16 W2 posts
+accounts: 28  links: 93
+pieces: 1   cut vertices: ['timballard89']   pieces without TB: 2
+links between the worlds not through TB: 0
+betweenness: timballard89 225.5, next 32.2
+cross-world pairs (one account from each side, not TB): 13 x 14 = 182, every one through TB
