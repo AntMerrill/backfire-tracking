@@ -1,0 +1,251 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="O grupo de simetrias que preservam a ordem das primeiras 16 copostagens de timballard89 e sandrabronzina tem ordem 24, mas nada dele vem da coorte. A estrutura da coorte é um hub com uma equipe em rodízio, rara sob um modelo nulo de margens fixas.">
+<meta property="og:type" content="article"><meta property="og:title" content="Um Hub e um Rodízio">
+<meta property="og:description" content="Tim Ballard e sandrabronzina: o mesmo D6 do primeiro objeto de Holland, com um novo segundo gêmeo, e um hub com uma equipe em rodízio que 20.000 embaralhamentos nunca reproduziram.">
+<meta property="og:image" content="https://antmerrill.github.io/backfire-tracking/img/bronzina-hub/og_bronzina_hub.png"><meta name="twitter:card" content="summary_large_image">
+<title>Um Hub e um Rodízio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap">
+<script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]},svg:{fontCache:"global"}};</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.min.js"></script>
+<style>
+/* Same stylesheet as rooms.html. */
+:root{
+  --paper:#fbfaf6; --ink:#1c1d22; --muted:#5d6070; --rule:#d9d6cc; --accent:#6b2d2d; --code:#f2efe6; --hl:#efe6cf;
+  --serif:"EB Garamond",Garamond,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --label:"IBM Plex Sans Condensed","Arial Narrow",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#15161a; --ink:#e8e6df; --muted:#a6a8b3; --rule:#33343c; --accent:#e0a39a; --code:#1e2026; --hl:#2a2619; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#15161a; --ink:#e8e6df; --muted:#a6a8b3; --rule:#33343c; --accent:#e0a39a; --code:#1e2026; --hl:#2a2619; color-scheme:dark}
+body{background:var(--paper);color:var(--ink);font:20px/1.6 var(--serif);padding-inline:16px;padding-block:36px 80px;margin:0}
+main{max-width:740px;margin:0 auto}
+h1{font:600 clamp(30px,5.4vw,44px)/1.15 var(--serif);text-align:center;margin:0 0 .4em;text-wrap:balance}
+.byline{text-align:center;font:500 15px var(--label);letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+h2{font:600 26px/1.25 var(--serif);margin:2em 0 .5em;border-bottom:1px solid var(--rule);padding-bottom:.2em}
+h2 .n{color:var(--accent);margin-right:.4em}
+p{margin:.65em 0} a{color:var(--accent)}
+.abs{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:.8em 0;margin:1.4em 0;font-size:18.5px}
+.abs b{font-variant:small-caps;letter-spacing:.04em}
+.st{margin:1.1em 0;padding:.2em 0 .2em 1em;border-left:3px solid var(--accent)}
+.st > .h{font-weight:600;font-variant:small-caps;letter-spacing:.03em}
+.st.def{border-left-color:var(--muted)}
+.pf{margin:.4em 0 1.1em;padding-left:1em;font-size:19px}
+.pf::before{content:"Proof. ";font-style:italic}
+.pf .qed{float:right}
+.tw{overflow-x:auto;margin:.8em 0}
+table{border-collapse:collapse;margin:0 auto;font:400 17px var(--serif);font-variant-numeric:tabular-nums}
+th,td{border-bottom:1px solid var(--rule);padding:.32em .7em;text-align:left;vertical-align:top}
+th{font:600 13px var(--label);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+pre{background:var(--code);border:1px solid var(--rule);border-radius:4px;padding:12px 14px;overflow-x:auto;font:400 13.5px/1.55 var(--mono);color:var(--ink)}
+.note{background:var(--hl);padding:.7em 1em;border-radius:4px;font-size:18px}
+.acct{font-family:var(--mono);font-size:.86em}
+ol li,ul li{margin:.3em 0}
+figure{margin:1.4em 0}figure > img{width:100%;height:auto;display:block;border:1px solid var(--rule);border-radius:4px}
+figcaption{font-size:16px;color:var(--muted);margin-top:.4em}
+.pull{font-style:italic;font-size:26px;text-align:center;margin:1.2em 0 .2em;color:var(--accent)}
+.plain{background:var(--hl);padding:.6em 1em;border-radius:4px;font-size:18.5px;margin:.6em 0 1.4em}
+figure.thm > img{border:none;border-radius:0}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+</style></head><body><main>
+
+<h1>Um Hub e um Rodízio: a Coorte Bronzina em \(\mathcal S_{16}\)</h1>
+<div class="byline">Complemento a <a href="rooms.html">“Rooms”</a> e <a href="rigid-grid.html">“A Rigid Grid and a Relay”</a> · 29 de outubro de 2026 · pré-publicação, sem revisão por pares · <a href="bronzina-hub.html">English</a></div>
+
+<p class="note"><b>Sobre esta versão.</b> O texto está em português. Os enunciados matemáticos (teoremas, proposições e suas provas) e os cartões
+ficam em inglês, como imagens, para que sejam idênticos aos da <a href="bronzina-hub.html">versão em inglês</a>. Cada um vem seguido de um quadro
+<b>“Em palavras simples”</b> que diz o que ele significa.</p>
+
+<div class="abs"><b>Resumo.</b> Estudamos a estrutura de incidência \(\mathcal S_{16}\) cujos blocos são as primeiras 16 copostagens de
+<span class="acct">timballard89</span> e <span class="acct">sandrabronzina</span>, e cujos pontos são as 15 contas presentes nelas. Provamos que
+\(\operatorname{Aut}_<(\mathcal S_{16})\cong S_2\times S_3\times S_2\cong D_6\times C_2\), de ordem 24: o \(D_6\) do primeiro objeto de Holland,
+de novo, com um novo segundo gêmeo. Mostramos depois que nenhuma parte desse 24 vem das outras 13 contas (a <em>coorte</em>) agindo de forma
+igual: um fator é forçado pela construção, e os outros dois vêm de contas que aparecem uma única vez. A estrutura está no que <em>não</em> é
+simétrico. Os quatro convidados recorrentes têm linhas distintas duas a duas, todas contidas na linha de uma conta central,
+<span class="acct">expofamily.cl</span>, e restritas a cinco blocos consecutivos. No modelo nulo de margens fixas, cada uma dessas propriedades tem
+probabilidade estimada \(\le 10^{-4}\). Terminamos com a conclusão de John sobre o hub e a equipe, e com a previsão que a derrubaria.</div>
+
+<h2><span class="n">0</span>Notação</h2>
+<p><b>Copostagens</b> = ser dono ou colaborador listado no mesmo post do Instagram.</p>
+<div class="tw"><table>
+<tr><th>aqui</th><th>conta</th><th>\(r\) em \(\mathcal S_{16}\)</th></tr>
+<tr><td>\(p_1\) (TB)</td><td class="acct">timballard89</td><td>16</td></tr>
+<tr><td>\(p_2\) (SB)</td><td class="acct">sandrabronzina</td><td>16</td></tr>
+<tr><td>\(p_3,p_4,p_5\)</td><td class="acct">liberal.noticias, julietaagonz, piterpaulin</td><td>1 cada</td></tr>
+<tr><td>\(p_6\)</td><td class="acct">maaydelara</td><td>1</td></tr>
+<tr><td>\(p_7,p_8\)</td><td class="acct">tbfrescue, timballardfoundationecuador</td><td>1 cada</td></tr>
+<tr><td>\(p_9\)</td><td class="acct">larinoar</td><td>1</td></tr>
+<tr><td>\(p_{10}=x\)</td><td class="acct">expofamily.cl</td><td>5</td></tr>
+<tr><td>\(p_{11}\)</td><td class="acct">dramariajosemancino</td><td>4</td></tr>
+<tr><td>\(p_{12}\)</td><td class="acct">margaritarojoc</td><td>3</td></tr>
+<tr><td>\(p_{13}\)</td><td class="acct">qntlc</td><td>3</td></tr>
+<tr><td>\(p_{14}\)</td><td class="acct">agustinlaje</td><td>1</td></tr>
+<tr><td>\(p_{15}\)</td><td class="acct">ivetteavaria</td><td>1</td></tr>
+</table></div>
+<p>A numeração é a do relatório holland24 (ordem de primeira aparição; dentro de um post, o dono primeiro). A <b>coorte</b> é
+\(C=\{p_3,\dots,p_{15}\}\), 13 contas. Os <b>convidados recorrentes</b> são \(R=\{p\in C: r_p\ge 2\}=\{p_{10},p_{11},p_{12},p_{13}\}\). Os blocos são
+\(B_1,\dots,B_{16}\), em ordem de publicação (UTC). Para um ponto \(p\), \(\mathcal B_p=\{i: p\in B_i\}\) é a sua linha, \(r_p=|\mathcal B_p|\), e
+\(\lambda_{pq}=|\mathcal B_p\cap\mathcal B_q|\).</p>
+
+<h2><span class="n">1</span>A estrutura</h2>
+<div class="st def"><span class="h">Definição 1.1.</span> \(\Omega=(\alpha_1<\dots<\alpha_{16})\) é o conjunto dos primeiros 16 posts copostados por
+\(p_1\) e \(p_2\), de 2025-11-04 a 2026-10-16, a partir das nossas capturas das linhas do tempo das duas contas. \(B_i\) é o conjunto das contas
+que copostam \(\alpha_i\), com o dono incluído (o Instagram deixa o dono fora da lista de créditos). \(\mathcal S_{16}=(P,(B_1,\dots,B_{16}))\), com
+\(P=\bigcup B_i\).</div>
+<div class="tw"><table>
+<tr><th>\(B\)</th><th>data</th><th>\(B_i\setminus\{p_1,p_2\}\)</th></tr>
+<tr><td>1</td><td>2025-11-04</td><td>\(\varnothing\)</td></tr>
+<tr><td>2</td><td>2025-11-21</td><td>\(p_3,p_4,p_5\)</td></tr>
+<tr><td>3</td><td>2026-05-27</td><td>\(p_6\)</td></tr>
+<tr><td>4–7</td><td>2026-05-27 a 05-29</td><td>\(\varnothing\)</td></tr>
+<tr><td>8</td><td>2026-05-30</td><td>\(p_7,p_8\)</td></tr>
+<tr><td>9</td><td>2026-05-30</td><td>\(p_9\)</td></tr>
+<tr><td>10</td><td>2026-06-02</td><td>\(\varnothing\)</td></tr>
+<tr><td>11</td><td>2026-08-08</td><td>\(p_{10},p_{11},p_{12},p_{13}\)</td></tr>
+<tr><td>12</td><td>2026-08-19</td><td>\(p_{10},p_{12},p_{13},p_{14}\)</td></tr>
+<tr><td>13</td><td>2026-08-27</td><td>\(p_{10},p_{11},p_{12}\)</td></tr>
+<tr><td>14</td><td>2026-09-15</td><td>\(p_{10},p_{11}\)</td></tr>
+<tr><td>15</td><td>2026-10-05</td><td>\(p_{10},p_{11},p_{13}\)</td></tr>
+<tr><td>16</td><td>2026-10-16</td><td>\(p_{15}\)</td></tr>
+</table></div>
+<p>Contagens: \(v=15\), \(b=16\). O número de convidados por bloco é \((0,3,1,0,0,0,0,2,1,0,4,4,3,2,3,1)\), com soma \(24=\sum_{p\in C}r_p\).</p>
+<div class="st def"><span class="h">Definição 1.2</span> (<a href="rooms.html">Rooms</a>, Def. 2.1–2.2). As <em>salas</em> são as classes de
+\(p\sim q\iff\mathcal B_p=\mathcal B_q\), isto é, as classes de linhas iguais. \(\operatorname{Aut}_<(\mathcal S_{16})\) é o conjunto dos
+\(\sigma\in\operatorname{Sym}(P)\) para os quais alguma bijeção \(\pi\) de \(\Omega\) que preserva a ordem satisfaz \(p\in B_i\iff p\sigma\in B_{i\pi}\).</div>
+
+<h2><span class="n">2</span>O grupo</h2>
+<figure class="thm"><img src="img/bronzina-hub/2026-10-29_131952_thm_2_1.png" alt="Teorema 2.1 e prova (em inglês): o grupo de simetrias que preservam a ordem de S16 é Sym dos dois anfitriões vezes Sym dos três convidados de B2 vezes Sym das duas contas de B8, de ordem 24."></figure>
+<p class="plain"><b>Em palavras simples.</b> Uma simetria só pode trocar contas que estão exatamente nos mesmos posts. Há três grupos assim: os dois
+anfitriões (em todos os posts), os três convidados de 21 de novembro de 2025 e as duas contas institucionais de TB em 30 de maio de 2026. Isso dá
+2 × 6 × 2 = 24 simetrias.</p>
+<p><em>Verificação.</em> <code>s16_check.py</code> reconstrói as linhas a partir de <code>matrix_first16.csv</code> e imprime as mesmas três salas e o
+24, como o relatório holland24 fez em 2026-10-22.</p>
+<div class="st"><span class="h">Observação 2.2.</span> Ignorando a ordem no tempo, \(|\operatorname{Aut}(\mathcal S_{16})|=288\). O fator extra de 12
+vem de \(\operatorname{Sym}\{p_6,p_9,p_{15}\}\) (os três blocos com um único convidado) e de \((p_{12}\,p_{13})\) com \(B_{13}\leftrightarrow B_{15}\).
+Nenhum dos dois respeita a ordem no tempo.</div>
+
+<figure class="thm"><img src="img/bronzina-hub/2026-10-29_131952_prop_2_3.png" alt="Proposição 2.3 e prova (em inglês): o grupo é D6 vezes C2; o D6 é o par de gêmeos vezes o trio, a mesma forma do primeiro objeto de Holland S7 (timballard89 e latterdaychad, fevereiro a abril de 2026)."></figure>
+<p class="plain"><b>Em palavras simples.</b> Dois gêmeos em todos os posts, mais três convidados num único post que podem trocar de lugar entre si,
+formam um grupo de 12 simetrias chamado D₆. É exatamente o primeiro objeto de Holland que encontramos, com <span class="acct">latterdaychad</span>
+como segundo gêmeo. Aqui ele volta com <span class="acct">sandrabronzina</span> nesse lugar.</p>
+<div class="tw"><table>
+<tr><th></th><th>primeiro objeto de Holland, \(\mathcal S_7\)</th><th>este artigo, \(\mathcal S_{16}\)</th></tr>
+<tr><td>dois gêmeos (todos os blocos)</td><td class="acct">timballard89, latterdaychad</td><td class="acct">timballard89, sandrabronzina</td></tr>
+<tr><td>três num único bloco</td><td>\(p_{10},p_{11},p_{12}\), 2026-04-10</td><td class="acct">liberal.noticias, julietaagonz, piterpaulin<br><span style="font-family:var(--serif)">2025-11-21</span></td></tr>
+<tr><td>grupo</td><td>\(D_6\), ordem 12</td><td>\(D_6\times C_2\), ordem 24</td></tr>
+</table></div>
+<figure><img src="img/bronzina-hub/2026-10-29_131918_card4_same_d6.png" alt="Duas grades lado a lado. À esquerda, o primeiro objeto de Holland: timballard89 e latterdaychad nos 7 posts do grupo, três contas juntas apenas em B6. À direita, este artigo: timballard89 e sandrabronzina nas 16 copostagens, liberal.noticias, julietaagonz e piterpaulin juntas apenas em B2."><figcaption>Cartão 4 (em inglês). O mesmo \(D_6\), um novo segundo gêmeo.</figcaption></figure>
+<p>O mesmo \(D_6\) aparece nos dois objetos. Só \(p_1\) é comum aos dois. O lugar do segundo gêmeo passou de <span class="acct">latterdaychad</span>
+para <span class="acct">sandrabronzina</span>: o revezamento de <a href="rigid-grid.html">A Rigid Grid and a Relay</a>. Cada fator, sozinho, sai
+barato (§3): é forçado pela construção ou vem de um único post. O que passa de um objeto para o outro é a forma inteira.</p>
+
+<h2><span class="n">3</span>O 24 não diz nada sobre a coorte</h2>
+<p>A leitura que queremos testar é esta. Uma sala de contas que voltam juntas é um conjunto de contas que o registro não consegue distinguir, e é
+assim que se parece um conjunto adicionado em bloco por um único operador. Os lemas abaixo mostram que \(\mathcal S_{16}\) não contém nenhuma sala
+desse tipo.</p>
+<figure><img src="img/bronzina-hub/2026-10-29_124855_card1_where_24_comes_from.png" alt="Grade de incidência das 15 contas nas 16 copostagens. Salas: os dois anfitriões nas 16; três contas apenas em B2; duas contas institucionais de TB apenas em B8. Os convidados recorrentes, expofamily.cl e uma equipe de três, estão todos de B11 a B15 e não são gêmeos.">
+<figcaption>Cartão 1 (em inglês). A grade inteira, e as três salas que dão o 24.</figcaption></figure>
+<div class="st"><span class="h">Lema 3.1</span> (a sala dos anfitriões é forçada). Em qualquer estrutura construída como na Def. 1.1, \(p_1\) e
+\(p_2\) estão em todos os blocos, então \(\{p_1,p_2\}\) está contido numa sala. O fator \(\operatorname{Sym}\{p_1,p_2\}\) não traz informação.</div>
+<div class="pf">Pela Definição 1.1, todo \(\alpha_i\) é copostado por \(p_1\) e por \(p_2\).<span class="qed">∎</span></div>
+<div class="st"><span class="h">Lema 3.2</span> (salas de um só bloco saem baratas). Se \(k\ge2\) pontos estão cada um em exatamente um bloco, e é
+o mesmo bloco, eles formam uma sala, e \(S_k\le\operatorname{Aut}_<\). Todo bloco com \(k\) convidados avulsos contribui com \(k!\), sejam quem
+forem os convidados.</div>
+<div class="pf">As linhas deles são todas iguais a \(\{i\}\).<span class="qed">∎</span></div>
+<p>As salas \(\{p_3,p_4,p_5\}\) e \(\{p_7,p_8\}\) são desse tipo: um bloco cada (\(B_2\) e \(B_8\)). Além disso, \(\{p_7,p_8\}\) são as próprias
+contas institucionais de TB num post do próprio TB (\(\alpha_8\) é o único dos 16 cujo dono é \(p_1\)).</p>
+<figure class="thm"><img src="img/bronzina-hub/2026-10-29_131952_cor_3_3.png" alt="Corolário 3.3 e prova (em inglês): nenhuma sala contém dois convidados recorrentes; as quatro linhas recorrentes são distintas duas a duas."></figure>
+<p class="plain"><b>Em palavras simples.</b> Nenhum par de contas que volta mais de uma vez é intercambiável. Então o 24 não diz nada sobre o
+comportamento da coorte.</p>
+<p>Portanto \(\mathcal S_{16}\) <b>não</b> mostra um conjunto clonado. O 24 é feito de dois fatores baratos (3.2) e um fator forçado (3.1).</p>
+
+<h2><span class="n">4</span>Onde está a estrutura</h2>
+<figure class="thm"><img src="img/bronzina-hub/2026-10-29_131952_prop_4_1.png" alt="Proposição 4.1 e prova (em inglês): aninhamento, hub, janela e rodízio dos convidados recorrentes de B11 a B15."></figure>
+<p class="plain"><b>Em palavras simples.</b> Sempre que um convidado recorrente está num post, <span class="acct">expofamily.cl</span> também está.
+Todos esses posts são cinco seguidos, de 8 de agosto a 5 de outubro de 2026. As três contas da equipe ocupam, cada uma, um conjunto diferente de
+assentos.</p>
+<figure><img src="img/bronzina-hub/2026-10-29_124855_card2_hub_and_rotation.png" alt="Grade de B11 a B15: expofamily.cl nos cinco; dramariajosemancino em quatro, margaritarojoc em três, qntlc em três, cada uma numa combinação diferente; agustinlaje uma vez, em B12.">
+<figcaption>Cartão 2 (em inglês). A janela Expo: um hub, uma equipe em rodízio.</figcaption></figure>
+<p>O padrão, então, é <b>um hub fixo e uma equipe em rodízio</b>: \(x\) em todos os posts da janela, e os outros assentos preenchidos a partir de
+\(\{p_{11},p_{12},p_{13}\}\) em combinações que mudam, mais um único convidado de fora (\(p_{14}\), em \(B_{12}\)).</p>
+<figure class="thm"><img src="img/bronzina-hub/2026-10-29_131952_prop_4_2.png" alt="Proposição 4.2 e prova (em inglês): acrescentar a 17ª copostagem mantém a ordem 24 e o aninhamento, e quebra a janela e a troca sem ordem."></figure>
+<p class="plain"><b>Em palavras simples.</b> A 17ª copostagem (20 de outubro de 2026) repete os assentos de 5 de outubro. O 24 e o hub continuam;
+só a janela de cinco posts seguidos é interrompida.</p>
+
+<h2><span class="n">5</span>É acaso? O modelo nulo de margens fixas</h2>
+<figure class="thm"><img src="img/bronzina-hub/2026-10-29_131952_null_5.png" alt="Definição 5.1 e Proposição 5.2 (em inglês): o modelo nulo de margens fixas e as probabilidades estimadas de S1 a S4 em 20.000 amostras."></figure>
+<p class="plain"><b>Em palavras simples.</b> Embaralhamos 20.000 vezes quem ocupa qual post, mantendo em quantos posts cada conta está e quantos
+convidados cada post tem. Gêmeos entre os convidados recorrentes quase nunca aparecem por acaso, então a ausência deles não prova nada. A forma
+hub-e-janela apareceu no máximo 2 vezes em 20.000.</p>
+<figure><img src="img/bronzina-hub/2026-10-29_124855_card3_null_model.png" alt="Tabela: gêmeos entre os convidados recorrentes, não; 99,4 por cento dos embaralhamentos também não; convidados recorrentes em apenas 5 posts, 1 em 10.000; esses posts são consecutivos, 0 em 20.000; uma conta em todos os posts em que as outras estão, 1 em 10.000.">
+<figcaption>Cartão 3 (em inglês). As quatro formas em 20.000 embaralhamentos.</figcaption></figure>
+<p><b>Consequências.</b></p>
+<ol>
+<li><b>A falta de um clone não é evidência em nenhum sentido.</b> Uma sala recorrente quase nunca ocorre sob \(\mathcal N\)
+(\(P(S_1=0)\approx0{,}99\)), então a ausência dela é o que o acaso prevê. Linhas gêmeas são raras com essas margens, e a ausência delas não
+inocenta ninguém.</li>
+<li><b>O hub não é acaso.</b> Sob \(\mathcal N\), os convidados recorrentes se espalham por muitos blocos sem nenhum membro em comum. Em
+\(\mathcal S_{16}\) eles estão em cinco posts consecutivos, sob uma conta que está em todos eles. A estrutura da coorte é um <b>hub com
+rodízio</b>, não um conjunto de gêmeos.</li>
+<li><b>A estatística do teste tem de combinar com a operação.</b> Um operador que preenche assentos a partir de um grupo, em rodízio, produz
+\(S_2\)–\(S_4\), não \(S_1\). Um teste de bots que procura só gêmeos daria esta coorte como limpa. <a href="rigid-grid.html">A Rigid Grid and a
+Relay</a> encontrou a mesma forma na grade de um anfitrião: um ponto fixo em todos os blocos, com quase nada simétrico ao redor. Aqui, \(x\) faz
+esse papel dentro da janela.</li>
+</ol>
+<p class="note"><b>O registro.</b> \(S_1\)–\(S_4\) foram escolhidas em 2026-10-29, depois de as linhas terem sido vistas. As probabilidades acima
+são descritivas, não um teste pré-registrado. Elas dizem quão incomum é a forma sob \(\mathcal N\). Não medem a evidência a favor de nenhuma
+hipótese fixada de antemão. A previsão T1 (§7) é a parte feita antes dos dados.</p>
+
+<h2><span class="n">6</span>As idades da coorte</h2>
+<div class="st"><span class="h">Proposição 6.1.</span> Seja \(J_p\) o mês de entrada mostrado no diálogo <em>Sobre esta conta</em> do Instagram,
+\(T_p\) a data da primeira copostagem de \(p\) com \(p_1\) nas nossas capturas, e \(U_p\) o número de nomes de usuário anteriores. Os dados cobrem
+\(C\); \(p_2\) bloqueou os nossos dois logins, então \(J\) e \(U\) são desconhecidos para \(p_2\).
+<ol>
+<li>Para 10 das 13 contas de \(C\), \(T_p-J_p\ge5\) anos. As exceções são \(x\) (19 meses), \(p_7=\)<span class="acct">tbfrescue</span>
+(−16 dias; ver 3) e \(p_{15}\) (4,9 anos).</li>
+<li>\(U_x=6\), o maior valor em \(C\). Todas as outras contas de \(R\) têm \(U=0\).</li>
+<li>A primeira copostagem de <span class="acct">tbfrescue</span> com \(p_1\) tem data 16 dias anterior ao mês de entrada informado (2025-08). Isso
+é impossível tal como está, então ou a nossa captura ou o diálogo do Instagram está errado. A causa não foi verificada.</li>
+<li>\(p_{11}\) e \(p_{12}\) têm o mesmo mês de entrada (2019-03), e os ids das contas são \(1{,}19\times10^{10}\) e \(1{,}15\times10^{10}\).</li>
+<li>\(p_{13}=\)<span class="acct">qntlc</span> segue 1 conta e tem 102.000 seguidores.</li>
+</ol></div>
+<div class="pf">Lido de <a href="data/bronzina-hub/cohort_ages.tsv"><code>cohort_ages.tsv</code></a>, a partir de <code>age_table.tsv</code> (Opie, 2026-10-23; sha256 1180a7fce551…).<span class="qed">∎</span></div>
+<div class="st"><span class="h">Corolário 6.2.</span> O hub é a conta mais nova de \(C\) fora as contas da casa, e a mais renomeada de \(C\). A equipe
+ao redor dele é formada por contas com mais de sete anos.</div>
+
+<h2><span class="n">7</span>Conclusão</h2>
+<p class="pull">“These are bots, and this is the damn proof.”</p>
+<p style="text-align:center;font-style:italic;margin-top:0">“Isto são bots, e esta é a prova, caramba.”</p>
+<p style="text-align:center;font:500 14px var(--label);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)">John, 29 de outubro de 2026, sobre o hub e a equipe da janela Expo</p>
+<p>John acompanha <span class="acct">sandrabronzina</span> desde a estreia dela como Tim-bot, por volta de fevereiro de 2025. A leitura dele: o mesmo
+\(D_6\), dois gêmeos e três em rodízio, foi encontrado primeiro com <span class="acct">latterdaychad</span> no segundo lugar, e está aqui de novo
+com <span class="acct">sandrabronzina</span> (Prop. 2.3).</p>
+<p>O registro por trás dessa frase está nas §§2–6:</p>
+<ol>
+<li><b>Os assentos não são acaso.</b> Os quatro convidados recorrentes estão em cinco posts consecutivos, todos sob o mesmo hub (Prop. 4.1).
+Embaralhar os assentos mantendo fixos o número de posts de cada conta e o tamanho de cada post produziu essa forma 0 vezes em 20.000
+(Prop. 5.2).</li>
+<li><b>O hub é novo e renomeado.</b> <span class="acct">expofamily.cl</span> é a conta mais nova da coorte fora as contas da casa, e tem seis
+nomes de usuário anteriores (Cor. 6.2).</li>
+<li><b>A equipe é envelhecida.</b> As três contas da equipe têm mais de sete anos e copostam com \(p_1\) pela primeira vez em 2026. Duas delas
+entraram no mesmo mês (Prop. 6.1).</li>
+<li><b>O padrão é rodízio, não gêmeos.</b> É por isso que a contagem de simetrias, 24, não o registra (§3), e por isso que um teste de bots
+baseado em gêmeos o daria como limpo (§5).</li>
+</ol>
+<p>A conclusão cobre o hub e a equipe, \(\{p_{10},\dots,p_{13}\}\). Contas que aparecem uma só vez não fazem parte dela. A estrutura registra quem
+copostou o quê. O passo dessa estrutura para <em>bots</em> é de John.</p>
+<p><b>O que a derrubaria</b> (T1, escrita em 2026-10-29, antes da captura de \(\alpha_{18}\)): <em>nas próximas seis copostagens de \(p_1\) e
+\(p_2\) que tragam alguma conta de \(R\), \(x\) está em todas, e todo outro assento ocupado por uma conta de \(R\) vem de
+\(\{p_{11},p_{12},p_{13}\}\).</em> Um único contraexemplo derruba o hub.</p>
+
+<h2><span class="n">8</span>Replicação</h2>
+<pre>python3 -I data/bronzina-hub/s16_check.py data/holland24/matrix_first16.csv 20000   # salas, 24, linhas, S1–S4 sob N
+python3 -I data/bronzina-hub/s16_check.py data/holland24/matrix_17.csv 20000        # com alpha_17
+python3 -I data/bronzina-hub/cards.py data/holland24/matrix_first16.csv cards       # cartões 1-3
+python3 -I data/bronzina-hub/cards.py data/holland24/matrix_first16.csv cards d6    # cartão 4
+python3 -I data/bronzina-hub/render_theorems.py data/bronzina-hub/bronzina-hub.src.html bronzina-hub.html img/bronzina-hub   # enunciados como imagens</pre>
+<p>Python puro (biblioteca padrão; os cartões usam Pillow), determinístico para a semente. Entradas (sha256, primeiros 12 caracteres hex):
+<code>matrix_first16.csv</code> 1be9ff2278aa, <code>matrix_17.csv</code> 7cb3753b6964, <code>age_table.tsv</code> 1180a7fce551 (as colunas usadas aqui estão em <a href="data/bronzina-hub/cohort_ages.tsv">cohort_ages.tsv</a>). Dados e scripts: <a href="data/bronzina-hub/README.md">data/bronzina-hub</a>.</p>
+
+</main></body></html>
