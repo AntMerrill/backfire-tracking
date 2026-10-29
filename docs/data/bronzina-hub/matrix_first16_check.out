@@ -1,0 +1,21 @@
+matrix data/holland24/matrix_first16.csv: v=15 b=16
+hosts on every block: True
+r: {'sandrabronzina': 16, 'timballard89': 16, 'expofamily.cl': 5, 'dramariajosemancino': 4, 'margaritarojoc': 3, 'qntlc': 3, 'agustinlaje': 1, 'ivetteavaria': 1, 'julietaagonz': 1, 'larinoar': 1, 'liberal.noticias': 1, 'maaydelara': 1, 'piterpaulin': 1, 'tbfrescue': 1, 'timballardfoundationecuador': 1}
+guest count per block: [0, 3, 1, 0, 0, 0, 0, 2, 1, 0, 4, 4, 3, 2, 3, 1]
+rooms of size>1: [(['julietaagonz', 'liberal.noticias', 'piterpaulin'], [1]), (['sandrabronzina', 'timballard89'], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]), (['tbfrescue', 'timballardfoundationecuador'], [7])]
+|Aut_<| = prod |room|! = 24
+recurring guests: {'dramariajosemancino': [11, 13, 14, 15], 'expofamily.cl': [11, 12, 13, 14, 15], 'margaritarojoc': [11, 12, 13], 'qntlc': [11, 12, 15]}
+distinct rows among recurring guests: True
+  |R(dramariajosemancino) ^ R(expofamily.cl)| = 4
+  |R(dramariajosemancino) ^ R(margaritarojoc)| = 2
+  |R(dramariajosemancino) ^ R(qntlc)| = 2
+  |R(expofamily.cl) ^ R(margaritarojoc)| = 3
+  |R(expofamily.cl) ^ R(qntlc)| = 3
+  |R(margaritarojoc) ^ R(qntlc)| = 2
+observed S1,S2,S3,S4 = (0, 5, True, True)
+null: 20000 samples, seed 20261029, 200 swaps apart after 20000 burn-in
+  P(S1 <= 0) = 0.9942
+  P(S2 <= 5) = 0.0001
+  P(S3 >= True) = 0.0000
+  P(S4 >= True) = 0.0001
+  P(S2<=obs and S3 and S4) = 0.0000

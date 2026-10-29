@@ -1,0 +1,272 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="The order-preserving symmetry group of the first 16 co-posts of timballard89 and sandrabronzina has order 24, but none of it comes from the cohort. The cohort's structure is a hub with a rotating crew, rare under a fixed-margins null model.">
+<meta name="robots" content="noindex">
+<title>A Hub and a Rotation</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap">
+<script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]},svg:{fontCache:"global"}};</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.min.js"></script>
+<style>
+/* Same stylesheet as rooms.html. */
+:root{
+  --paper:#fbfaf6; --ink:#1c1d22; --muted:#5d6070; --rule:#d9d6cc; --accent:#6b2d2d; --code:#f2efe6; --hl:#efe6cf;
+  --serif:"EB Garamond",Garamond,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --label:"IBM Plex Sans Condensed","Arial Narrow",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#15161a; --ink:#e8e6df; --muted:#a6a8b3; --rule:#33343c; --accent:#e0a39a; --code:#1e2026; --hl:#2a2619; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#15161a; --ink:#e8e6df; --muted:#a6a8b3; --rule:#33343c; --accent:#e0a39a; --code:#1e2026; --hl:#2a2619; color-scheme:dark}
+body{background:var(--paper);color:var(--ink);font:20px/1.6 var(--serif);padding-inline:16px;padding-block:36px 80px;margin:0}
+main{max-width:740px;margin:0 auto}
+h1{font:600 clamp(30px,5.4vw,44px)/1.15 var(--serif);text-align:center;margin:0 0 .4em;text-wrap:balance}
+.byline{text-align:center;font:500 15px var(--label);letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+h2{font:600 26px/1.25 var(--serif);margin:2em 0 .5em;border-bottom:1px solid var(--rule);padding-bottom:.2em}
+h2 .n{color:var(--accent);margin-right:.4em}
+p{margin:.65em 0} a{color:var(--accent)}
+.abs{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:.8em 0;margin:1.4em 0;font-size:18.5px}
+.abs b{font-variant:small-caps;letter-spacing:.04em}
+.st{margin:1.1em 0;padding:.2em 0 .2em 1em;border-left:3px solid var(--accent)}
+.st > .h{font-weight:600;font-variant:small-caps;letter-spacing:.03em}
+.st.def{border-left-color:var(--muted)}
+.pf{margin:.4em 0 1.1em;padding-left:1em;font-size:19px}
+.pf::before{content:"Proof. ";font-style:italic}
+.pf .qed{float:right}
+.tw{overflow-x:auto;margin:.8em 0}
+table{border-collapse:collapse;margin:0 auto;font:400 17px var(--serif);font-variant-numeric:tabular-nums}
+th,td{border-bottom:1px solid var(--rule);padding:.32em .7em;text-align:left;vertical-align:top}
+th{font:600 13px var(--label);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+pre{background:var(--code);border:1px solid var(--rule);border-radius:4px;padding:12px 14px;overflow-x:auto;font:400 13.5px/1.55 var(--mono);color:var(--ink)}
+.note{background:var(--hl);padding:.7em 1em;border-radius:4px;font-size:18px}
+.acct{font-family:var(--mono);font-size:.86em}
+ol li,ul li{margin:.3em 0}
+figure{margin:1.4em 0}figure > img{width:100%;height:auto;display:block;border:1px solid var(--rule);border-radius:4px}
+figcaption{font-size:16px;color:var(--muted);margin-top:.4em}
+.pull{font-style:italic;font-size:26px;text-align:center;margin:1.2em 0 .2em;color:var(--accent)}
+.plain{background:var(--hl);padding:.6em 1em;border-radius:4px;font-size:18.5px;margin:.6em 0 1.4em}
+figure.thm > img{border:none;border-radius:0}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+</style></head><body><main>
+
+<h1>A Hub and a Rotation: the Bronzina Cohort in \(\mathcal S_{16}\)</h1>
+<div class="byline">Companion to <a href="rooms.html">“Rooms”</a> and <a href="rigid-grid.html">“A Rigid Grid and a Relay”</a> · October 29, 2026 · preprint, not peer reviewed</div>
+
+<div class="abs"><b>Abstract.</b> We study the incidence structure \(\mathcal S_{16}\) whose blocks are the first 16 co-posts of
+<span class="acct">timballard89</span> and <span class="acct">sandrabronzina</span>, and whose points are the 15 accounts on them. We prove
+\(\operatorname{Aut}_<(\mathcal S_{16})\cong S_2\times S_3\times S_2\cong D_6\times C_2\), the \(D_6\) of the first Holland object again with a new second twin, of order 24. We then show that none of the 24 comes from the 13 other
+accounts (the <em>cohort</em>) behaving alike: one factor is forced by the construction, and the other two come from accounts that appear once.
+The structure is in what is <em>not</em> symmetric. The four recurring guests have pairwise distinct rows, all nested inside the row of one hub,
+<span class="acct">expofamily.cl</span>, and confined to five consecutive blocks. Under the fixed-margins null model each of these properties has
+estimated probability \(\le 10^{-4}\). We close with John's conclusion on the hub and crew, and the prediction that would break it.</div>
+
+<h2><span class="n">0</span>Notation</h2>
+<p><b>Co-posts</b> = being the owner or a listed collaborator on the same Instagram post.</p>
+<div class="tw"><table>
+<tr><th>here</th><th>account</th><th>\(r\) in \(\mathcal S_{16}\)</th></tr>
+<tr><td>\(p_1\) (TB)</td><td class="acct">timballard89</td><td>16</td></tr>
+<tr><td>\(p_2\) (SB)</td><td class="acct">sandrabronzina</td><td>16</td></tr>
+<tr><td>\(p_3,p_4,p_5\)</td><td class="acct">liberal.noticias, julietaagonz, piterpaulin</td><td>1 each</td></tr>
+<tr><td>\(p_6\)</td><td class="acct">maaydelara</td><td>1</td></tr>
+<tr><td>\(p_7,p_8\)</td><td class="acct">tbfrescue, timballardfoundationecuador</td><td>1 each</td></tr>
+<tr><td>\(p_9\)</td><td class="acct">larinoar</td><td>1</td></tr>
+<tr><td>\(p_{10}=x\)</td><td class="acct">expofamily.cl</td><td>5</td></tr>
+<tr><td>\(p_{11}\)</td><td class="acct">dramariajosemancino</td><td>4</td></tr>
+<tr><td>\(p_{12}\)</td><td class="acct">margaritarojoc</td><td>3</td></tr>
+<tr><td>\(p_{13}\)</td><td class="acct">qntlc</td><td>3</td></tr>
+<tr><td>\(p_{14}\)</td><td class="acct">agustinlaje</td><td>1</td></tr>
+<tr><td>\(p_{15}\)</td><td class="acct">ivetteavaria</td><td>1</td></tr>
+</table></div>
+<p>The numbering is that of the holland24 write-up (first appearance; within a post, owner first). The <b>cohort</b> is \(C=\{p_3,\dots,p_{15}\}\),
+13 accounts. The <b>recurring guests</b> are \(R=\{p\in C: r_p\ge 2\}=\{p_{10},p_{11},p_{12},p_{13}\}\). Blocks are \(B_1,\dots,B_{16}\) in
+posting order (UTC). For a point \(p\), \(\mathcal B_p=\{i: p\in B_i\}\) is its row, \(r_p=|\mathcal B_p|\), and
+\(\lambda_{pq}=|\mathcal B_p\cap\mathcal B_q|\).</p>
+
+<h2><span class="n">1</span>The structure</h2>
+<div class="st def"><span class="h">Definition 1.1.</span> \(\Omega=(\alpha_1<\dots<\alpha_{16})\) is the set of the first 16 posts that both
+\(p_1\) and \(p_2\) co-post, 2025-11-04 to 2026-10-16, from our captures of both accounts' timelines. \(B_i\) is the set of accounts that co-post
+\(\alpha_i\), with the owner added (Instagram leaves the owner off the credit list). \(\mathcal S_{16}=(P,(B_1,\dots,B_{16}))\) with
+\(P=\bigcup B_i\).</div>
+<div class="tw"><table>
+<tr><th>\(B\)</th><th>date</th><th>\(B_i\setminus\{p_1,p_2\}\)</th></tr>
+<tr><td>1</td><td>2025-11-04</td><td>\(\varnothing\)</td></tr>
+<tr><td>2</td><td>2025-11-21</td><td>\(p_3,p_4,p_5\)</td></tr>
+<tr><td>3</td><td>2026-05-27</td><td>\(p_6\)</td></tr>
+<tr><td>4–7</td><td>2026-05-27 to 05-29</td><td>\(\varnothing\)</td></tr>
+<tr><td>8</td><td>2026-05-30</td><td>\(p_7,p_8\)</td></tr>
+<tr><td>9</td><td>2026-05-30</td><td>\(p_9\)</td></tr>
+<tr><td>10</td><td>2026-06-02</td><td>\(\varnothing\)</td></tr>
+<tr><td>11</td><td>2026-08-08</td><td>\(p_{10},p_{11},p_{12},p_{13}\)</td></tr>
+<tr><td>12</td><td>2026-08-19</td><td>\(p_{10},p_{12},p_{13},p_{14}\)</td></tr>
+<tr><td>13</td><td>2026-08-27</td><td>\(p_{10},p_{11},p_{12}\)</td></tr>
+<tr><td>14</td><td>2026-09-15</td><td>\(p_{10},p_{11}\)</td></tr>
+<tr><td>15</td><td>2026-10-05</td><td>\(p_{10},p_{11},p_{13}\)</td></tr>
+<tr><td>16</td><td>2026-10-16</td><td>\(p_{15}\)</td></tr>
+</table></div>
+<p>Counts: \(v=15\), \(b=16\). The guest counts per block are \((0,3,1,0,0,0,0,2,1,0,4,4,3,2,3,1)\), with sum \(24=\sum_{p\in C}r_p\).</p>
+<div class="st def"><span class="h">Definition 1.2</span> (<a href="rooms.html">Rooms</a>, Def. 2.1–2.2). The <em>rooms</em> are the classes of
+\(p\sim q\iff\mathcal B_p=\mathcal B_q\). \(\operatorname{Aut}_<(\mathcal S_{16})\) is the set of \(\sigma\in\operatorname{Sym}(P)\) for which
+some order-preserving bijection \(\pi\) of \(\Omega\) satisfies \(p\in B_i\iff p\sigma\in B_{i\pi}\).</div>
+
+<h2><span class="n">2</span>The group</h2>
+<!--IMG thm_2_1--><!--ALT Theorem 2.1 and proof: the order-preserving symmetry group of S16 is Sym of the two hosts times Sym of the three B2 guests times Sym of the two B8 accounts, order 24.--><div class="st"><span class="h">Theorem 2.1.</span>
+\[\operatorname{Aut}_<(\mathcal S_{16})=\operatorname{Sym}\{p_1,p_2\}\times\operatorname{Sym}\{p_3,p_4,p_5\}\times\operatorname{Sym}\{p_7,p_8\}\cong S_2\times S_3\times S_2,\]
+of order 24.</div>
+<div class="pf">A finite chain has only the identity as an order-preserving bijection (Rooms, Lemma 0.1). So \(\pi=1\), and
+\(\sigma\in\operatorname{Aut}_<\) iff \(p\in B_i\iff p\sigma\in B_i\) for all \(p\) and \(i\), that is, iff \(\mathcal B_{p\sigma}=\mathcal B_p\)
+for every \(p\). Such \(\sigma\) are exactly the permutations that map each room onto itself, so \(\operatorname{Aut}_<=\prod\operatorname{Sym}(\text{room})\).
+The rows give three rooms of size \(>1\): \(\{p_1,p_2\}\) (row \(\{1,\dots,16\}\)), \(\{p_3,p_4,p_5\}\) (row \(\{2\}\)) and \(\{p_7,p_8\}\)
+(row \(\{8\}\)). The other nine rows are pairwise distinct and distinct from these. Hence \(|\operatorname{Aut}_<|=2!\cdot3!\cdot2!=24\).<span class="qed">∎</span></div><!--/IMG-->
+<p class="plain"><b>In plain words.</b> A symmetry may only swap accounts that sit on exactly the same posts. Three such groups exist: the two hosts (on every post), the three guests of 21 November 2025, and TB's two organisation accounts on 30 May 2026. That gives 2 × 6 × 2 = 24 symmetries.</p>
+<p><em>Check.</em> <code>s16_check.py</code> rebuilds the rows from <code>matrix_first16.csv</code> and prints the same three rooms and 24, as the
+holland24 write-up did on 2026-10-22.</p>
+<div class="st"><span class="h">Remark 2.2.</span> Ignoring time order, \(|\operatorname{Aut}(\mathcal S_{16})|=288\). The extra factor of 12
+comes from \(\operatorname{Sym}\{p_6,p_9,p_{15}\}\) (the three one-guest blocks) and from \((p_{12}\,p_{13})\) with \(B_{13}\leftrightarrow B_{15}\).
+Neither respects time order.</div>
+
+<!--IMG prop_2_3--><!--ALT Proposition 2.3 and proof: the group is D6 times C2; the D6 is the two twins times the trio, the same shape as the first Holland object S7 (timballard89 and latterdaychad, Feb to Apr 2026).--><div class="st"><span class="h">Proposition 2.3</span> (the \(D_6\) inside). \(\operatorname{Aut}_<(\mathcal S_{16})\cong D_6\times C_2\), with
+\[D_6\cong\operatorname{Sym}\{p_1,p_2\}\times\operatorname{Sym}\{p_3,p_4,p_5\}:\]
+two twins on every block, and three on one block that can rotate among themselves. This is the shape of the first Holland object. In the
+<a href="automorphism-group.html">treatise</a> (Prop. 2.3), \(\operatorname{Aut}(\mathcal S_7)=\operatorname{Sym}\{p_1,p_2\}\times\operatorname{Sym}\{p_{10},p_{11},p_{12}\}\cong D_6\),
+for the seven group posts of February to April 2026. The twins there are <span class="acct">timballard89</span> and <span class="acct">latterdaychad</span>,
+and the trio sits on one block (2026-04-10).</div>
+<div class="pf">\(S_2\times S_3\cong D_6\) (treatise Prop. 2.3). By Theorem 2.1 the remaining factor is \(\operatorname{Sym}\{p_7,p_8\}\cong C_2\).<span class="qed">∎</span></div><!--/IMG-->
+<p class="plain"><b>In plain words.</b> Two twins on every post, plus three guests on one post who can trade places, give a group of 12 symmetries called D₆. That is exactly the first Holland object we found, with <span class="acct">latterdaychad</span> as the second twin. Here it comes back with <span class="acct">sandrabronzina</span> in that seat.</p>
+<div class="tw"><table>
+<tr><th></th><th>first Holland object, \(\mathcal S_7\)</th><th>this paper, \(\mathcal S_{16}\)</th></tr>
+<tr><td>two twins (every block)</td><td class="acct">timballard89, latterdaychad</td><td class="acct">timballard89, sandrabronzina</td></tr>
+<tr><td>three on one block</td><td>\(p_{10},p_{11},p_{12}\), 2026-04-10</td><td class="acct">liberal.noticias, julietaagonz, piterpaulin<br><span style="font-family:var(--serif)">2025-11-21</span></td></tr>
+<tr><td>group</td><td>\(D_6\), order 12</td><td>\(D_6\times C_2\), order 24</td></tr>
+</table></div>
+<figure><img src="img/2026-10-29_131918_card4_same_d6.png" alt="Two grids side by side. Left, the first Holland object: timballard89 and latterdaychad on all 7 group posts, three accounts together on B6 only. Right, this paper: timballard89 and sandrabronzina on all 16 co-posts, liberal.noticias, julietaagonz and piterpaulin together on B2 only."><figcaption>Card 4. The same \(D_6\), a new second twin.</figcaption></figure>
+<p>The same \(D_6\) appears in both objects. Only \(p_1\) is shared. The second twin's seat passed from <span class="acct">latterdaychad</span> to
+<span class="acct">sandrabronzina</span>, the relay of <a href="rigid-grid.html">A Rigid Grid and a Relay</a>. Each factor on its own is cheap (§3): it is
+forced by the construction, or it comes from one post. What carries over from one object to the other is the whole shape.</p>
+
+<h2><span class="n">3</span>The 24 says nothing about the cohort</h2>
+<p>The reading we want to test is this. A room of accounts that recur together is accounts the record cannot tell apart, which is what a set added
+as a bundle by one operator looks like. The lemmas below show that \(\mathcal S_{16}\) contains no such room.</p>
+<figure><img src="img/2026-10-29_124855_card1_where_24_comes_from.png" alt="Incidence grid of the 15 accounts over 16 co-posts. Rooms: the two hosts on all 16; three accounts only on B2; two TB organisation accounts only on B8. The recurring guests, expofamily.cl and a crew of three, are all in B11 to B15 and are not twins.">
+<figcaption>Card 1. The whole grid, and the three rooms that give the 24.</figcaption></figure>
+<div class="st"><span class="h">Lemma 3.1</span> (the host room is forced). In any structure built as in Def. 1.1, \(p_1\) and \(p_2\) lie on
+every block, so \(\{p_1,p_2\}\) is contained in a room. The factor \(\operatorname{Sym}\{p_1,p_2\}\) carries no information.</div>
+<div class="pf">By Definition 1.1, every \(\alpha_i\) is co-posted by both \(p_1\) and \(p_2\).<span class="qed">∎</span></div>
+<div class="st"><span class="h">Lemma 3.2</span> (one-block rooms are cheap). If \(k\ge2\) points each lie on exactly one block, and it is the same
+block, they form a room, and \(S_k\le\operatorname{Aut}_<\). Every block with \(k\) one-off guests contributes \(k!\), whoever the guests are.</div>
+<div class="pf">Their rows all equal \(\{i\}\).<span class="qed">∎</span></div>
+<p>The rooms \(\{p_3,p_4,p_5\}\) and \(\{p_7,p_8\}\) are of this kind: one block each (\(B_2\) and \(B_8\)). Moreover \(\{p_7,p_8\}\) are TB's own
+organisation accounts on TB's own post (\(\alpha_8\) is the only one of the 16 that \(p_1\) owns).</p>
+<!--IMG cor_3_3--><!--ALT Corollary 3.3 and proof: no room contains two recurring guests; the four recurring rows are pairwise distinct.--><div class="st"><span class="h">Corollary 3.3.</span> The rooms meeting \(C\) are \(\{p_3,p_4,p_5\}\) and \(\{p_7,p_8\}\), and every point in them
+has \(r=1\). In particular <b>no room contains two recurring guests</b>: \(S_1:=\#\{\text{rooms of size}\ge2\text{ inside }R\}=0\).</div>
+<div class="pf">Theorem 2.1 and §0. The four rows in \(R\) are \(\{11,\dots,15\}\), \(\{11,13,14,15\}\), \(\{11,12,13\}\) and \(\{11,12,15\}\),
+which are pairwise distinct.<span class="qed">∎</span></div><!--/IMG-->
+<p class="plain"><b>In plain words.</b> No two accounts that come back more than once are interchangeable. So the 24 says nothing about how the cohort behaves.</p>
+<p>So \(\mathcal S_{16}\) does <b>not</b> show a cloned set. The 24 is two cheap factors (3.2) and one forced factor (3.1).</p>
+
+<h2><span class="n">4</span>Where the structure is</h2>
+<!--IMG prop_4_1--><!--ALT Proposition 4.1 and proof: nesting, hub, window and rotation for the recurring guests in B11 to B15.--><div class="st"><span class="h">Proposition 4.1</span> (hub, nesting, window). In \(\mathcal S_{16}\):
+<ol>
+<li>(<em>nesting</em>) \(\mathcal B_p\subseteq\mathcal B_x\) for every \(p\in R\): every block carrying a recurring guest carries
+\(x=\)<span class="acct">expofamily.cl</span>.</li>
+<li>(<em>hub</em>) \(\mathcal B_x=\{11,\dots,15\}\), so \(x\) is on every block from \(B_{11}\) to \(B_{15}\) and on no other.</li>
+<li>(<em>window</em>) \(\bigcup_{p\in R}\mathcal B_p=\{11,\dots,15\}\), an interval of \(\Omega\): five consecutive blocks, 2026-08-08 to 2026-10-05.</li>
+<li>(<em>rotation</em>) The rows of \(p_{11},p_{12},p_{13}\) are distinct 3- or 4-subsets of \(\mathcal B_x\), with \(\lambda=2\) for each pair.
+No two of them are on the same posts.</li>
+</ol></div>
+<div class="pf">Read off the table of §1; <code>s16_check.py</code> prints the rows and the \(\lambda\).<span class="qed">∎</span></div><!--/IMG-->
+<p class="plain"><b>In plain words.</b> Whenever a recurring guest is on a post, <span class="acct">expofamily.cl</span> is on it too. All of those posts are five in a row, 8 August to 5 October 2026. The three crew accounts each take a different set of seats.</p>
+<figure><img src="img/2026-10-29_124855_card2_hub_and_rotation.png" alt="Grid of B11 to B15: expofamily.cl on all five; dramariajosemancino on four, margaritarojoc on three, qntlc on three, each in a different combination; agustinlaje once on B12.">
+<figcaption>Card 2. The Expo window: one hub, a rotating crew.</figcaption></figure>
+<p>So the pattern is <b>one fixed hub and a rotating crew</b>: \(x\) on every post in the window, and the other seats filled from
+\(\{p_{11},p_{12},p_{13}\}\) in changing combinations, plus a single outside guest (\(p_{14}\), on \(B_{12}\)).</p>
+<!--IMG prop_4_2--><!--ALT Proposition 4.2 and proof: adding the 17th co-post keeps the order 24 and the nesting, breaks the window and the unordered swap.--><div class="st"><span class="h">Proposition 4.2</span> (one more block). Add \(\alpha_{17}\) (2026-10-20), with
+\(B_{17}=\{p_1,p_2,p_{10},p_{11},p_{13}\}=B_{15}\). Then: \(|\operatorname{Aut}_<|\) is still 24 (rooms can only split, Rooms Prop. 4.1, and none
+splits); nesting (4.1.1) still holds; the window (4.1.3) does not, because \(B_{16}\) now lies inside it; and the unordered swap
+\((p_{12}\,p_{13})\) of Remark 2.2 is broken, since \(r_{p_{13}}=4\ne3=r_{p_{12}}\).</div>
+<div class="pf"><code>s16_check.py</code> on <code>matrix_17.csv</code>.<span class="qed">∎</span></div><!--/IMG-->
+<p class="plain"><b>In plain words.</b> The 17th co-post (20 October 2026) repeats the seats of 5 October. The 24 and the hub stay; only the five-in-a-row window is interrupted.</p>
+
+<h2><span class="n">5</span>Is it chance? The fixed-margins null model</h2>
+<!--IMG null_5--><!--ALT Definition 5.1 and Proposition 5.2: the fixed-margins null model and the estimated probabilities of S1 to S4 over 20,000 samples.--><div class="st def"><span class="h">Definition 5.1.</span> Fix \(p_1,p_2\) on every block. Let \(\mathcal N\) be the uniform distribution on 0–1
+matrices \(C\times\Omega\) with the observed row sums (\(r_p\) for \(p\in C\)) and column sums (the guest counts of §1). This null keeps who is busy
+and how big each post is, and forgets everything else. It is sampled by checkerboard swaps, each of which preserves both margins. The statistics are:
+\(S_1\) as in 3.3; \(S_2=|\bigcup_{p\in R}\mathcal B_p|\); \(S_3=[\)that union is an interval of \(\Omega]\); \(S_4=[\)some \(p\in R\) has
+\(\mathcal B_q\subseteq\mathcal B_p\) for every \(q\in R]\).</div>
+<div class="st"><span class="h">Proposition 5.2</span> (computation). For \(\mathcal S_{16}\), with 20,000 samples (seed 20261029, 200 swaps apart
+after 20,000 burn-in):
+<div class="tw"><table>
+<tr><th>statistic</th><th>observed</th><th>estimated \(P_{\mathcal N}\) (as extreme or more)</th></tr>
+<tr><td>\(S_1\)</td><td>0</td><td>0.994</td></tr>
+<tr><td>\(S_2\)</td><td>5</td><td>\(1\times10^{-4}\)</td></tr>
+<tr><td>\(S_3\)</td><td>true</td><td>\(<5\times10^{-5}\) (0 of 20,000)</td></tr>
+<tr><td>\(S_4\)</td><td>true</td><td>\(1\times10^{-4}\)</td></tr>
+<tr><td>\(S_2\), \(S_3\) and \(S_4\) together</td><td></td><td>\(<5\times10^{-5}\)</td></tr>
+</table></div>
+With \(\alpha_{17}\): \(P(S_2\le6)<5\times10^{-5}\) and \(P(S_4)<5\times10^{-5}\); \(S_3\) fails (Prop. 4.2); \(P(S_1=0)=1.000\).</div><!--/IMG-->
+<p class="plain"><b>In plain words.</b> We shuffled who sits on which post 20,000 times, keeping how many posts each account is on and how many guests each post has. Twins among the recurring guests almost never appear by chance, so their absence proves nothing. The hub-and-window shape appeared at most 2 times in 20,000.</p>
+<figure><img src="img/2026-10-29_124855_card3_null_model.png" alt="Table: twins among recurring guests, no, 99.4 percent of shuffles also no; recurring guests touch only 5 posts, 1 in 10,000; those posts consecutive, 0 of 20,000; one account on every post the others are on, 1 in 10,000.">
+<figcaption>Card 3. The four shapes under 20,000 shuffles.</figcaption></figure>
+<p><b>Consequences.</b></p>
+<ol>
+<li><b>The missing clone is not evidence either way.</b> A recurring room almost never occurs under \(\mathcal N\) (\(P(S_1=0)\approx0.99\)), so its
+absence is what chance predicts. Twin rows are rare at these margins, and their absence clears nobody.</li>
+<li><b>The hub is not chance.</b> Under \(\mathcal N\) the recurring guests scatter over many blocks with no common member. In \(\mathcal S_{16}\) they
+sit in five consecutive posts, under one account that is on all of them. The structure of the cohort is a <b>hub with a rotation</b>, not a set of
+twins.</li>
+<li><b>The test statistic has to fit the operation.</b> An operator who fills seats from a pool in rotation produces \(S_2\)–\(S_4\), not \(S_1\).
+A bot test that looks only for twins would pass this cohort as clean. <a href="rigid-grid.html">A Rigid Grid and a Relay</a> found the same shape
+on a host's grid: a fixed point on every block with almost nothing symmetric around it. Here \(x\) plays that part inside the window.</li>
+</ol>
+<p class="note"><b>The record.</b> \(S_1\)–\(S_4\) were chosen on 2026-10-29, after the rows were seen. The probabilities above are descriptive,
+not a pre-registered test. They say how unusual the shape is under \(\mathcal N\). They do not measure the evidence for any hypothesis fixed
+beforehand. The forward prediction T1 (§7) is the part made before the data.</p>
+
+<h2><span class="n">6</span>The cohort's ages</h2>
+<div class="st"><span class="h">Proposition 6.1.</span> Let \(J_p\) be the join month in Instagram's <em>About this account</em> dialog,
+\(T_p\) the date of \(p\)'s first co-post with \(p_1\) in our captures, and \(U_p\) the number of former usernames. The data cover \(C\); \(p_2\)
+has blocked both of our logins, so \(J\) and \(U\) are unknown for \(p_2\).
+<ol>
+<li>For 10 of the 13 accounts in \(C\), \(T_p-J_p\ge5\) years. The exceptions are \(x\) (19 months), \(p_7=\)<span class="acct">tbfrescue</span>
+(−16 days; see 3) and \(p_{15}\) (4.9 years).</li>
+<li>\(U_x=6\), the most in \(C\). Every other account in \(R\) has \(U=0\).</li>
+<li><span class="acct">tbfrescue</span>'s first co-post with \(p_1\) is dated 16 days before its listed join month (2025-08). That is impossible as
+stated, so either our capture or Instagram's dialog is wrong. The cause hasn't been checked.</li>
+<li>\(p_{11}\) and \(p_{12}\) have the same join month (2019-03), and their account ids are \(1.19\times10^{10}\) and \(1.15\times10^{10}\).</li>
+<li>\(p_{13}=\)<span class="acct">qntlc</span> follows 1 account and has 102,000 followers.</li>
+</ol></div>
+<div class="pf">Read off <code>age_table.tsv</code> (Opie, 2026-10-23; sha256 1180a7fce551…).<span class="qed">∎</span></div>
+<div class="st"><span class="h">Corollary 6.2.</span> The hub is the youngest non-house account in \(C\) and the most renamed account in \(C\).
+The crew around it is made of accounts more than seven years old.</div>
+
+<h2><span class="n">7</span>Conclusion</h2>
+<p class="pull">“These are bots, and this is the damn proof.”</p>
+<p style="text-align:center;font:500 14px var(--label);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)">John, October 29, 2026, on the hub and crew of the Expo window</p>
+<p>John has tracked <span class="acct">sandrabronzina</span> since her debut as a Tim-bot, circa February 2025. His reading: the same \(D_6\), two twins and three
+rotated, was first found with <span class="acct">latterdaychad</span> in the second seat, and is here again with <span class="acct">sandrabronzina</span>
+(Prop. 2.3).</p>
+<p>The record behind that sentence is in §§2–6:</p>
+<ol>
+<li><b>The seats are not chance.</b> The four recurring guests sit in five consecutive posts, every one under the same hub (Prop. 4.1). Shuffling the
+seats with every account's post count and every post's size held fixed produced that shape 0 times in 20,000 (Prop. 5.2).</li>
+<li><b>The hub is new and renamed.</b> <span class="acct">expofamily.cl</span> is the youngest non-house account in the cohort and has six former
+usernames (Cor. 6.2).</li>
+<li><b>The crew is aged.</b> The three crew accounts are more than seven years old and first co-post with \(p_1\) in 2026. Two of them joined in
+the same month (Prop. 6.1).</li>
+<li><b>The pattern is rotation, not twins.</b> That is why the symmetry count of 24 does not register it (§3), and why a twin-based bot test would
+pass it as clean (§5).</li>
+</ol>
+<p>The conclusion covers the hub and the crew, \(\{p_{10},\dots,p_{13}\}\). Accounts that appear once are not part of it. The structure records who
+co-posted what. The step from that structure to <em>bots</em> is John's.</p>
+<p><b>What would break it</b> (T1, written 2026-10-29, before \(\alpha_{18}\) is captured): <em>in the next six co-posts of \(p_1\) and \(p_2\)
+that carry any of \(R\), \(x\) is on every one, and every other seat taken by an account of \(R\) comes from
+\(\{p_{11},p_{12},p_{13}\}\).</em> One counterexample refutes the hub.</p>
+
+<h2><span class="n">8</span>Replication</h2>
+<pre>python3 -I s16_check.py data/holland24/matrix_first16.csv 20000   # rooms, 24, rows, S1–S4 under N
+python3 -I s16_check.py data/holland24/matrix_17.csv 20000        # with alpha_17
+python3 -I cards.py data/holland24/matrix_first16.csv cards       # cards 1-3
+python3 -I cards.py data/holland24/matrix_first16.csv cards d6    # card 4
+python3 -I render_theorems.py bronzina-hub.src.html bronzina-hub.html img   # theorem boxes as images</pre>
+<p>Plain Python (stdlib; the cards use Pillow), deterministic for the seed. Inputs (sha256, first 12 hex characters):
+<code>matrix_first16.csv</code> 1be9ff2278aa, <code>matrix_17.csv</code> 7cb3753b6964, <code>age_table.tsv</code> 1180a7fce551.</p>
+
+</main></body></html>
