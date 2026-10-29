@@ -1,0 +1,9 @@
+pair	role	fb_reel	ig_shortcode	frames_compared	match_max_diff	diff_min_diff	frames_over_20	differing_spans	facebook_tail_s	note
+b0	basepoint	1653357746398669	Decca9IB4mM	812	5.8	76.2	1	32.44-32.48	36.56	last IG frame differs; FB then runs 32.48-69.04 s (GoFundMe page recording)
+e1	known	1854928455492847	DeOEQmtoQjd	1700	0.0		0	none	0.00	decoded frames identical at 90x160 grey, left 60 columns
+e2	known	1088431590591550	DeOAfQwonHi	2144	0.0		0	none	0.00	decoded frames identical
+e3	known	1020903481014768	DeNnnzboyBs	2543	0.0		0	none	0.00	decoded frames identical
+e4	known	4616607718583913	DeOBQw2oqTA	8218	0.0		0	none	0.00	decoded frames identical
+e5	known	3844835329006568	DeNlpDSI691	6203	0.0		0	none	0.00	decoded frames identical
+e6	known	1621801979669604	DeK65lovwvC	400	0.0		0	none	0.00	decoded frames identical
+x1	outside control	1140352768334907	De6mHwFRbAG	1190	2.5	56.1	45	17.92-18.80;30.68-31.60	4.00	re-edit: two inserts + 4.0 s end card; matches same-reel.html
