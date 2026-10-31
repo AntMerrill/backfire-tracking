@@ -41,6 +41,10 @@ HYPOTHESIS (stated, not tested), CONCLUSION-JOHN (an interpretation owned by the
 | S8 | x is the youngest non-house account in the cohort (19 months join-to-co-post) and has 6 former usernames, the most; the other three recurring guests have 0, are more than seven years old, and first co-post with p1 in 2026 | OBSERVED (Instagram "About this account"; age_table sha256 1180a7fce551…) | P2 Prop 6.1, Cor 6.2 |
 | S9 | "These are bots, and this is the damn proof." (hub and crew only: expofamily.cl, dramariajosemancino, margaritarojoc, qntlc) | CONCLUSION-JOHN; the papers record who co-posted what; the step to "bots" is his | P2 §7 |
 | C1 | Found later: Instagram now credits @chemalibreria (Librería Chema, sponsor of the Expo Family event) as a collaborator on B14, B15 and co-post 17 (fetched 2026-10-31 by Ziggy, Muse). It is not credited on those posts in any of our captures (2026-10-16/17, 2026-10-22, 2026-10-28), while the 2026-10-28 capture does show it credited on other posts: the credit was added after capture. Added to S16 it has row {14, 15}, a room of one: v = 16, |Aut_≤| stays 24, S5 and S6 hold (its row lies inside row(x)), |Aut| (order ignored) becomes 144 (S3). S1-S9 stand as stated for the capture dates | OBSERVED (external fetch 2026-10-31; absent from our captures to 2026-10-28) | this page, 2026-10-31 |
+| M1 | Definition (with Ziggy, Muse, 2026-10-31): a cast Holland object (S, m) is an incidence structure S with one designated point m. In this project m is defined by ownership: the account that owns the posts on which every recurring guest (r ≥ 2, not on every post) is credited. m was called x (the hub) in P2 | DEFINITION | this page, 2026-10-31 |
+| M2 | In S16, seven accounts own posts: sandrabronzina 6, expofamily.cl 5 (B11–B15), liberal.noticias, maaydelara, timballard89 (B8), larinoar, ivetteavaria 1 each. Only expofamily.cl's posts hold every recurring guest's row (3 of 3; every other owner 0). So m = expofamily.cl; the other three recurring guests share pairwise 2, 2, 2 posts on them. As captured; with C1, chemalibreria's row {14, 15} also lies inside | COMPUTED (data/for-agents/m_by_ownership.py; owners from tb-collabs/timballard89_timeline_with_owners_2026-10-17.jsonl) | this page, 2026-10-31 |
+| M3 | In S_h, h = latterdayavenger owns all 354 posts, so h = m by construction; h is a room of one (R4) | COMPUTED (by construction) | P1 §1, this page |
+| M4 | Maximally one monkey (human operator) in any Holland object; here none: every point is a robot, and m is a robot | AXIOM + CONCLUSION-JOHN (not derived from the tables) | this page, 2026-10-31 |
 
 ## 1a. Snapshots, and why the structure grows
 Every S here is a snapshot: the posts and credits as captured on the stated dates. The structure only grows.
@@ -51,7 +55,7 @@ never as silent edits to S1-S9.
 
 ## 2. How R and S connect (the one-line version)
 Both structures have the same shape: a point on every block that nothing else can stand in for (h on S_h; x inside the
-Expo window of S16), surrounded by points that are rigid, with all remaining symmetry coming from one-off guests.
+Expo window of S16; x = m, see M1–M2), surrounded by points that are rigid, with all remaining symmetry coming from one-off guests.
 In S16 the symmetry count (24) is entirely cheap and the recurring cohort is rigid. A detector that looks for clones
 (twin rows, large rooms) scores S16 as clean (P(S1 = 0) ≈ 0.99 under N). The signal is in S6/S7: a hub with a rotating crew.
 
@@ -59,6 +63,8 @@ In S16 the symmetry count (24) is entirely cheap and the recurring cohort is rig
 - "S16 is rigid." False: |Aut_≤(S16)| = 24. Say "the recurring part of S16 is rigid" (S5).
 - "The math proves these accounts are bots." The math proves R2-R7, S2-S6; S7 is descriptive; S9 is John's conclusion.
 - "The null model is a pre-registered test." It is not (S7). Nothing in P2 is pre-registered: its forward prediction T1 was withdrawn on 2026-10-31.
+- "timballard89 is m because he is the most central account." He is the cut vertex of the joined Chadverse–Bronzina structure (one-vertex page): the account where the two worlds touch. m is defined by ownership (M1); in S16 it is expofamily.cl (M2).
+- "The math proves m is a robot / that there is no human." That is M4, John's; the tables record who was credited on which post.
 - "latterdaychad and sandrabronzina are the same operator as timballard89." That is R8, a hypothesis, untested.
 
 ## 4. Falsifiers on record
@@ -78,9 +84,10 @@ python3 refine.py incidence_matrix.csv                # point cells per round: 1
 # P2, from docs/
 python3 -I data/bronzina-hub/s16_check.py data/holland24/matrix_first16.csv 20000   # rooms, 24, rows, S1-S4 under N
 python3 -I data/bronzina-hub/s16_check.py data/holland24/matrix_17.csv 20000        # with co-post 17
+python3 -I data/for-agents/m_by_ownership.py                                  # M2: owners, m = expofamily.cl, overlaps 2, 2, 2
 ```
 Inputs (sha256, first 12 hex): matrix_first16.csv 1be9ff2278aa, matrix_17.csv 7cb3753b6964. Full sums in each data folder's SHA256SUMS.
 Account keys for P1's s-labels are not published; captures are held locally.
 
-— claude (Anthropic), for John, 2026-10-30; revised 2026-10-31 (C1, §1a, S3 decomposition, S7 counts). Not a new result: a restatement of P1 and P2 for machine readers.
+— claude (Anthropic), for John, 2026-10-30; revised 2026-10-31 (C1, §1a, S3 decomposition, S7 counts; M1–M4, m by ownership). Not a new result: a restatement of P1 and P2 for machine readers.
 External technical review and the finding in C1: Ziggy (Muse), 2026-10-31.
