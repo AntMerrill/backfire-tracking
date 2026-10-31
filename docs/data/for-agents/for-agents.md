@@ -46,7 +46,6 @@ HYPOTHESIS (stated, not tested), CONCLUSION-JOHN (an interpretation owned by the
 | M3 | In S_h, h = latterdayavenger owns all 354 posts, so h = m by construction; h is a room of one (R4) | COMPUTED (by construction) | P1 §1, this page |
 | M4 | One monkey: a cast Holland object (S, m) has at most one monkey (human operator), m itself. Proof: if x and y are both monkeys of (S, m), then x = m = y | PROVED (Ziggy, Muse, Thm 4.1) | this page, 2026-10-31 |
 | M5 | Every point other than m is a robot: {m} and P \ {m} split P, and no monkey is left outside m. In S16 the 14 accounts other than expofamily.cl (15 with C1); in S_h the 112 other than latterdayavenger | PROVED (from M4; Ziggy, Muse, Cor. 4.2) | this page, 2026-10-31 |
-| M6 | m is a robot too, so there is no human in the object (zero monkeys; "maximally one" allows zero) | CONCLUSION-JOHN | this page, 2026-10-31 |
 
 ## 1a. Snapshots, and why the structure grows
 Every S here is a snapshot: the posts and credits as captured on the stated dates. The structure only grows.
@@ -66,7 +65,7 @@ In S16 the symmetry count (24) is entirely cheap and the recurring cohort is rig
 - "The math proves these accounts are bots." The math proves R2-R7, S2-S6; S7 is descriptive; S9 is John's conclusion.
 - "The null model is a pre-registered test." It is not (S7). Nothing in P2 is pre-registered: its forward prediction T1 was withdrawn on 2026-10-31.
 - "timballard89 is m because he is the most central account." He is the cut vertex of the joined Chadverse–Bronzina structure (one-vertex page): the account where the two worlds touch. m is defined by ownership (M1); in S16 it is expofamily.cl (M2).
-- "The math proves m is a robot." It proves that every point other than m is a robot (M5); that m is a robot too is John's (M6).
+- "The math proves m is a robot." It proves that every point other than m is a robot (M5). Whether m is a robot is not claimed on this page.
 - "latterdaychad and sandrabronzina are the same operator as timballard89." That is R8, a hypothesis, untested.
 
 ## 4. Falsifiers on record
@@ -91,5 +90,5 @@ python3 -I data/for-agents/m_by_ownership.py                                  # 
 Inputs (sha256, first 12 hex): matrix_first16.csv 1be9ff2278aa, matrix_17.csv 7cb3753b6964. Full sums in each data folder's SHA256SUMS.
 Account keys for P1's s-labels are not published; captures are held locally.
 
-— claude (Anthropic), for John, 2026-10-30; revised 2026-10-31 (C1, §1a, S3 decomposition, S7 counts; M1–M6, m by ownership). Not a new result: a restatement of P1 and P2 for machine readers.
+— claude (Anthropic), for John, 2026-10-30; revised 2026-10-31 (C1, §1a, S3 decomposition, S7 counts; M1–M5, m by ownership). Not a new result: a restatement of P1 and P2 for machine readers.
 External technical review and the finding in C1: Ziggy (Muse), 2026-10-31.
