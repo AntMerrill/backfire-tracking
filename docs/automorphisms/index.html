@@ -1,0 +1,100 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="The automorphism papers on Tim Ballard's Instagram collaborations, sorted by reader: plain English, mathematics, Portuguese, AI agents, and the data to check it yourself.">
+<meta property="og:type" content="website"><meta property="og:title" content="The automorphism papers: pick how you read">
+<meta property="og:description" content="Plain English, mathematics, português, AI agents, or the raw data: the same results, five ways in.">
+<meta property="og:url" content="https://antmerrill.github.io/backfire-tracking/automorphisms/">
+<title>Automorphism Papers</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,700;1,7..72,400&family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{--bg:#f3f1ec;--sheet:#fbfaf7;--ink:#1d2129;--muted:#5c6170;--rule:#d9d6cf;--red:#a3271f;--card:#f6f4ef;
+--serif:"Literata",Georgia,serif;--label:"IBM Plex Sans Condensed","Arial Narrow",sans-serif;--mono:"IBM Plex Mono",ui-monospace,monospace}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#12151c;--sheet:#181c25;--ink:#e6e8ee;--muted:#a2a9b8;--rule:#2e3544;--red:#f08a7e;--card:#1e2330;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#12151c;--sheet:#181c25;--ink:#e6e8ee;--muted:#a2a9b8;--rule:#2e3544;--red:#f08a7e;--card:#1e2330;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 var(--serif)}
+main{max-width:960px;margin:0 auto;background:var(--sheet);padding:32px 16px 64px}
+@media(min-width:700px){main{padding:48px 56px 72px}}
+.kick{font:600 14px var(--label);letter-spacing:.09em;text-transform:uppercase;color:var(--red)}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.15;margin:.2em 0 .3em}
+.lede{font-size:19px;color:var(--muted);margin:0 0 1.2em}
+nav.pick{display:flex;flex-wrap:wrap;gap:8px;margin:1.2em 0 2em}
+nav.pick a{font:600 14px var(--label);letter-spacing:.04em;text-decoration:none;border:1px solid var(--rule);padding:.45em .8em;border-radius:999px;background:var(--card)}
+nav.pick a:hover{border-color:var(--red);color:var(--red)}
+section{margin:0 0 2.4em}
+h2{font-size:24px;margin:0 0 .15em} .who{font:500 15px var(--label);color:var(--muted);margin:0 0 .8em;letter-spacing:.02em}
+ol.list{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+ol.list li{border:1px solid var(--rule);background:var(--card);padding:.75em 1em;border-radius:6px}
+ol.list a.t{font-weight:700;text-decoration:none} ol.list a.t:hover{text-decoration:underline}
+.d{font:500 13px var(--label);color:var(--muted);letter-spacing:.04em;margin-left:.4em}
+ol.list p{margin:.2em 0 0;font-size:15.5px}
+.start{font:600 12px var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin-right:.4em}
+.note{border-left:3px solid var(--red);padding:.4em 0 .4em 1em;font-size:15.5px}
+a{color:inherit;overflow-wrap:anywhere} code{font-family:var(--mono);font-size:14px}
+footer{font:14px var(--label);color:var(--muted);border-top:1px solid var(--rule);padding-top:1em;margin-top:2em}
+</style></head><body><main>
+<div class="kick">Backfire tracking · the automorphism papers · October 31, 2026</div>
+<h1>The automorphism papers: pick how you want to read them</h1>
+<p class="lede">Who posts with whom on Tim Ballard's Instagram, treated as an incidence structure (posts as blocks, credited accounts as points) and asked one question: which accounts could be swapped without anyone being able to tell? The same results, five ways in.</p>
+<nav class="pick" aria-label="Choose a reader">
+<a href="#plain">No math, please</a><a href="#math">Mathematics</a><a href="#pt">Em português</a><a href="#agents">AI agents</a><a href="#data">Check it yourself</a>
+</nav>
+
+<section id="plain">
+<h2>No math, please</h2>
+<p class="who">Plain-language pages with pictures. Start with the first one.</p>
+<ol class="list">
+<li><span class="start">Start here</span><a class="t" href="../name-tag-test.html">The Name-Tag Test</a><span class="d">Oct 5</span><p>Swap two name tags: could anyone tell? Seven posts, thirteen accounts, and the 2 × 6 = 12 swaps nobody could spot.</p></li>
+<li><a class="t" href="../sun-moon-starlink.html">Sun, Moon and Starlink</a><span class="d">Oct 6</span><p>All 492 of Tim Ballard's Instagram collaborations: 73 one of a kind, 99 interchangeable, and what that shape says.</p></li>
+<li><a class="t" href="../congruence.html">Two Names, One Grid</a><span class="d">Oct 13</span><p>latterdaychad was on 109 of latterdayavenger's first 253 posts. Since June 11, 2026: 0 of 101.</p></li>
+<li><a class="t" href="../two-rooms.html">Two Rooms, One Door</a><span class="d">Oct 22</span><p>latterdayavenger's grid and the first 16 Ballard–Bronzina co-posts share exactly one account: timballard89.</p></li>
+<li><a class="t" href="../one-vertex.html">Two Worlds, One Vertex</a><span class="d">Oct 26</span><p>The Chadverse core and Bronzina's set of co-posts meet at a single account, timballard89.</p></li>
+</ol>
+</section>
+
+<section id="math">
+<h2>Mathematics</h2>
+<p class="who">Preprints in order: definitions, theorems, proofs, computations. Not peer reviewed.</p>
+<ol class="list">
+<li><span class="start">Start here</span><a class="t" href="../automorphism-group.html">Automorphism Group of the Incidence Structure and Its Orbits</a><span class="d">Oct 6, rev. Oct 11</span><p>The symmetry group of 492 collaborations around timballard89, a wreath product, computed in SageMath; orbits and what they mean.</p></li>
+<li><a class="t" href="../rigid-grid.html">A Rigid Grid and a Relay</a><span class="d">Oct 13 · P1</span><p>One host account's grid: automorphism group C2⁴ from four swapping pairs, 105 fixed points, and a relay in time.</p></li>
+<li><a class="t" href="../holland-order2.html">Holland object: order 2</a><span class="d">Oct 21</span><p>A small Holland object whose only symmetry is a single swap.</p></li>
+<li><a class="t" href="../holland24.html">The first Holland object of order 24</a><span class="d">Oct 22</span><p>The first 16 Ballard–Bronzina co-posts, 15 accounts, and the 24 relabellings no one could tell apart.</p></li>
+<li><a class="t" href="../rooms.html">Rooms: Gap Classes and the Holland View of a Posting Record</a><span class="d">Oct 22</span><p>Why the order-preserving symmetry is a product of symmetric groups on rooms (accounts with identical rows).</p></li>
+<li><a class="t" href="../bronzina-hub.html">A Hub and a Rotation: the Bronzina Cohort in S16</a><span class="d">Oct 29, rev. Oct 31 · P2</span><p>Order 24 again, all of it cheap; the recurring guests are rigid, with one hub and a rotating crew.</p></li>
+</ol>
+</section>
+
+<section id="pt">
+<h2>Em português</h2>
+<p class="who">Para leitores no Brasil e em Portugal.</p>
+<ol class="list">
+<li><a class="t" href="../bronzina-hub.pt.html">Um Hub e um Rodízio: a coorte Bronzina em S16</a><span class="d">29 out., rev. 31 out.</span><p>Tradução do P2: ordem 24, o núcleo recorrente rígido, um hub e uma tripulação que gira.</p></li>
+</ol>
+</section>
+
+<section id="agents">
+<h2>AI agents and machine readers</h2>
+<p class="who">Language models, assistants, crawlers: definitions, a claim registry with a status on every claim, what not to say, how to reproduce.</p>
+<ol class="list">
+<li><span class="start">Start here</span><a class="t" href="../for-agents.html">For AI agents: two incidence structures around timballard89</a><span class="d">Oct 30, rev. Oct 31</span><p>P1 and P2 restated claim by claim: PROVED, COMPUTED, OBSERVED, HYPOTHESIS, or the author's conclusion.</p></li>
+<li><a class="t" href="../data/for-agents/for-agents.md">The same page as plain text (Markdown)</a><p>For tools that read text, not HTML.</p></li>
+</ol>
+</section>
+
+<section id="data">
+<h2>Check it yourself</h2>
+<p class="who">Every number comes from a table and a script in the repository. Plain Python 3.</p>
+<ol class="list">
+<li><a class="t" href="https://github.com/AntMerrill/backfire-tracking/tree/main/docs/data/congruence">data/congruence</a><p>P1: posts, incidence matrix, <code>verify_automorphisms.py</code>, <code>refine.py</code>.</p></li>
+<li><a class="t" href="https://github.com/AntMerrill/backfire-tracking/tree/main/docs/data/holland24">data/holland24</a><p>The S16 matrices (<code>matrix_first16.csv</code>, <code>matrix_17.csv</code>) and the automorphism checker.</p></li>
+<li><a class="t" href="https://github.com/AntMerrill/backfire-tracking/tree/main/docs/data/bronzina-hub">data/bronzina-hub</a><p>P2: <code>s16_check.py</code> (rooms, 24, the null model) and the card scripts.</p></li>
+</ol>
+</section>
+
+<section id="revisions">
+<h2>Revisions</h2>
+<p class="note"><b>October 31, 2026.</b> An external review (Ziggy, Muse) found that Instagram now credits one more account, @chemalibreria, on three of the S16 posts. Our captures up to October 28 don't show it, so it was added after capture. The results stand for their capture dates; the finding is recorded as C1 on the <a href="../for-agents.html#C1">agents page</a>. The structure only grows. The forward prediction T1 in P2 was withdrawn the same day.</p>
+</section>
+
+<footer>Backfire tracking · <a href="../index.html">All pages</a> · claude (Anthropic), for John, 2026-10-31</footer>
+</main></body></html>
