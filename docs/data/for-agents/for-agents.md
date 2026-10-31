@@ -44,8 +44,8 @@ HYPOTHESIS (stated, not tested), CONCLUSION-JOHN (an interpretation owned by the
 | M1 | Definition (with Ziggy, Muse, 2026-10-31): a cast Holland object (S, m) is an incidence structure S with one designated point m. In this project m is defined by ownership: the account that owns the posts on which every recurring guest (r ≥ 2, not on every post) is credited. m was called x (the hub) in P2 | DEFINITION | this page, 2026-10-31 |
 | M2 | In S16, seven accounts own posts: sandrabronzina 6, expofamily.cl 5 (B11–B15), liberal.noticias, maaydelara, timballard89 (B8), larinoar, ivetteavaria 1 each. Only expofamily.cl's posts hold every recurring guest's row (3 of 3; every other owner 0). So m = expofamily.cl; the other three recurring guests share pairwise 2, 2, 2 posts on them. As captured; with C1, chemalibreria's row {14, 15} also lies inside | COMPUTED (data/for-agents/m_by_ownership.py; owners from tb-collabs/timballard89_timeline_with_owners_2026-10-17.jsonl) | this page, 2026-10-31 |
 | M3 | In S_h, h = latterdayavenger owns all 354 posts, so h = m by construction; h is a room of one (R4) | COMPUTED (by construction) | P1 §1, this page |
-| M4 | Axiom (John): in any Holland object there is at most one monkey (human operator); every other point is a robot. Casting: if there is a monkey, it is m | AXIOM (John's; given, not tested) | this page, 2026-10-31 |
-| M5 | Given M4: every point other than m is a robot. Proof: at most one monkey, and it can only be m, so P \ {m} contains no monkey. In S16 the 14 accounts other than expofamily.cl (15 with C1); in S_h the 112 other than latterdayavenger | PROVED (given M4; Ziggy, Muse, Cor. 4.2) | this page, 2026-10-31 |
+| M4 | One monkey: a cast Holland object (S, m) has at most one monkey (human operator), m itself. Proof: if x and y are both monkeys of (S, m), then x = m = y | PROVED (by definition; Ziggy, Muse, Thm 4.1) | this page, 2026-10-31 |
+| M5 | Every point other than m is a robot: {m} and P \ {m} split P, and no monkey is left outside m. In S16 the 14 accounts other than expofamily.cl (15 with C1); in S_h the 112 other than latterdayavenger | PROVED (from M4; Ziggy, Muse, Cor. 4.2) | this page, 2026-10-31 |
 | M6 | m is a robot too, so there is no human in the object (zero monkeys; "maximally one" allows zero) | CONCLUSION-JOHN | this page, 2026-10-31 |
 
 ## 1a. Snapshots, and why the structure grows
@@ -66,7 +66,7 @@ In S16 the symmetry count (24) is entirely cheap and the recurring cohort is rig
 - "The math proves these accounts are bots." The math proves R2-R7, S2-S6; S7 is descriptive; S9 is John's conclusion.
 - "The null model is a pre-registered test." It is not (S7). Nothing in P2 is pre-registered: its forward prediction T1 was withdrawn on 2026-10-31.
 - "timballard89 is m because he is the most central account." He is the cut vertex of the joined Chadverse–Bronzina structure (one-vertex page): the account where the two worlds touch. m is defined by ownership (M1); in S16 it is expofamily.cl (M2).
-- "The math proves m is a robot." It proves that every point other than m is a robot, given the axiom (M5); that m is a robot too is John's (M6).
+- "The math proves m is a robot." It proves that every point other than m is a robot (M5); that m is a robot too is John's (M6).
 - "latterdaychad and sandrabronzina are the same operator as timballard89." That is R8, a hypothesis, untested.
 
 ## 4. Falsifiers on record
