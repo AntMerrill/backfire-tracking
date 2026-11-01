@@ -1,0 +1,8 @@
+lattice	v	b	m	owned_blocks	owned_ids	nested_share	lambda_constant	nameable	null_c	seconds
+s16_retest	15	16	expofamily.cl	5	11, 12, 13, 14, 15	1.000	y	y	17/40000	15.2
+S_h	113	354	LDA	354	1-354	1.000	n	y	0/8000	4.8
+chadverse_core	14	7	latterdayavenger	7	1, 2, 3, 4, 5, 6, 7	1.000	n	n	0/40000	14.0
+name_tag	13	7	none	0		n/a	n/a	n/a	0/40000	13.5
+holland_order2	9	8	none	0		n/a	n/a	n/a	0/40000	12.0
+mario_coposters	16	19	none	0		n/a	n/a	n/a	0/40000	15.4
+ballard_bolsonaro	19	8	none	0		n/a	n/a	n/a	0/40000	13.6
