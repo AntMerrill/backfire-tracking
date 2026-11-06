@@ -1,0 +1,5 @@
+Oct 16 (as one-vertex.html): 28 accounts, 23 posts, 93 lines, 1 piece(s); cut vertices ['TB']; accounts with no line []
+Nov 6, our login: 29 accounts, 15 posts, 65 lines, 6 piece(s); cut vertices ['TB']; accounts with no line ['H', 'I', 'J', 'K', 'sandrabronzina']
+sandrabronzina on 16 of 16 Bronzina-coset posts on Oct 16; on 0 of 10 still on Tim's grid on Nov 6
+off Tim's grid on Nov 6: 6 (DQncoDDkalv, DY2_vclhVd5, DY6Nuq0OU5z, DY7LGsdIKg7, DY7wTMOoN5U, DZFy1F3h0uh), all owned by ['sandrabronzina']
+accounts on the Bronzina-coset posts on Nov 6 that weren't on Oct 16: ['chemalibreria']
