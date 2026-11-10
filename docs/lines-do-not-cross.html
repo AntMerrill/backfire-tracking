@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="robots" content="noindex" />
+<link rel="icon" href="data:," />
+<title>Lines Do Not Cross — Nov 9 Notes</title>
+<style>
+  :root{
+    --bg:#fbf9f4;
+    --bg2:#f3efe6;
+    --panel:#ffffff;
+    --panel2:#f7f3ea;
+    --line:#e3ddd0;
+    --line2:#cfc6b2;
+    --gold:#8a6d2f;
+    --gold-bright:#6f561f;
+    --gold-dim:#b9a678;
+    --text:#201d17;
+    --muted:#5f594d;
+    --faint:#857d6c;
+    --radius:14px;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0f0e0b;
+      --bg2:#161410;
+      --panel:#1a1712;
+      --panel2:#201c15;
+      --line:#332c1e;
+      --line2:#4a3f27;
+      --gold:#c9a86a;
+      --gold-bright:#e6c887;
+      --gold-dim:#8a744a;
+      --text:#ece6d8;
+      --muted:#b8ae97;
+      --faint:#8f8672;
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);font-family: ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:var(--gold-bright);text-decoration-color:rgba(138,109,47,.45);text-underline-offset:3px}
+  .wrap{max-width:880px;margin:0 auto;padding:28px 20px 56px}
+  .kicker{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700;margin:6px 0 14px}
+  h1{font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;font-weight:600;font-size:clamp(2rem,6vw,3.15rem);line-height:1.05;letter-spacing:-.01em;margin:0 0 16px}
+  h1 em{color:var(--gold-bright);font-style:normal}
+  .lede{font-size:1.02rem;line-height:1.7;color:var(--muted);border-left:3px solid var(--gold);padding:4px 0 4px 18px;margin:0 0 10px}
+  .lede strong{color:var(--text);font-weight:600}
+  .quote-inline{color:var(--gold-bright);font-style:italic;white-space:nowrap}
+  .rule{height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin:28px 0 8px;opacity:.7}
+  section{margin-top:26px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px 24px}
+  .sec-head{display:flex;gap:14px;align-items:flex-start;margin-bottom:14px}
+  .num{flex:0 0 auto;width:36px;height:36px;border-radius:50%;border:1px solid var(--gold-dim);color:var(--gold-bright);display:grid;place-items:center;font-family:Georgia,serif;font-size:1rem;margin-top:2px}
+  h2{font-family:Georgia,"Iowan Old Style",serif;font-size:1.45rem;line-height:1.2;font-weight:600;margin:0}
+  .sec-sub{color:var(--faint);font-size:.92rem;margin:3px 0 0}
+  p{margin:0 0 14px;color:var(--text)}
+  p:last-child{margin-bottom:0}
+  .small{font-size:.92rem;color:var(--muted)}
+  .footnote{font-size:.88rem;color:var(--muted);background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-top:16px}
+  .footnote b{color:var(--gold);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:6px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 16px}
+  .chip{border:1px solid var(--line2);background:var(--panel2);border-radius:999px;padding:7px 13px;font-size:.9rem}
+  .chip b{color:var(--gold-bright);font-weight:600}
+  ul.tight{margin:6px 0 14px;padding-left:20px;color:var(--text)}
+  ul.tight li{margin-bottom:7px}
+  code, .math{font-family: Georgia, serif;font-style:italic;color:var(--gold-bright);white-space:nowrap}
+  .formula{display:block;text-align:center;font-family:Georgia,serif;font-size:1.35rem;color:var(--text);background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:16px;margin:16px 0}
+  .formula span{color:var(--gold-bright)}
+  blockquote{margin:18px 0;padding:18px 20px;background:var(--panel2);border:1px solid var(--line2);border-radius:10px}
+  blockquote p{font-family:Georgia,serif;font-size:1.25rem;line-height:1.4;color:var(--text);margin:0}
+  blockquote cite{display:block;margin-top:8px;font-style:normal;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+  .toggle{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 12px}
+  .toggle button{appearance:none;border:1px solid var(--line2);background:transparent;color:var(--muted);padding:9px 14px;border-radius:999px;font-size:.9rem;cursor:pointer;font-weight:600}
+  .toggle button[aria-pressed="true"]{background:var(--gold);color:var(--bg);border-color:var(--gold)}
+  .tablewrap{overflow:hidden;border:1px solid var(--line);border-radius:10px}
+  table{width:100%;border-collapse:collapse;font-size:.92rem;table-layout:fixed}
+  th,td{padding:11px 12px;text-align:left;border-bottom:1px solid var(--line);overflow-wrap:break-word}
+  th{color:var(--gold);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;background:var(--bg2)}
+  tr:last-child td{border-bottom:none}
+  td.c, th.c{text-align:center}
+  .yes{color:var(--gold-bright);font-weight:700}
+  .no{color:var(--faint)}
+  tr.twin td{background:rgba(138,109,47,.10)}
+  .verdict{margin-top:12px;padding:13px 15px;border-radius:10px;background:var(--bg2);border:1px solid var(--line);font-size:.94rem;color:var(--muted)}
+  .verdict strong{color:var(--text)}
+  .ladder{display:grid;gap:12px;margin:18px 0}
+  .rung{border:1px solid var(--line);border-left:4px solid var(--gold-dim);border-radius:10px;padding:16px 18px;background:var(--bg2)}
+  @media(min-width:640px){
+    .rung:nth-child(2){margin-left:28px;border-left-color:var(--gold)}
+    .rung:nth-child(3){margin-left:56px;border-left-color:var(--gold-bright)}
+  }
+  .rung h3{margin:0 0 6px;font-size:1rem}
+  .rung h3 span{color:var(--gold);font-family:Georgia,serif;margin-right:8px}
+  .rung p{font-size:.94rem;margin:0;color:var(--muted)}
+  .rung p strong{color:var(--text)}
+  .diagram{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:14px;margin:16px 0}
+  .diagram a{display:block}
+  .diagram img{display:block;width:100%;height:auto;background:#fff;border:1px solid var(--line);border-radius:8px}
+  .diagram figcaption{font-size:.86rem;color:var(--faint);margin-top:10px;line-height:1.55}
+  .cards{display:grid;gap:14px;margin:18px 0 0}
+  @media(min-width:700px){.cards{grid-template-columns:1fr 1fr 1fr}}
+  .card{border:1px solid var(--line);border-radius:10px;background:var(--bg2);padding:10px}
+  .card img{display:block;width:100%;height:auto;background:#fff;border:1px solid var(--line);border-radius:6px}
+  .card figcaption{font-size:.82rem;color:var(--muted);margin-top:8px;line-height:1.45}
+  footer{margin-top:28px;padding-top:20px;border-top:1px solid var(--line);color:var(--faint);font-size:.9rem;line-height:1.6}
+  footer strong{color:var(--muted)}
+  @media(max-width:560px){
+    .wrap{padding:20px 14px 44px}
+    section{padding:20px 17px}
+    th,td{padding:9px 7px;font-size:.86rem}
+    th{font-size:.64rem;letter-spacing:.03em;overflow-wrap:normal;padding:10px 5px}
+    td{padding:10px 7px}
+    .formula{font-size:1.12rem}
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <p class="kicker">Holland objects · Ordered groups · Notes</p>
+  <h1>Lines Do Not Cross — <em>notes from November 9, 2026</em></h1>
+  <p class="lede">Worked up by <strong>Ziggy (Muse)</strong> from a conversation with <strong>Justin</strong>. Two phrases on this page are Justin&rsquo;s own and are credited to him where they appear: his description of torsion-freeness — <span class="quote-inline">&lsquo;lines do not cross&rsquo;</span> — and his description of the theory — <span class="quote-inline">&lsquo;what isn&rsquo;t Archimedean.&rsquo;</span> Background: Charles Holland&rsquo;s 1963 embedding theorem (every lattice-ordered group embeds in A(Ω), the order-automorphisms of some chain Ω) and Birkhoff&rsquo;s Problem 95.</p>
+  <div class="rule" aria-hidden="true"></div>
+
+  <!-- 1 -->
+  <section aria-labelledby="s1">
+    <div class="sec-head"><div class="num">1</div><div><h2 id="s1">The word game: a Holland object made of Hollands</h2><p class="sec-sub">Build the object out of three hypothetical people who share the name Holland — the same move as the Instagram objects.</p></div></div>
+
+    <p>The word game needs three people and nothing else. Imagine three hypothetical people who happen to share the surname Holland: a parent, the parent&rsquo;s child, and the child&rsquo;s spouse, who took the name. Nothing about them is claimed beyond the name and the records that connect them.</p>
+
+    <div class="chips" aria-label="Points">
+      <span class="chip"><b>Points</b> — the Hollands</span>
+      <span class="chip">The parent</span>
+      <span class="chip">The child</span>
+      <span class="chip">The child&rsquo;s spouse — also Holland</span>
+    </div>
+
+    <p><strong>Blocks:</strong> the dated ties between them.</p>
+    <ul class="tight">
+      <li>A parent tie is a two-point block <span class="math">{parent, child}</span>.</li>
+      <li>A marriage is a two-point block <span class="math">{child, spouse}</span>.</li>
+      <li>The roster of a club or group containing Hollands is a block, like a co-post.</li>
+    </ul>
+    <p>Order the blocks by date — that is the chain. <strong>The group:</strong> all rearrangements of the points that preserve every block, respecting the time order — the ordered automorphism group, product of factorials of the rooms, the sets of points with identical rows.</p>
+    <p>The object is non-trivial exactly when two Hollands share a row. In the full record they do not: the child sits in the parent block; the spouse does not.</p>
+    <p>But coarsen the recording — memberships and the marriage only, refusing to look at anything but the bookkeeping — and the marriage block is symmetric, <span class="math">{Holland, Holland}</span>: if the child and the spouse land in all the same groups and have no other recorded tie, their rows coincide, the object gains a swap, and it cannot tell the born Holland from the married-in Holland. Twins by bookkeeping — the same phenomenon as the twin accounts in the Instagram coset.</p>
+
+    <div class="toggle" role="group" aria-label="Recording resolution">
+      <button type="button" id="btn-full" aria-pressed="true">Full record</button>
+      <button type="button" id="btn-coarse" aria-pressed="false">Coarsened — bookkeeping only</button>
+    </div>
+    <div class="tablewrap">
+      <table aria-label="Holland incidence rows">
+        <thead><tr><th>Point</th><th class="c" id="th-parent">Parent block</th><th class="c">Marriage block</th><th class="c">Same groups</th></tr></thead>
+        <tbody>
+          <tr id="row-child"><td>Child</td><td class="c yes" data-parent>●</td><td class="c yes">●</td><td class="c yes">●</td></tr>
+          <tr id="row-spouse"><td>Spouse</td><td class="c no" data-parent>—</td><td class="c yes">●</td><td class="c yes">●</td></tr>
+          <tr><td>Parent</td><td class="c yes" data-parent>●</td><td class="c no">—</td><td class="c no">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="verdict" id="verdict"><strong>Rows differ.</strong> The child is in the parent block and the spouse is not — no identical rows, no swap, trivial group.</p>
+
+    <div class="footnote"><b>Honest footnote</b>A(Ω) is torsion-free, so no nontrivial finite group literally embeds in it; these are Holland objects in the project&rsquo;s sense — incidence structure plus ordered automorphisms — the sense used throughout the project.</div>
+  </section>
+
+  <!-- 2 -->
+  <section aria-labelledby="s2">
+    <div class="sec-head"><div class="num">2</div><div><h2 id="s2">Torsion, in plain words</h2><p class="sec-sub">Repeating something until you come home — or never coming home at all.</p></div></div>
+
+    <p><strong>Definition:</strong> an element <span class="math">g</span> of a group has torsion if repeating it returns to the identity — <span class="math">g<sup>n</sup> = e</span> for some <span class="math">n ≥ 1</span>; the least such <span class="math">n</span> is its order. A group is torsion-free if only the identity ever returns.</p>
+
+    <span class="formula">g<sup>n</sup> = e &nbsp;<span>— torsion</span> &nbsp;&nbsp;·&nbsp;&nbsp; only e ever returns <span>— torsion-free</span></span>
+
+    <p><strong>Examples from the project&rsquo;s objects:</strong> swapping the twin accounts twice restores everything — order 2; a 3-cycle in a room of three — order 3. Every element of a finite group has torsion: in a finite room, repetition has nowhere else to go.</p>
+
+    <p><strong>Why A(Ω) has none — the non-crossing argument.</strong> Let <span class="math">f</span> be an order-preserving bijection of a chain and suppose <span class="math">f(x) &gt; x</span> for some point <span class="math">x</span>. Order-preserving gives</p>
+
+    <figure class="diagram">
+      <a href="img/ldnc/card_a_iterates_v2.svg"><img src="img/ldnc/card_a_iterates_v2.svg" alt="A chain with points x, f(x), f²(x), f³(x) strictly increasing to the right, joined by arrows"></a>
+      <figcaption>x &lt; f(x) &lt; f²(x) &lt; … — strictly increasing forever. Returning would require crossing points already passed. Standalone card: <a href="img/ldnc/card_a_iterates_v2.svg">SVG</a> · <a href="img/ldnc/card_a_iterates_v2.png">1200-px PNG</a>.</figcaption>
+    </figure>
+
+    <p>…strictly increasing forever — the iterates can never return to <span class="math">x</span>, because returning would require crossing points already passed, and an order-preserving map crosses nothing: if <span class="math">a &lt; b</span> then <span class="math">f(a) &lt; f(b)</span>, always. The descending case is symmetric. Hence <span class="math">f<sup>n</sup> = identity</span> forces <span class="math">f(x) = x</span> for all <span class="math">x</span>.</p>
+
+    <blockquote><p>&ldquo;Lines do not cross.&rdquo;</p><cite>Justin — his summary of this argument, in his own words</cite></blockquote>
+
+    <p><strong>Cross-reference to physics:</strong> torsion there is twisting; here a torsion element is one that twists back onto itself in finitely many turns — a half-turn rotation has torsion; a translation never does. Loosely, A(Ω) behaves like translations, not rotations.</p>
+    <p class="small">No field is needed for any of this: torsion is defined for plain groups (and, in a second act, for modules over a ring).</p>
+  </section>
+
+  <!-- 3 -->
+  <section aria-labelledby="s3">
+    <div class="sec-head"><div class="num">3</div><div><h2 id="s3">The three rungs</h2><p class="sec-sub">Finite groups, ordered groups, Archimedean ordered groups — three different classes, not a chain of inclusions.</p></div></div>
+
+    <div class="ladder">
+      <div class="rung"><h3><span>Rung 1</span>Finite groups</h3><p>Everything has torsion — swaps and cycles, all coming home; <strong>the project&rsquo;s automorphism groups live here.</strong> No nontrivial finite group admits a translation-invariant total order, because an ordered group is torsion-free.</p></div>
+      <div class="rung"><h3><span>Rung 2</span>Ordered groups</h3><p>Linearly ordered groups, lattice-ordered groups, A(Ω): <strong>torsion-free, because lines do not cross.</strong> Holland&rsquo;s embedding theorem lives here — every such group embeds in some A(Ω). Not every ordered group is Archimedean.</p></div>
+      <div class="rung"><h3><span>Rung 3</span>Archimedean ordered groups</h3><p>Isomorphic to subgroups of the additive real numbers by Hölder&rsquo;s theorem — <strong>hence abelian, hence tame.</strong> This is the real-valued special case, not the whole of the ordered world.</p></div>
+    </div>
+
+    <p>The rungs are not a chain of inclusions. Nontrivial finite groups sit outside the ordered ones; an ordered group need not be Archimedean; the Archimedean ordered groups are the abelian, real-valued special case. The project&rsquo;s finite objects never meet the Archimedean property, and the reason is this ladder.</p>
+
+    <figure class="diagram">
+      <a href="img/ldnc/card_c_rungs_v2.svg"><img src="img/ldnc/card_c_rungs_v2.svg" alt="Boxes for finite groups, ordered groups, Archimedean ordered groups and the additive reals, with arrows for orderability, inclusion and Hölder's embedding"></a>
+      <figcaption>The three classes and the two exclusions. Standalone card: <a href="img/ldnc/card_c_rungs_v2.svg">SVG</a> · <a href="img/ldnc/card_c_rungs_v2.png">1200-px PNG</a>.</figcaption>
+    </figure>
+  </section>
+
+  <!-- 4 -->
+  <section aria-labelledby="s4">
+    <div class="sec-head"><div class="num">4</div><div><h2 id="s4">The Archimedean property</h2><p class="sec-sub">From Eudoxus, via Archimedes — Euclid, Elements Book V; the engine of the method of exhaustion.</p></div></div>
+
+    <p>For all positive elements <span class="math">a</span> and <span class="math">b</span>, some finite multiple of <span class="math">a</span> exceeds <span class="math">b</span> — there exists <span class="math">n</span> with</p>
+    <span class="formula">b &lt; n · a</span>
+    <p>Nothing is so small that repetition cannot save it; nothing so large that it is out of reach.</p>
+    <p><strong>Hölder&rsquo;s theorem:</strong> an ordered group with this property embeds in (ℝ, +). The property is standard and is documented on Wikipedia under <a href="https://en.wikipedia.org/wiki/Archimedean_property" target="_blank" rel="noopener">&lsquo;Archimedean property.&rsquo;</a></p>
+  </section>
+
+  <!-- 5 -->
+  <section aria-labelledby="s5">
+    <div class="sec-head"><div class="num">5</div><div><h2 id="s5">What isn&rsquo;t Archimedean</h2><p class="sec-sub">Justin&rsquo;s description of the theory he was looking at.</p></div></div>
+
+    <blockquote><p>&ldquo;What isn&rsquo;t Archimedean.&rdquo;</p><cite>Justin — his description</cite></blockquote>
+
+    <p>Where the axiom fails, infinitesimals live: positive elements <span class="math">a, b</span> with <span class="math">n·a &lt; b</span> for <em>every</em> <span class="math">n</span>. The Holland world is built there.</p>
+
+    <p><strong>Example:</strong> in A(ℝ), take an automorphism that moves points only inside one small interval — a bump supported in <span class="math">[a, c]</span> — and a translation <span class="math">t_d(x) = x + d</span> longer than that interval, <span class="math">d ≥ c − a</span>. Iterate the bump any number of times: its effect stays inside the interval, and every power lies pointwise below the translation. No power of the bump equals the translation; the bump is infinitesimal relative to it. (For a translation shorter than the bump&rsquo;s interval the pointwise comparison can fail at points near the left end a — the interval length is the bound.)</p>
+
+    <figure class="diagram">
+      <a href="img/ldnc/card_b_bump_v2.svg"><img src="img/ldnc/card_b_bump_v2.svg" alt="A bump curve supported on an interval [a, c] above a number line, and a translation arrow from x to x plus d where d is longer than the interval"></a>
+      <figcaption>No number of repetitions of the bump ever adds up to the translation — b<sup>n</sup> &lt; t<sub>d</sub> for every n when d ≥ c − a. Standalone card: <a href="img/ldnc/card_b_bump_v2.svg">SVG</a> · <a href="img/ldnc/card_b_bump_v2.png">1200-px PNG</a>.</figcaption>
+    </figure>
+
+    <p>More generally, the chains used in Holland&rsquo;s representation theory are lexicographic stacks: component laid on component, where everything in a lower component is infinitesimal relative to anything in a higher one — the canonical machine for breaking Archimedes&rsquo; axiom, and the natural habitat of A(Ω).</p>
+    <p>So the theory the project&rsquo;s objects are named after lives on the non-Archimedean side — Justin&rsquo;s description of what he was looking at: <em>&lsquo;what isn&rsquo;t Archimedean.&rsquo;</em> The finite objects themselves sit outside the question: in a finite room, everything is a few swaps from everything else, and nothing is large or small enough to be infinitesimal.</p>
+  </section>
+
+  <footer>
+    <p><strong>Prepared Nov 9, 2026, by Ziggy (Muse) for Justin.</strong> Companion pages: &lsquo;The Twins and the Window — Nov 8 Findings&rsquo; and the project site <a href="https://antmerrill.github.io/backfire-tracking" target="_blank" rel="noopener">antmerrill.github.io/backfire-tracking</a>.</p>
+    <p>Cards: <a href="img/ldnc/card_a_iterates_v2.svg">iterates</a> (<a href="img/ldnc/card_a_iterates_v2.png">PNG</a>) · <a href="img/ldnc/card_b_bump_v2.svg">bump vs translation</a> (<a href="img/ldnc/card_b_bump_v2.png">PNG</a>) · <a href="img/ldnc/card_c_rungs_v2.svg">the three rungs</a> (<a href="img/ldnc/card_c_rungs_v2.png">PNG</a>).</p>
+  </footer>
+
+</main>
+<script>
+(function(){
+  var btnFull=document.getElementById('btn-full');
+  var btnCoarse=document.getElementById('btn-coarse');
+  var verdict=document.getElementById('verdict');
+  var child=document.getElementById('row-child');
+  var spouse=document.getElementById('row-spouse');
+  var parentCells=document.querySelectorAll('[data-parent]');
+  var thParent=document.getElementById('th-parent');
+  function setMode(coarse){
+    btnFull.setAttribute('aria-pressed', String(!coarse));
+    btnCoarse.setAttribute('aria-pressed', String(coarse));
+    parentCells.forEach(function(c){ c.style.opacity = coarse ? '0.18' : '1'; });
+    thParent.style.opacity = coarse ? '0.4' : '1';
+    thParent.textContent = coarse ? 'Parent — dropped' : 'Parent block';
+    child.classList.toggle('twin', coarse);
+    spouse.classList.toggle('twin', coarse);
+    verdict.innerHTML = coarse
+      ? '<strong>Rows coincide.</strong> Drop the parent block and the child and the spouse have identical rows — the object gains a swap (S\u2082) and cannot tell the born Holland from the married-in Holland.'
+      : '<strong>Rows differ.</strong> The child is in the parent block and the spouse is not \u2014 no identical rows, no swap, trivial group.';
+  }
+  btnFull.addEventListener('click', function(){ setMode(false); });
+  btnCoarse.addEventListener('click', function(){ setMode(true); });
+})();
+</script>
+</body>
+</html>

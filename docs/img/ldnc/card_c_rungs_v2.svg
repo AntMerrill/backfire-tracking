@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" role="img">
+<title>Finite, ordered, and Archimedean groups</title>
+<desc>Nested regions: ordered groups contain the Archimedean ordered groups, which are isomorphic to subgroups of the additive reals by Hölder's theorem. Nontrivial finite groups are drawn outside and are disjoint: none is orderable.</desc>
+<rect width="1200" height="620" fill="#ffffff"/>
+<text x="60" y="82" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="38" fill="#1a1a1a" font-weight="bold" text-anchor="start">Finite, ordered, and Archimedean groups</text>
+<rect x="330" y="165" width="800" height="360" rx="18" fill="#eef3f8" stroke="#1f4e79" stroke-width="2"/>
+<text x="365" y="217" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="30" fill="#1a1a1a" font-weight="bold" text-anchor="start">Ordered groups</text>
+<text x="365" y="247" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="18" fill="#555555" text-anchor="start">torsion-free</text>
+<rect x="395" y="275" width="670" height="190" rx="14" fill="#ffffff" stroke="#1f4e79" stroke-width="2.5"/>
+<text x="730" y="327" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="28" fill="#1a1a1a" font-weight="bold" text-anchor="middle">Archimedean ordered groups</text>
+<text x="730" y="372" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="24" fill="#1a1a1a" text-anchor="middle">isomorphic to subgroups of (ℝ, +)</text>
+<text x="730" y="412" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#555555" text-anchor="middle">Hölder: embeds in (ℝ, +), hence abelian</text>
+<text x="730" y="496" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="19" fill="#555555" text-anchor="middle">not every ordered group is Archimedean</text>
+<rect x="60" y="300" width="225" height="175" rx="14" fill="#f4f6f9" stroke="#1a1a1a" stroke-width="2"/>
+<text x="172" y="346" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="22" fill="#1a1a1a" font-weight="bold" text-anchor="middle">Nontrivial</text>
+<text x="172" y="374" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="22" fill="#1a1a1a" font-weight="bold" text-anchor="middle">finite groups</text>
+<text x="172" y="408" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="16" fill="#555555" text-anchor="middle">all elements have</text>
+<text x="172" y="430" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="16" fill="#555555" text-anchor="middle">finite order</text>
+<text x="600" y="570" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="21" fill="#1a1a1a" text-anchor="middle">Nontrivial finite groups lie outside: none is orderable; ordered groups need not be Archimedean.</text>
+</svg>

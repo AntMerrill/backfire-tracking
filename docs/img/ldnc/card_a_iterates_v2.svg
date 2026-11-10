@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" role="img">
+<title>Iterates of an order-preserving map</title>
+<desc>A point and its iterates under an order-preserving bijection of a chain with f(x) &gt; x: x &lt; f(x) &lt; f squared (x) &lt; f cubed (x) &lt; ...; the case f(x) &lt; x is symmetric.</desc>
+<rect width="1200" height="560" fill="#ffffff"/>
+<text x="70" y="82" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="38" fill="#1a1a1a" font-weight="bold" text-anchor="start">Iterates of an order-preserving map</text>
+<text x="70" y="126" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="24" fill="#555555" text-anchor="start">an order-preserving bijection of a chain, with f(x) &gt; x</text>
+<line x1="90" y1="340" x2="1110" y2="340" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round"/>
+<circle cx="180" cy="340" r="13" fill="#1a1a1a" stroke="none" stroke-width="2"/>
+<text x="180" y="292" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="28" fill="#1a1a1a" text-anchor="middle">x</text>
+<circle cx="420" cy="340" r="13" fill="#1f4e79" stroke="none" stroke-width="2"/>
+<text x="420" y="292" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="28" fill="#1a1a1a" font-style="italic" text-anchor="middle">f(x)</text>
+<circle cx="660" cy="340" r="13" fill="#1f4e79" stroke="none" stroke-width="2"/>
+<text x="660" y="292" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="28" fill="#1a1a1a" font-style="italic" text-anchor="middle">f²(x)</text>
+<circle cx="900" cy="340" r="13" fill="#1f4e79" stroke="none" stroke-width="2"/>
+<text x="900" y="292" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="28" fill="#1a1a1a" font-style="italic" text-anchor="middle">f³(x)</text>
+<polyline points="200.00,328.00 206.25,322.19 212.49,316.75 218.73,311.69 224.97,307.00 231.20,302.69 237.43,298.75 243.65,295.19 249.88,292.00 256.09,289.19 262.30,286.75 268.51,284.69 274.72,283.00 280.92,281.69 287.12,280.75 293.31,280.19 299.50,280.00 305.69,280.19 311.87,280.75 318.04,281.69 324.22,283.00 330.39,284.69 336.55,286.75 342.72,289.19 348.88,292.00 355.03,295.19 361.18,298.75 367.33,302.69 373.47,307.00 379.61,311.69 385.74,316.75 391.87,322.19 398.00,328.00" fill="none" stroke="#1f4e79" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="398.00,328.00 384.89,322.80 392.53,315.00" fill="#1f4e79" stroke="#1f4e79" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="440.00,328.00 446.25,322.19 452.49,316.75 458.73,311.69 464.97,307.00 471.20,302.69 477.43,298.75 483.65,295.19 489.88,292.00 496.09,289.19 502.30,286.75 508.51,284.69 514.72,283.00 520.92,281.69 527.12,280.75 533.31,280.19 539.50,280.00 545.69,280.19 551.87,280.75 558.04,281.69 564.22,283.00 570.39,284.69 576.55,286.75 582.72,289.19 588.88,292.00 595.03,295.19 601.18,298.75 607.33,302.69 613.47,307.00 619.61,311.69 625.74,316.75 631.87,322.19 638.00,328.00" fill="none" stroke="#1f4e79" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="638.00,328.00 624.89,322.80 632.53,315.00" fill="#1f4e79" stroke="#1f4e79" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="680.00,328.00 686.25,322.19 692.49,316.75 698.73,311.69 704.97,307.00 711.20,302.69 717.43,298.75 723.65,295.19 729.88,292.00 736.09,289.19 742.30,286.75 748.51,284.69 754.72,283.00 760.92,281.69 767.12,280.75 773.31,280.19 779.50,280.00 785.69,280.19 791.87,280.75 798.04,281.69 804.22,283.00 810.39,284.69 816.55,286.75 822.72,289.19 828.88,292.00 835.03,295.19 841.18,298.75 847.33,302.69 853.47,307.00 859.61,311.69 865.74,316.75 871.87,322.19 878.00,328.00" fill="none" stroke="#1f4e79" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="878.00,328.00 864.89,322.80 872.53,315.00" fill="#1f4e79" stroke="#1f4e79" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1035" y="292" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="34" fill="#555555" text-anchor="middle">…</text>
+<text x="600" y="430" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="23" fill="#1a1a1a" text-anchor="middle">If f(x) &gt; x, then x &lt; f(x) &lt; f²(x) &lt; … : the orbit moves right and never returns.</text>
+<text x="600" y="464" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="23" fill="#1a1a1a" text-anchor="middle">The case f(x) &lt; x is symmetric, moving left. So no power fⁿ with n ≥ 1 is the identity:</text>
+<text x="600" y="496" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="23" fill="#555555" text-anchor="middle">every iterate crosses no point already passed.</text>
+</svg>
