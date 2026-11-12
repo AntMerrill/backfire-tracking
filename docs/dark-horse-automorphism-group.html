@@ -1,0 +1,271 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="description" content="A preprint-style treatment of the Dark Horse co-posts of p1 (May–June 2025) as an incidence structure: its automorphism group, orbits, pendant stars with nested centres, orbit-stabilizer and Burnside.">
+<title>Automorphism Group of the Dark Horse Incidence Structure and Its Orbits</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap">
+<script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]},svg:{fontCache:"global"}};</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.min.js"></script>
+<style>
+/* Layout: a mathematics preprint, same sheet as automorphism-group.html. One column, numbered statements, proofs set off, Sage sessions as figures. */
+:root{
+  --paper:#fbfaf6; --ink:#1c1d22; --muted:#5d6070; --rule:#d9d6cc; --accent:#6b2d2d; --code:#f2efe6; --hl:#efe6cf;
+  --serif:"EB Garamond",Garamond,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --label:"IBM Plex Sans Condensed","Arial Narrow",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#15161a; --ink:#e8e6df; --muted:#a6a8b3; --rule:#33343c; --accent:#e0a39a; --code:#1e2026; --hl:#2a2619; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#15161a; --ink:#e8e6df; --muted:#a6a8b3; --rule:#33343c; --accent:#e0a39a; --code:#1e2026; --hl:#2a2619; color-scheme:dark}
+body{background:var(--paper);color:var(--ink);font:20px/1.6 var(--serif);padding-inline:16px;padding-block:36px 80px;margin:0}
+main{max-width:740px;margin:0 auto}
+h1{font:600 clamp(30px,5.4vw,44px)/1.15 var(--serif);text-align:center;margin:0 0 .4em;text-wrap:balance}
+.byline{text-align:center;font:500 15px var(--label);letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+.ded{text-align:center;font-style:italic;margin:2.2em auto 0;max-width:34em}
+.epi{text-align:center;margin:.6em auto 2.2em;max-width:30em;color:var(--muted)}
+h2{font:600 26px/1.25 var(--serif);margin:2em 0 .5em;border-bottom:1px solid var(--rule);padding-bottom:.2em}
+h2 .n{color:var(--accent);margin-right:.4em}
+p{margin:.65em 0} a{color:var(--accent)} img{max-width:100%}
+.abs{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:.8em 0;margin:1.4em 0;font-size:18.5px}
+.abs b{font-variant:small-caps;letter-spacing:.04em}
+.st{margin:1.1em 0;padding:.2em 0 .2em 1em;border-left:3px solid var(--accent)}
+.st > .h{font-weight:600;font-variant:small-caps;letter-spacing:.03em}
+.st.def{border-left-color:var(--muted)}
+.pf{margin:.4em 0 1.1em;padding-left:1em;font-size:19px}
+.pf::before{content:"Proof. ";font-style:italic}
+.pf .qed{float:right}
+.tw{overflow-x:auto;margin:.8em 0}
+table{border-collapse:collapse;margin:0 auto;font:400 17px var(--serif);font-variant-numeric:tabular-nums}
+th,td{border-bottom:1px solid var(--rule);padding:.32em .7em;text-align:left;vertical-align:top}
+th{font:600 13px var(--label);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+pre{background:var(--code);border:1px solid var(--rule);border-radius:4px;padding:12px 14px;overflow-x:auto;font:400 13.5px/1.55 var(--mono);color:var(--ink)}
+.cap{font:500 14px var(--label);color:var(--muted);margin-top:-.3em}
+.note{background:var(--hl);padding:.7em 1em;border-radius:4px;font-size:18px}
+.status{border:1px dashed var(--accent);padding:.6em 1em;border-radius:4px;font:500 15px/1.5 var(--label);color:var(--muted);margin:1.2em 0}
+.ack{font-size:18px}
+.acct{font-family:var(--mono);font-size:.86em}
+.refs{font-size:17px} .refs li{margin:.35em 0}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+</style>
+
+</head><body><main>
+<h1>Automorphism Group of the Dark Horse Incidence Structure and Its Orbits</h1>
+<div class="byline">On the Dark Horse co-posts of the \(p_{1}\) Instagram account, May–June 2025 · November 11, 2026 · draft · companion to <a href="https://antmerrill.github.io/backfire-tracking/automorphism-group.html">the first paper</a></div>
+<p class="ded">Dedicated to the memory of Dean Neumann.</p>
+<p class="epi">“When you’re the smartest guy in the room, you don’t need to say so.”</p>
+
+<div class="status" id="status">Status: draft of November 11, 2026. The group below was predicted by hand (Lemmas 2.2, 3.1 and 3.3) at 20:1x, before any machine ran; SageMath 10.9 confirmed the order, the factorisation, the orbits and the orbit groups at 20:2x (Section 4). The independent plain-Python count is still running and its column in Section 5 is marked pending. Nothing here is published.</div>
+
+<div class="abs"><b>Abstract.</b> We model the 22 Instagram co-posts of May 1 to June 30, 2025 in which \(p_{1}\) shares credit, the “Dark Horse collaboration”, as a finite incidence structure \(\mathcal S_{22}\) on \(v=28\) accounts: accounts are points, posts are blocks, and one block occurs four times. We prove
+\[\operatorname{Aut}(\mathcal S_{22})\;\cong\;S_9\times(S_2\wr S_3)\times S_4\times S_2\times S_2,\]
+of order \(2^{16}\,3^{6}\,5\cdot7=1{,}672{,}151{,}040\approx1.67\times10^{9}\), with 10 orbits: five fixed points and five nontrivial orbits. Unlike the seven group posts of the first paper, where the group came from twins, every nontrivial orbit here is a <i>pendant star</i>, and the star centres are nested: \(\{p_1\}\subset\{p_1,p_4\}\subset\{p_1,p_4,p_6\}\). The upper bound is proved by hand from replication numbers and block traces; the lower bound by the pendant-star lemma; SageMath 10.9 confirms both.</div>
+
+<h2><span class="n">0</span>Notation</h2>
+<p>As in the first paper, accounts are points \(p_1,\dots,p_{28}\): \(p_1\) is the account on every block, and \(p_{n+1}\) is contributor \(n\) of the published Dark Horse Caucus list (ordered by first post, then alphabetically), so the numbering is the one already on the <a href="https://antmerrill.github.io/backfire-tracking/dark-horse-caucus.html">Caucus page</a>. \(B_1,\dots,B_{22}\) are the posts in date order; \(G=\operatorname{Aut}(\mathcal S_{22})\); \(r_x\) and \(\lambda_{xy}\) are replication and pair counts; \(C\) is the centre of a pendant star.</p>
+<div class="tw"><table>
+<tr><th>Point</th><th>Account</th><th>\(r_x\)</th><th>Point</th><th>Account</th><th>\(r_x\)</th></tr>
+<tr><td>\(p_{1}\)</td><td><span class="acct">p1</span></td><td>22</td><td>\(p_{15}\)</td><td><span class="acct">p15</span></td><td>1</td></tr>
+<tr><td>\(p_{2}\)</td><td><span class="acct">p2</span></td><td>1</td><td>\(p_{16}\)</td><td><span class="acct">p16</span></td><td>1</td></tr>
+<tr><td>\(p_{3}\)</td><td><span class="acct">p3</span></td><td>1</td><td>\(p_{17}\)</td><td><span class="acct">p17</span></td><td>1</td></tr>
+<tr><td>\(p_{4}\)</td><td><span class="acct">p4</span></td><td>3</td><td>\(p_{18}\)</td><td><span class="acct">p18</span></td><td>1</td></tr>
+<tr><td>\(p_{5}\)</td><td><span class="acct">p5</span></td><td>1</td><td>\(p_{19}\)</td><td><span class="acct">p19</span></td><td>1</td></tr>
+<tr><td>\(p_{6}\)</td><td><span class="acct">p6</span></td><td>5</td><td>\(p_{20}\)</td><td><span class="acct">p20</span></td><td>1</td></tr>
+<tr><td>\(p_{7}\)</td><td><span class="acct">p7</span></td><td>1</td><td>\(p_{21}\)</td><td><span class="acct">p21</span></td><td>1</td></tr>
+<tr><td>\(p_{8}\)</td><td><span class="acct">p8</span></td><td>1</td><td>\(p_{22}\)</td><td><span class="acct">p22</span></td><td>1</td></tr>
+<tr><td>\(p_{9}\)</td><td><span class="acct">p9</span></td><td>2</td><td>\(p_{23}\)</td><td><span class="acct">p23</span></td><td>1</td></tr>
+<tr><td>\(p_{10}\)</td><td><span class="acct">p10</span></td><td>1</td><td>\(p_{24}\)</td><td><span class="acct">p24</span></td><td>1</td></tr>
+<tr><td>\(p_{11}\)</td><td><span class="acct">p11</span></td><td>1</td><td>\(p_{25}\)</td><td><span class="acct">p25</span></td><td>1</td></tr>
+<tr><td>\(p_{12}\)</td><td><span class="acct">p12</span></td><td>1</td><td>\(p_{26}\)</td><td><span class="acct">p26</span></td><td>1</td></tr>
+<tr><td>\(p_{13}\)</td><td><span class="acct">p13</span></td><td>1</td><td>\(p_{27}\)</td><td><span class="acct">p27</span></td><td>1</td></tr>
+<tr><td>\(p_{14}\)</td><td><span class="acct">p14</span></td><td>1</td><td>\(p_{28}\)</td><td><span class="acct">p28</span></td><td>1</td></tr>
+</table></div>
+
+<h2>Cast</h2>
+<p>Names appear only in this table; the rest of the paper uses the labels p1–p28.</p>
+<div class="tw"><table>
+<tr><th>Label</th><th>Account</th><th>Role</th><th>Blocks</th><th>Orbit</th></tr>
+<tr><td>p1</td><td class="acct">timballard89</td><td>fixed point; on every block</td><td>B1–B22 (all 22)</td><td>fixed</td></tr>
+<tr><td>p2</td><td class="acct">freedomcenterlu</td><td>leaf of the \(S_9\) star on \(\{p_1\}\)</td><td>B1</td><td>\(S_9\)</td></tr>
+<tr><td>p3</td><td class="acct">biakicis</td><td>leaf of the \(S_2\) star on \(\{p_1,p_4\}\) (\(B_2\))</td><td>B2</td><td>\(S_2\)</td></tr>
+<tr><td>p4</td><td class="acct">lilipacheco.usa</td><td>fixed point; on B2, B9, B10 only</td><td>B2, B9, B10</td><td>fixed</td></tr>
+<tr><td>p5</td><td class="acct">mareannl</td><td>leaf of the \(S_2\) star on \(\{p_1,p_4\}\) (\(B_2\))</td><td>B2</td><td>\(S_2\)</td></tr>
+<tr><td>p6</td><td class="acct">damaresalvesoficial</td><td>fixed point; four of its five blocks are the repeated block</td><td>B3, B6, B8, B9, B15</td><td>fixed</td></tr>
+<tr><td>p7</td><td class="acct">generalgirao</td><td>leaf of the \(S_9\) star on \(\{p_1\}\)</td><td>B4</td><td>\(S_9\)</td></tr>
+<tr><td>p8</td><td class="acct">mariofriasoficial</td><td>leaf of the \(S_9\) star on \(\{p_1\}\)</td><td>B5</td><td>\(S_9\)</td></tr>
+<tr><td>p9</td><td class="acct">carlosjordy</td><td>fixed point; on B7, B19 only</td><td>B7, B19</td><td>fixed</td></tr>
+<tr><td>p10</td><td class="acct">gusgayer</td><td>leaf of the \(S_2\) star on \(\{p_1,p_4,p_6\}\) (\(B_9\))</td><td>B9</td><td>\(S_2\)</td></tr>
+<tr><td>p11</td><td class="acct">jorgeseifjunior</td><td>leaf of the \(S_2\) star on \(\{p_1,p_4,p_6\}\) (\(B_9\))</td><td>B9</td><td>\(S_2\)</td></tr>
+<tr><td>p12</td><td class="acct">americatv</td><td>leaf of the \(S_2\wr S_3\) orbit (pair on \(B_{11}\))</td><td>B11</td><td>\(S_2\wr S_3\)</td></tr>
+<tr><td>p13</td><td class="acct">rolando_gps</td><td>leaf of the \(S_2\wr S_3\) orbit (pair on \(B_{11}\))</td><td>B11</td><td>\(S_2\wr S_3\)</td></tr>
+<tr><td>p14</td><td class="acct">cristianosenpolitica</td><td>leaf of the \(S_9\) star on \(\{p_1\}\)</td><td>B12</td><td>\(S_9\)</td></tr>
+<tr><td>p15</td><td class="acct">paolafelixdiaz</td><td>leaf of the \(S_9\) star on \(\{p_1\}\)</td><td>B13</td><td>\(S_9\)</td></tr>
+<tr><td>p16</td><td class="acct">eduardoverastegui</td><td>leaf of the \(S_9\) star on \(\{p_1\}\)</td><td>B14</td><td>\(S_9\)</td></tr>
+<tr><td>p17</td><td class="acct">janethinostrozaok</td><td>leaf of the \(S_9\) star on \(\{p_1\}\)</td><td>B16</td><td>\(S_9\)</td></tr>
+<tr><td>p18</td><td class="acct">herzog_foundation</td><td>leaf of the \(S_2\wr S_3\) orbit (pair on \(B_{17}\))</td><td>B17</td><td>\(S_2\wr S_3\)</td></tr>
+<tr><td>p19</td><td class="acct">momsforamerica</td><td>leaf of the \(S_2\wr S_3\) orbit (pair on \(B_{17}\))</td><td>B17</td><td>\(S_2\wr S_3\)</td></tr>
+<tr><td>p20</td><td class="acct">verosevillaec</td><td>leaf of the \(S_9\) star on \(\{p_1\}\)</td><td>B18</td><td>\(S_9\)</td></tr>
+<tr><td>p21</td><td class="acct">laisjordy</td><td>fixed point; on B19 only</td><td>B19</td><td>fixed</td></tr>
+<tr><td>p22</td><td class="acct">4ludlins</td><td>leaf of the \(S_9\) star on \(\{p_1\}\)</td><td>B20</td><td>\(S_9\)</td></tr>
+<tr><td>p23</td><td class="acct">47contadoallan</td><td>leaf of the \(S_2\wr S_3\) orbit (pair on \(B_{21}\))</td><td>B21</td><td>\(S_2\wr S_3\)</td></tr>
+<tr><td>p24</td><td class="acct">_revistatimeline</td><td>leaf of the \(S_2\wr S_3\) orbit (pair on \(B_{21}\))</td><td>B21</td><td>\(S_2\wr S_3\)</td></tr>
+<tr><td>p25</td><td class="acct">dignidadyderecho</td><td>leaf of the \(S_4\) star on \(B_{22}\)</td><td>B22</td><td>\(S_4\)</td></tr>
+<tr><td>p26</td><td class="acct">emilia_maldonadojaramillo</td><td>leaf of the \(S_4\) star on \(B_{22}\)</td><td>B22</td><td>\(S_4\)</td></tr>
+<tr><td>p27</td><td class="acct">pabloaproano</td><td>leaf of the \(S_4\) star on \(B_{22}\)</td><td>B22</td><td>\(S_4\)</td></tr>
+<tr><td>p28</td><td class="acct">timballardfoundationecuador</td><td>leaf of the \(S_4\) star on \(B_{22}\)</td><td>B22</td><td>\(S_4\)</td></tr>
+</table></div>
+
+<h2><span class="n">1</span>Setting</h2>
+<div class="st def" id="def-1-1"><span class="h">Definition 1.1.</span> An <i>incidence structure</i> is \(\mathcal S=(P,\mathcal B)\) with \(P\) a finite set of points and \(\mathcal B\) a finite multiset of subsets of \(P\) (blocks). Its incidence matrix \(N\in\{0,1\}^{P\times\mathcal B}\) has \(N_{x,B}=1\) iff \(x\in B\). The <i>automorphism group</i> is
+\[\operatorname{Aut}(\mathcal S)=\{\sigma\in\operatorname{Sym}(P):\ \sigma(\mathcal B)=\mathcal B\ \text{as multisets}\},\]
+equivalently the \(\sigma\) for which some permutation matrix \(Q\) gives \(P_\sigma N Q = N\).</div>
+<p>The Levi (incidence) graph \(L(\mathcal S)\) is bipartite on \(P\sqcup\mathcal B\), with \(x\sim B\) iff \(x\in B\). Colour-preserving automorphisms of \(L\), restricted to \(P\), are exactly \(\operatorname{Aut}(\mathcal S)\); this is how Sage computes it. A repeated block is two vertices of \(L\) with the same neighbourhood.</p>
+<div class="st def"><span class="h">Data.</span> Points are accounts; a block is the set of accounts on one post: those Instagram credits as collaborators, plus the account whose grid the post came from. The 22 posts are every co-post of May 1 to June 30, 2025 (UTC) with \(p_1\) among its accounts, as captured from \(p_1\)’s grid on October 17, 2026 and published as <a href="https://github.com/AntMerrill/backfire-tracking/tree/main/docs/data/dark-horse-caucus">posts.csv</a>.</div>
+
+<h2><span class="n">2</span>The 22 co-posts</h2>
+<div class="tw"><table>
+<tr><th>Block</th><th>Date (2025, UTC)</th><th>Points</th><th>Block</th><th>Date (2025, UTC)</th><th>Points</th></tr>
+<tr><td>\(B_1\)</td><td>May 5</td><td>\(p_1,p_2\)</td><td>\(B_{12}\)</td><td>Jun 2</td><td>\(p_1,p_{14}\)</td></tr>
+<tr><td>\(B_2\)</td><td>May 20</td><td>\(p_1,p_3,p_4,p_5\)</td><td>\(B_{13}\)</td><td>Jun 7</td><td>\(p_1,p_{15}\)</td></tr>
+<tr><td>\(B_3\)</td><td>May 20</td><td>\(p_1,p_6\)</td><td>\(B_{14}\)</td><td>Jun 10</td><td>\(p_1,p_{16}\)</td></tr>
+<tr><td>\(B_4\)</td><td>May 21</td><td>\(p_1,p_7\)</td><td>\(B_{15}\)</td><td>Jun 18</td><td>\(p_1,p_6\)</td></tr>
+<tr><td>\(B_5\)</td><td>May 21</td><td>\(p_1,p_8\)</td><td>\(B_{16}\)</td><td>Jun 19</td><td>\(p_1,p_{17}\)</td></tr>
+<tr><td>\(B_6\)</td><td>May 21</td><td>\(p_1,p_6\)</td><td>\(B_{17}\)</td><td>Jun 19</td><td>\(p_1,p_{18},p_{19}\)</td></tr>
+<tr><td>\(B_7\)</td><td>May 21</td><td>\(p_1,p_9\)</td><td>\(B_{18}\)</td><td>Jun 24</td><td>\(p_1,p_{20}\)</td></tr>
+<tr><td>\(B_8\)</td><td>May 25</td><td>\(p_1,p_6\)</td><td>\(B_{19}\)</td><td>Jun 28</td><td>\(p_1,p_9,p_{21}\)</td></tr>
+<tr><td>\(B_9\)</td><td>May 26</td><td>\(p_1,p_4,p_6,p_{10},p_{11}\)</td><td>\(B_{20}\)</td><td>Jun 29</td><td>\(p_1,p_{22}\)</td></tr>
+<tr><td>\(B_{10}\)</td><td>May 29</td><td>\(p_1,p_4\)</td><td>\(B_{21}\)</td><td>Jun 29</td><td>\(p_1,p_{23},p_{24}\)</td></tr>
+<tr><td>\(B_{11}\)</td><td>May 30</td><td>\(p_1,p_{12},p_{13}\)</td><td>\(B_{22}\)</td><td>Jun 30</td><td>\(p_1,p_{25},p_{26},p_{27},p_{28}\)</td></tr>
+</table></div>
+<p>So \(v=28\), \(b=22\); block sizes are 2 (fifteen blocks), 3 (four), 4 (one) and 5 (two). The replication numbers are \(r_{p_1}=22\), \(r_{p_6}=5\), \(r_{p_4}=3\), \(r_{p_9}=2\) and \(r_x=1\) for the other 24 points. Only 46 of the \(\binom{28}{2}=378\) pairs have \(\lambda_{xy}>0\); 27 of them involve \(p_1\), and the other 19 lie inside \(B_2\), \(B_9\), \(B_{11}\), \(B_{17}\), \(B_{19}\), \(B_{21}\) and \(B_{22}\). Since block sizes vary, \(\mathcal S_{22}\) is not a \(t\)-design for any \(t\). The Levi graph has \(28+22=50\) vertices and \(\sum_B|B|=56\) edges.</p>
+<p><b>A multiset.</b> \(B_3=B_6=B_8=B_{15}=\{p_1,p_6\}\): the same two-point block occurs four times. Definition 1.1 counts it four times, so \(b=22\), and an automorphism must send a block of multiplicity 4 to a block of multiplicity 4. Here that costs nothing, because \(p_1\) and \(p_6\) turn out to be fixed anyway (Lemma 3.3).</p>
+
+<div class="st def" id="def-2-1"><span class="h">Definition 2.1.</span> Points \(x,y\) are <i>twins</i> if their rows of \(N\) agree: \(x\) and \(y\) lie on exactly the same blocks.</div>
+<div class="st" id="lem-2-2"><span class="h">Lemma 2.2.</span> If \(T\) is a twin class, \(\operatorname{Sym}(T)\le\operatorname{Aut}(\mathcal S)\), acting trivially off \(T\).</div>
+<div class="pf">A permutation of \(T\) fixes every block setwise, since each block contains all of \(T\) or none of it. <span class="qed">□</span></div>
+<p>\(\mathcal S_{22}\) has six twin classes of size \(>1\): \(\{p_{25},p_{26},p_{27},p_{28}\}\) (all on \(B_{22}\) only) and the pairs \(\{p_3,p_5\}\) (\(B_2\)), \(\{p_{10},p_{11}\}\) (\(B_9\)), \(\{p_{12},p_{13}\}\) (\(B_{11}\)), \(\{p_{18},p_{19}\}\) (\(B_{17}\)), \(\{p_{23},p_{24}\}\) (\(B_{21}\)). By Lemma 2.2 they contribute \(S_4\times S_2^{\,5}\), of order \(24\cdot32=768\). That is the whole group if blocks must be fixed setwise, which is what the 11-02 count of 768 for this structure measured; the full group is \(2{,}177{,}280=9!\cdot3!\) times larger, and the next lemma says where the factor comes from.</p>
+
+<h2><span class="n">3</span>Pendant stars with nested centres</h2>
+<div class="st" id="lem-3-1"><span class="h">Lemma 3.1 (pendant stars).</span> Let \(C\subseteq P\) and let \(T_1,\dots,T_m\) be pairwise disjoint \(k\)-subsets of \(P\setminus C\) such that \(C\cup T_i\in\mathcal B\) for each \(i\), and no point of \(T=\bigcup T_i\) lies on any other block. Then \(S_k\wr S_m\le\operatorname{Aut}(\mathcal S)\), acting on \(T\) imprimitively with block system \(\{T_1,\dots,T_m\}\) and trivially off \(T\).</div>
+<div class="pf">Each \(T_i\) is a twin class, so the base group \(\prod_i\operatorname{Sym}(T_i)\cong S_k^{\,m}\) lies in \(\operatorname{Aut}\) by Lemma 2.2. For \(\pi\in S_m\), fix bijections \(T_i\to T_{\pi(i)}\) and let \(\hat\pi\) act by them on \(T\) and trivially elsewhere; \(\hat\pi\) maps \(C\cup T_i\) to \(C\cup T_{\pi(i)}\) and fixes every other block, so \(\hat\pi\in\operatorname{Aut}\). Base group and these lifts generate \(S_k\wr S_m\). <span class="qed">□</span></div>
+
+<p>\(\mathcal S_{22}\) has five pendant stars, on three nested centres:</p>
+<div class="tw"><table>
+<tr><th>Centre \(C\)</th><th>\(k\)</th><th>\(m\)</th><th>Blocks</th><th>Leaves \(T\)</th><th>Group</th><th>Order</th></tr>
+<tr><td>\(\{p_1\}\)</td><td>1</td><td>9</td><td>\(B_1,B_4,B_5,B_{12},B_{13},B_{14},B_{16},B_{18},B_{20}\)</td><td>\(p_2,p_7,p_8,p_{14},p_{15},p_{16},p_{17},p_{20},p_{22}\)</td><td>\(S_1\wr S_9=S_9\)</td><td>362,880</td></tr>
+<tr><td>\(\{p_1\}\)</td><td>2</td><td>3</td><td>\(B_{11},B_{17},B_{21}\)</td><td>\(\{p_{12},p_{13}\},\{p_{18},p_{19}\},\{p_{23},p_{24}\}\)</td><td>\(S_2\wr S_3\)</td><td>48</td></tr>
+<tr><td>\(\{p_1\}\)</td><td>4</td><td>1</td><td>\(B_{22}\)</td><td>\(\{p_{25},p_{26},p_{27},p_{28}\}\)</td><td>\(S_4\wr S_1=S_4\)</td><td>24</td></tr>
+<tr><td>\(\{p_1,p_4\}\)</td><td>2</td><td>1</td><td>\(B_2\)</td><td>\(\{p_3,p_5\}\)</td><td>\(S_2\)</td><td>2</td></tr>
+<tr><td>\(\{p_1,p_4,p_6\}\)</td><td>2</td><td>1</td><td>\(B_9\)</td><td>\(\{p_{10},p_{11}\}\)</td><td>\(S_2\)</td><td>2</td></tr>
+</table></div>
+<p class="cap">The three centres form a chain \(\{p_1\}\subset\{p_1,p_4\}\subset\{p_1,p_4,p_6\}\): a flag in the lattice of subsets of the fixed points.</p>
+
+<div class="st" id="prop-3-2"><span class="h">Proposition 3.2 (lower bound).</span> \(H:=S_9\times(S_2\wr S_3)\times S_4\times S_2\times S_2\le\operatorname{Aut}(\mathcal S_{22})\), the factors acting on the five leaf sets of the table and trivially elsewhere.</div>
+<div class="pf">Lemma 3.1 five times. The five leaf sets are pairwise disjoint and their stars have disjoint block sets, so the five subgroups commute and intersect trivially; their product is direct. <span class="qed">□</span></div>
+
+<div class="st" id="lem-3-3"><span class="h">Lemma 3.3 (upper bound by traces).</span> Let \(F=\{p_1,p_4,p_6,p_9\}\). Every automorphism of \(\mathcal S_{22}\) fixes \(F\) pointwise and \(p_{21}\), and \(\operatorname{Aut}(\mathcal S_{22})\le H\).</div>
+<div class="pf">Automorphisms preserve replication numbers. The values \(22,5,3,2\) each occur once, at \(p_1,p_6,p_4,p_9\), so \(F\) is fixed pointwise. Hence for every block the pair \((B\cap F,\,|B|)\), its <i>trace</i> and size, is invariant, and \(\sigma\in G\) permutes the blocks within each trace class:
+<div class="tw"><table>
+<tr><th>Trace \(B\cap F\)</th><th>\(|B|\)</th><th>Blocks</th><th>Consequence</th></tr>
+<tr><td>\(\{p_1,p_9\}\)</td><td>3</td><td>\(B_{19}\)</td><td>fixed; so \(p_{21}=B_{19}\setminus F\) is fixed</td></tr>
+<tr><td>\(\{p_1,p_4\}\)</td><td>4</td><td>\(B_2\)</td><td>fixed; \(\sigma\) permutes \(\{p_3,p_5\}\)</td></tr>
+<tr><td>\(\{p_1,p_4,p_6\}\)</td><td>5</td><td>\(B_9\)</td><td>fixed; \(\sigma\) permutes \(\{p_{10},p_{11}\}\)</td></tr>
+<tr><td>\(\{p_1\}\)</td><td>5</td><td>\(B_{22}\)</td><td>fixed; \(\sigma\) permutes \(\{p_{25},\dots,p_{28}\}\)</td></tr>
+<tr><td>\(\{p_1\}\)</td><td>3</td><td>\(B_{11},B_{17},B_{21}\)</td><td>\(\sigma\) permutes the three blocks, hence the three leaf pairs: at most \(S_2\wr S_3\)</td></tr>
+<tr><td>\(\{p_1\}\)</td><td>2</td><td>nine blocks</td><td>\(\sigma\) permutes nine blocks, hence nine leaves: at most \(S_9\)</td></tr>
+<tr><td>\(\{p_1,p_6\}\), \(\{p_1,p_4\}\), \(\{p_1,p_9\}\)</td><td>2</td><td>\(B_3,B_6,B_8,B_{15}\); \(B_{10}\); \(B_7\)</td><td>inside \(F\); nothing to move</td></tr>
+</table></div>
+<div>Every point outside \(F\cup\{p_{21}\}\) is a leaf of exactly one star, and the table bounds \(\sigma\) on each leaf set by the corresponding factor of \(H\). Hence \(G\le H\). <span class="qed">□</span></div></div>
+
+<div class="st" id="thm-3-4"><span class="h">Theorem 3.4.</span> \[\operatorname{Aut}(\mathcal S_{22})\;=\;H\;\cong\;S_9\times(S_2\wr S_3)\times S_4\times S_2\times S_2,\qquad |G|=2^{16}\,3^{6}\,5\cdot7=1{,}672{,}151{,}040.\] Its orbits on the 28 points are the five leaf sets, of sizes \(9,6,4,2,2\), and the five fixed points \(p_1,p_4,p_6,p_9,p_{21}\): ten orbits in all.</div>
+<div class="pf">Proposition 3.2 and Lemma 3.3. The order is \(9!\cdot(2^3\cdot3!)\cdot4!\cdot2\cdot2\). Each factor is transitive on its leaf set, so the leaf sets are orbits; the remaining five points are fixed by Lemma 3.3. <span class="qed">□</span></div>
+<p class="note">Unlike Theorem 3.2 of the first paper, which needed Sage to show that the orbit groups multiply to \(|G|\), nothing here depends on a machine: the trace argument closes the gap by hand. Sage’s role (Section 4) is to check the hand proof, not to replace it. One name differs: Sage reports the six-point factor as <code>C2 x S4</code>, which is the same group, since \(S_2\wr S_3\cong C_2\times S_4\) (the symmetry group of the cube, of order 48, acting on its three axes with a sign on each); so Sage’s <code>structure_description()</code> for the whole group reads <code>C2 x C2 x C2 x S9 x S4 x S4</code>.</p>
+
+<p><b>Orbit-stabilizer.</b> \(|G|=|\operatorname{Orb}(x)|\,|\operatorname{Stab}(x)|\) for every point (Gallian, Ch. 7). The stabilizer of a leaf is the whole group except on its own star, where it is the stabilizer in that factor:</p>
+<div class="tw"><table>
+<tr><th>\(x\)</th><th>\(\operatorname{Orb}(x)\)</th><th>\(\operatorname{Stab}(x)\) on its star</th><th>Check (within the factor)</th></tr>
+<tr><td>\(p_2\)</td><td>the nine one-guest leaves</td><td>\(S_8\)</td><td>\(9\cdot40{,}320=362{,}880\)</td></tr>
+<tr><td>\(p_{12}\)</td><td>the six two-guest leaves</td><td>\(S_2\wr S_2\cong D_4\) (its twin \(p_{13}\) is fixed too)</td><td>\(6\cdot8=48\)</td></tr>
+<tr><td>\(p_{25}\)</td><td>\(\{p_{25},p_{26},p_{27},p_{28}\}\)</td><td>\(S_3\)</td><td>\(4\cdot6=24\)</td></tr>
+<tr><td>\(p_3\)</td><td>\(\{p_3,p_5\}\)</td><td>trivial</td><td>\(2\cdot1=2\)</td></tr>
+<tr><td>\(p_6\)</td><td>\(\{p_6\}\)</td><td>\(G\)</td><td>\(1\cdot|G|=|G|\)</td></tr>
+</table></div>
+
+<p><b>Burnside.</b> The number of orbits is \(\frac1{|G|}\sum_{g\in G}|\operatorname{Fix}(g)|\). Summing over \(1.67\times10^9\) elements by hand is out of the question, but for a direct product acting on a disjoint union the sum splits over the factors,
+\[\frac1{|G|}\sum_{g\in G}|\operatorname{Fix}(g)|=\sum_{O}\frac1{|G^O|}\sum_{h\in G^O}|\operatorname{Fix}_O(h)|=\sum_O\#\{\text{orbits of }G^O\text{ on }O\},\]
+and each factor is transitive: \(5+5=10\). The one factor worth doing by hand is \(S_2\wr S_3\) on its six leaves, by the cycle type of the top permutation \(\pi\in S_3\) and the number of trivial base coordinates:</p>
+<div class="tw"><table>
+<tr><th>Top \(\pi\)</th><th>How many \(g\)</th><th>\(|\operatorname{Fix}(g)|\)</th><th>Subtotal</th></tr>
+<tr><td>identity</td><td>8 (one per base vector)</td><td>\(2\times\) number of trivial coordinates: \(6,4,4,4,2,2,2,0\)</td><td>24</td></tr>
+<tr><td>transposition (3)</td><td>24</td><td>2 if the fixed pair’s coordinate is trivial (12 of 24), else 0</td><td>24</td></tr>
+<tr><td>3-cycle (2)</td><td>16</td><td>0</td><td>0</td></tr>
+<tr><td colspan="3"><b>Sum</b></td><td><b>48</b></td></tr>
+</table></div>
+<p>So \(48/48=1\) orbit on those six points, as it should be. The same count on \(S_9\) is the classical \(\sum_g|\operatorname{Fix}(g)|=9!\), one orbit.</p>
+
+<p class="note">Reading. In \(\mathcal S_{22}\) the structure sees five accounts as individuals: \(p_1\) (on every block), \(p_6\) (five posts, four of them the same two-point block), \(p_4\) (three posts, two of them with other guests), \(p_9\) (two posts) and \(p_{21}\) (fixed only because its one post is \(p_9\)’s). The other 23 accounts are leaves: within a star they are interchangeable (twins), and the stars on \(\{p_1\}\) are interchangeable across posts (the top group of the wreath product). Nine of the 22 posts are \(p_1\) plus one one-off guest. The first paper found the same mechanism on 492 posts; here it is the whole story, and the twin-driven \(D_6\) of the seven group posts does not recur. “Same orbit” means identical position in this incidence structure, nothing more.</p>
+
+<h2><span class="n">4</span>Sage session</h2>
+<pre id="sage">B = [["p1","p2"], ["p1","p3","p4","p5"], ["p1","p6"], ["p1","p7"], ["p1","p8"], ["p1","p6"],
+     ["p1","p9"], ["p1","p6"], ["p1","p4","p6","p10","p11"], ["p1","p4"], ["p1","p12","p13"],
+     ["p1","p14"], ["p1","p15"], ["p1","p16"], ["p1","p6"], ["p1","p17"], ["p1","p18","p19"],
+     ["p1","p20"], ["p1","p9","p21"], ["p1","p22"], ["p1","p23","p24"], ["p1","p25","p26","p27","p28"]]
+S = IncidenceStructure(B); G = S.automorphism_group()
+G.order(), factor(G.order())
+#  (1672151040, 2^16 * 3^6 * 5 * 7)
+G.structure_description()
+#  'C2 x C2 x C2 x S9 x S4 x S4'
+G.orbits()
+#  (('p5','p3'), ('p14','p22','p2','p16','p15','p8','p17','p20','p7'), ('p19','p12','p23','p24','p13','p18'),
+#   ('p27','p26','p28','p25'), ('p21',), ('p11','p10'), ('p4',), ('p9',), ('p6',), ('p1',))
+# induced groups on the nontrivial orbits: S9 (362880, primitive), C2 x S4 (48, imprimitive, blocks
+#   {p12,p13} {p18,p19} {p23,p24}), S4 (24, primitive), C2 (2), C2 (2); their product is 1672151040 = |G|
+# Burnside by factor: 5 transitive factors + 5 fixed points = 10 = len(G.orbits())
+S.is_t_design(return_parameters=True)             #  (False, (0, 0, 0, 0))   block sizes differ
+L = S.incidence_graph(); L.order(), L.size()       #  (50, 56)
+# regression on the seven group posts of the first paper:  (12, 'D6', 10 orbits)</pre>
+<p class="cap">SageMath 10.9 (release 2026-05-04), run by Opie on November 11, 2026 at 20:2x; the full session (<code>sage_session.txt</code>, <code>sage_results.json</code>) is released beside the data. The blocks are <a href="https://github.com/AntMerrill/backfire-tracking/tree/main/docs/data/dark-horse-caucus">posts.csv</a> in \(p\)-notation (<code>blocks_p.csv</code>).</p>
+
+<h2><span class="n">5</span>Results and replication</h2>
+<p><b>Results.</b> As in the first paper, the group was predicted before it was computed, then computed by independent methods.</p>
+<div class="tw"><table id="results">
+<tr><th>Claim</th><th>Predicted (Nov 11, 20:1x, before any run)</th><th>SageMath</th><th>Plain-Python count</th></tr>
+<tr><td>\(|\operatorname{Aut}(\mathcal S_{22})|\)</td><td>\(1{,}672{,}151{,}040=2^{16}3^{6}5\cdot7\)</td><td>1,672,151,040, \(2^{16}3^{6}5\cdot7\): match</td><td>pending</td></tr>
+<tr><td>Structure</td><td>\(S_9\times(S_2\wr S_3)\times S_4\times S_2^{\,2}\)</td><td><code>C2 x C2 x C2 x S9 x S4 x S4</code>: match (\(S_2\wr S_3\cong C_2\times S_4\))</td><td></td></tr>
+<tr><td>Orbits</td><td>sizes 9, 6, 4, 2, 2; fixed \(p_1,p_4,p_6,p_9,p_{21}\); 10 orbits</td><td>same five leaf sets, same five fixed points, 10 orbits: match; orbit groups 362880, 48, 24, 2, 2 multiply to \(|G|\)</td><td></td></tr>
+<tr><td>Twin classes</td><td>one of size 4, five of size 2</td><td>the same six classes: match</td><td>11-02 rooms: 20 rooms, sizes 1×14, 2×5, 4×1 (agrees)</td></tr>
+<tr><td>Pairs meeting</td><td>46 of 378</td><td>46 of 378: match</td><td>46 (predict.py)</td></tr>
+<tr><td>Levi graph</td><td>50 vertices, 56 edges</td><td>(50, 56): match</td><td></td></tr>
+<tr><td>Burnside</td><td>\(5+5=10\)</td><td>per-factor sum 10 = <code>len(G.orbits())</code>: match</td><td></td></tr>
+<tr><td>Regression: \(\mathcal S_7\)</td><td>12, \(D_6\), 10 orbits (published)</td><td>(12, <code>D6</code>, 10 orbits): match</td><td></td></tr>
+</table></div>
+
+<p><b>Replication of the data.</b> The mathematics is only as good as the incidence matrix. Anyone can rebuild \(N\) for \(\mathcal S_{22}\) from Instagram itself:</p>
+<ol>
+<li>open the 22 posts (links in <a href="https://github.com/AntMerrill/backfire-tracking/tree/main/docs/data/dark-horse-caucus">posts.csv</a>);</li>
+<li>record each post’s uploader and its Collaborators list; number the accounts by first appearance, alphabetically within a post, with \(p_1\) the account on every block;</li>
+<li>run the Sage calls of Section 4 on the resulting blocks.</li>
+</ol>
+<p>The test needs no knowledge of our labels, because \(|\operatorname{Aut}(\mathcal S)|\) and the orbit sizes are invariant under relabelling the points. The Caucus page’s README gives the capture method and its limits (posts can be deleted or lose collaborators after a capture).</p>
+
+<h2>p8: prediction vs Sage</h2>
+<p>John’s question was what had been predicted for \(p_8\). The prediction was sealed at 20:12, before Sage ran (it is the file <code>predict.md</code>): it put \(p_8\) in the nine-point star centred on \(\{p_1\}\), the factor \(S_9\) of order \(9!=362{,}880\), on the nine one-guest blocks \(B_1,B_4,B_5,B_{12},B_{13},B_{14},B_{16},B_{18},B_{20}\), whose leaves are \(\{p_2,p_7,p_8,p_{14},p_{15},p_{16},p_{17},p_{20},p_{22}\}\). <b>Predicted, before Sage:</b> orbit \(S_9\) of order 362,880 on nine points, containing \(p_8\).</p>
+<p><b>Checked after Sage</b> (against <code>sage_results.json</code>): the orbit of \(p_8\) is \(\{p_2,p_7,p_8,p_{14},p_{15},p_{16},p_{17},p_{20},p_{22}\}\), of size 9, with induced group of order 362,880 and description <code>S9</code>; inside that factor the stabilizer is \(S_8\), so \(9\cdot40{,}320=362{,}880\), while the stabilizer in \(G\) has order 185,794,560 \(=|G|/9\). The set, the group and the order are the predicted ones. <b>Match: yes.</b></p>
+<p><b>Blocks.</b> The star sits on \(B_1,B_4,B_5,B_{12},B_{13},B_{14},B_{16},B_{18},B_{20}\); \(p_8\) itself lies on one of them, \(B_5\). Nothing in this paragraph was known when the prediction was written: the prediction is the sealed file, the Sage output the check; no part was adjusted afterwards.</p>
+
+<h2><span class="n">6</span>Scope</h2>
+<p>The structure is only as complete as the capture of October 17, 2026, of \(p_1\)’s grid; a co-post removed before that date is not a block. “Same orbit” means identical position in this incidence structure, not common control, and the paper says nothing about who operates any account. The proofs in Section 3 are by hand and complete; the Sage session is a check. The paper has not been refereed by mathematicians. Corrections are welcome.</p>
+
+<h2><span class="n">7</span>Acknowledgements</h2>
+<p class="ack">With thanks to <b>Dave Meronk</b>, for explaining Gallian’s text; <b>Charles Holland</b>, for algebra; <b>Charles Ford</b>, for representation theory; <b>Jay Goldman</b>, for combinatorics; and <b>Stephen H. McCleary</b>, on telling left from right [4]. The Sage session and the independent count were run by Opie (an opencode agent) on November 11, 2026.</p>
+
+<h2><span class="n">8</span>References</h2>
+<ol class="refs">
+<li>J. A. Gallian, <i>Contemporary Abstract Algebra</i>, Chapman &amp; Hall/CRC (10th ed. 2021; 11th ed.). Ch. 7: orbits, stabilizers, the orbit-stabilizer theorem; “Symmetry and Counting”: Burnside’s lemma.</li>
+<li>J. D. Dixon and B. Mortimer, <i>Permutation Groups</i>, Graduate Texts in Mathematics 163, Springer, 1996 (wreath products, primitivity).</li>
+<li>B. D. McKay and A. Piperno, “Practical graph isomorphism, II,” <i>J. Symbolic Comput.</i> 60 (2014) 94–112 (nauty/Traces).</li>
+<li>S. H. McCleary, “Telling Left from Right,” in <i>Ordered Algebraic Structures</i>, Springer (Kluwer), 1989, doi:<a href="https://link.springer.com/chapter/10.1007/978-94-009-2472-7_7">10.1007/978-94-009-2472-7_7</a>.</li>
+<li>The SageMath Developers, <i>SageMath</i>: <code>IncidenceStructure</code>, <code>automorphism_group</code>.</li>
+<li>The first paper: <a href="https://antmerrill.github.io/backfire-tracking/automorphism-group.html">Automorphism Group of the Incidence Structure and Its Orbits</a> (October 2026). Companion pages: <a href="https://antmerrill.github.io/backfire-tracking/dark-horse-caucus.html">Dark Horse Caucus</a>, <a href="https://antmerrill.github.io/backfire-tracking/dark-horse-collaboration.html">Dark Horse Collaboration</a>.</li>
+</ol>
+</main>
+</body></html>
