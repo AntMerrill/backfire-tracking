@@ -1,0 +1,200 @@
+{
+ "posts": 22,
+ "others": 27,
+ "hybrids": 11,
+ "six_span": "23 h 39 min",
+ "six_start": "2025-05-20T15:07:48+00:00",
+ "six_end": "2025-05-21T14:46:32+00:00",
+ "camps": {
+  "US": 4,
+  "BR": 11,
+  "UNK": 1,
+  "LAT": 11
+ },
+ "tb_span": [
+  "2025-10-01",
+  "2026-11-06"
+ ],
+ "tb_posts": 1846,
+ "tb_coposts": 865,
+ "br7_on_tb_grid": {
+  "biakicis": 0,
+  "damaresalvesoficial": 0,
+  "generalgirao": 0,
+  "mariofriasoficial": 0,
+  "carlosjordy": 0,
+  "gusgayer": 0,
+  "jorgeseifjunior": 0
+ },
+ "verastegui": [
+  [
+   "2025-12-05",
+   "DR3UIeEkYrg",
+   "timballard89"
+  ],
+  [
+   "2026-04-19",
+   "DXUtCzDD-C1",
+   "timballard89"
+  ],
+  [
+   "2026-04-20",
+   "DXXQ6fZkWAX",
+   "eduardoverastegui"
+  ],
+  [
+   "2026-07-01",
+   "DaQfptNKIzA",
+   "timballard89"
+  ]
+ ],
+ "laisjordy": [
+  [
+   "2025-12-01",
+   "DRuoEbQkeE1"
+  ],
+  [
+   "2026-06-30",
+   "DaNgHkSx4hY"
+  ]
+ ],
+ "monthly": {
+  "2025-10": [
+   5,
+   42
+  ],
+  "2025-11": [
+   20,
+   89
+  ],
+  "2025-12": [
+   2,
+   50
+  ],
+  "2026-01": [
+   29,
+   35
+  ],
+  "2026-02": [
+   19,
+   31
+  ],
+  "2026-03": [
+   14,
+   31
+  ],
+  "2026-04": [
+   19,
+   27
+  ],
+  "2026-05": [
+   35,
+   44
+  ],
+  "2026-06": [
+   33,
+   58
+  ],
+  "2026-07": [
+   37,
+   50
+  ],
+  "2026-08": [
+   30,
+   55
+  ],
+  "2026-09": [
+   12,
+   19
+  ],
+  "2026-10": [
+   23,
+   50
+  ],
+  "2026-11": [
+   2,
+   4
+  ]
+ },
+ "reach_may2025": [
+  "47contadoallan",
+  "4ludlins",
+  "cristianosenpolitica",
+  "dignidadyderecho",
+  "emilia_maldonadojaramillo",
+  "freedomcenterlu",
+  "gusgayer",
+  "herzog_foundation",
+  "janethinostrozaok",
+  "laisjordy",
+  "lilipacheco.usa",
+  "momsforamerica",
+  "pabloaproano",
+  "paolafelixdiaz",
+  "rolando_gps",
+  "timballardfoundationecuador",
+  "verosevillaec"
+ ],
+ "tb_top": [
+  [
+   "tbfrescue",
+   302
+  ],
+  [
+   "timballardfoundationecuador",
+   280
+  ],
+  [
+   "hiddenwarmovie",
+   50
+  ],
+  [
+   "druze.spirit",
+   37
+  ],
+  [
+   "druze_nexus",
+   24
+  ],
+  [
+   "expofamily.cl",
+   20
+  ],
+  [
+   "freechildhoodec",
+   19
+  ],
+  [
+   "brasilparalelo",
+   18
+  ],
+  [
+   "spanglishmoviesofficial",
+   14
+  ],
+  [
+   "beingkylecampbell",
+   13
+  ],
+  [
+   "politicallybasic",
+   13
+  ],
+  [
+   "latterdaychad",
+   12
+  ],
+  [
+   "podcastlaplena",
+   12
+  ],
+  [
+   "matthewcooper",
+   11
+  ],
+  [
+   "latterdayavenger",
+   11
+  ]
+ ]
+}

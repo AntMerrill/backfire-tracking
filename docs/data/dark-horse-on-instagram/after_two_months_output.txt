@@ -1,0 +1,123 @@
+timballard89's grid, as held: section 6 of the article
+source: inputs/timballard89_2026-11-06_reverse_0853.jsonl (our copy, saved Nov 6, 2026)
+
+date span : 2025-10-01 to 2026-11-06
+posts     : 1,846
+co-posts  : 865
+
+top 12 partners (co-posts Oct 2025 - Nov 2026):
+   1. @tbfrescue                       302
+   2. @timballardfoundationecuador     280
+   3. @hiddenwarmovie                   50
+   4. @druze.spirit                     37
+   5. @druze_nexus                      24
+   6. @expofamily.cl                    20
+   7. @freechildhoodec                  19
+   8. @brasilparalelo                   18
+   9. @spanglishmoviesofficial          14
+  10. @beingkylecampbell                13
+  11. @politicallybasic                 13
+  12. @latterdaychad                    12
+
+the seven Brazilian politicians who appear on the May-June 2025 co-posts,
+and how many co-posts on this grid put them beside timballard89:
+  @biakicis                   0   (no co-posts)
+  @damaresalvesoficial        0   (no co-posts)
+  @generalgirao               0   (no co-posts)
+  @mariofriasoficial          0   (no co-posts)
+  @carlosjordy                0   (no co-posts)
+  @gusgayer                   0   (no co-posts)
+  @jorgeseifjunior            0   (no co-posts)
+
+@eduardoverastegui co-posts (4):
+  2025-12-05  DR3UIeEkYrg  owner @timballard89
+  2026-04-19  DXUtCzDD-C1  owner @timballard89
+  2026-04-20  DXXQ6fZkWAX  owner @eduardoverastegui
+  2026-07-01  DaQfptNKIzA  owner @timballard89
+
+@laisjordy co-posts (2):
+  2025-12-01  DRuoEbQkeE1
+  2026-06-30  DaNgHkSx4hY
+
+co-posts by month: with @timballardfoundationecuador, and all others
+  2025-10     5 with     42 other   (  47 total)
+  2025-11    20 with     89 other   ( 109 total)
+  2025-12     2 with     50 other   (  52 total)
+  2026-01    29 with     35 other   (  64 total)
+  2026-02    19 with     31 other   (  50 total)
+  2026-03    14 with     31 other   (  45 total)
+  2026-04    19 with     27 other   (  46 total)
+  2026-05    35 with     44 other   (  79 total)
+  2026-06    33 with     58 other   (  91 total)
+  2026-07    37 with     50 other   (  87 total)
+  2026-08    30 with     55 other   (  85 total)
+  2026-09    12 with     19 other   (  31 total)
+  2026-10    23 with     50 other   (  73 total)
+  2026-11     2 with      4 other   (   6 total)
+timballard89's grid, as held: section 6 of the article
+source: inputs/timballard89_2026-11-06_reverse_0853.jsonl (our copy, saved Nov 6, 2026)
+
+date span : 2025-10-01 to 2026-11-06
+posts     : 1,846
+co-posts  : 865
+
+top 12 partners (co-posts Oct 2025 - Nov 2026):
+   1. @tbfrescue                       302
+   2. @timballardfoundationecuador     280
+   3. @hiddenwarmovie                   50
+   4. @druze.spirit                     37
+   5. @druze_nexus                      24
+   6. @expofamily.cl                    20
+   7. @freechildhoodec                  19
+   8. @brasilparalelo                   18
+   9. @spanglishmoviesofficial          14
+  10. @beingkylecampbell                13
+  11. @politicallybasic                 13
+  12. @latterdaychad                    12
+
+the seven Brazilian politicians who appear on the May-June 2025 co-posts,
+and how many co-posts on this grid put them beside timballard89:
+  @biakicis                   0   (no co-posts)
+  @damaresalvesoficial        0   (no co-posts)
+  @generalgirao               0   (no co-posts)
+  @mariofriasoficial          0   (no co-posts)
+  @carlosjordy                0   (no co-posts)
+  @gusgayer                   0   (no co-posts)
+  @jorgeseifjunior            0   (no co-posts)
+
+@eduardoverastegui co-posts (4):
+  2025-12-05  DR3UIeEkYrg  owner @timballard89
+  2026-04-19  DXUtCzDD-C1  owner @timballard89
+  2026-04-20  DXXQ6fZkWAX  owner @eduardoverastegui
+  2026-07-01  DaQfptNKIzA  owner @timballard89
+
+@laisjordy co-posts (2):
+  2025-12-01  DRuoEbQkeE1
+  2026-06-30  DaNgHkSx4hY
+
+co-posts by month: with @timballardfoundationecuador, and all others
+  2025-10     5 with     42 other   (  47 total)
+  2025-11    20 with     89 other   ( 109 total)
+  2025-12     2 with     50 other   (  52 total)
+  2026-01    29 with     35 other   (  64 total)
+  2026-02    19 with     31 other   (  50 total)
+  2026-03    14 with     31 other   (  45 total)
+  2026-04    19 with     27 other   (  46 total)
+  2026-05    35 with     44 other   (  79 total)
+  2026-06    33 with     58 other   (  91 total)
+  2026-07    37 with     50 other   (  87 total)
+  2026-08    30 with     55 other   (  85 total)
+  2026-09    12 with     19 other   (  31 total)
+  2026-10    23 with     50 other   (  73 total)
+  2026-11     2 with      4 other   (   6 total)
+
+OK       date span
+OK       post count
+OK       co-post count
+OK       top 12 partners
+OK       seven Brazilian politicians
+OK       @eduardoverastegui co-posts
+OK       @laisjordy co-posts
+OK       co-posts by month
+8/8 section-6 numbers match inputs/numbers.json
+CHECK PASS
