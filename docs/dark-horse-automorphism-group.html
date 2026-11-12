@@ -54,7 +54,7 @@ mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
 <p class="ded">Dedicated to the memory of Dean Neumann.</p>
 <p class="epi">“When you’re the smartest guy in the room, you don’t need to say so.”</p>
 
-<div class="status" id="status">Status: draft of November 11, 2026. The group below was predicted by hand (Lemmas 2.2, 3.1 and 3.3) at 20:1x, before any machine ran; SageMath 10.9 confirmed the order, the factorisation, the orbits and the orbit groups at 20:2x (Section 4). The independent plain-Python count is still running and its column in Section 5 is marked pending. Nothing here is published.</div>
+<div class="status" id="status">Status: final draft of November 12, 2026. The group below was predicted by hand (Lemmas 2.2, 3.1 and 3.3) at 20:1x, before any machine ran; SageMath 10.9 confirmed the order, the factorisation, the orbits and the orbit groups at 20:2x (Section 4). The independent plain-Python count finished and agrees (Section 5). Nothing here is published.</div>
 
 <div class="abs"><b>Abstract.</b> We model the 22 Instagram co-posts of May 1 to June 30, 2025 in which \(p_{1}\) shares credit, the “Dark Horse collaboration”, as a finite incidence structure \(\mathcal S_{22}\) on \(v=28\) accounts: accounts are points, posts are blocks, and one block occurs four times. We prove
 \[\operatorname{Aut}(\mathcal S_{22})\;\cong\;S_9\times(S_2\wr S_3)\times S_4\times S_2\times S_2,\]
@@ -229,7 +229,7 @@ L = S.incidence_graph(); L.order(), L.size()       #  (50, 56)
 <p><b>Results.</b> As in the first paper, the group was predicted before it was computed, then computed by independent methods.</p>
 <div class="tw"><table id="results">
 <tr><th>Claim</th><th>Predicted (Nov 11, 20:1x, before any run)</th><th>SageMath</th><th>Plain-Python count</th></tr>
-<tr><td>\(|\operatorname{Aut}(\mathcal S_{22})|\)</td><td>\(1{,}672{,}151{,}040=2^{16}3^{6}5\cdot7\)</td><td>1,672,151,040, \(2^{16}3^{6}5\cdot7\): match</td><td>pending</td></tr>
+<tr><td>\(|\operatorname{Aut}(\mathcal S_{22})|\)</td><td>\(1{,}672{,}151{,}040=2^{16}3^{6}5\cdot7\)</td><td>1,672,151,040, \(2^{16}3^{6}5\cdot7\): match</td><td>1,672,151,040: match (2-WL refinement plus orbit-stabilizer recursion; 0.03 s CPU)</td></tr>
 <tr><td>Structure</td><td>\(S_9\times(S_2\wr S_3)\times S_4\times S_2^{\,2}\)</td><td><code>C2 x C2 x C2 x S9 x S4 x S4</code>: match (\(S_2\wr S_3\cong C_2\times S_4\))</td><td></td></tr>
 <tr><td>Orbits</td><td>sizes 9, 6, 4, 2, 2; fixed \(p_1,p_4,p_6,p_9,p_{21}\); 10 orbits</td><td>same five leaf sets, same five fixed points, 10 orbits: match; orbit groups 362880, 48, 24, 2, 2 multiply to \(|G|\)</td><td></td></tr>
 <tr><td>Twin classes</td><td>one of size 4, five of size 2</td><td>the same six classes: match</td><td>11-02 rooms: 20 rooms, sizes 1×14, 2×5, 4×1 (agrees)</td></tr>
