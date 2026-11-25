@@ -1,0 +1,99 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DH22 deep pass: 28 accounts, 22 posts, |Aut| = 768</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="DH22 = the 22 co-posts of timballard89, 2025-05-01 to 2025-06-30 UTC, 28 accounts. The canonical object has |Aut| = 768 = 4!·2!⁵. A network snapshot to 2026-11-19.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DH22 deep pass: 28 accounts, 22 posts, |Aut| = 768">
+<meta property="og:description" content="The canonical DH22 object is 28 accounts × 22 posts with |Aut| = 768 = 4!·2!⁵. The construction reproduces the known answer; the wider network is a long tail.">
+<meta property="og:url" content="https://antmerrill.github.io/backfire-tracking/dh22-deep-2026-11-25.html">
+<meta property="og:image" content="https://antmerrill.github.io/backfire-tracking/img/dh22-deep-2026-11-25/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DH22 deep pass: 28 accounts, 22 posts, |Aut| = 768">
+<meta name="twitter:description" content="DH22 = the 22 co-posts of timballard89, 2025-05-01 to 2025-06-30 UTC, 28 accounts. |Aut| = 768 = 4!·2!⁵.">
+<meta name="twitter:image" content="https://antmerrill.github.io/backfire-tracking/img/dh22-deep-2026-11-25/og.png">
+<style>
+:root{--bg:#12151c;--panel:#171b24;--ink:#e6e8ee;--mute:#98a1b3;--rule:#2a3242;--gold:#e0b93a}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,sans-serif;padding:28px 16px}
+main{max-width:1000px;margin:0 auto} h1{margin:0 0 4px;font-size:34px;line-height:1.2} .sub{color:var(--mute);margin:0 0 18px}
+a{color:#7fb4dc} .big{color:var(--gold);font-size:22px;font-weight:700} p{max-width:860px} h2{font-size:22px;margin:30px 0 8px;color:var(--gold)}
+table.t{border-collapse:collapse;margin:10px 0;font-size:15px;width:100%} .t td,.t th{border-bottom:1px solid var(--rule);padding:6px 10px;text-align:left;vertical-align:top} .t th{color:var(--gold);font-weight:normal}
+.panel{background:var(--panel);border:1px solid var(--rule);border-radius:8px;padding:14px 18px;margin:14px 0}
+code,pre{background:#1c212c;border-radius:4px;padding:0 4px} pre{padding:10px 12px;overflow-x:auto;white-space:pre-wrap} .foot{color:var(--mute);font-size:14px;margin-top:24px} .wrap{overflow-x:auto}
+.nums{display:flex;flex-wrap:wrap;gap:12px;margin:12px 0}
+.num{background:var(--panel);border:1px solid var(--rule);border-radius:8px;padding:12px 16px;flex:1 1 260px}
+.num .k{color:var(--gold);font-weight:700;font-size:20px} .num .v{color:var(--mute);font-size:14px}
+.small{color:var(--mute);font-size:14px} ul{max-width:860px} li{margin:4px 0}
+</style></head><body><main>
+<h1>DH22 deep pass: 28 accounts, 22 posts, |Aut| = 768</h1>
+<p class="sub">DH22 = the 22 co-posts of <b>timballard89</b>, 2025-05-01 – 2025-06-30 (UTC), and the 28 accounts on them · snapshot to 2026-11-19 · 2026-11-25</p>
+
+<p class="big">The canonical DH22 object is 28 accounts × 22 posts with |Aut| = 768 = 4!·2!⁵ — one class of four interchangeable accounts and five pairs.</p>
+
+<h2>Short answer</h2>
+<p><b>DH22</b> is the set of 22 co-posts of <code>timballard89</code> posted between 2025-05-01 and 2025-06-30 UTC, and the 28 accounts on them. It is <b>not</b> S16 / holland24 and <b>not</b> the rigid grid; those are different sets, and no number here is carried over from them.</p>
+<p>On that defining set the construction finds one clean symmetry: accounts that appear on exactly the same posts are interchangeable, and the sizes of those classes multiply to <b>768 = 4!·2!⁵</b>. One class of four and five pairs; the remaining 14 accounts are singletons. Over the captured network the picture does not become one rigid object: the largest look-alike class is still 4, and the non-trivial classes form a long tail. The headline is a small, exact, definition-level result, plus a regression check that the method still reproduces a known answer.</p>
+
+<h2>The big numbers</h2>
+<div class="nums">
+<div class="num"><div class="k">28 × 22</div><div>canonical DH22 object — accounts × posts<br><b>|Aut| = 768 = 4!·2!⁵</b></div></div>
+<div class="num"><div class="k">282 × 766</div><div>known-answer reproduction (sandrabronzina)<br><b>|Aut| = 150,994,944</b>, trio included</div></div>
+<div class="num"><div class="k">2,904 × 98,432</div><div>network, union view<br><b>|Aut| ≈ 1.80×10<sup>103</sup></b></div></div>
+</div>
+<div class="wrap"><table class="t">
+<tr><th>object</th><th>accounts</th><th>posts</th><th>|Aut|</th><th>largest class</th></tr>
+<tr><td><b>Canonical DH22</b> (the 22 defining posts)</td><td>28</td><td>22</td><td><b>768</b> = 4!·2!⁵</td><td>4</td></tr>
+<tr><td>Known answer — sandrabronzina 2026-10-16</td><td>282</td><td>766</td><td>150,994,944</td><td>3</td></tr>
+<tr><td>Network, union view (<code>haul_union</code>)</td><td>2,904</td><td>98,432</td><td>≈ 1.80×10<sup>103</sup></td><td>4</td></tr>
+<tr><td>11-20 baseline reproduced (<code>holland_keep</code>)</td><td>2,898</td><td>98,420</td><td>≈ 2.99×10<sup>102</sup></td><td>4</td></tr>
+<tr><td>Clean 28-set archive view (<code>archive_keep</code>)</td><td>1,592</td><td>27,277</td><td>≈ 7.9958×10<sup>67</sup></td><td>4</td></tr>
+</table></div>
+<p class="small">The union view adds six collaborator-only accounts and 12 archive-only posts to the 11-20 holland baseline; the long-tail shape is unchanged. The archive view is the clean 28-set capture alone (27 files), so its smaller size is expected.</p>
+
+<h2>How it is made</h2>
+<ol>
+<li><b>Points</b> are accounts. <b>A block</b> is the set of accounts Instagram credits on one post: the owner plus the collaborators shown in the post header. Caption @-tags and picture credits do not count.</li>
+<li><b>Dedupe</b> by shortcode, keeping the earliest <code>taken_at</code> (the house keep rule).</li>
+<li><b>Classes:</b> two accounts are in the same class when they appear on exactly the same set of posts (identical membership rows). Accounts in one class are interchangeable.</li>
+<li><b>|Aut|</b> is the product of <code>(class size)!</code> over the classes. This is the house <i>time-order</i> group: blocks stay ordered by time, so only account classes contribute. For the canonical object the blocks are the 22 defining posts; for the network object they are every captured post.</li>
+</ol>
+<p>That rule is the whole method. It is the same construction used on 2026-10-20, unchanged. <a href="data/dh22-deep-2026-11-25/check.py">check.py</a> (Python 3, standard library only) rebuilds the canonical 768 and the known answer from the included files.</p>
+
+<h2>Validation</h2>
+<p>The reused construction reproduces the known answer <b>exactly</b>: sandrabronzina, 282 accounts × 766 posts, <b>|Aut| = 150,994,944</b>, trio included. This is the regression check that lets the DH22 numbers be read at all — a method that misses a known answer is not trusted on a new set. Two unit checks (a synthetic four-block example and the known answer) were run before the real data; both pass.</p>
+
+<h2>The sets used</h2>
+<div class="wrap"><table class="t">
+<tr><th>set</th><th>what it is</th><th>size</th></tr>
+<tr><td><b>DH22 member set</b></td><td>participants of the 22 defining co-posts</td><td><b>28 accounts, 22 posts</b></td></tr>
+<tr><td>DH22 clean 28-set capture</td><td>archive timelines, one per seed (captured 11-18/19)</td><td>27 files / 27 accounts</td></tr>
+<tr><td>DH22 haul holland-60</td><td>dated captures incl. deep re-scrapes</td><td>60 files / 42 capture accounts</td></tr>
+<tr><td>DH22 network object (union)</td><td>every account in any captured block, deduped by shortcode</td><td>2,904 accounts × 98,432 posts</td></tr>
+</table></div>
+
+<h2>Repeated twins</h2>
+<p>Two accounts that appear together on many posts look alike to the construction. The ones worth naming, with where they hold:</p>
+<div class="wrap"><table class="t">
+<tr><th>pair / group</th><th>co-posts</th><th>survives the merge?</th><th>where it holds</th></tr>
+<tr><td><b>defeatleftism / jdvance4usa</b></td><td><b>16</b></td><td><b>yes</b></td><td>momsforamerica_2026-11-20; still 16 in the union — the best network-level twin</td></tr>
+<tr><td>38contadoallan / allanconta_35</td><td>24</td><td>no (capture-local)</td><td>maxcardosobr_2026-11-19; 9 in luis.lacombe; 5 in 47contadoallan; not in the union</td></tr>
+<tr><td>andres.fearless / karim.fearless</td><td>6</td><td>yes</td><td>all three eduardoverastegui captures; still 6 in the union</td></tr>
+<tr><td>horanoticiasbr / horapoliticabr</td><td>6</td><td>yes</td><td>jorgeseifjunior_2026-11-20; still 6 in the union</td></tr>
+</table></div>
+<p class="small">The capture-local 24 is the strongest single-capture twin, but both accounts own grids, so their rows stop being identical once captures are merged. Co-posting is all this measures; it does not establish intent.</p>
+
+<h2>The long tail</h2>
+<p>Over the union network (2,904 accounts × 98,432 posts) the largest class is <b>4</b>, and there are <b>239 non-trivial classes</b>: <b>186 pairs + 43 triples + 10 quads</b>. Grouping is temporal, not random: about 88% of captured posts are single-account, and the repeated twins are a short, stable list. The 11-20 conclusion stands — the DH22 network is a long tail of small look-alike classes, not a few huge symmetric factors.</p>
+
+<h2>What it shows, and what it doesn't</h2>
+<div class="panel">
+<p><b>Shows:</b> who Instagram credits alongside <code>timballard89</code> on the 22 co-posts of May–June 2025; that the 28×22 defining object has the exact symmetry 4!·2!⁵ = 768; that the construction reproduces a known answer; and the named repeated twins, with whether each survives the merge.</p>
+<p><b>Doesn't show:</b> a census of Instagram. This is a snapshot of captured grids to <b>2026-11-19</b>. One defining post (<code>DKYTBMSuTjl</code>, 2025-06-02) is in no capture; two captured defining posts are incomplete (<code>DKSZ5T6iU3E</code> misses <code>americatv</code>; <code>DLfpqobvgiT</code> misses <code>4ludlins</code>). For the archive view the owner is injected as the capture account (documented). Co-posting is a header credit, not intent, and says nothing about what any account thinks, knows or does off Instagram.</p>
+</div>
+
+<h2>Data and cards</h2>
+<p>Data: <a href="data/dh22-deep-2026-11-25/">data/dh22-deep-2026-11-25/</a> — <code>canonical_object.tsv</code>, <code>canonical_posts.tsv</code>, <code>known_answer_object.tsv</code>, <code>repeats.tsv</code>, <code>summary.json</code>, <code>README.md</code> (method, limits, set definition), <code>check.py</code>, <code>SHA256SUMS</code>.</p>
+<p>Cards: <a href="img/dh22-deep-2026-11-25/cards.html">img/dh22-deep-2026-11-25/cards.html</a> (six plain cards, 1200×630).</p>
+
+<p class="foot">Backfire Tracking · 2026-11-25 · snapshot to 2026-11-19 · not linked from the index · <code>noindex</code>. Data derived from captures dated 2013-01-02 … 2026-11-19; canonical posts 2025-05-05 … 2025-06-30 UTC.</p>
+</main></body></html>

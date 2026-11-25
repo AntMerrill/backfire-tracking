@@ -1,0 +1,167 @@
+{
+ "tests": [
+  "unit synthetic: 4 pts x 4 blocks, classes [2,1,1], |Aut|=2 -- OK",
+  "sandrabronzina_2026-10-16 (2026-10-20 report): got 282 x 766, |Aut|=150994944 (expected 282 pts x 766 blocks, |Aut|=150,994,944) -> REPRODUCED"
+ ],
+ "known_answer": {
+  "check": "sandrabronzina_2026-10-16 (2026-10-20 report)",
+  "expected": "282 pts x 766 blocks, |Aut|=150,994,944",
+  "got": "282 x 766, |Aut|=150994944",
+  "reproduced": true
+ },
+ "canonical": {
+  "points": 28,
+  "blocks": 22,
+  "order": 768,
+  "classes": [
+   4,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "pts": null,
+  "rowv": null,
+  "cls": null,
+  "blocks_list": null,
+  "rows": null
+ },
+ "canonical_window": [
+  "2025-05-05 17:22",
+  "2025-06-30 23:19"
+ ],
+ "captures": {
+  "archive": 27,
+  "holland": 60
+ },
+ "per_capture_nontrivial": {
+  "archive": 24,
+  "holland": 57
+ },
+ "per_capture_repeat_ge3": {
+  "archive": 5,
+  "holland": 17
+ },
+ "combined": {
+  "archive_keep": {
+   "points": 1592,
+   "blocks": 27277,
+   "order": 79958015885398792040100119522779578298114077184465589721866270932992,
+   "orbits": 1399,
+   "classes_top": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    3,
+    3,
+    3,
+    3
+   ],
+   "n_nontrivial_classes": 143,
+   "largest_class": 4
+  },
+  "holland_keep": {
+   "points": 2898,
+   "blocks": 98420,
+   "order": 2992568682747769872301192298774728714123826610847132001250778060501236129443173141940843158070366306304,
+   "orbits": 2598,
+   "classes_top": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    3,
+    3
+   ],
+   "n_nontrivial_classes": 238,
+   "largest_class": 4
+  },
+  "haul_keep": {
+   "points": 2899,
+   "blocks": 98432,
+   "order": 2992568682747769872301192298774728714123826610847132001250778060501236129443173141940843158070366306304,
+   "orbits": 2599,
+   "classes_top": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    3,
+    3
+   ],
+   "n_nontrivial_classes": 238,
+   "largest_class": 4
+  },
+  "haul_union": {
+   "points": 2904,
+   "blocks": 98432,
+   "order": 17955412096486619233807153792648372284742959665082792007504668363007416776659038851645058948422197837824,
+   "orbits": 2602,
+   "classes_top": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    3,
+    3
+   ],
+   "n_nontrivial_classes": 239,
+   "largest_class": 4
+  }
+ },
+ "full_haul_posts": 98432,
+ "full_haul_points": 2904,
+ "posts_in_canonical_window": 2778,
+ "archive_only_posts": [
+  "C1dQ2R9Ow47",
+  "C1nSxy3uSVY",
+  "DHB31RvOcQM",
+  "DLYQpnxvsN9",
+  "DMEUy86vO2N",
+  "DNiGtQAA5mi",
+  "DR2buVkAPmU",
+  "DUCLzWCD_kD",
+  "DUdaricET-I",
+  "DVRDNH8ke_J",
+  "DVaLSv3DFDq",
+  "DW9fW6vETaX"
+ ]
+}
