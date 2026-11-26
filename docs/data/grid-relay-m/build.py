@@ -13,6 +13,7 @@ def card(n):
 c1, c2 = card("2026-11-01_card_grid_relay_m_public.svg"), card("2026-11-01_card_twins_no_m_public.svg")
 
 page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
 <meta name="description" content="One rule, nine co-post tables: only the rigid grid with relays has an m. S16 m = expofamily.cl (2, 2, 2); none in Tim Ballard x druze.spirit.">
 <meta property="og:type" content="article"><meta property="og:title" content="Only the rigid grid with relays has an m">
 <meta property="og:description" content="Nine co-post tables, one rule. Three have an m, all the rigid-grid-with-relay shape.">
@@ -31,6 +32,7 @@ main{{max-width:860px;margin:0 auto;background:var(--sheet);padding:28px 16px 56
 h1{{font-size:clamp(32px,6vw,48px);line-height:1.08;margin:.2em 0 .35em}} h2{{font-size:24px;margin:1.7em 0 .4em;border-bottom:1px solid var(--rule)}}
 .lede{{font-size:21px;color:var(--muted)}}
 .cardbox{{margin:1.2em 0;border:1px solid var(--rule);box-shadow:0 1px 4px rgba(0,0,0,.08)}} .cardbox svg.card{{width:100%;height:auto;display:block}}
+figure.fig{{margin:1.2em 0}} figure.fig img{{width:100%;height:auto;display:block;border:1px solid var(--rule)}} figure.fig figcaption{{font:14px var(--label);color:var(--muted);margin-top:.4em}}
 .st{{display:inline-block;font:600 11px var(--label);letter-spacing:.08em;text-transform:uppercase;padding:1px 7px;border-radius:3px;margin-right:6px;color:#fff;vertical-align:2px}}
 .pr{{background:var(--green)}} .co{{background:#2c5aa8}} .df{{background:var(--muted)}} .no{{background:var(--red)}} .pa{{background:var(--gold)}}
 .claims p{{margin:.7em 0}}
@@ -65,6 +67,13 @@ footer{{font:14px var(--label);color:var(--muted);border-top:1px solid var(--rul
 </div>
 
 <div class="cardbox">{c2}</div>
+
+<h2>The relay result — card and graphs (2026-11-25)</h2>
+<p class="lede">The 2026-11-25 card and two graphs for the m result: the nine co-post tables, the last two m-tables as graphs, and the same two as a solar-system analogy. The card is the summary; the graphs are for John.</p>
+<figure class="fig"><a href="img/m-relay/2026-11-25_card_m_is_the_relay.png"><img src="img/m-relay/2026-11-25_card_m_is_the_relay.png" alt="Card: nine co-post tables, three with an m, and the relay check." loading="lazy"></a><figcaption>The card: nine tables, three with an m, and the relay check. Conditional on the ownership read; see the note below.</figcaption></figure>
+<figure class="fig"><a href="img/m-relay/2026-11-25_graph_m_relay_math.png"><img src="img/m-relay/2026-11-25_graph_m_relay_math.png" alt="Graph: the two m-tables in mathematics — grid with credited-post rings and the relay." loading="lazy"></a><figcaption>Mathematics. Grid: node size and spoke colour = posts credited (r_x); green rings = the four swapping pairs. Relay: edges colour-banded by shared posts.</figcaption></figure>
+<figure class="fig"><a href="img/m-relay/2026-11-25_graph_m_relay_solar.png"><img src="img/m-relay/2026-11-25_graph_m_relay_solar.png" alt="Graph: the same two tables drawn as solar systems, an analogy only." loading="lazy"></a><figcaption>Analogy only. Sun = m; orbit = posts credited; green = a twin pair. Nothing here is a claim about who runs an account.</figcaption></figure>
+<p><strong>Ownership limit.</strong> The 354/354 for S_h is the host convention of the 2026-10-31 m run. An independent owner-read capture of LDA's timeline (2026-10-17, 334 posts) has LDA owning <strong>307</strong>, with <strong>27</strong> owned by 20 other accounts (<strong>5</strong> by <code>timballard89</code>). The relay result is a check conditional on that ownership read, not a general theorem; a structure-only proof is open.</p>
 
 <h2>Sources</h2>
 <p style="font-size:16px">Seven tables: the m-by-ownership run of Oct 31, 2026 over the tables already on this site (<code>summary_7_lattices_2026-10-31.tsv</code>). Tim Ballard × druze.spirit: the Tim Ballard timeline of Oct 17 and druze.spirit timeline of Oct 19 and Nov 1, owner and credits per post (<code>owners_tb_x_druze_spirit.tsv</code>). druze.spirit timeline: the Oct 19 and Nov 1 captures joined, newer capture winning (<code>owners_druze_spirit_timeline.tsv</code>). File hashes in <code>SOURCES.sha256</code>.</p>
